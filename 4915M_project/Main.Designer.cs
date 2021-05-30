@@ -40,9 +40,9 @@ namespace _4915M_project
             // pictureBox4
             // 
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(179, 20);
+            this.pictureBox4.Location = new System.Drawing.Point(-2, -1);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(443, 201);
+            this.pictureBox4.Size = new System.Drawing.Size(1062, 565);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 13;
             this.pictureBox4.TabStop = false;
@@ -51,7 +51,7 @@ namespace _4915M_project
             // 
             this.goLoginbtn.BackColor = System.Drawing.Color.DodgerBlue;
             this.goLoginbtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.goLoginbtn.Location = new System.Drawing.Point(231, 267);
+            this.goLoginbtn.Location = new System.Drawing.Point(356, 586);
             this.goLoginbtn.Name = "goLoginbtn";
             this.goLoginbtn.Size = new System.Drawing.Size(338, 80);
             this.goLoginbtn.TabIndex = 14;
@@ -63,7 +63,7 @@ namespace _4915M_project
             // 
             this.button2.BackColor = System.Drawing.Color.DodgerBlue;
             this.button2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(231, 389);
+            this.button2.Location = new System.Drawing.Point(700, 586);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(338, 80);
             this.button2.TabIndex = 22;
@@ -75,7 +75,7 @@ namespace _4915M_project
             // 
             this.goCreatebtn.BackColor = System.Drawing.Color.DodgerBlue;
             this.goCreatebtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.goCreatebtn.Location = new System.Drawing.Point(231, 513);
+            this.goCreatebtn.Location = new System.Drawing.Point(12, 586);
             this.goCreatebtn.Name = "goCreatebtn";
             this.goCreatebtn.Size = new System.Drawing.Size(338, 80);
             this.goCreatebtn.TabIndex = 23;
@@ -88,7 +88,7 @@ namespace _4915M_project
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
-            this.ClientSize = new System.Drawing.Size(772, 711);
+            this.ClientSize = new System.Drawing.Size(1060, 707);
             this.Controls.Add(this.goCreatebtn);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.goLoginbtn);

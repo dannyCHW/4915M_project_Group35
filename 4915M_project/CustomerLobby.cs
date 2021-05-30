@@ -19,9 +19,7 @@ namespace _4915M_project
 
         private void btnAirwayBill_Click(object sender, EventArgs e)
         {
-            AirwayBill1 airwayBill1  = new AirwayBill1();
-            airwayBill1.Show();
-            this.Hide();
+            openChildForm(new AirwayBill1());
         }
 
         private void btnAirwayBill2_Click(object sender, EventArgs e)
@@ -71,6 +69,48 @@ namespace _4915M_project
             Invoice invoice = new Invoice();
             invoice.Show();
             this.Hide();
+        }
+
+        private Form activeForm = null;
+        private void openChildForm(Form childForm)
+        {
+            if (activeForm != null)
+            {
+                activeForm.Close();
+            }
+            activeForm = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            panelChildForm.Controls.Add(childForm);
+            panelChildForm.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
+        }
+
+        private void panelLogo_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panelChildForm_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
