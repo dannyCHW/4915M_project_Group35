@@ -31,27 +31,32 @@ namespace _4915M_project
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CustomerLobby));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.panelLogo = new System.Windows.Forms.Panel();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.btnCustomerCheck = new System.Windows.Forms.Button();
             this.btnBooking = new System.Windows.Forms.Button();
             this.btnAirwayBill = new System.Windows.Forms.Button();
             this.btnTracking = new System.Windows.Forms.Button();
             this.btnCustomerInvoice = new System.Windows.Forms.Button();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.panelChildForm = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnLogOut = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            this.panelChildForm.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.panel1.Controls.Add(this.btnLogOut);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
@@ -69,15 +74,78 @@ namespace _4915M_project
             this.panel1.Size = new System.Drawing.Size(250, 638);
             this.panel1.TabIndex = 1;
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label5.Location = new System.Drawing.Point(25, 113);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(203, 12);
+            this.label5.TabIndex = 18;
+            this.label5.Text = "_________________________________";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label4.Location = new System.Drawing.Point(25, 395);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(203, 12);
+            this.label4.TabIndex = 17;
+            this.label4.Text = "_________________________________";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label3.Location = new System.Drawing.Point(25, 323);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(203, 12);
+            this.label3.TabIndex = 16;
+            this.label3.Text = "_________________________________";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label2.Location = new System.Drawing.Point(25, 251);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(203, 12);
+            this.label2.TabIndex = 16;
+            this.label2.Text = "_________________________________";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label1.Location = new System.Drawing.Point(25, 179);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(203, 12);
+            this.label1.TabIndex = 15;
+            this.label1.Text = "_________________________________";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
             // panelLogo
             // 
-            this.panelLogo.Controls.Add(this.pictureBox4);
+            this.panelLogo.Controls.Add(this.pictureBox1);
             this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelLogo.Location = new System.Drawing.Point(0, 0);
             this.panelLogo.Name = "panelLogo";
             this.panelLogo.Size = new System.Drawing.Size(250, 107);
             this.panelLogo.TabIndex = 14;
             this.panelLogo.Paint += new System.Windows.Forms.PaintEventHandler(this.panelLogo_Paint);
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(255, 113);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Padding = new System.Windows.Forms.Padding(30);
+            this.pictureBox4.Size = new System.Drawing.Size(400, 373);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 12;
+            this.pictureBox4.TabStop = false;
             // 
             // btnCustomerCheck
             // 
@@ -86,7 +154,7 @@ namespace _4915M_project
             this.btnCustomerCheck.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCustomerCheck.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCustomerCheck.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnCustomerCheck.Location = new System.Drawing.Point(4, 223);
+            this.btnCustomerCheck.Location = new System.Drawing.Point(4, 194);
             this.btnCustomerCheck.Name = "btnCustomerCheck";
             this.btnCustomerCheck.Size = new System.Drawing.Size(243, 54);
             this.btnCustomerCheck.TabIndex = 13;
@@ -101,7 +169,7 @@ namespace _4915M_project
             this.btnBooking.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBooking.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBooking.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnBooking.Location = new System.Drawing.Point(4, 295);
+            this.btnBooking.Location = new System.Drawing.Point(4, 266);
             this.btnBooking.Name = "btnBooking";
             this.btnBooking.Size = new System.Drawing.Size(243, 54);
             this.btnBooking.TabIndex = 8;
@@ -116,7 +184,7 @@ namespace _4915M_project
             this.btnAirwayBill.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAirwayBill.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAirwayBill.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnAirwayBill.Location = new System.Drawing.Point(3, 157);
+            this.btnAirwayBill.Location = new System.Drawing.Point(3, 128);
             this.btnAirwayBill.Name = "btnAirwayBill";
             this.btnAirwayBill.Size = new System.Drawing.Size(244, 48);
             this.btnAirwayBill.TabIndex = 9;
@@ -131,7 +199,7 @@ namespace _4915M_project
             this.btnTracking.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTracking.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTracking.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnTracking.Location = new System.Drawing.Point(3, 367);
+            this.btnTracking.Location = new System.Drawing.Point(3, 338);
             this.btnTracking.Name = "btnTracking";
             this.btnTracking.Size = new System.Drawing.Size(244, 54);
             this.btnTracking.TabIndex = 12;
@@ -146,7 +214,7 @@ namespace _4915M_project
             this.btnCustomerInvoice.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCustomerInvoice.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCustomerInvoice.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnCustomerInvoice.Location = new System.Drawing.Point(7, 439);
+            this.btnCustomerInvoice.Location = new System.Drawing.Point(7, 410);
             this.btnCustomerInvoice.Name = "btnCustomerInvoice";
             this.btnCustomerInvoice.Size = new System.Drawing.Size(237, 54);
             this.btnCustomerInvoice.TabIndex = 11;
@@ -154,19 +222,10 @@ namespace _4915M_project
             this.btnCustomerInvoice.UseVisualStyleBackColor = false;
             this.btnCustomerInvoice.Click += new System.EventHandler(this.btnCustomerInvoice_Click);
             // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(32, 3);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(182, 101);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 12;
-            this.pictureBox4.TabStop = false;
-            // 
             // panelChildForm
             // 
             this.panelChildForm.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panelChildForm.Controls.Add(this.pictureBox4);
             this.panelChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelChildForm.Location = new System.Drawing.Point(250, 0);
             this.panelChildForm.Name = "panelChildForm";
@@ -174,57 +233,28 @@ namespace _4915M_project
             this.panelChildForm.TabIndex = 2;
             this.panelChildForm.Paint += new System.Windows.Forms.PaintEventHandler(this.panelChildForm_Paint);
             // 
-            // label1
+            // pictureBox1
             // 
-            this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label1.Location = new System.Drawing.Point(25, 208);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(203, 12);
-            this.label1.TabIndex = 15;
-            this.label1.Text = "_________________________________";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(55, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(136, 116);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 13;
+            this.pictureBox1.TabStop = false;
             // 
-            // label2
+            // btnLogOut
             // 
-            this.label2.AutoSize = true;
-            this.label2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label2.Location = new System.Drawing.Point(25, 280);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(203, 12);
-            this.label2.TabIndex = 16;
-            this.label2.Text = "_________________________________";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label3.Location = new System.Drawing.Point(25, 352);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(203, 12);
-            this.label3.TabIndex = 16;
-            this.label3.Text = "_________________________________";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label4.Location = new System.Drawing.Point(25, 424);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(203, 12);
-            this.label4.TabIndex = 17;
-            this.label4.Text = "_________________________________";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label5.Location = new System.Drawing.Point(25, 142);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(203, 12);
-            this.label5.TabIndex = 18;
-            this.label5.Text = "_________________________________";
+            this.btnLogOut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.btnLogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogOut.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogOut.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnLogOut.Location = new System.Drawing.Point(7, 572);
+            this.btnLogOut.Name = "btnLogOut";
+            this.btnLogOut.Size = new System.Drawing.Size(237, 54);
+            this.btnLogOut.TabIndex = 19;
+            this.btnLogOut.Text = "LogOut";
+            this.btnLogOut.UseVisualStyleBackColor = false;
             // 
             // CustomerLobby
             // 
@@ -240,6 +270,8 @@ namespace _4915M_project
             this.panel1.PerformLayout();
             this.panelLogo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            this.panelChildForm.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -260,5 +292,7 @@ namespace _4915M_project
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btnLogOut;
     }
 }

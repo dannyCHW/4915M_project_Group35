@@ -346,9 +346,10 @@ namespace _4915M_project
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(35, 323);
+            this.textBox2.Font = new System.Drawing.Font("PMingLiU", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.textBox2.Location = new System.Drawing.Point(39, 323);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(374, 22);
+            this.textBox2.Size = new System.Drawing.Size(374, 27);
             this.textBox2.TabIndex = 74;
             // 
             // label19
@@ -364,9 +365,10 @@ namespace _4915M_project
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(473, 163);
+            this.textBox1.Font = new System.Drawing.Font("PMingLiU", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.textBox1.Location = new System.Drawing.Point(475, 162);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(374, 22);
+            this.textBox1.Size = new System.Drawing.Size(374, 27);
             this.textBox1.TabIndex = 72;
             // 
             // label18
@@ -383,10 +385,13 @@ namespace _4915M_project
             // 
             // comboBoxCountry
             // 
+            this.comboBoxCountry.Font = new System.Drawing.Font("PMingLiU", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.comboBoxCountry.FormattingEnabled = true;
-            this.comboBoxCountry.Location = new System.Drawing.Point(35, 165);
+            this.comboBoxCountry.Items.AddRange(new object[] {
+            "Japen"});
+            this.comboBoxCountry.Location = new System.Drawing.Point(39, 165);
             this.comboBoxCountry.Name = "comboBoxCountry";
-            this.comboBoxCountry.Size = new System.Drawing.Size(374, 20);
+            this.comboBoxCountry.Size = new System.Drawing.Size(374, 24);
             this.comboBoxCountry.TabIndex = 70;
             // 
             // label13

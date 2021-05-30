@@ -12,6 +12,8 @@ namespace _4915M_project
 {
     public partial class CustomerLobby : Form
     {
+        private Form activeForm = null;
+
         public CustomerLobby()
         {
             InitializeComponent();
@@ -71,7 +73,6 @@ namespace _4915M_project
             this.Hide();
         }
 
-        private Form activeForm = null;
         private void openChildForm(Form childForm)
         {
             if (activeForm != null)
