@@ -65,8 +65,17 @@ namespace _4915M_project
             this.label15 = new System.Windows.Forms.Label();
             this.btnGoNext = new System.Windows.Forms.Button();
             this.AirwayBillPanel2 = new System.Windows.Forms.Panel();
-            this.label14 = new System.Windows.Forms.Label();
             this.btnBack = new System.Windows.Forms.Button();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.label22 = new System.Windows.Forms.Label();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.label23 = new System.Windows.Forms.Label();
             this.AirwayBillPanel1.SuspendLayout();
             this.AirwayBillPanel2.SuspendLayout();
             this.SuspendLayout();
@@ -434,22 +443,24 @@ namespace _4915M_project
             // 
             // AirwayBillPanel2
             // 
+            this.AirwayBillPanel2.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.AirwayBillPanel2.Controls.Add(this.textBox6);
+            this.AirwayBillPanel2.Controls.Add(this.label23);
+            this.AirwayBillPanel2.Controls.Add(this.textBox5);
+            this.AirwayBillPanel2.Controls.Add(this.label22);
+            this.AirwayBillPanel2.Controls.Add(this.textBox4);
             this.AirwayBillPanel2.Controls.Add(this.label14);
+            this.AirwayBillPanel2.Controls.Add(this.textBox3);
+            this.AirwayBillPanel2.Controls.Add(this.button1);
+            this.AirwayBillPanel2.Controls.Add(this.label21);
+            this.AirwayBillPanel2.Controls.Add(this.label20);
             this.AirwayBillPanel2.Controls.Add(this.btnBack);
-            this.AirwayBillPanel2.Location = new System.Drawing.Point(10, 569);
+            this.AirwayBillPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.AirwayBillPanel2.Location = new System.Drawing.Point(0, 0);
             this.AirwayBillPanel2.Name = "AirwayBillPanel2";
-            this.AirwayBillPanel2.Size = new System.Drawing.Size(200, 100);
+            this.AirwayBillPanel2.Size = new System.Drawing.Size(918, 622);
             this.AirwayBillPanel2.TabIndex = 96;
             this.AirwayBillPanel2.Visible = false;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(399, 253);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(32, 12);
-            this.label14.TabIndex = 2;
-            this.label14.Text = "RWO";
             // 
             // btnBack
             // 
@@ -458,13 +469,114 @@ namespace _4915M_project
             this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBack.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBack.ForeColor = System.Drawing.Color.White;
-            this.btnBack.Location = new System.Drawing.Point(12, 560);
+            this.btnBack.Location = new System.Drawing.Point(144, 489);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(122, 50);
             this.btnBack.TabIndex = 1;
             this.btnBack.Text = "<-Back";
             this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.label20.Location = new System.Drawing.Point(512, 155);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(243, 32);
+            this.label20.TabIndex = 70;
+            this.label20.Text = "Receiver Address";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.ForeColor = System.Drawing.Color.Black;
+            this.label21.Location = new System.Drawing.Point(5, 9);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(258, 38);
+            this.label21.TabIndex = 71;
+            this.label21.Text = "Shipment Order";
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(633, 489);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(122, 50);
+            this.button1.TabIndex = 72;
+            this.button1.Text = "Next->";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Font = new System.Drawing.Font("PMingLiU", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.textBox3.Location = new System.Drawing.Point(518, 190);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(237, 27);
+            this.textBox3.TabIndex = 73;
+            // 
+            // textBox4
+            // 
+            this.textBox4.Font = new System.Drawing.Font("PMingLiU", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.textBox4.Location = new System.Drawing.Point(144, 190);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(237, 27);
+            this.textBox4.TabIndex = 75;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.label14.Location = new System.Drawing.Point(138, 155);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(129, 32);
+            this.label14.TabIndex = 74;
+            this.label14.Text = "Receiver";
+            // 
+            // textBox5
+            // 
+            this.textBox5.Font = new System.Drawing.Font("PMingLiU", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.textBox5.Location = new System.Drawing.Point(144, 335);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(237, 27);
+            this.textBox5.TabIndex = 77;
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.label22.Location = new System.Drawing.Point(138, 300);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(214, 32);
+            this.label22.TabIndex = 76;
+            this.label22.Text = "Contact Person";
+            // 
+            // textBox6
+            // 
+            this.textBox6.Font = new System.Drawing.Font("PMingLiU", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.textBox6.Location = new System.Drawing.Point(518, 335);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(237, 27);
+            this.textBox6.TabIndex = 79;
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.label23.Location = new System.Drawing.Point(512, 300);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(209, 32);
+            this.label23.TabIndex = 78;
+            this.label23.Text = "Contact Phone";
             // 
             // AirwayBill1
             // 
@@ -542,7 +654,6 @@ namespace _4915M_project
         private System.Windows.Forms.Panel AirwayBillPanel1;
         private System.Windows.Forms.Button btnGoNext;
         private System.Windows.Forms.Panel AirwayBillPanel2;
-        private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label15;
@@ -551,5 +662,15 @@ namespace _4915M_project
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.TextBox textBox3;
     }
 }
