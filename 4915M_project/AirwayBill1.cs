@@ -78,8 +78,9 @@ namespace _4915M_project
 
         }
 
-        
+        private void AirwayBillPanel3_Paint(object sender, PaintEventArgs e)
+        {
 
-        
+        }
     }
 }
