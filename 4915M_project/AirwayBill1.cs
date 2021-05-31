@@ -82,5 +82,10 @@ namespace _4915M_project
         {
 
         }
+
+        private void AirwayBill1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -36,6 +36,7 @@ namespace _4915M_project
             this.txtStaffID = new System.Windows.Forms.TextBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.btnLogin = new System.Windows.Forms.Button();
+            this.btnBack = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -106,6 +107,22 @@ namespace _4915M_project
             this.btnLogin.TabIndex = 34;
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = false;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
+            // 
+            // btnBack
+            // 
+            this.btnBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.btnBack.FlatAppearance.BorderSize = 0;
+            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBack.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBack.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnBack.Location = new System.Drawing.Point(95, 569);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(244, 48);
+            this.btnBack.TabIndex = 35;
+            this.btnBack.Text = "<-back";
+            this.btnBack.UseVisualStyleBackColor = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // StaffLogin
             // 
@@ -113,6 +130,7 @@ namespace _4915M_project
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
             this.ClientSize = new System.Drawing.Size(1186, 638);
+            this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox3);
@@ -121,6 +139,7 @@ namespace _4915M_project
             this.Controls.Add(this.txtStaffID);
             this.Name = "StaffLogin";
             this.Text = "StaffLogin";
+            this.Load += new System.EventHandler(this.StaffLogin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
@@ -136,5 +155,6 @@ namespace _4915M_project
         private System.Windows.Forms.TextBox txtStaffID;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Button btnLogin;
+        private System.Windows.Forms.Button btnBack;
     }
 }

@@ -859,6 +859,7 @@ namespace _4915M_project
             this.Controls.Add(this.label2);
             this.Name = "AirwayBill1";
             this.Text = "AirwayBill1";
+            this.Load += new System.EventHandler(this.AirwayBill1_Load);
             this.AirwayBillPanel1.ResumeLayout(false);
             this.AirwayBillPanel1.PerformLayout();
             this.AirwayBillPanel2.ResumeLayout(false);

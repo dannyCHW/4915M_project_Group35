@@ -40,6 +40,7 @@ namespace _4915M_project
             this.txtPhone = new System.Windows.Forms.TextBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.btnCreateAccout = new System.Windows.Forms.Button();
+            this.btnBack = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -52,7 +53,7 @@ namespace _4915M_project
             this.txtEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
             this.txtEmail.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmail.ForeColor = System.Drawing.SystemColors.Window;
-            this.txtEmail.Location = new System.Drawing.Point(513, 276);
+            this.txtEmail.Location = new System.Drawing.Point(527, 278);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(229, 26);
             this.txtEmail.TabIndex = 23;
@@ -62,7 +63,7 @@ namespace _4915M_project
             this.txtPwd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
             this.txtPwd.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPwd.ForeColor = System.Drawing.SystemColors.Window;
-            this.txtPwd.Location = new System.Drawing.Point(513, 405);
+            this.txtPwd.Location = new System.Drawing.Point(527, 407);
             this.txtPwd.Name = "txtPwd";
             this.txtPwd.Size = new System.Drawing.Size(229, 26);
             this.txtPwd.TabIndex = 24;
@@ -72,7 +73,7 @@ namespace _4915M_project
             this.txtPwd2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
             this.txtPwd2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPwd2.ForeColor = System.Drawing.SystemColors.Window;
-            this.txtPwd2.Location = new System.Drawing.Point(513, 468);
+            this.txtPwd2.Location = new System.Drawing.Point(527, 470);
             this.txtPwd2.Name = "txtPwd2";
             this.txtPwd2.Size = new System.Drawing.Size(229, 26);
             this.txtPwd2.TabIndex = 25;
@@ -80,7 +81,7 @@ namespace _4915M_project
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(417, 387);
+            this.pictureBox1.Location = new System.Drawing.Point(431, 389);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(77, 58);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -90,7 +91,7 @@ namespace _4915M_project
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(417, 451);
+            this.pictureBox2.Location = new System.Drawing.Point(431, 453);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(77, 58);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -100,7 +101,7 @@ namespace _4915M_project
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(417, 258);
+            this.pictureBox3.Location = new System.Drawing.Point(431, 260);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(77, 58);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -110,7 +111,7 @@ namespace _4915M_project
             // pictureBox5
             // 
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(417, 322);
+            this.pictureBox5.Location = new System.Drawing.Point(431, 324);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(77, 59);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -122,7 +123,7 @@ namespace _4915M_project
             this.txtPhone.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
             this.txtPhone.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPhone.ForeColor = System.Drawing.SystemColors.Window;
-            this.txtPhone.Location = new System.Drawing.Point(513, 335);
+            this.txtPhone.Location = new System.Drawing.Point(527, 337);
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Size = new System.Drawing.Size(229, 26);
             this.txtPhone.TabIndex = 31;
@@ -130,7 +131,7 @@ namespace _4915M_project
             // pictureBox4
             // 
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(435, 0);
+            this.pictureBox4.Location = new System.Drawing.Point(449, 2);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(296, 246);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -144,7 +145,7 @@ namespace _4915M_project
             this.btnCreateAccout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCreateAccout.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCreateAccout.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnCreateAccout.Location = new System.Drawing.Point(465, 538);
+            this.btnCreateAccout.Location = new System.Drawing.Point(479, 540);
             this.btnCreateAccout.Name = "btnCreateAccout";
             this.btnCreateAccout.Size = new System.Drawing.Size(244, 48);
             this.btnCreateAccout.TabIndex = 33;
@@ -152,12 +153,28 @@ namespace _4915M_project
             this.btnCreateAccout.UseVisualStyleBackColor = false;
             this.btnCreateAccout.Click += new System.EventHandler(this.btnCreateAccout_Click);
             // 
+            // btnBack
+            // 
+            this.btnBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.btnBack.FlatAppearance.BorderSize = 0;
+            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBack.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBack.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnBack.Location = new System.Drawing.Point(95, 569);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(244, 48);
+            this.btnBack.TabIndex = 34;
+            this.btnBack.Text = "<-back";
+            this.btnBack.UseVisualStyleBackColor = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
             // CustomerCreateAccout
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
             this.ClientSize = new System.Drawing.Size(1186, 638);
+            this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnCreateAccout);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.txtPhone);
@@ -191,5 +208,6 @@ namespace _4915M_project
         private System.Windows.Forms.TextBox txtPhone;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Button btnCreateAccout;
+        private System.Windows.Forms.Button btnBack;
     }
 }
