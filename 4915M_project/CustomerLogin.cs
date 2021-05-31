@@ -17,7 +17,7 @@ namespace _4915M_project
             InitializeComponent();
         }
 
-        private void loginbtn_Click(object sender, EventArgs e)
+        private void btnLogin_Click(object sender, EventArgs e)
         {
             CustomerLobby custLobby = new CustomerLobby();
             custLobby.Show();

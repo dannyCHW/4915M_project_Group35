@@ -17,7 +17,7 @@ namespace _4915M_project
             InitializeComponent();
         }
 
-        private void createbtn_Click(object sender, EventArgs e)
+        private void btnCreateAccout_Click(object sender, EventArgs e)
         {
             Main main = new Main();
             main.Show();

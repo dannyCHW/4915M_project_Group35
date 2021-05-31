@@ -32,10 +32,10 @@ namespace _4915M_project
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StaffLogin));
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.loginPasswordtxt = new System.Windows.Forms.TextBox();
-            this.loginbtn = new System.Windows.Forms.Button();
-            this.loginEmailtxt = new System.Windows.Forms.TextBox();
+            this.txtPassword = new System.Windows.Forms.TextBox();
+            this.txtStaffID = new System.Windows.Forms.TextBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.btnLogin = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -44,7 +44,7 @@ namespace _4915M_project
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(223, 355);
+            this.pictureBox3.Location = new System.Drawing.Point(419, 299);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(77, 58);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -54,68 +54,71 @@ namespace _4915M_project
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(223, 419);
+            this.pictureBox1.Location = new System.Drawing.Point(419, 363);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(77, 58);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 31;
             this.pictureBox1.TabStop = false;
             // 
-            // loginPasswordtxt
+            // txtPassword
             // 
-            this.loginPasswordtxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
-            this.loginPasswordtxt.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.loginPasswordtxt.ForeColor = System.Drawing.SystemColors.Window;
-            this.loginPasswordtxt.Location = new System.Drawing.Point(321, 434);
-            this.loginPasswordtxt.Name = "loginPasswordtxt";
-            this.loginPasswordtxt.Size = new System.Drawing.Size(229, 26);
-            this.loginPasswordtxt.TabIndex = 30;
-            this.loginPasswordtxt.Text = "Password";
+            this.txtPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
+            this.txtPassword.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPassword.ForeColor = System.Drawing.SystemColors.Window;
+            this.txtPassword.Location = new System.Drawing.Point(517, 378);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Size = new System.Drawing.Size(229, 26);
+            this.txtPassword.TabIndex = 30;
+            this.txtPassword.Text = "Password";
             // 
-            // loginbtn
+            // txtStaffID
             // 
-            this.loginbtn.BackColor = System.Drawing.Color.DodgerBlue;
-            this.loginbtn.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.loginbtn.Location = new System.Drawing.Point(223, 505);
-            this.loginbtn.Name = "loginbtn";
-            this.loginbtn.Size = new System.Drawing.Size(338, 80);
-            this.loginbtn.TabIndex = 29;
-            this.loginbtn.Text = "Login";
-            this.loginbtn.UseVisualStyleBackColor = false;
-            // 
-            // loginEmailtxt
-            // 
-            this.loginEmailtxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
-            this.loginEmailtxt.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.loginEmailtxt.ForeColor = System.Drawing.SystemColors.Window;
-            this.loginEmailtxt.Location = new System.Drawing.Point(321, 368);
-            this.loginEmailtxt.Name = "loginEmailtxt";
-            this.loginEmailtxt.Size = new System.Drawing.Size(229, 26);
-            this.loginEmailtxt.TabIndex = 28;
-            this.loginEmailtxt.Text = "Staff ID";
+            this.txtStaffID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
+            this.txtStaffID.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtStaffID.ForeColor = System.Drawing.SystemColors.Window;
+            this.txtStaffID.Location = new System.Drawing.Point(517, 312);
+            this.txtStaffID.Name = "txtStaffID";
+            this.txtStaffID.Size = new System.Drawing.Size(229, 26);
+            this.txtStaffID.TabIndex = 28;
+            this.txtStaffID.Text = "Staff ID";
             // 
             // pictureBox4
             // 
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(174, 27);
+            this.pictureBox4.Location = new System.Drawing.Point(435, 0);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(443, 233);
+            this.pictureBox4.Size = new System.Drawing.Size(296, 246);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 34;
+            this.pictureBox4.TabIndex = 33;
             this.pictureBox4.TabStop = false;
+            // 
+            // btnLogin
+            // 
+            this.btnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.btnLogin.FlatAppearance.BorderSize = 0;
+            this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogin.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogin.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnLogin.Location = new System.Drawing.Point(462, 491);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(244, 48);
+            this.btnLogin.TabIndex = 34;
+            this.btnLogin.Text = "Login";
+            this.btnLogin.UseVisualStyleBackColor = false;
             // 
             // StaffLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
-            this.ClientSize = new System.Drawing.Size(800, 700);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.ClientSize = new System.Drawing.Size(1186, 638);
+            this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.loginPasswordtxt);
-            this.Controls.Add(this.loginbtn);
-            this.Controls.Add(this.loginEmailtxt);
+            this.Controls.Add(this.txtPassword);
+            this.Controls.Add(this.txtStaffID);
             this.Name = "StaffLogin";
             this.Text = "StaffLogin";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -129,9 +132,9 @@ namespace _4915M_project
         #endregion
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.TextBox loginPasswordtxt;
-        private System.Windows.Forms.Button loginbtn;
-        private System.Windows.Forms.TextBox loginEmailtxt;
+        private System.Windows.Forms.TextBox txtPassword;
+        private System.Windows.Forms.TextBox txtStaffID;
         private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.Button btnLogin;
     }
 }

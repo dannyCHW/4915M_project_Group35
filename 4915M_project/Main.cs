@@ -17,24 +17,24 @@ namespace _4915M_project
             InitializeComponent();
         }
 
-        private void goCreatebtn_Click(object sender, EventArgs e)
+        private void btnCustomerCreateAccount_Click(object sender, EventArgs e)
         {
             CustomerCreateAccout cusCreateAccount = new CustomerCreateAccout();
             cusCreateAccount.Show();
             this.Hide();
         }
 
-        private void goLoginbtn_Click(object sender, EventArgs e)
+        private void btnStaffLogin_Click(object sender, EventArgs e)
         {
-            CustomerLogin csutLogin = new CustomerLogin();
-            csutLogin.Show();
+            //StaffLogin staffLogin = new StaffLogin();
+            staffLogin.Show();
             this.Hide();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void btnCustomerLogin_Click(object sender, EventArgs e)
         {
-            StaffLogin staffLogin = new StaffLogin();
-            staffLogin.Show();
+            CustomerLogin csutLogin = new CustomerLogin();
+            csutLogin.Show();
             this.Hide();
         }
     }
