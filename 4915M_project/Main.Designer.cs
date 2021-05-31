@@ -31,12 +31,12 @@ namespace _4915M_project
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.btnCustomerLogin = new System.Windows.Forms.Button();
             this.btnStaffLogin = new System.Windows.Forms.Button();
             this.btnCustomerCreateAccount = new System.Windows.Forms.Button();
+            this.btnCustomerLogin = new System.Windows.Forms.Button();
             this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -49,6 +49,13 @@ namespace _4915M_project
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(200, 100);
             this.flowLayoutPanel1.TabIndex = 28;
+            // 
+            // panel1
+            // 
+            this.panel1.Location = new System.Drawing.Point(3, 3);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1183, 635);
+            this.panel1.TabIndex = 29;
             // 
             // flowLayoutPanel2
             // 
@@ -68,30 +75,6 @@ namespace _4915M_project
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 30;
             this.pictureBox2.TabStop = false;
-            // 
-            // panel1
-            // 
-            this.panel1.Location = new System.Drawing.Point(3, 3);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1183, 635);
-            this.panel1.TabIndex = 29;
-            // 
-            // btnCustomerLogin
-            // 
-            this.btnCustomerLogin.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCustomerLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.btnCustomerLogin.FlatAppearance.BorderSize = 0;
-            this.btnCustomerLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCustomerLogin.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCustomerLogin.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnCustomerLogin.Location = new System.Drawing.Point(466, 344);
-            this.btnCustomerLogin.Name = "btnCustomerLogin";
-            this.btnCustomerLogin.Size = new System.Drawing.Size(244, 48);
-            this.btnCustomerLogin.TabIndex = 30;
-            this.btnCustomerLogin.Text = "Customer Login";
-            this.btnCustomerLogin.UseVisualStyleBackColor = false;
-            this.btnCustomerLogin.Click += new System.EventHandler(this.btnCustomerLogin_Click_1);
             // 
             // btnStaffLogin
             // 
@@ -127,6 +110,23 @@ namespace _4915M_project
             this.btnCustomerCreateAccount.UseVisualStyleBackColor = false;
             this.btnCustomerCreateAccount.Click += new System.EventHandler(this.btnCustomerCreateAccount_Click_1);
             // 
+            // btnCustomerLogin
+            // 
+            this.btnCustomerLogin.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCustomerLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.btnCustomerLogin.FlatAppearance.BorderSize = 0;
+            this.btnCustomerLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCustomerLogin.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCustomerLogin.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnCustomerLogin.Location = new System.Drawing.Point(466, 344);
+            this.btnCustomerLogin.Name = "btnCustomerLogin";
+            this.btnCustomerLogin.Size = new System.Drawing.Size(244, 48);
+            this.btnCustomerLogin.TabIndex = 30;
+            this.btnCustomerLogin.Text = "Customer Login";
+            this.btnCustomerLogin.UseVisualStyleBackColor = false;
+            this.btnCustomerLogin.Click += new System.EventHandler(this.btnCustomerLogin_Click_1);
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -153,9 +153,9 @@ namespace _4915M_project
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button btnCustomerLogin;
         private System.Windows.Forms.Button btnStaffLogin;
         private System.Windows.Forms.Button btnCustomerCreateAccount;
+        private System.Windows.Forms.Button btnCustomerLogin;
     }
 }
 
