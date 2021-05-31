@@ -25,21 +25,9 @@ namespace _4915M_project
 
         private void btnStaffLogin_Click_1(object sender, EventArgs e)
         {
-<<<<<<< HEAD
-<<<<<<< HEAD
             StaffLogin staffLogin = new StaffLogin();
             staffLogin.Show();
             this.Hide();
-=======
-            //StaffLogin staffLogin = new StaffLogin();
-            //staffLogin.Show();
-            //this.Hide();
->>>>>>> 63103e7f9d22687fe1a5cb27c9d69dcfc91d7063
-=======
-            //StaffLogin staffLogin = new StaffLogin();
-            //staffLogin.Show();
-            //this.Hide();
->>>>>>> 63103e7f9d22687fe1a5cb27c9d69dcfc91d7063
         }
 
         private void btnCustomerCreateAccount_Click_1(object sender, EventArgs e)
@@ -47,6 +35,11 @@ namespace _4915M_project
             CustomerCreateAccout cusCreateAccount = new CustomerCreateAccout();
             cusCreateAccount.Show();
             this.Hide();
+        }
+
+        private void Main_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

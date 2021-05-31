@@ -141,6 +141,7 @@ namespace _4915M_project
             this.Controls.Add(this.flowLayoutPanel1);
             this.Name = "Main";
             this.Text = "EDE DELIVERY";
+            this.Load += new System.EventHandler(this.Main_Load);
             this.flowLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
