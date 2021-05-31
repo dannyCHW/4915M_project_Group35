@@ -27,8 +27,8 @@ namespace _4915M_project
         private void btnStaffLogin_Click(object sender, EventArgs e)
         {
             //StaffLogin staffLogin = new StaffLogin();
-            staffLogin.Show();
-            this.Hide();
+            //staffLogin.Show();
+            //this.Hide();
         }
 
         private void btnCustomerLogin_Click(object sender, EventArgs e)
