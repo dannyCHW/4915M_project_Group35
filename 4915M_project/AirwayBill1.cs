@@ -21,13 +21,13 @@ namespace _4915M_project
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //old useless code (do not delete !)
+            //old useless code (but do not delete !)
         }
 
         private Form from = new CustomerLobby();
         private void createbtn_Click(object sender, EventArgs e)
         {
-            //old useless code (do not delete !)
+            //old useless code (but do not delete !)
         }
 
 
