@@ -66,7 +66,7 @@ namespace _4915M_project
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1186, 638);
+            this.panel1.Size = new System.Drawing.Size(834, 661);
             this.panel1.TabIndex = 0;
             // 
             // btnBack
@@ -75,13 +75,13 @@ namespace _4915M_project
             this.btnBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
             this.btnBack.FlatAppearance.BorderSize = 0;
             this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBack.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBack.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBack.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnBack.Location = new System.Drawing.Point(100, 559);
+            this.btnBack.Location = new System.Drawing.Point(304, 590);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(244, 48);
             this.btnBack.TabIndex = 45;
-            this.btnBack.Text = "<-back";
+            this.btnBack.Text = "Back";
             this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click_1);
             // 
@@ -91,9 +91,9 @@ namespace _4915M_project
             this.btnCreateAccout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
             this.btnCreateAccout.FlatAppearance.BorderSize = 0;
             this.btnCreateAccout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCreateAccout.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCreateAccout.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCreateAccout.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnCreateAccout.Location = new System.Drawing.Point(480, 536);
+            this.btnCreateAccout.Location = new System.Drawing.Point(304, 525);
             this.btnCreateAccout.Name = "btnCreateAccout";
             this.btnCreateAccout.Size = new System.Drawing.Size(244, 48);
             this.btnCreateAccout.TabIndex = 44;
@@ -105,7 +105,7 @@ namespace _4915M_project
             // 
             this.pictureBox4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(452, 12);
+            this.pictureBox4.Location = new System.Drawing.Point(279, 12);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(296, 246);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -118,18 +118,18 @@ namespace _4915M_project
             this.txtPhone.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
             this.txtPhone.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPhone.ForeColor = System.Drawing.SystemColors.Window;
-            this.txtPhone.Location = new System.Drawing.Point(530, 347);
+            this.txtPhone.Location = new System.Drawing.Point(307, 347);
             this.txtPhone.Name = "txtPhone";
-            this.txtPhone.Size = new System.Drawing.Size(229, 26);
+            this.txtPhone.Size = new System.Drawing.Size(244, 26);
             this.txtPhone.TabIndex = 42;
             // 
             // pictureBox5
             // 
             this.pictureBox5.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(434, 334);
+            this.pictureBox5.Location = new System.Drawing.Point(261, 332);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(77, 59);
+            this.pictureBox5.Size = new System.Drawing.Size(40, 41);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox5.TabIndex = 41;
             this.pictureBox5.TabStop = false;
@@ -138,9 +138,9 @@ namespace _4915M_project
             // 
             this.pictureBox3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(434, 270);
+            this.pictureBox3.Location = new System.Drawing.Point(261, 274);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(77, 58);
+            this.pictureBox3.Size = new System.Drawing.Size(40, 40);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 40;
             this.pictureBox3.TabStop = false;
@@ -149,9 +149,9 @@ namespace _4915M_project
             // 
             this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(434, 463);
+            this.pictureBox2.Location = new System.Drawing.Point(252, 466);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(77, 58);
+            this.pictureBox2.Size = new System.Drawing.Size(49, 40);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 39;
             this.pictureBox2.TabStop = false;
@@ -160,9 +160,9 @@ namespace _4915M_project
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(434, 399);
+            this.pictureBox1.Location = new System.Drawing.Point(252, 403);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(77, 58);
+            this.pictureBox1.Size = new System.Drawing.Size(49, 40);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 38;
             this.pictureBox1.TabStop = false;
@@ -173,9 +173,9 @@ namespace _4915M_project
             this.txtPwd2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
             this.txtPwd2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPwd2.ForeColor = System.Drawing.SystemColors.Window;
-            this.txtPwd2.Location = new System.Drawing.Point(530, 480);
+            this.txtPwd2.Location = new System.Drawing.Point(307, 480);
             this.txtPwd2.Name = "txtPwd2";
-            this.txtPwd2.Size = new System.Drawing.Size(229, 26);
+            this.txtPwd2.Size = new System.Drawing.Size(244, 26);
             this.txtPwd2.TabIndex = 37;
             // 
             // txtPwd
@@ -184,9 +184,9 @@ namespace _4915M_project
             this.txtPwd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
             this.txtPwd.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPwd.ForeColor = System.Drawing.SystemColors.Window;
-            this.txtPwd.Location = new System.Drawing.Point(530, 417);
+            this.txtPwd.Location = new System.Drawing.Point(307, 417);
             this.txtPwd.Name = "txtPwd";
-            this.txtPwd.Size = new System.Drawing.Size(229, 26);
+            this.txtPwd.Size = new System.Drawing.Size(244, 26);
             this.txtPwd.TabIndex = 36;
             // 
             // txtEmail
@@ -195,9 +195,9 @@ namespace _4915M_project
             this.txtEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
             this.txtEmail.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmail.ForeColor = System.Drawing.SystemColors.Window;
-            this.txtEmail.Location = new System.Drawing.Point(530, 288);
+            this.txtEmail.Location = new System.Drawing.Point(307, 288);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(229, 26);
+            this.txtEmail.Size = new System.Drawing.Size(244, 26);
             this.txtEmail.TabIndex = 35;
             // 
             // CustomerCreateAccout
@@ -205,7 +205,7 @@ namespace _4915M_project
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.ClientSize = new System.Drawing.Size(1186, 638);
+            this.ClientSize = new System.Drawing.Size(834, 661);
             this.Controls.Add(this.panel1);
             this.Name = "CustomerCreateAccout";
             this.Text = "EDE Delivery";
