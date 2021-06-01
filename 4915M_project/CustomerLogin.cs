@@ -16,11 +16,18 @@ namespace _4915M_project
         {
             InitializeComponent();
         }
-
         private void btnLogin_Click(object sender, EventArgs e)
         {
+
             CustomerLobby custLobby = new CustomerLobby();
             custLobby.Show();
+            this.Hide();
+        }
+
+        private void btnBack_Click_1(object sender, EventArgs e)
+        {
+            Main main = new Main();
+            main.Show();
             this.Hide();
         }
     }

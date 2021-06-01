@@ -17,16 +17,24 @@ namespace _4915M_project
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void BookingPickup_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSubmit_Click(object sender, EventArgs e)
         {
             CustomerLobby custLobby = new CustomerLobby();
             custLobby.Show();
             this.Hide();
+
         }
 
-        private void BookingPickup_Load(object sender, EventArgs e)
+        private void btnBack_Click(object sender, EventArgs e)
         {
-
+            CustomerLobby custLobby = new CustomerLobby();
+            custLobby.Show();
+            this.Hide();
         }
     }
 }

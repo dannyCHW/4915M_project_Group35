@@ -16,5 +16,21 @@ namespace _4915M_project
         {
             InitializeComponent();
         }
+
+        private void StaffLogin_Load(object sender, EventArgs e)
+        {
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            Main main = new Main();
+            main.Show();
+            this.Hide();
+        }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

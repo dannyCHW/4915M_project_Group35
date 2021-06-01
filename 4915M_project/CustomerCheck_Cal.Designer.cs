@@ -29,8 +29,11 @@ namespace _4915M_project
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.btnCheck = new System.Windows.Forms.Button();
+            this.btnPayment = new System.Windows.Forms.Button();
+            this.btnBack = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.txtReason = new System.Windows.Forms.RichTextBox();
             this.txtStatus = new System.Windows.Forms.TextBox();
@@ -38,185 +41,220 @@ namespace _4915M_project
             this.label5 = new System.Windows.Forms.Label();
             this.txtCheckOrderNO = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.btnPayment = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.txtFare = new System.Windows.Forms.TextBox();
-            this.btnBack = new System.Windows.Forms.Button();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // label1
+            // panel1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Aqua;
-            this.label1.Location = new System.Drawing.Point(185, 206);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(132, 38);
-            this.label1.TabIndex = 83;
-            this.label1.Text = "Output:";
+            this.panel1.Controls.Add(this.btnCheck);
+            this.panel1.Controls.Add(this.btnPayment);
+            this.panel1.Controls.Add(this.btnBack);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.label9);
+            this.panel1.Controls.Add(this.txtReason);
+            this.panel1.Controls.Add(this.txtStatus);
+            this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.txtCheckOrderNO);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.txtFare);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1250, 603);
+            this.panel1.TabIndex = 0;
             // 
             // btnCheck
             // 
-            this.btnCheck.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(32)))), ((int)(((byte)(104)))));
-            this.btnCheck.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.btnCheck.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCheck.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnCheck.Location = new System.Drawing.Point(781, 124);
+            this.btnCheck.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnCheck.AutoSize = true;
+            this.btnCheck.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.btnCheck.FlatAppearance.BorderSize = 0;
+            this.btnCheck.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCheck.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCheck.ForeColor = System.Drawing.Color.White;
+            this.btnCheck.Location = new System.Drawing.Point(841, 130);
             this.btnCheck.Name = "btnCheck";
-            this.btnCheck.Size = new System.Drawing.Size(144, 35);
-            this.btnCheck.TabIndex = 82;
-            this.btnCheck.Text = "Click to check";
+            this.btnCheck.Size = new System.Drawing.Size(167, 34);
+            this.btnCheck.TabIndex = 124;
+            this.btnCheck.Text = "Check to check";
             this.btnCheck.UseVisualStyleBackColor = false;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
-            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.label9.Location = new System.Drawing.Point(262, 347);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(191, 29);
-            this.label9.TabIndex = 81;
-            this.label9.Text = "Reject Reason:";
-            // 
-            // txtReason
-            // 
-            this.txtReason.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.txtReason.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtReason.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.txtReason.Location = new System.Drawing.Point(471, 347);
-            this.txtReason.Name = "txtReason";
-            this.txtReason.ReadOnly = true;
-            this.txtReason.Size = new System.Drawing.Size(288, 100);
-            this.txtReason.TabIndex = 80;
-            this.txtReason.Text = "output here (if have)";
-            // 
-            // txtStatus
-            // 
-            this.txtStatus.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtStatus.Location = new System.Drawing.Point(288, 279);
-            this.txtStatus.Name = "txtStatus";
-            this.txtStatus.ReadOnly = true;
-            this.txtStatus.Size = new System.Drawing.Size(272, 27);
-            this.txtStatus.TabIndex = 79;
-            this.txtStatus.Text = "(output)";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label6.Location = new System.Drawing.Point(196, 278);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(86, 28);
-            this.label6.TabIndex = 78;
-            this.label6.Text = "Status:";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label5.Location = new System.Drawing.Point(251, 124);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(187, 28);
-            this.label5.TabIndex = 77;
-            this.label5.Text = "Order Number:";
-            // 
-            // txtCheckOrderNO
-            // 
-            this.txtCheckOrderNO.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCheckOrderNO.Location = new System.Drawing.Point(460, 125);
-            this.txtCheckOrderNO.Name = "txtCheckOrderNO";
-            this.txtCheckOrderNO.Size = new System.Drawing.Size(272, 27);
-            this.txtCheckOrderNO.TabIndex = 76;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Red;
-            this.label4.Location = new System.Drawing.Point(63, 31);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(589, 38);
-            this.label4.TabIndex = 75;
-            this.label4.Text = "Airway-bill Status and Calculate Fare";
             // 
             // btnPayment
             // 
-            this.btnPayment.BackColor = System.Drawing.Color.DodgerBlue;
-            this.btnPayment.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPayment.Location = new System.Drawing.Point(731, 481);
+            this.btnPayment.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnPayment.AutoSize = true;
+            this.btnPayment.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.btnPayment.FlatAppearance.BorderSize = 0;
+            this.btnPayment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPayment.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPayment.ForeColor = System.Drawing.Color.White;
+            this.btnPayment.Location = new System.Drawing.Point(798, 516);
             this.btnPayment.Name = "btnPayment";
-            this.btnPayment.Size = new System.Drawing.Size(338, 80);
-            this.btnPayment.TabIndex = 74;
+            this.btnPayment.Size = new System.Drawing.Size(338, 50);
+            this.btnPayment.TabIndex = 123;
             this.btnPayment.Text = "Confirm and go to payment ->";
             this.btnPayment.UseVisualStyleBackColor = false;
             this.btnPayment.Click += new System.EventHandler(this.btnPayment_Click);
             // 
+            // btnBack
+            // 
+            this.btnBack.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnBack.AutoSize = true;
+            this.btnBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.btnBack.FlatAppearance.BorderSize = 0;
+            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBack.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBack.ForeColor = System.Drawing.Color.White;
+            this.btnBack.Location = new System.Drawing.Point(240, 516);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(338, 50);
+            this.btnBack.TabIndex = 122;
+            this.btnBack.Text = "<- Back";
+            this.btnBack.UseVisualStyleBackColor = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click_1);
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Red;
+            this.label1.Location = new System.Drawing.Point(252, 211);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(132, 38);
+            this.label1.TabIndex = 121;
+            this.label1.Text = "Output:";
+            // 
+            // label9
+            // 
+            this.label9.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
+            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.label9.Location = new System.Drawing.Point(329, 352);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(191, 29);
+            this.label9.TabIndex = 119;
+            this.label9.Text = "Reject Reason:";
+            // 
+            // txtReason
+            // 
+            this.txtReason.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtReason.BackColor = System.Drawing.SystemColors.Control;
+            this.txtReason.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtReason.ForeColor = System.Drawing.Color.Black;
+            this.txtReason.Location = new System.Drawing.Point(538, 352);
+            this.txtReason.Name = "txtReason";
+            this.txtReason.ReadOnly = true;
+            this.txtReason.Size = new System.Drawing.Size(288, 100);
+            this.txtReason.TabIndex = 118;
+            this.txtReason.Text = "output here (if have)";
+            // 
+            // txtStatus
+            // 
+            this.txtStatus.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtStatus.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtStatus.Location = new System.Drawing.Point(355, 284);
+            this.txtStatus.Name = "txtStatus";
+            this.txtStatus.ReadOnly = true;
+            this.txtStatus.Size = new System.Drawing.Size(272, 27);
+            this.txtStatus.TabIndex = 117;
+            this.txtStatus.Text = "(output)";
+            // 
+            // label6
+            // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.label6.Location = new System.Drawing.Point(263, 283);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(86, 28);
+            this.label6.TabIndex = 116;
+            this.label6.Text = "Status:";
+            // 
+            // label5
+            // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.label5.Location = new System.Drawing.Point(318, 129);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(187, 28);
+            this.label5.TabIndex = 115;
+            this.label5.Text = "Order Number:";
+            // 
+            // txtCheckOrderNO
+            // 
+            this.txtCheckOrderNO.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtCheckOrderNO.BackColor = System.Drawing.SystemColors.Control;
+            this.txtCheckOrderNO.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCheckOrderNO.Location = new System.Drawing.Point(527, 130);
+            this.txtCheckOrderNO.Name = "txtCheckOrderNO";
+            this.txtCheckOrderNO.Size = new System.Drawing.Size(272, 27);
+            this.txtCheckOrderNO.TabIndex = 114;
+            // 
+            // label4
+            // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Black;
+            this.label4.Location = new System.Drawing.Point(114, 37);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(589, 38);
+            this.label4.TabIndex = 113;
+            this.label4.Text = "Airway-bill Status and Calculate Fare";
+            // 
             // label3
             // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label3.Location = new System.Drawing.Point(598, 279);
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.label3.Location = new System.Drawing.Point(665, 284);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(70, 28);
-            this.label3.TabIndex = 73;
+            this.label3.TabIndex = 112;
             this.label3.Text = "Fare:";
             // 
             // txtFare
             // 
+            this.txtFare.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtFare.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFare.Location = new System.Drawing.Point(690, 279);
+            this.txtFare.Location = new System.Drawing.Point(757, 284);
             this.txtFare.Name = "txtFare";
             this.txtFare.ReadOnly = true;
             this.txtFare.Size = new System.Drawing.Size(272, 27);
-            this.txtFare.TabIndex = 72;
+            this.txtFare.TabIndex = 111;
             this.txtFare.Text = "HK$  (output)";
-            // 
-            // btnBack
-            // 
-            this.btnBack.BackColor = System.Drawing.Color.DodgerBlue;
-            this.btnBack.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBack.Location = new System.Drawing.Point(173, 481);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(338, 80);
-            this.btnBack.TabIndex = 108;
-            this.btnBack.Text = "<- Back";
-            this.btnBack.UseVisualStyleBackColor = false;
-            this.btnBack.Click += new System.EventHandler(this.button2_Click);
             // 
             // CustomerCheck_Cal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(39)))), ((int)(((byte)(40)))));
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(1250, 603);
-            this.Controls.Add(this.btnBack);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.btnCheck);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.txtReason);
-            this.Controls.Add(this.txtStatus);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.txtCheckOrderNO);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.btnPayment);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.txtFare);
+            this.Controls.Add(this.panel1);
             this.Name = "CustomerCheck_Cal";
             this.Text = "CustomerCheck_Cal";
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button btnPayment;
+        private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnCheck;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.RichTextBox txtReason;
         private System.Windows.Forms.TextBox txtStatus;
@@ -224,9 +262,8 @@ namespace _4915M_project
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtCheckOrderNO;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button btnPayment;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtFare;
-        private System.Windows.Forms.Button btnBack;
+        private System.Windows.Forms.Button btnCheck;
     }
 }
