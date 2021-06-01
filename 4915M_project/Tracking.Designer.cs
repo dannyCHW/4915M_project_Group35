@@ -79,7 +79,7 @@ namespace _4915M_project
             // 
             this.btnCheck.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnCheck.AutoSize = true;
-            this.btnCheck.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.btnCheck.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.btnCheck.FlatAppearance.BorderSize = 0;
             this.btnCheck.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCheck.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -96,7 +96,7 @@ namespace _4915M_project
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Red;
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.label3.Location = new System.Drawing.Point(246, 273);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(132, 38);

@@ -137,7 +137,6 @@ namespace _4915M_project
             this.label4.Size = new System.Drawing.Size(116, 28);
             this.label4.TabIndex = 116;
             this.label4.Text = "Choice 3";
-
             // 
             // label3
             // 
@@ -150,7 +149,6 @@ namespace _4915M_project
             this.label3.Size = new System.Drawing.Size(116, 28);
             this.label3.TabIndex = 114;
             this.label3.Text = "Choice 2";
-
             // 
             // label2
             // 
@@ -163,7 +161,6 @@ namespace _4915M_project
             this.label2.Size = new System.Drawing.Size(116, 28);
             this.label2.TabIndex = 113;
             this.label2.Text = "Choice 1";
-
             // 
             // label1
             // 
@@ -176,7 +173,6 @@ namespace _4915M_project
             this.label1.Size = new System.Drawing.Size(154, 38);
             this.label1.TabIndex = 110;
             this.label1.Text = "Payment";
-
             // 
             // Payment
             // 
