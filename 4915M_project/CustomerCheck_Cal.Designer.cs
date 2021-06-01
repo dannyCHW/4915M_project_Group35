@@ -64,7 +64,7 @@ namespace _4915M_project
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1250, 603);
+            this.panel1.Size = new System.Drawing.Size(918, 622);
             this.panel1.TabIndex = 0;
             // 
             // btnCheck
@@ -76,7 +76,7 @@ namespace _4915M_project
             this.btnCheck.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCheck.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCheck.ForeColor = System.Drawing.Color.White;
-            this.btnCheck.Location = new System.Drawing.Point(841, 130);
+            this.btnCheck.Location = new System.Drawing.Point(675, 130);
             this.btnCheck.Name = "btnCheck";
             this.btnCheck.Size = new System.Drawing.Size(167, 34);
             this.btnCheck.TabIndex = 124;
@@ -92,7 +92,7 @@ namespace _4915M_project
             this.btnPayment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPayment.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPayment.ForeColor = System.Drawing.Color.White;
-            this.btnPayment.Location = new System.Drawing.Point(798, 516);
+            this.btnPayment.Location = new System.Drawing.Point(568, 560);
             this.btnPayment.Name = "btnPayment";
             this.btnPayment.Size = new System.Drawing.Size(338, 50);
             this.btnPayment.TabIndex = 123;
@@ -109,7 +109,7 @@ namespace _4915M_project
             this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBack.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBack.ForeColor = System.Drawing.Color.White;
-            this.btnBack.Location = new System.Drawing.Point(240, 516);
+            this.btnBack.Location = new System.Drawing.Point(12, 560);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(338, 50);
             this.btnBack.TabIndex = 122;
@@ -123,7 +123,7 @@ namespace _4915M_project
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(252, 211);
+            this.label1.Location = new System.Drawing.Point(86, 211);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(132, 38);
             this.label1.TabIndex = 121;
@@ -135,7 +135,7 @@ namespace _4915M_project
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold);
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.label9.Location = new System.Drawing.Point(329, 352);
+            this.label9.Location = new System.Drawing.Point(163, 352);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(191, 29);
             this.label9.TabIndex = 119;
@@ -147,7 +147,7 @@ namespace _4915M_project
             this.txtReason.BackColor = System.Drawing.SystemColors.Control;
             this.txtReason.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtReason.ForeColor = System.Drawing.Color.Black;
-            this.txtReason.Location = new System.Drawing.Point(538, 352);
+            this.txtReason.Location = new System.Drawing.Point(372, 352);
             this.txtReason.Name = "txtReason";
             this.txtReason.ReadOnly = true;
             this.txtReason.Size = new System.Drawing.Size(288, 100);
@@ -158,7 +158,7 @@ namespace _4915M_project
             // 
             this.txtStatus.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtStatus.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtStatus.Location = new System.Drawing.Point(355, 284);
+            this.txtStatus.Location = new System.Drawing.Point(189, 284);
             this.txtStatus.Name = "txtStatus";
             this.txtStatus.ReadOnly = true;
             this.txtStatus.Size = new System.Drawing.Size(272, 27);
@@ -171,7 +171,7 @@ namespace _4915M_project
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.label6.Location = new System.Drawing.Point(263, 283);
+            this.label6.Location = new System.Drawing.Point(97, 283);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(86, 28);
             this.label6.TabIndex = 116;
@@ -183,7 +183,7 @@ namespace _4915M_project
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.label5.Location = new System.Drawing.Point(318, 129);
+            this.label5.Location = new System.Drawing.Point(152, 129);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(187, 28);
             this.label5.TabIndex = 115;
@@ -194,7 +194,7 @@ namespace _4915M_project
             this.txtCheckOrderNO.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtCheckOrderNO.BackColor = System.Drawing.SystemColors.Control;
             this.txtCheckOrderNO.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCheckOrderNO.Location = new System.Drawing.Point(527, 130);
+            this.txtCheckOrderNO.Location = new System.Drawing.Point(361, 130);
             this.txtCheckOrderNO.Name = "txtCheckOrderNO";
             this.txtCheckOrderNO.Size = new System.Drawing.Size(272, 27);
             this.txtCheckOrderNO.TabIndex = 114;
@@ -205,7 +205,7 @@ namespace _4915M_project
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(114, 37);
+            this.label4.Location = new System.Drawing.Point(12, 9);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(589, 38);
             this.label4.TabIndex = 113;
@@ -217,7 +217,7 @@ namespace _4915M_project
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.label3.Location = new System.Drawing.Point(665, 284);
+            this.label3.Location = new System.Drawing.Point(499, 284);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(70, 28);
             this.label3.TabIndex = 112;
@@ -227,7 +227,7 @@ namespace _4915M_project
             // 
             this.txtFare.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtFare.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFare.Location = new System.Drawing.Point(757, 284);
+            this.txtFare.Location = new System.Drawing.Point(591, 284);
             this.txtFare.Name = "txtFare";
             this.txtFare.ReadOnly = true;
             this.txtFare.Size = new System.Drawing.Size(272, 27);
@@ -239,7 +239,7 @@ namespace _4915M_project
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(1250, 603);
+            this.ClientSize = new System.Drawing.Size(918, 622);
             this.Controls.Add(this.panel1);
             this.Name = "CustomerCheck_Cal";
             this.Text = "CustomerCheck_Cal";

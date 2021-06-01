@@ -33,5 +33,16 @@ namespace _4915M_project.Properties {
                 return ((string)(this["des_dbConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=D:\\VsProject\\4915M_project\\des.accd" +
+            "b")]
+        public string desConnectionString {
+            get {
+                return ((string)(this["desConnectionString"]));
+            }
+        }
     }
 }

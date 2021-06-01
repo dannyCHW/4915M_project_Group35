@@ -34,15 +34,15 @@ namespace _4915M_project
             this.panel1 = new System.Windows.Forms.Panel();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.btnCustomerCreateAccount = new System.Windows.Forms.Button();
-            this.btnStaffLogin = new System.Windows.Forms.Button();
-            this.btnCustomerLogin = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.btnStaffLogin = new System.Windows.Forms.Button();
+            this.btnCustomerCreateAccount = new System.Windows.Forms.Button();
+            this.btnCustomerLogin = new System.Windows.Forms.Button();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // flowLayoutPanel1
@@ -80,42 +80,39 @@ namespace _4915M_project
             this.panel2.Size = new System.Drawing.Size(834, 661);
             this.panel2.TabIndex = 33;
             // 
+            // panel3
+            // 
+            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.panel3.Controls.Add(this.pictureBox2);
+            this.panel3.Controls.Add(this.btnStaffLogin);
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(565, 661);
+            this.panel3.TabIndex = 37;
+            // 
             // pictureBox2
             // 
             this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(126, 180);
+            this.pictureBox2.Location = new System.Drawing.Point(122, 180);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(296, 246);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 33;
             this.pictureBox2.TabStop = false;
             // 
-            // btnCustomerCreateAccount
-            // 
-            this.btnCustomerCreateAccount.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnCustomerCreateAccount.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.btnCustomerCreateAccount.FlatAppearance.BorderSize = 0;
-            this.btnCustomerCreateAccount.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCustomerCreateAccount.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCustomerCreateAccount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.btnCustomerCreateAccount.Location = new System.Drawing.Point(578, 246);
-            this.btnCustomerCreateAccount.Name = "btnCustomerCreateAccount";
-            this.btnCustomerCreateAccount.Size = new System.Drawing.Size(244, 48);
-            this.btnCustomerCreateAccount.TabIndex = 36;
-            this.btnCustomerCreateAccount.Text = "Create Accout";
-            this.btnCustomerCreateAccount.UseVisualStyleBackColor = false;
-            this.btnCustomerCreateAccount.Click += new System.EventHandler(this.btnCustomerCreateAccount_Click);
-            // 
             // btnStaffLogin
             // 
-            this.btnStaffLogin.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnStaffLogin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnStaffLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
             this.btnStaffLogin.FlatAppearance.BorderSize = 0;
             this.btnStaffLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnStaffLogin.Font = new System.Drawing.Font("Century Gothic", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnStaffLogin.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnStaffLogin.Location = new System.Drawing.Point(0, 632);
+            this.btnStaffLogin.Location = new System.Drawing.Point(-4, 632);
             this.btnStaffLogin.Name = "btnStaffLogin";
             this.btnStaffLogin.Size = new System.Drawing.Size(95, 26);
             this.btnStaffLogin.TabIndex = 35;
@@ -123,31 +120,37 @@ namespace _4915M_project
             this.btnStaffLogin.UseVisualStyleBackColor = false;
             this.btnStaffLogin.Click += new System.EventHandler(this.btnStaffLogin_Click);
             // 
+            // btnCustomerCreateAccount
+            // 
+            this.btnCustomerCreateAccount.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btnCustomerCreateAccount.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnCustomerCreateAccount.FlatAppearance.BorderSize = 0;
+            this.btnCustomerCreateAccount.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCustomerCreateAccount.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCustomerCreateAccount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.btnCustomerCreateAccount.Location = new System.Drawing.Point(578, 244);
+            this.btnCustomerCreateAccount.Name = "btnCustomerCreateAccount";
+            this.btnCustomerCreateAccount.Size = new System.Drawing.Size(244, 48);
+            this.btnCustomerCreateAccount.TabIndex = 36;
+            this.btnCustomerCreateAccount.Text = "Create Accout";
+            this.btnCustomerCreateAccount.UseVisualStyleBackColor = false;
+            this.btnCustomerCreateAccount.Click += new System.EventHandler(this.btnCustomerCreateAccount_Click);
+            // 
             // btnCustomerLogin
             // 
-            this.btnCustomerLogin.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnCustomerLogin.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btnCustomerLogin.BackColor = System.Drawing.Color.WhiteSmoke;
             this.btnCustomerLogin.FlatAppearance.BorderSize = 0;
             this.btnCustomerLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCustomerLogin.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCustomerLogin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.btnCustomerLogin.Location = new System.Drawing.Point(578, 312);
+            this.btnCustomerLogin.Location = new System.Drawing.Point(578, 310);
             this.btnCustomerLogin.Name = "btnCustomerLogin";
             this.btnCustomerLogin.Size = new System.Drawing.Size(244, 48);
             this.btnCustomerLogin.TabIndex = 34;
             this.btnCustomerLogin.Text = "Login";
             this.btnCustomerLogin.UseVisualStyleBackColor = false;
             this.btnCustomerLogin.Click += new System.EventHandler(this.btnCustomerLogin_Click);
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.panel3.Controls.Add(this.pictureBox2);
-            this.panel3.Controls.Add(this.btnStaffLogin);
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(572, 661);
-            this.panel3.TabIndex = 37;
             // 
             // Main
             // 
@@ -163,8 +166,8 @@ namespace _4915M_project
             this.Load += new System.EventHandler(this.Main_Load);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }

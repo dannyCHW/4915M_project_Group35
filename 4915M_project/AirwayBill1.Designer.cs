@@ -772,7 +772,7 @@ namespace _4915M_project
             // 
             this.textBox10.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.textBox10.Font = new System.Drawing.Font("PMingLiU", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.textBox10.Location = new System.Drawing.Point(115, 394);
+            this.textBox10.Location = new System.Drawing.Point(114, 389);
             this.textBox10.Name = "textBox10";
             this.textBox10.Size = new System.Drawing.Size(348, 27);
             this.textBox10.TabIndex = 82;
@@ -795,7 +795,7 @@ namespace _4915M_project
             this.textBox8.Font = new System.Drawing.Font("PMingLiU", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.textBox8.Location = new System.Drawing.Point(114, 207);
             this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(262, 27);
+            this.textBox8.Size = new System.Drawing.Size(348, 27);
             this.textBox8.TabIndex = 80;
             // 
             // label28

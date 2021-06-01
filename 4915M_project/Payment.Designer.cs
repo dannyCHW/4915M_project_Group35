@@ -55,7 +55,7 @@ namespace _4915M_project
             this.btnCash.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnCash.Location = new System.Drawing.Point(0, 0);
             this.btnCash.Name = "btnCash";
-            this.btnCash.Size = new System.Drawing.Size(1250, 603);
+            this.btnCash.Size = new System.Drawing.Size(918, 622);
             this.btnCash.TabIndex = 0;
             // 
             // btnBack
@@ -67,7 +67,7 @@ namespace _4915M_project
             this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBack.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBack.ForeColor = System.Drawing.Color.White;
-            this.btnBack.Location = new System.Drawing.Point(187, 498);
+            this.btnBack.Location = new System.Drawing.Point(12, 565);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(209, 45);
             this.btnBack.TabIndex = 121;
@@ -84,7 +84,7 @@ namespace _4915M_project
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(583, 353);
+            this.button3.Location = new System.Drawing.Point(417, 353);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(270, 80);
             this.button3.TabIndex = 120;
@@ -101,7 +101,7 @@ namespace _4915M_project
             this.btnCredit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCredit.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCredit.ForeColor = System.Drawing.Color.White;
-            this.btnCredit.Location = new System.Drawing.Point(583, 240);
+            this.btnCredit.Location = new System.Drawing.Point(417, 240);
             this.btnCredit.Name = "btnCredit";
             this.btnCredit.Size = new System.Drawing.Size(270, 80);
             this.btnCredit.TabIndex = 119;
@@ -118,7 +118,7 @@ namespace _4915M_project
             this.btnEBA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEBA.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEBA.ForeColor = System.Drawing.Color.White;
-            this.btnEBA.Location = new System.Drawing.Point(583, 131);
+            this.btnEBA.Location = new System.Drawing.Point(417, 131);
             this.btnEBA.Name = "btnEBA";
             this.btnEBA.Size = new System.Drawing.Size(270, 80);
             this.btnEBA.TabIndex = 118;
@@ -132,7 +132,7 @@ namespace _4915M_project
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.label4.Location = new System.Drawing.Point(386, 379);
+            this.label4.Location = new System.Drawing.Point(220, 379);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(116, 28);
             this.label4.TabIndex = 116;
@@ -144,7 +144,7 @@ namespace _4915M_project
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.label3.Location = new System.Drawing.Point(386, 265);
+            this.label3.Location = new System.Drawing.Point(220, 265);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(116, 28);
             this.label3.TabIndex = 114;
@@ -156,7 +156,7 @@ namespace _4915M_project
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.label2.Location = new System.Drawing.Point(386, 156);
+            this.label2.Location = new System.Drawing.Point(220, 156);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(116, 28);
             this.label2.TabIndex = 113;
@@ -168,7 +168,7 @@ namespace _4915M_project
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(118, 31);
+            this.label1.Location = new System.Drawing.Point(5, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(154, 38);
             this.label1.TabIndex = 110;
@@ -179,7 +179,7 @@ namespace _4915M_project
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(39)))), ((int)(((byte)(40)))));
-            this.ClientSize = new System.Drawing.Size(1250, 603);
+            this.ClientSize = new System.Drawing.Size(918, 622);
             this.Controls.Add(this.btnCash);
             this.Name = "Payment";
             this.Text = "Payment";
