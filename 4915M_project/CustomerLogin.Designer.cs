@@ -53,90 +53,98 @@ namespace _4915M_project
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.txtPasswrod);
             this.panel1.Controls.Add(this.txtEmail);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1186, 637);
-            this.panel1.TabIndex = 36;
+            this.panel1.Size = new System.Drawing.Size(1186, 638);
+            this.panel1.TabIndex = 0;
             // 
             // btnBack
             // 
+            this.btnBack.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
             this.btnBack.FlatAppearance.BorderSize = 0;
             this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBack.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBack.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnBack.Location = new System.Drawing.Point(102, 570);
+            this.btnBack.Location = new System.Drawing.Point(112, 570);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(244, 48);
-            this.btnBack.TabIndex = 42;
+            this.btnBack.TabIndex = 63;
             this.btnBack.Text = "<-back";
             this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click_1);
             // 
             // btnLogin
             // 
+            this.btnLogin.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
             this.btnLogin.FlatAppearance.BorderSize = 0;
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogin.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnLogin.Location = new System.Drawing.Point(483, 494);
+            this.btnLogin.Location = new System.Drawing.Point(493, 494);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(244, 48);
-            this.btnLogin.TabIndex = 41;
+            this.btnLogin.TabIndex = 62;
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = false;
-            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click_1);
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // pictureBox4
             // 
+            this.pictureBox4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(456, 3);
+            this.pictureBox4.Location = new System.Drawing.Point(466, 3);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(296, 246);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 40;
+            this.pictureBox4.TabIndex = 61;
             this.pictureBox4.TabStop = false;
             // 
             // pictureBox3
             // 
+            this.pictureBox3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(439, 300);
+            this.pictureBox3.Location = new System.Drawing.Point(449, 300);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(77, 58);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 39;
+            this.pictureBox3.TabIndex = 60;
             this.pictureBox3.TabStop = false;
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(439, 373);
+            this.pictureBox1.Location = new System.Drawing.Point(449, 373);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(77, 58);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 38;
+            this.pictureBox1.TabIndex = 59;
             this.pictureBox1.TabStop = false;
             // 
             // txtPasswrod
             // 
+            this.txtPasswrod.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtPasswrod.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
             this.txtPasswrod.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPasswrod.ForeColor = System.Drawing.SystemColors.Window;
-            this.txtPasswrod.Location = new System.Drawing.Point(537, 388);
+            this.txtPasswrod.Location = new System.Drawing.Point(547, 388);
             this.txtPasswrod.Name = "txtPasswrod";
             this.txtPasswrod.Size = new System.Drawing.Size(229, 26);
-            this.txtPasswrod.TabIndex = 37;
+            this.txtPasswrod.TabIndex = 58;
             // 
             // txtEmail
             // 
+            this.txtEmail.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
             this.txtEmail.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmail.ForeColor = System.Drawing.SystemColors.Window;
-            this.txtEmail.Location = new System.Drawing.Point(537, 313);
+            this.txtEmail.Location = new System.Drawing.Point(547, 313);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(229, 26);
-            this.txtEmail.TabIndex = 36;
+            this.txtEmail.TabIndex = 57;
             // 
             // CustomerLogin
             // 

@@ -16,15 +16,14 @@ namespace _4915M_project
         {
             InitializeComponent();
         }
-
-        private void btnCreateAccout_Click(object sender, EventArgs e)
+        private void btnCreateAccout_Click_1(object sender, EventArgs e)
         {
             Main main = new Main();
             main.Show();
             this.Hide();
         }
 
-        private void btnBack_Click(object sender, EventArgs e)
+        private void btnBack_Click_1(object sender, EventArgs e)
         {
             Main main = new Main();
             main.Show();

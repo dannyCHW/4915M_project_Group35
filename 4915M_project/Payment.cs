@@ -16,29 +16,28 @@ namespace _4915M_project
         {
             InitializeComponent();
         }
-
-        private void btnBack_Click(object sender, EventArgs e)
+        private void btnBack_Click_1(object sender, EventArgs e)
         {
             CustomerCheck_Cal cusCheck = new CustomerCheck_Cal();
             cusCheck.Show();
             this.Hide();
         }
 
-        private void btnExtenalBilling_Click(object sender, EventArgs e)
+        private void btnEBA_Click(object sender, EventArgs e)
         {
             CustomerLobby custLobby = new CustomerLobby();
             custLobby.Show();
             this.Hide();
         }
 
-        private void btnCheque_credit_Click(object sender, EventArgs e)
+        private void btnCredit_Click(object sender, EventArgs e)
         {
             CustomerLobby custLobby = new CustomerLobby();
             custLobby.Show();
             this.Hide();
         }
 
-        private void btnCash_Click(object sender, EventArgs e)
+        private void button3_Click(object sender, EventArgs e)
         {
             CustomerLobby custLobby = new CustomerLobby();
             custLobby.Show();
