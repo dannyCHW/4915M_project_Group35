@@ -61,16 +61,25 @@ namespace _4915M_project
                 OleDbDataAdapter dataAdapter = new OleDbDataAdapter(sqlStr, connStr);
                 dataAdapter.Fill(dt);
 
-                if (dt.Rows.Count > 0) ////////有個小問題 待fix , 第一次 Input個已經註冊嘅email 會warning , 但之後無論點改個txtEmail都唔會過到 （再check phone）
+
+                if (dt.Rows.Count > 0)
                 {
                     dataAdapter.Dispose();
-                    MessageBox.Show("The email or phone already has been used", "Invalid Email", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    dt.Clear();
 
-                } else {
+                    MessageBox.Show("This Email Already Been used", "Invalid Email", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                }
+
+                /*
+                 * 屌！！！！！！！！！！！！未check到Phone Number 用左未
+                 */
+                else {
+
+                    ;
                     con.Open();
 
-
-                    string sqlString = "Insert into Customer (cusName, cusPhone, cusPassword, cusEmail) values ('"  + name + "','" + phone + "','" + pwd + "','" + email + "');"; 
+                    string sqlString = "Insert into Customer (cusName, cusPhone, cusPassword, cusEmail) values ('" + name + "','" + phone + "','" + pwd + "','" + email + "');";
 
 
                     cmd = new OleDbCommand(sqlString, con);
