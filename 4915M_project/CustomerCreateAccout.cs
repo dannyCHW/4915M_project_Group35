@@ -18,9 +18,23 @@ namespace _4915M_project
         }
         private void btnCreateAccout_Click_1(object sender, EventArgs e)
         {
-            Main main = new Main();
-            main.Show();
-            this.Hide();
+            if (txtPhone.Text == "" || txtEmail.Text == "" || txtPwd2.Text == "" || txtPwd.Text == "") {
+                MessageBox.Show("Please Enter All The Information", "Invalid Email", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (!this.txtEmail.Text.Contains('@') || !this.txtEmail.Text.Contains('.'))
+            {
+                MessageBox.Show("Please Enter A Valid Email", "Invalid Email", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            } else if (txtPhone.Text.Length < 7) {
+                MessageBox.Show("Please Enter A Valid Phone Number", "Invalid Email", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            } else if (txtPwd.Text != txtPwd2.Text) {
+                MessageBox.Show("Please Enter A Same Password", "Invalid Email", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                Main main = new Main();
+                main.Show();
+                this.Hide();
+            }
         }
 
         private void btnBack_Click_1(object sender, EventArgs e)
@@ -29,5 +43,11 @@ namespace _4915M_project
             main.Show();
             this.Hide();
         }
+
+        private void CustomerCreateAccout_Load(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }
