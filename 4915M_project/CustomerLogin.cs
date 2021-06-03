@@ -32,44 +32,47 @@ namespace _4915M_project
             String pswd = txtPassword.Text;
             String vemail = "";
             String vpswd = "";
-            //Console.WriteLine(email + " " + pswd);
 
-            string sqlStr = "Select cusEmail from Customer where cusEmail LIKE '" + email + "'";
+            string sqlStr = "Select cusEmail, cusPassword from Customer where cusEmail LIKE '" + email + "'";
             OleDbDataAdapter dataAdapter = new OleDbDataAdapter(sqlStr, connStr);
             dataAdapter.Fill(dt);
 
             try
             {
-                dt.Rows[0]["cusEmail"].ToString();
-            } catch (Exception)
+                if (dt.Rows.Count > 0){
+                    vemail = dt.Rows[0]["cusEmail"].ToString();
+                    vpswd = dt.Rows[0]["cusPassword"].ToString();
+                    //Console.WriteLine(vpswd + vemail);
+
+                    if (vemail == email && vpswd == pswd)
+                    {
+                        CustomerLobby cusPage = new CustomerLobby();
+                        vemail = null;
+                        vpswd = null;
+                        cusPage.Show();
+                        this.Close();
+                    }
+                    else
+                    {
+                        //temp message, maybe change to messageBox?
+                        Console.WriteLine("Wrong password or email");
+                    }
+
+                } 
+                else
+                {
+                    throw new Exception("");
+                }
+                
+            } 
+            catch (Exception)
             {
-                //temp message
+                //temp message, maybe change to messageBox?
                 Console.WriteLine("No such account, plz got to register");
             }
 
-            sqlStr = "Select cusEmail, cusPassword from Customer where cusEmail LIKE '" + email + "'";
-            dataAdapter = new OleDbDataAdapter(sqlStr, connStr);
-            dataAdapter.Fill(dt);
-
-            vemail = dt.Rows[0]["cusEmail"].ToString();
-            vpswd = dt.Rows[0]["cusPassword"].ToString();
-
             dataAdapter.Dispose();
 
-            if (vemail == email && vpswd == pswd)
-            {
-                CustomerLobby custLobby = new CustomerLobby();
-                custLobby.Show();
-                this.Close();
-            }
-
-            //for (int i = 0; i < dt.Rows.Count; i++)
-            //{
-            //Console.WriteLine(dt.Rows[i]["cusEmail"].ToString());
-            //}
-
-            
-            
         }
 
         private void btnBack_Click_1(object sender, EventArgs e)
