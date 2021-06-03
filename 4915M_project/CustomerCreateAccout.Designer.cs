@@ -209,7 +209,6 @@ namespace _4915M_project
             this.Controls.Add(this.panel1);
             this.Name = "CustomerCreateAccout";
             this.Text = "EDE Delivery";
-            this.Load += new System.EventHandler(this.CustomerCreateAccout_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();

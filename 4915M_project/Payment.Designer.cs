@@ -31,23 +31,21 @@ namespace _4915M_project
         {
             this.btnCash = new System.Windows.Forms.Panel();
             this.btnBack = new System.Windows.Forms.Button();
-            this.btnMonthly = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.btnCredit = new System.Windows.Forms.Button();
             this.btnEBA = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.btnCash.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnCash
             // 
             this.btnCash.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.btnCash.Controls.Add(this.label5);
             this.btnCash.Controls.Add(this.btnBack);
-            this.btnCash.Controls.Add(this.btnMonthly);
+            this.btnCash.Controls.Add(this.button3);
             this.btnCash.Controls.Add(this.btnCredit);
             this.btnCash.Controls.Add(this.btnEBA);
             this.btnCash.Controls.Add(this.label4);
@@ -77,22 +75,22 @@ namespace _4915M_project
             this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click_1);
             // 
-            // btnMonthly
+            // button3
             // 
-            this.btnMonthly.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnMonthly.AutoSize = true;
-            this.btnMonthly.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.btnMonthly.FlatAppearance.BorderSize = 0;
-            this.btnMonthly.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMonthly.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMonthly.ForeColor = System.Drawing.Color.White;
-            this.btnMonthly.Location = new System.Drawing.Point(417, 353);
-            this.btnMonthly.Name = "btnMonthly";
-            this.btnMonthly.Size = new System.Drawing.Size(270, 80);
-            this.btnMonthly.TabIndex = 120;
-            this.btnMonthly.Text = "Monthly";
-            this.btnMonthly.UseVisualStyleBackColor = false;
-            this.btnMonthly.Click += new System.EventHandler(this.button3_Click);
+            this.button3.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.button3.AutoSize = true;
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.Color.White;
+            this.button3.Location = new System.Drawing.Point(417, 353);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(270, 80);
+            this.button3.TabIndex = 120;
+            this.button3.Text = "Cash";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // btnCredit
             // 
@@ -176,18 +174,6 @@ namespace _4915M_project
             this.label1.TabIndex = 110;
             this.label1.Text = "Payment";
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold);
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.label5.Location = new System.Drawing.Point(730, 576);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(176, 23);
-            this.label5.TabIndex = 122;
-            this.label5.Text = "Want to use cash?";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
-            // 
             // Payment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -211,9 +197,8 @@ namespace _4915M_project
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnBack;
-        private System.Windows.Forms.Button btnMonthly;
+        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button btnCredit;
         private System.Windows.Forms.Button btnEBA;
-        private System.Windows.Forms.Label label5;
     }
 }
