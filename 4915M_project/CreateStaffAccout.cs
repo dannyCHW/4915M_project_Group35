@@ -30,5 +30,21 @@ namespace _4915M_project
             managerlobby.Show();
             this.Hide();
         }
+
+        private void txtStaffname_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
+        private void txtStfPwd2(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtStfPwd_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

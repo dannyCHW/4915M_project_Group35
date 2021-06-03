@@ -99,6 +99,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>desDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="desDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>desDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Invoice.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -244,6 +249,17 @@
     <None Include="desDataSet.xss">
       <DependentUpon>desDataSet.xsd</DependentUpon>
     </None>
+    <None Include="desDataSet1.xsc">
+      <DependentUpon>desDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="desDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>desDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="desDataSet1.xss">
+      <DependentUpon>desDataSet1.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -256,6 +272,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="des.accdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

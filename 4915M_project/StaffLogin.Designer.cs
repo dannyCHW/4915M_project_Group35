@@ -72,6 +72,7 @@ namespace _4915M_project
             this.txtPassword.Size = new System.Drawing.Size(229, 26);
             this.txtPassword.TabIndex = 30;
             this.txtPassword.Text = "Password";
+            this.txtPassword.Click += new System.EventHandler(this.txtPwd_Click);
             // 
             // txtStaffID
             // 
@@ -83,6 +84,7 @@ namespace _4915M_project
             this.txtStaffID.Size = new System.Drawing.Size(229, 26);
             this.txtStaffID.TabIndex = 28;
             this.txtStaffID.Text = "Staff ID";
+            this.txtStaffID.Click += new System.EventHandler(this.txtID_Click);
             // 
             // pictureBox4
             // 
