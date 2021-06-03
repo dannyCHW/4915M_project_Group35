@@ -14,8 +14,7 @@ namespace _4915M_project
     public partial class CustomerLogin : Form
     {
 
-        private DataTable dt = new DataTable();
-        string connStr = "Provider=Microsoft.ACE.OLEDB.12.0;" + "Data Source=des.accdb";
+
 
         public CustomerLogin()
         {
@@ -28,6 +27,8 @@ namespace _4915M_project
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
+            DataTable dt = new DataTable();
+            String connStr = "Provider=Microsoft.ACE.OLEDB.12.0;" + "Data Source=des.accdb";
 
             String email = txtEmail.Text;
             String pswd = txtPassword.Text;

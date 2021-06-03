@@ -13,11 +13,6 @@ namespace _4915M_project
 {
     public partial class CustomerCreateAccout : Form
     {
-        private DataTable dt = new DataTable();
-        string connStr = "Provider=Microsoft.ACE.OLEDB.12.0;" + "Data Source=des.accdb";
-        OleDbCommand cmd = new OleDbCommand();
-        OleDbConnection con = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=des.accdb");
-        OleDbDataAdapter da = new OleDbDataAdapter();
 
 
         public CustomerCreateAccout()
@@ -28,9 +23,11 @@ namespace _4915M_project
 
         private void btnCreateAccout_Click_1(object sender, EventArgs e)
         {
+            DataTable dt = new DataTable();
+            string connStr = "Provider=Microsoft.ACE.OLEDB.12.0;" + "Data Source=des.accdb";
             if (txtPhone.Text == "" || txtEmail.Text == "" || txtPwd2.Text == "" || txtPwd.Text == "" || txtName.Text == "")
             {
-                MessageBox.Show("Please enter value in all field", "Invalid Email", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Please enter value in all field", "Invalid", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else if (!this.txtEmail.Text.Contains('@') || !this.txtEmail.Text.Contains('.'))
             {
@@ -38,20 +35,21 @@ namespace _4915M_project
             }
             else if (txtPhone.Text.Length < 7 || System.Text.RegularExpressions.Regex.IsMatch(txtPhone.Text, "[^0-9]"))
             {
-                MessageBox.Show("Please Enter A Valid Phone Number", "Invalid Email", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Please Enter A Valid Phone Number", "Invalid Phone", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else if (txtName.Text == "" || System.Text.RegularExpressions.Regex.IsMatch(txtPhone.Text, "[^0-9]")|| txtName.Text.Length<6) {
-                    MessageBox.Show("Please Enter A Valid Name", "Invalid Email", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Please Enter A Valid Name", "Invalid Name", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             else if (txtPwd.Text.Length < 6) {
-                MessageBox.Show("The password cannot short than 6 digit", "Invalid Email", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("The password cannot short than 6 digit", "Invalid Password", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else if (txtPwd.Text != txtPwd2.Text)
             {
-                MessageBox.Show("Please enter both password same", "Invalid Email", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Please enter both password same", "Invalid Password", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
+
                 String phone = txtPhone.Text;
                 String email = txtEmail.Text;
                 String pwd = txtPwd.Text;
@@ -65,33 +63,31 @@ namespace _4915M_project
                 if (dt.Rows.Count > 0)
                 {
                     dataAdapter.Dispose();
-                    dt.Clear();
 
                     MessageBox.Show("This Email Already Been used", "Invalid Email", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                 }
 
                 /*
-                 * 屌！！！！！！！！！！！！未check到Phone Number 用左未
+                 * 
+                 * 
+                 * 
+                 * 
+                 * 
+                 * 屌！！！！！！！！！！！！未check到Phone Number 用左未 可以留翻遲D做
                  */
                 else {
-
-                    ;
-                    con.Open();
-
+                    dataAdapter.Dispose();
                     string sqlString = "Insert into Customer (cusName, cusPhone, cusPassword, cusEmail) values ('" + name + "','" + phone + "','" + pwd + "','" + email + "');";
 
-
-                    cmd = new OleDbCommand(sqlString, con);
-                    cmd.ExecuteNonQuery();
-                    con.Close();
-
+                    OleDbDataAdapter dataAdapter2 = new OleDbDataAdapter(sqlString, connStr);
+                    dataAdapter2.Fill(dt);
+                    dataAdapter.Dispose();
                     MessageBox.Show("Your Account has been Successfully Created", "Registration success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     Main main = new Main();
                     main.Show();
                     this.Hide();
                 }
-                dataAdapter.Dispose();
             }
         }
 
