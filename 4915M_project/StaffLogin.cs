@@ -13,7 +13,7 @@ namespace _4915M_project
 {
     public partial class StaffLogin : Form
     {
-
+        
 
         public StaffLogin()
         {
@@ -38,6 +38,9 @@ namespace _4915M_project
             String vID = "";
             String vPwd = "";
             string vPosition = "";
+
+            DataTable dt = new DataTable();
+            String connStr = "";
 
             string sqlStr = "Select stfID,stfPassword,stfPosition from Staff where stfID = '" + staffID + "'";
             OleDbDataAdapter dataAdapter = new OleDbDataAdapter(sqlStr, connStr);
