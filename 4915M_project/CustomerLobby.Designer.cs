@@ -87,6 +87,7 @@ namespace _4915M_project
             this.btnLogOut.TabIndex = 19;
             this.btnLogOut.Text = "LogOut";
             this.btnLogOut.UseVisualStyleBackColor = false;
+            this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
             // 
             // label5
             // 

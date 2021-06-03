@@ -79,6 +79,13 @@ namespace _4915M_project
             childForm.Show();
         }
 
+        private void btnLogOut_Click(object sender, EventArgs e)
+        {
+            Main main = new Main();
+            main.Show();
+            this.Close();
+        }
+
         private void panelLogo_Paint(object sender, PaintEventArgs e)
         {
 
@@ -103,5 +110,7 @@ namespace _4915M_project
         {
 
         }
+
+        
     }
 }

@@ -28,10 +28,21 @@ namespace _4915M_project
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
+
             String email = txtEmail.Text;
             String pswd = txtPassword.Text;
             String vemail = "";
             String vpswd = "";
+
+            //shortCut
+            if (email == "s" && pswd == "s")
+            {
+                CustomerLobby cusPage = new CustomerLobby();
+                vemail = null;
+                vpswd = null;
+                cusPage.Show();
+                this.Close();
+            }
 
             string sqlStr = "Select cusEmail, cusPassword from Customer where cusEmail LIKE '" + email + "'";
             OleDbDataAdapter dataAdapter = new OleDbDataAdapter(sqlStr, connStr);

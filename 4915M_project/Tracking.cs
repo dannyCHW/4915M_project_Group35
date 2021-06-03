@@ -24,10 +24,7 @@ namespace _4915M_project
         }
 
         private void btnBack_Click_1(object sender, EventArgs e)
-        {
-            CustomerLobby custLobby = new CustomerLobby();
-            custLobby.Show();
-            this.Hide();
-        }
+        {}
+
     }
 }

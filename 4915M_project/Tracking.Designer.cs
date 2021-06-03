@@ -30,7 +30,6 @@ namespace _4915M_project
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnBack = new System.Windows.Forms.Button();
             this.btnCheck = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.txtExpected = new System.Windows.Forms.TextBox();
@@ -44,7 +43,6 @@ namespace _4915M_project
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel1.Controls.Add(this.btnBack);
             this.panel1.Controls.Add(this.btnCheck);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.txtExpected);
@@ -57,23 +55,6 @@ namespace _4915M_project
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(918, 622);
             this.panel1.TabIndex = 0;
-            // 
-            // btnBack
-            // 
-            this.btnBack.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnBack.AutoSize = true;
-            this.btnBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.btnBack.FlatAppearance.BorderSize = 0;
-            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBack.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBack.ForeColor = System.Drawing.Color.White;
-            this.btnBack.Location = new System.Drawing.Point(12, 560);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(178, 50);
-            this.btnBack.TabIndex = 124;
-            this.btnBack.Text = "<-Back";
-            this.btnBack.UseVisualStyleBackColor = false;
-            this.btnBack.Click += new System.EventHandler(this.btnBack_Click_1);
             // 
             // btnCheck
             // 
@@ -186,7 +167,6 @@ namespace _4915M_project
         private System.Windows.Forms.TextBox txtOrder;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Button btnCheck;
     }
 }
