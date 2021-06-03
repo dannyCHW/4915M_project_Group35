@@ -52,18 +52,6 @@
     <Compile Include="AirwayBill1.Designer.cs">
       <DependentUpon>AirwayBill1.cs</DependentUpon>
     </Compile>
-    <Compile Include="AirwayBill2.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AirwayBill2.Designer.cs">
-      <DependentUpon>AirwayBill2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="AirwayBill3.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AirwayBill3.Designer.cs">
-      <DependentUpon>AirwayBill3.cs</DependentUpon>
-    </Compile>
     <Compile Include="BookingPickup.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -181,12 +169,6 @@
     </Compile>
     <EmbeddedResource Include="AirwayBill1.resx">
       <DependentUpon>AirwayBill1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AirwayBill2.resx">
-      <DependentUpon>AirwayBill2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AirwayBill3.resx">
-      <DependentUpon>AirwayBill3.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BookingPickup.resx">
       <DependentUpon>BookingPickup.cs</DependentUpon>

@@ -12,45 +12,42 @@ namespace _4915M_project
 {
     public partial class AirwayBill1 : Form
     {
+        //String[,] goodsArray = new String[4, 2];
+
         public AirwayBill1()
         {
             InitializeComponent();
-            AirwayBillPanel2.Visible = false;
-            AirwayBillPanel3.Visible = false;
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //old useless code (but do not delete !)
+            //old useless code
         }
 
         private Form from = new CustomerLobby();
         private void createbtn_Click(object sender, EventArgs e)
         {
-            //old useless code (but do not delete !)
+            //old useless code
         }
 
 
 
         private void btnGoNext_Click(object sender, EventArgs e)
         {
-            AirwayBillPanel1.Visible = false;
-            AirwayBillPanel2.Visible = true;
-            AirwayBillPanel3.Visible = false;
+            AirwayBillPanelGood.Visible = true;
+            
         }
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            AirwayBillPanel1.Visible = true;
-            AirwayBillPanel2.Visible = false;
-            AirwayBillPanel3.Visible = false;
+          
         }
 
         private void btnGoAirwayBIll3_Click(object sender, EventArgs e)
         {
-            AirwayBillPanel1.Visible = false;
-            AirwayBillPanel2.Visible = false;
-            AirwayBillPanel3.Visible = true;
+            
+            
         }
 
         private void label13_Click_1(object sender, EventArgs e)
@@ -84,6 +81,16 @@ namespace _4915M_project
         }
 
         private void AirwayBill1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnMoreGood_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void AirwayBillPanel1_Paint(object sender, PaintEventArgs e)
         {
 
         }

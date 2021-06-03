@@ -56,47 +56,55 @@ namespace _4915M_project
             this.txtSenderName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.AirwayBillPanel1 = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
-            this.comboBoxCountry = new System.Windows.Forms.ComboBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.btnGoNext = new System.Windows.Forms.Button();
-            this.AirwayBillPanel2 = new System.Windows.Forms.Panel();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.label29 = new System.Windows.Forms.Label();
-            this.label26 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.label27 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.label25 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.btnMoreGood = new System.Windows.Forms.Button();
-            this.btnGoAirwayBIll3 = new System.Windows.Forms.Button();
-            this.label21 = new System.Windows.Forms.Label();
-            this.btnBack = new System.Windows.Forms.Button();
-            this.AirwayBillPanel3 = new System.Windows.Forms.Panel();
-            this.label33 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.textBox9 = new System.Windows.Forms.TextBox();
+            this.comboBoxCountry = new System.Windows.Forms.ComboBox();
             this.label31 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
             this.textBox10 = new System.Windows.Forms.TextBox();
             this.label32 = new System.Windows.Forms.Label();
+            this.btnGoNext = new System.Windows.Forms.Button();
             this.textBox8 = new System.Windows.Forms.TextBox();
-            this.label28 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.label30 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
+            this.label28 = new System.Windows.Forms.Label();
+            this.label30 = new System.Windows.Forms.Label();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.btnBack = new System.Windows.Forms.Button();
+            this.label21 = new System.Windows.Forms.Label();
+            this.btnGoAirwayBIll3 = new System.Windows.Forms.Button();
+            this.label14 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.label26 = new System.Windows.Forms.Label();
+            this.label29 = new System.Windows.Forms.Label();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.AirwayBillPanelGood = new System.Windows.Forms.Panel();
+            this.btnAddGood = new System.Windows.Forms.Button();
+            this.label35 = new System.Windows.Forms.Label();
+            this.label36 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label37 = new System.Windows.Forms.Label();
+            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.label33 = new System.Windows.Forms.Label();
+            this.textBox13 = new System.Windows.Forms.TextBox();
+            this.label34 = new System.Windows.Forms.Label();
+            this.label38 = new System.Windows.Forms.Label();
+            this.textBox14 = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label39 = new System.Windows.Forms.Label();
             this.AirwayBillPanel1.SuspendLayout();
-            this.AirwayBillPanel2.SuspendLayout();
-            this.AirwayBillPanel3.SuspendLayout();
+            this.AirwayBillPanelGood.SuspendLayout();
             this.SuspendLayout();
             // 
             // label17
@@ -357,40 +365,80 @@ namespace _4915M_project
             // 
             // AirwayBillPanel1
             // 
+            this.AirwayBillPanel1.AutoScroll = true;
             this.AirwayBillPanel1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.AirwayBillPanel1.Controls.Add(this.label39);
+            this.AirwayBillPanel1.Controls.Add(this.textBox14);
+            this.AirwayBillPanel1.Controls.Add(this.label15);
+            this.AirwayBillPanel1.Controls.Add(this.label38);
+            this.AirwayBillPanel1.Controls.Add(this.textBox13);
+            this.AirwayBillPanel1.Controls.Add(this.label34);
+            this.AirwayBillPanel1.Controls.Add(this.textBox12);
+            this.AirwayBillPanel1.Controls.Add(this.label33);
+            this.AirwayBillPanel1.Controls.Add(this.textBox11);
+            this.AirwayBillPanel1.Controls.Add(this.label37);
+            this.AirwayBillPanel1.Controls.Add(this.comboBox1);
+            this.AirwayBillPanel1.Controls.Add(this.label36);
+            this.AirwayBillPanel1.Controls.Add(this.label35);
+            this.AirwayBillPanel1.Controls.Add(this.panel1);
             this.AirwayBillPanel1.Controls.Add(this.textBox1);
             this.AirwayBillPanel1.Controls.Add(this.label18);
+            this.AirwayBillPanel1.Controls.Add(this.textBox9);
             this.AirwayBillPanel1.Controls.Add(this.comboBoxCountry);
+            this.AirwayBillPanel1.Controls.Add(this.label31);
             this.AirwayBillPanel1.Controls.Add(this.label13);
-            this.AirwayBillPanel1.Controls.Add(this.label15);
+            this.AirwayBillPanel1.Controls.Add(this.textBox10);
+            this.AirwayBillPanel1.Controls.Add(this.label32);
             this.AirwayBillPanel1.Controls.Add(this.btnGoNext);
+            this.AirwayBillPanel1.Controls.Add(this.textBox8);
+            this.AirwayBillPanel1.Controls.Add(this.label24);
+            this.AirwayBillPanel1.Controls.Add(this.label28);
+            this.AirwayBillPanel1.Controls.Add(this.label30);
+            this.AirwayBillPanel1.Controls.Add(this.textBox7);
             this.AirwayBillPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.AirwayBillPanel1.Location = new System.Drawing.Point(0, 0);
             this.AirwayBillPanel1.Name = "AirwayBillPanel1";
             this.AirwayBillPanel1.Size = new System.Drawing.Size(918, 622);
             this.AirwayBillPanel1.TabIndex = 95;
+            this.AirwayBillPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.AirwayBillPanel1_Paint);
+            // 
+            // panel1
+            // 
+            this.panel1.Location = new System.Drawing.Point(3, 1429);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(200, 46);
+            this.panel1.TabIndex = 97;
             // 
             // textBox1
             // 
             this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.textBox1.Font = new System.Drawing.Font("PMingLiU", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.textBox1.Location = new System.Drawing.Point(257, 377);
+            this.textBox1.Location = new System.Drawing.Point(83, 715);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(374, 27);
+            this.textBox1.Size = new System.Drawing.Size(358, 27);
             this.textBox1.TabIndex = 72;
             // 
             // label18
             // 
             this.label18.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.label18.Location = new System.Drawing.Point(339, 336);
+            this.label18.Location = new System.Drawing.Point(77, 680);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(205, 38);
+            this.label18.Size = new System.Drawing.Size(160, 32);
             this.label18.TabIndex = 71;
-            this.label18.Text = "Area Code?";
+            this.label18.Text = "Area Code";
             this.label18.Click += new System.EventHandler(this.label18_Click);
+            // 
+            // textBox9
+            // 
+            this.textBox9.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.textBox9.Font = new System.Drawing.Font("PMingLiU", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.textBox9.Location = new System.Drawing.Point(83, 795);
+            this.textBox9.Name = "textBox9";
+            this.textBox9.Size = new System.Drawing.Size(550, 27);
+            this.textBox9.TabIndex = 84;
             // 
             // comboBoxCountry
             // 
@@ -399,34 +447,56 @@ namespace _4915M_project
             this.comboBoxCountry.FormattingEnabled = true;
             this.comboBoxCountry.Items.AddRange(new object[] {
             "Japen"});
-            this.comboBoxCountry.Location = new System.Drawing.Point(257, 226);
+            this.comboBoxCountry.Location = new System.Drawing.Point(84, 644);
             this.comboBoxCountry.Name = "comboBoxCountry";
-            this.comboBoxCountry.Size = new System.Drawing.Size(374, 24);
+            this.comboBoxCountry.Size = new System.Drawing.Size(357, 24);
             this.comboBoxCountry.TabIndex = 70;
+            // 
+            // label31
+            // 
+            this.label31.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label31.AutoSize = true;
+            this.label31.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label31.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.label31.Location = new System.Drawing.Point(77, 760);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(243, 32);
+            this.label31.TabIndex = 83;
+            this.label31.Text = "Receiver Address";
             // 
             // label13
             // 
             this.label13.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.label13.Location = new System.Drawing.Point(314, 185);
+            this.label13.Location = new System.Drawing.Point(77, 609);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(255, 38);
+            this.label13.Size = new System.Drawing.Size(118, 32);
             this.label13.TabIndex = 69;
-            this.label13.Text = "Where to send?";
+            this.label13.Text = "Country";
             this.label13.Click += new System.EventHandler(this.label13_Click_1);
             // 
-            // label15
+            // textBox10
             // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.Color.Black;
-            this.label15.Location = new System.Drawing.Point(7, 10);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(188, 38);
-            this.label15.TabIndex = 68;
-            this.label15.Text = "Destination";
+            this.textBox10.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.textBox10.Font = new System.Drawing.Font("PMingLiU", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.textBox10.Location = new System.Drawing.Point(84, 872);
+            this.textBox10.Name = "textBox10";
+            this.textBox10.Size = new System.Drawing.Size(357, 27);
+            this.textBox10.TabIndex = 82;
+            // 
+            // label32
+            // 
+            this.label32.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label32.AutoSize = true;
+            this.label32.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label32.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.label32.Location = new System.Drawing.Point(77, 836);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(217, 32);
+            this.label32.TabIndex = 81;
+            this.label32.Text = "Receiver Name";
             // 
             // btnGoNext
             // 
@@ -436,236 +506,66 @@ namespace _4915M_project
             this.btnGoNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGoNext.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGoNext.ForeColor = System.Drawing.Color.White;
-            this.btnGoNext.Location = new System.Drawing.Point(39, 560);
+            this.btnGoNext.Location = new System.Drawing.Point(16, 1373);
             this.btnGoNext.Name = "btnGoNext";
-            this.btnGoNext.Size = new System.Drawing.Size(837, 50);
+            this.btnGoNext.Size = new System.Drawing.Size(851, 50);
             this.btnGoNext.TabIndex = 0;
-            this.btnGoNext.Text = "Next->";
+            this.btnGoNext.Text = "Next";
             this.btnGoNext.UseVisualStyleBackColor = false;
             this.btnGoNext.Click += new System.EventHandler(this.btnGoNext_Click);
             // 
-            // AirwayBillPanel2
+            // textBox8
             // 
-            this.AirwayBillPanel2.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.AirwayBillPanel2.Controls.Add(this.textBox6);
-            this.AirwayBillPanel2.Controls.Add(this.label29);
-            this.AirwayBillPanel2.Controls.Add(this.label26);
-            this.AirwayBillPanel2.Controls.Add(this.textBox5);
-            this.AirwayBillPanel2.Controls.Add(this.label27);
-            this.AirwayBillPanel2.Controls.Add(this.label23);
-            this.AirwayBillPanel2.Controls.Add(this.textBox4);
-            this.AirwayBillPanel2.Controls.Add(this.label25);
-            this.AirwayBillPanel2.Controls.Add(this.label20);
-            this.AirwayBillPanel2.Controls.Add(this.textBox3);
-            this.AirwayBillPanel2.Controls.Add(this.label22);
-            this.AirwayBillPanel2.Controls.Add(this.label19);
-            this.AirwayBillPanel2.Controls.Add(this.textBox2);
-            this.AirwayBillPanel2.Controls.Add(this.label14);
-            this.AirwayBillPanel2.Controls.Add(this.btnMoreGood);
-            this.AirwayBillPanel2.Controls.Add(this.btnGoAirwayBIll3);
-            this.AirwayBillPanel2.Controls.Add(this.label21);
-            this.AirwayBillPanel2.Controls.Add(this.btnBack);
-            this.AirwayBillPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.AirwayBillPanel2.Location = new System.Drawing.Point(0, 0);
-            this.AirwayBillPanel2.Name = "AirwayBillPanel2";
-            this.AirwayBillPanel2.Size = new System.Drawing.Size(918, 622);
-            this.AirwayBillPanel2.TabIndex = 96;
-            this.AirwayBillPanel2.Visible = false;
+            this.textBox8.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.textBox8.Font = new System.Drawing.Font("PMingLiU", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.textBox8.Location = new System.Drawing.Point(84, 1279);
+            this.textBox8.Name = "textBox8";
+            this.textBox8.Size = new System.Drawing.Size(357, 27);
+            this.textBox8.TabIndex = 80;
             // 
-            // textBox6
+            // label24
             // 
-            this.textBox6.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBox6.Font = new System.Drawing.Font("PMingLiU", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.textBox6.Location = new System.Drawing.Point(141, 444);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(655, 27);
-            this.textBox6.TabIndex = 87;
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.ForeColor = System.Drawing.Color.Black;
+            this.label24.Location = new System.Drawing.Point(12, 9);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(344, 38);
+            this.label24.TabIndex = 75;
+            this.label24.Text = "Shipment information";
             // 
-            // label29
+            // label28
             // 
-            this.label29.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label29.AutoSize = true;
-            this.label29.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label29.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.label29.Location = new System.Drawing.Point(134, 404);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(189, 38);
-            this.label29.TabIndex = 86;
-            this.label29.Text = "Description";
+            this.label28.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label28.AutoSize = true;
+            this.label28.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label28.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.label28.Location = new System.Drawing.Point(77, 1238);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(209, 32);
+            this.label28.TabIndex = 79;
+            this.label28.Text = "Contact Phone";
             // 
-            // label26
+            // label30
             // 
-            this.label26.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label26.AutoSize = true;
-            this.label26.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.label26.Location = new System.Drawing.Point(458, 311);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(38, 25);
-            this.label26.TabIndex = 85;
-            this.label26.Text = "kg";
+            this.label30.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label30.AutoSize = true;
+            this.label30.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label30.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.label30.Location = new System.Drawing.Point(78, 1143);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(214, 32);
+            this.label30.TabIndex = 77;
+            this.label30.Text = "Contact Person";
             // 
-            // textBox5
+            // textBox7
             // 
-            this.textBox5.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBox5.Font = new System.Drawing.Font("PMingLiU", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.textBox5.Location = new System.Drawing.Point(141, 306);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(311, 27);
-            this.textBox5.TabIndex = 84;
-            // 
-            // label27
-            // 
-            this.label27.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label27.AutoSize = true;
-            this.label27.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.label27.Location = new System.Drawing.Point(134, 265);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(124, 38);
-            this.label27.TabIndex = 83;
-            this.label27.Text = "Weight";
-            // 
-            // label23
-            // 
-            this.label23.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.label23.Location = new System.Drawing.Point(751, 178);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(45, 25);
-            this.label23.TabIndex = 82;
-            this.label23.Text = "cm";
-            // 
-            // textBox4
-            // 
-            this.textBox4.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBox4.Font = new System.Drawing.Font("PMingLiU", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.textBox4.Location = new System.Drawing.Point(632, 174);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(113, 27);
-            this.textBox4.TabIndex = 81;
-            // 
-            // label25
-            // 
-            this.label25.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label25.AutoSize = true;
-            this.label25.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.label25.Location = new System.Drawing.Point(622, 133);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(117, 38);
-            this.label25.TabIndex = 80;
-            this.label25.Text = "Height";
-            // 
-            // label20
-            // 
-            this.label20.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.label20.Location = new System.Drawing.Point(506, 178);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(45, 25);
-            this.label20.TabIndex = 79;
-            this.label20.Text = "cm";
-            // 
-            // textBox3
-            // 
-            this.textBox3.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBox3.Font = new System.Drawing.Font("PMingLiU", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.textBox3.Location = new System.Drawing.Point(387, 174);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(113, 27);
-            this.textBox3.TabIndex = 78;
-            // 
-            // label22
-            // 
-            this.label22.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.label22.Location = new System.Drawing.Point(380, 133);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(104, 38);
-            this.label22.TabIndex = 77;
-            this.label22.Text = "Width";
-            // 
-            // label19
-            // 
-            this.label19.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.label19.Location = new System.Drawing.Point(260, 178);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(45, 25);
-            this.label19.TabIndex = 76;
-            this.label19.Text = "cm";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBox2.Font = new System.Drawing.Font("PMingLiU", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.textBox2.Location = new System.Drawing.Point(141, 174);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(113, 27);
-            this.textBox2.TabIndex = 75;
-            // 
-            // label14
-            // 
-            this.label14.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.label14.Location = new System.Drawing.Point(134, 133);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(120, 38);
-            this.label14.TabIndex = 74;
-            this.label14.Text = "Length";
-            // 
-            // btnMoreGood
-            // 
-            this.btnMoreGood.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnMoreGood.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.btnMoreGood.FlatAppearance.BorderSize = 0;
-            this.btnMoreGood.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMoreGood.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMoreGood.ForeColor = System.Drawing.Color.White;
-            this.btnMoreGood.Location = new System.Drawing.Point(491, 560);
-            this.btnMoreGood.Name = "btnMoreGood";
-            this.btnMoreGood.Size = new System.Drawing.Size(230, 50);
-            this.btnMoreGood.TabIndex = 73;
-            this.btnMoreGood.Text = "Add Another Package";
-            this.btnMoreGood.UseVisualStyleBackColor = false;
-            // 
-            // btnGoAirwayBIll3
-            // 
-            this.btnGoAirwayBIll3.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnGoAirwayBIll3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.btnGoAirwayBIll3.FlatAppearance.BorderSize = 0;
-            this.btnGoAirwayBIll3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGoAirwayBIll3.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGoAirwayBIll3.ForeColor = System.Drawing.Color.White;
-            this.btnGoAirwayBIll3.Location = new System.Drawing.Point(727, 560);
-            this.btnGoAirwayBIll3.Name = "btnGoAirwayBIll3";
-            this.btnGoAirwayBIll3.Size = new System.Drawing.Size(179, 50);
-            this.btnGoAirwayBIll3.TabIndex = 72;
-            this.btnGoAirwayBIll3.Text = "Next->";
-            this.btnGoAirwayBIll3.UseVisualStyleBackColor = false;
-            this.btnGoAirwayBIll3.Click += new System.EventHandler(this.btnGoAirwayBIll3_Click);
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.ForeColor = System.Drawing.Color.Black;
-            this.label21.Location = new System.Drawing.Point(3, 9);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(157, 38);
-            this.label21.TabIndex = 71;
-            this.label21.Text = "Package";
+            this.textBox7.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.textBox7.Font = new System.Drawing.Font("PMingLiU", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.textBox7.Location = new System.Drawing.Point(83, 1183);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(358, 27);
+            this.textBox7.TabIndex = 78;
             // 
             // btnBack
             // 
@@ -683,164 +583,371 @@ namespace _4915M_project
             this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
-            // AirwayBillPanel3
+            // label21
             // 
-            this.AirwayBillPanel3.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.AirwayBillPanel3.Controls.Add(this.label33);
-            this.AirwayBillPanel3.Controls.Add(this.button1);
-            this.AirwayBillPanel3.Controls.Add(this.button2);
-            this.AirwayBillPanel3.Controls.Add(this.textBox9);
-            this.AirwayBillPanel3.Controls.Add(this.label31);
-            this.AirwayBillPanel3.Controls.Add(this.textBox10);
-            this.AirwayBillPanel3.Controls.Add(this.label32);
-            this.AirwayBillPanel3.Controls.Add(this.textBox8);
-            this.AirwayBillPanel3.Controls.Add(this.label28);
-            this.AirwayBillPanel3.Controls.Add(this.textBox7);
-            this.AirwayBillPanel3.Controls.Add(this.label30);
-            this.AirwayBillPanel3.Controls.Add(this.label24);
-            this.AirwayBillPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.AirwayBillPanel3.Location = new System.Drawing.Point(0, 0);
-            this.AirwayBillPanel3.Name = "AirwayBillPanel3";
-            this.AirwayBillPanel3.Size = new System.Drawing.Size(918, 622);
-            this.AirwayBillPanel3.TabIndex = 97;
-            this.AirwayBillPanel3.Paint += new System.Windows.Forms.PaintEventHandler(this.AirwayBillPanel3_Paint);
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.ForeColor = System.Drawing.Color.Black;
+            this.label21.Location = new System.Drawing.Point(3, 9);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(157, 38);
+            this.label21.TabIndex = 71;
+            this.label21.Text = "Package";
+            // 
+            // btnGoAirwayBIll3
+            // 
+            this.btnGoAirwayBIll3.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnGoAirwayBIll3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.btnGoAirwayBIll3.FlatAppearance.BorderSize = 0;
+            this.btnGoAirwayBIll3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGoAirwayBIll3.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGoAirwayBIll3.ForeColor = System.Drawing.Color.White;
+            this.btnGoAirwayBIll3.Location = new System.Drawing.Point(727, 560);
+            this.btnGoAirwayBIll3.Name = "btnGoAirwayBIll3";
+            this.btnGoAirwayBIll3.Size = new System.Drawing.Size(179, 50);
+            this.btnGoAirwayBIll3.TabIndex = 72;
+            this.btnGoAirwayBIll3.Text = "Next->";
+            this.btnGoAirwayBIll3.UseVisualStyleBackColor = false;
+            this.btnGoAirwayBIll3.Click += new System.EventHandler(this.btnGoAirwayBIll3_Click);
+            // 
+            // label14
+            // 
+            this.label14.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.label14.Location = new System.Drawing.Point(134, 133);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(120, 38);
+            this.label14.TabIndex = 74;
+            this.label14.Text = "Length";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.textBox2.Font = new System.Drawing.Font("PMingLiU", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.textBox2.Location = new System.Drawing.Point(141, 174);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(113, 27);
+            this.textBox2.TabIndex = 75;
+            // 
+            // label19
+            // 
+            this.label19.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.label19.Location = new System.Drawing.Point(260, 178);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(45, 25);
+            this.label19.TabIndex = 76;
+            this.label19.Text = "cm";
+            // 
+            // label22
+            // 
+            this.label22.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.label22.Location = new System.Drawing.Point(380, 133);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(104, 38);
+            this.label22.TabIndex = 77;
+            this.label22.Text = "Width";
+            // 
+            // textBox3
+            // 
+            this.textBox3.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.textBox3.Font = new System.Drawing.Font("PMingLiU", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.textBox3.Location = new System.Drawing.Point(387, 174);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(113, 27);
+            this.textBox3.TabIndex = 78;
+            // 
+            // label20
+            // 
+            this.label20.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.label20.Location = new System.Drawing.Point(506, 178);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(45, 25);
+            this.label20.TabIndex = 79;
+            this.label20.Text = "cm";
+            // 
+            // label25
+            // 
+            this.label25.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label25.AutoSize = true;
+            this.label25.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label25.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.label25.Location = new System.Drawing.Point(622, 133);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(117, 38);
+            this.label25.TabIndex = 80;
+            this.label25.Text = "Height";
+            // 
+            // textBox4
+            // 
+            this.textBox4.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.textBox4.Font = new System.Drawing.Font("PMingLiU", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.textBox4.Location = new System.Drawing.Point(632, 174);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(113, 27);
+            this.textBox4.TabIndex = 81;
+            // 
+            // label23
+            // 
+            this.label23.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.label23.Location = new System.Drawing.Point(751, 178);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(45, 25);
+            this.label23.TabIndex = 82;
+            this.label23.Text = "cm";
+            // 
+            // label27
+            // 
+            this.label27.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label27.AutoSize = true;
+            this.label27.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label27.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.label27.Location = new System.Drawing.Point(134, 265);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(124, 38);
+            this.label27.TabIndex = 83;
+            this.label27.Text = "Weight";
+            // 
+            // textBox5
+            // 
+            this.textBox5.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.textBox5.Font = new System.Drawing.Font("PMingLiU", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.textBox5.Location = new System.Drawing.Point(141, 306);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(311, 27);
+            this.textBox5.TabIndex = 84;
+            // 
+            // label26
+            // 
+            this.label26.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label26.AutoSize = true;
+            this.label26.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label26.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.label26.Location = new System.Drawing.Point(458, 311);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(38, 25);
+            this.label26.TabIndex = 85;
+            this.label26.Text = "kg";
+            // 
+            // label29
+            // 
+            this.label29.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label29.AutoSize = true;
+            this.label29.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label29.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.label29.Location = new System.Drawing.Point(134, 404);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(189, 38);
+            this.label29.TabIndex = 86;
+            this.label29.Text = "Description";
+            // 
+            // textBox6
+            // 
+            this.textBox6.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.textBox6.Font = new System.Drawing.Font("PMingLiU", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.textBox6.Location = new System.Drawing.Point(141, 444);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(655, 27);
+            this.textBox6.TabIndex = 87;
+            // 
+            // AirwayBillPanelGood
+            // 
+            this.AirwayBillPanelGood.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.AirwayBillPanelGood.Controls.Add(this.btnAddGood);
+            this.AirwayBillPanelGood.Controls.Add(this.textBox6);
+            this.AirwayBillPanelGood.Controls.Add(this.label29);
+            this.AirwayBillPanelGood.Controls.Add(this.label26);
+            this.AirwayBillPanelGood.Controls.Add(this.textBox5);
+            this.AirwayBillPanelGood.Controls.Add(this.label27);
+            this.AirwayBillPanelGood.Controls.Add(this.label23);
+            this.AirwayBillPanelGood.Controls.Add(this.textBox4);
+            this.AirwayBillPanelGood.Controls.Add(this.label25);
+            this.AirwayBillPanelGood.Controls.Add(this.label20);
+            this.AirwayBillPanelGood.Controls.Add(this.textBox3);
+            this.AirwayBillPanelGood.Controls.Add(this.label22);
+            this.AirwayBillPanelGood.Controls.Add(this.label19);
+            this.AirwayBillPanelGood.Controls.Add(this.textBox2);
+            this.AirwayBillPanelGood.Controls.Add(this.label14);
+            this.AirwayBillPanelGood.Controls.Add(this.btnGoAirwayBIll3);
+            this.AirwayBillPanelGood.Controls.Add(this.label21);
+            this.AirwayBillPanelGood.Controls.Add(this.btnBack);
+            this.AirwayBillPanelGood.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.AirwayBillPanelGood.Location = new System.Drawing.Point(0, 0);
+            this.AirwayBillPanelGood.Name = "AirwayBillPanelGood";
+            this.AirwayBillPanelGood.Size = new System.Drawing.Size(918, 622);
+            this.AirwayBillPanelGood.TabIndex = 96;
+            this.AirwayBillPanelGood.Visible = false;
+            // 
+            // btnAddGood
+            // 
+            this.btnAddGood.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnAddGood.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.btnAddGood.FlatAppearance.BorderSize = 0;
+            this.btnAddGood.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddGood.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddGood.ForeColor = System.Drawing.Color.White;
+            this.btnAddGood.Location = new System.Drawing.Point(491, 560);
+            this.btnAddGood.Name = "btnAddGood";
+            this.btnAddGood.Size = new System.Drawing.Size(230, 50);
+            this.btnAddGood.TabIndex = 88;
+            this.btnAddGood.Text = "Add Another Package";
+            this.btnAddGood.UseVisualStyleBackColor = false;
+            // 
+            // label35
+            // 
+            this.label35.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label35.AutoSize = true;
+            this.label35.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label35.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.label35.Location = new System.Drawing.Point(77, 155);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(118, 32);
+            this.label35.TabIndex = 99;
+            this.label35.Text = "Country";
+            // 
+            // label36
+            // 
+            this.label36.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label36.AutoSize = true;
+            this.label36.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label36.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.label36.Location = new System.Drawing.Point(50, 89);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(92, 38);
+            this.label36.TabIndex = 100;
+            this.label36.Text = "From";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.comboBox1.Font = new System.Drawing.Font("PMingLiU", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Japen"});
+            this.comboBox1.Location = new System.Drawing.Point(83, 190);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(347, 24);
+            this.comboBox1.TabIndex = 101;
+            // 
+            // label37
+            // 
+            this.label37.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label37.AutoSize = true;
+            this.label37.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label37.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.label37.Location = new System.Drawing.Point(77, 316);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(220, 32);
+            this.label37.TabIndex = 102;
+            this.label37.Text = "Sender Address";
+            // 
+            // textBox11
+            // 
+            this.textBox11.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.textBox11.Font = new System.Drawing.Font("PMingLiU", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.textBox11.Location = new System.Drawing.Point(83, 351);
+            this.textBox11.Name = "textBox11";
+            this.textBox11.Size = new System.Drawing.Size(550, 27);
+            this.textBox11.TabIndex = 103;
+            // 
+            // textBox12
+            // 
+            this.textBox12.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.textBox12.Font = new System.Drawing.Font("PMingLiU", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.textBox12.Location = new System.Drawing.Point(82, 270);
+            this.textBox12.Name = "textBox12";
+            this.textBox12.Size = new System.Drawing.Size(348, 27);
+            this.textBox12.TabIndex = 105;
             // 
             // label33
             // 
             this.label33.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label33.AutoSize = true;
-            this.label33.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label33.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.label33.Location = new System.Drawing.Point(107, 279);
+            this.label33.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label33.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.label33.Location = new System.Drawing.Point(76, 235);
             this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(136, 38);
-            this.label33.TabIndex = 87;
-            this.label33.Text = "Send To";
+            this.label33.Size = new System.Drawing.Size(194, 32);
+            this.label33.TabIndex = 104;
+            this.label33.Text = "Sender Name";
             // 
-            // button1
+            // textBox13
             // 
-            this.button1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(727, 560);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(179, 50);
-            this.button1.TabIndex = 86;
-            this.button1.Text = "Next->";
-            this.button1.UseVisualStyleBackColor = false;
+            this.textBox13.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.textBox13.Font = new System.Drawing.Font("PMingLiU", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.textBox13.Location = new System.Drawing.Point(83, 442);
+            this.textBox13.Name = "textBox13";
+            this.textBox13.Size = new System.Drawing.Size(432, 27);
+            this.textBox13.TabIndex = 107;
             // 
-            // button2
+            // label34
             // 
-            this.button2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(10, 560);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(178, 50);
-            this.button2.TabIndex = 85;
-            this.button2.Text = "<-Back";
-            this.button2.UseVisualStyleBackColor = false;
+            this.label34.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label34.AutoSize = true;
+            this.label34.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label34.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.label34.Location = new System.Drawing.Point(77, 407);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(425, 32);
+            this.label34.TabIndex = 106;
+            this.label34.Text = "Sender Company Name(if any)";
             // 
-            // textBox9
+            // label38
             // 
-            this.textBox9.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBox9.Font = new System.Drawing.Font("PMingLiU", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.textBox9.Location = new System.Drawing.Point(115, 465);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(577, 27);
-            this.textBox9.TabIndex = 84;
+            this.label38.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label38.AutoSize = true;
+            this.label38.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label38.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.label38.Location = new System.Drawing.Point(50, 534);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(136, 38);
+            this.label38.TabIndex = 108;
+            this.label38.Text = "Send To";
             // 
-            // label31
+            // textBox14
             // 
-            this.label31.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label31.AutoSize = true;
-            this.label31.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label31.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.label31.Location = new System.Drawing.Point(105, 424);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(285, 38);
-            this.label31.TabIndex = 83;
-            this.label31.Text = "Receiver Address";
+            this.textBox14.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.textBox14.Font = new System.Drawing.Font("PMingLiU", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.textBox14.Location = new System.Drawing.Point(84, 958);
+            this.textBox14.Name = "textBox14";
+            this.textBox14.Size = new System.Drawing.Size(442, 27);
+            this.textBox14.TabIndex = 110;
             // 
-            // textBox10
+            // label15
             // 
-            this.textBox10.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBox10.Font = new System.Drawing.Font("PMingLiU", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.textBox10.Location = new System.Drawing.Point(114, 389);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(348, 27);
-            this.textBox10.TabIndex = 82;
+            this.label15.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.label15.Location = new System.Drawing.Point(78, 923);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(448, 32);
+            this.label15.TabIndex = 109;
+            this.label15.Text = "Receiver Company Name(if any)";
             // 
-            // label32
+            // label39
             // 
-            this.label32.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label32.AutoSize = true;
-            this.label32.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label32.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.label32.Location = new System.Drawing.Point(105, 352);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(152, 38);
-            this.label32.TabIndex = 81;
-            this.label32.Text = "Receiver";
-            // 
-            // textBox8
-            // 
-            this.textBox8.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBox8.Font = new System.Drawing.Font("PMingLiU", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.textBox8.Location = new System.Drawing.Point(114, 207);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(348, 27);
-            this.textBox8.TabIndex = 80;
-            // 
-            // label28
-            // 
-            this.label28.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label28.AutoSize = true;
-            this.label28.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label28.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.label28.Location = new System.Drawing.Point(105, 160);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(357, 38);
-            this.label28.TabIndex = 79;
-            this.label28.Text = "Contact Person Phone";
-            // 
-            // textBox7
-            // 
-            this.textBox7.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBox7.Font = new System.Drawing.Font("PMingLiU", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.textBox7.Location = new System.Drawing.Point(114, 130);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(348, 27);
-            this.textBox7.TabIndex = 78;
-            // 
-            // label30
-            // 
-            this.label30.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label30.AutoSize = true;
-            this.label30.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label30.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.label30.Location = new System.Drawing.Point(105, 89);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(252, 38);
-            this.label30.TabIndex = 77;
-            this.label30.Text = "Contact Person";
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.ForeColor = System.Drawing.Color.Black;
-            this.label24.Location = new System.Drawing.Point(3, 10);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(344, 38);
-            this.label24.TabIndex = 75;
-            this.label24.Text = "Shipment information";
+            this.label39.AutoSize = true;
+            this.label39.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label39.ForeColor = System.Drawing.Color.Black;
+            this.label39.Location = new System.Drawing.Point(14, 1063);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(325, 38);
+            this.label39.TabIndex = 111;
+            this.label39.Text = "Contact information";
             // 
             // AirwayBill1
             // 
@@ -848,8 +955,7 @@ namespace _4915M_project
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(918, 622);
-            this.Controls.Add(this.AirwayBillPanel3);
-            this.Controls.Add(this.AirwayBillPanel2);
+            this.Controls.Add(this.AirwayBillPanelGood);
             this.Controls.Add(this.AirwayBillPanel1);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.label16);
@@ -882,10 +988,8 @@ namespace _4915M_project
             this.Load += new System.EventHandler(this.AirwayBill1_Load);
             this.AirwayBillPanel1.ResumeLayout(false);
             this.AirwayBillPanel1.PerformLayout();
-            this.AirwayBillPanel2.ResumeLayout(false);
-            this.AirwayBillPanel2.PerformLayout();
-            this.AirwayBillPanel3.ResumeLayout(false);
-            this.AirwayBillPanel3.PerformLayout();
+            this.AirwayBillPanelGood.ResumeLayout(false);
+            this.AirwayBillPanelGood.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -921,18 +1025,26 @@ namespace _4915M_project
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel AirwayBillPanel1;
         private System.Windows.Forms.Button btnGoNext;
-        private System.Windows.Forms.Panel AirwayBillPanel2;
-        private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label15;
         private System.Windows.Forms.ComboBox comboBoxCountry;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button btnGoAirwayBIll3;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Panel AirwayBillPanel3;
         private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.Button btnMoreGood;
+        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel AirwayBillPanelGood;
+        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.Label label27;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label25;
@@ -942,21 +1054,22 @@ namespace _4915M_project
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.Label label29;
-        private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.Button btnGoAirwayBIll3;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Button btnBack;
+        private System.Windows.Forms.Button btnAddGood;
+        private System.Windows.Forms.Label label36;
+        private System.Windows.Forms.Label label35;
+        private System.Windows.Forms.TextBox textBox13;
+        private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.TextBox textBox12;
         private System.Windows.Forms.Label label33;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.Label label31;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.Label label32;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.Label label28;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.Label label37;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label39;
+        private System.Windows.Forms.TextBox textBox14;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label38;
     }
 }
