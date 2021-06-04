@@ -7,12 +7,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data;
+using System.Data.OleDb;
 
 namespace _4915M_project
 {
     public partial class AirwayBill1 : Form
     {
-        //String[,] goodsArray = new String[4, 2];
+        String[] goodsArray = new string[10];
+        LinkedList<Array> goodsList = new LinkedList<Array>(); 
+        String sCountry, sName, sAddress, sCompany, 
+            rCountry, areaCode, rAddress, rName, rCompany,
+            length, width, height, weight, description;
 
         public AirwayBill1()
         {
@@ -20,12 +26,7 @@ namespace _4915M_project
             
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            //old useless code
-        }
-
-        private Form from = new CustomerLobby();
+        //private Form from = new CustomerLobby();
         private void createbtn_Click(object sender, EventArgs e)
         {
             //old useless code
@@ -35,13 +36,14 @@ namespace _4915M_project
 
         private void btnGoNext_Click(object sender, EventArgs e)
         {
+            Console.WriteLine("in air" + CustomerLogin.currentCustomerID);
             AirwayBillPanelGood.Visible = true;
             
         }
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-          
+            AirwayBillPanelGood.Visible = false;
         }
 
         private void btnGoAirwayBIll3_Click(object sender, EventArgs e)

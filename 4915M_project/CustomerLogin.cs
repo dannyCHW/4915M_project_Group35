@@ -14,6 +14,9 @@ namespace _4915M_project
     public partial class CustomerLogin : Form
     {
 
+        public static int currentCustomerID;
+        public static String currentCustomerName;
+
         public CustomerLogin()
         {
             InitializeComponent();
@@ -43,7 +46,7 @@ namespace _4915M_project
                 this.Close();
             }
 
-            string sqlStr = "Select cusEmail, cusPassword from Customer where cusEmail LIKE '" + email + "'";
+            string sqlStr = "Select cusID, cusName, cusEmail, cusPassword from Customer where cusEmail LIKE '" + email + "'";
             OleDbDataAdapter dataAdapter = new OleDbDataAdapter(sqlStr, connStr);
             dataAdapter.Fill(dt);
 
@@ -59,6 +62,8 @@ namespace _4915M_project
                         CustomerLobby cusPage = new CustomerLobby();
                         vemail = null;
                         vpswd = null;
+                        currentCustomerID = Convert.ToInt32(dt.Rows[0]["cusID"]);
+                        currentCustomerName = dt.Rows[0]["cusName"].ToString();
                         cusPage.Show();
                         this.Close();
                     }

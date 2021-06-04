@@ -22,9 +22,6 @@ namespace _4915M_project
         private void btnAirwayBill_Click(object sender, EventArgs e)
         {
             openChildForm(new AirwayBill1());
-            Console.WriteLine(Main.position);
-            Main.position = 2;
-            Console.WriteLine(Main.position);
         }
 
         private void btnAirwayBill2_Click(object sender, EventArgs e)
@@ -114,6 +111,9 @@ namespace _4915M_project
 
         }
 
-        
+        private void CustomerLobby_Load(object sender, EventArgs e)
+        {
+            lblCurrentUser.Text = "You are now login as " + CustomerLogin.currentCustomerName;
+        }
     }
 }

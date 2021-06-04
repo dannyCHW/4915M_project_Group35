@@ -46,6 +46,7 @@ namespace _4915M_project
             this.btnCustomerInvoice = new System.Windows.Forms.Button();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.panelChildForm = new System.Windows.Forms.Panel();
+            this.lblCurrentUser = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -250,6 +251,7 @@ namespace _4915M_project
             // panelChildForm
             // 
             this.panelChildForm.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panelChildForm.Controls.Add(this.lblCurrentUser);
             this.panelChildForm.Controls.Add(this.pictureBox4);
             this.panelChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelChildForm.Location = new System.Drawing.Point(250, 0);
@@ -257,6 +259,16 @@ namespace _4915M_project
             this.panelChildForm.Size = new System.Drawing.Size(936, 638);
             this.panelChildForm.TabIndex = 2;
             this.panelChildForm.Paint += new System.Windows.Forms.PaintEventHandler(this.panelChildForm_Paint);
+            // 
+            // lblCurrentUser
+            // 
+            this.lblCurrentUser.AutoSize = true;
+            this.lblCurrentUser.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCurrentUser.Location = new System.Drawing.Point(6, 9);
+            this.lblCurrentUser.Name = "lblCurrentUser";
+            this.lblCurrentUser.Size = new System.Drawing.Size(55, 25);
+            this.lblCurrentUser.TabIndex = 13;
+            this.lblCurrentUser.Text = "User";
             // 
             // CustomerLobby
             // 
@@ -268,12 +280,14 @@ namespace _4915M_project
             this.Controls.Add(this.panel1);
             this.Name = "CustomerLobby";
             this.Text = "CustomerLobby";
+            this.Load += new System.EventHandler(this.CustomerLobby_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panelLogo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.panelChildForm.ResumeLayout(false);
+            this.panelChildForm.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -296,5 +310,6 @@ namespace _4915M_project
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnLogOut;
+        private System.Windows.Forms.Label lblCurrentUser;
     }
 }
