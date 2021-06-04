@@ -12,6 +12,7 @@ namespace _4915M_project
 {
     public partial class StaffLobby : Form
     {
+
         public StaffLobby()
         {
             InitializeComponent();
