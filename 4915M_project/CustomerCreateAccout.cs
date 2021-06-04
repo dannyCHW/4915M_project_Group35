@@ -147,19 +147,6 @@ namespace _4915M_project
             }
         }
 
-        private void btnCreate2_Click(object sender, EventArgs e)
-        {
-            //費事驗證version
-            String phone = txtPhone.Text;
-            String email = txtEmail.Text;
-            String pwd = txtPwd.Text;
-            String name = txtName.Text;
-            DataTable dt = Program.DataTableVar;
-            string connStr = "Provider=Microsoft.ACE.OLEDB.12.0;" + "Data Source=des.accdb";
-            string sqlString = "Insert into Customer (cusName, cusPhone, cusPassword, cusEmail) values ('" + name + "','" + phone + "','" + pwd + "','" + email + "');";
-            OleDbDataAdapter dataAdapter = new OleDbDataAdapter(sqlString, connStr);
-            dataAdapter.Fill(dt);
-            MessageBox.Show("Your Account has been Successfully Created", "Registration success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        }
+        
     }
 }
