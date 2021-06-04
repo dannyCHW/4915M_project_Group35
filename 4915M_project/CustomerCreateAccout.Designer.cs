@@ -43,6 +43,7 @@ namespace _4915M_project
             this.txtPwd2 = new System.Windows.Forms.TextBox();
             this.txtPwd = new System.Windows.Forms.TextBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
+            this.btnCreate2 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -53,6 +54,7 @@ namespace _4915M_project
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.btnCreate2);
             this.panel1.Controls.Add(this.txtName);
             this.panel1.Controls.Add(this.btnBack);
             this.panel1.Controls.Add(this.btnCreateAccout);
@@ -165,7 +167,6 @@ namespace _4915M_project
             // pictureBox2
             // 
             this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(250, 475);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(49, 40);
@@ -223,6 +224,22 @@ namespace _4915M_project
             this.txtEmail.Text = "Email";
             this.txtEmail.Click += new System.EventHandler(this.txtEmail_Click);
             // 
+            // btnCreate2
+            // 
+            this.btnCreate2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnCreate2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.btnCreate2.FlatAppearance.BorderSize = 0;
+            this.btnCreate2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCreate2.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCreate2.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnCreate2.Location = new System.Drawing.Point(555, 536);
+            this.btnCreate2.Name = "btnCreate2";
+            this.btnCreate2.Size = new System.Drawing.Size(244, 48);
+            this.btnCreate2.TabIndex = 47;
+            this.btnCreate2.Text = "Create2";
+            this.btnCreate2.UseVisualStyleBackColor = false;
+            this.btnCreate2.Click += new System.EventHandler(this.btnCreate2_Click);
+            // 
             // CustomerCreateAccout
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -259,5 +276,6 @@ namespace _4915M_project
         private System.Windows.Forms.TextBox txtPwd;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.TextBox txtName;
+        private System.Windows.Forms.Button btnCreate2;
     }
 }

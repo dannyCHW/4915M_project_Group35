@@ -13,8 +13,6 @@ namespace _4915M_project
 {
     public partial class CustomerCreateAccout : Form
     {
-
-
         public CustomerCreateAccout()
         {
             InitializeComponent();
@@ -23,7 +21,7 @@ namespace _4915M_project
 
         private void btnCreateAccout_Click_1(object sender, EventArgs e)
         {
-            DataTable dt = new DataTable();
+            DataTable dt = Program.DataTableVar;
             string connStr = "Provider=Microsoft.ACE.OLEDB.12.0;" + "Data Source=des.accdb";
             if (txtPhone.Text == "" || txtEmail.Text == "" || txtPwd2.Text == "" || txtPwd.Text == "" || txtName.Text == "")
             {
@@ -79,7 +77,6 @@ namespace _4915M_project
                 else {
                     dataAdapter.Dispose();
                     string sqlString = "Insert into Customer (cusName, cusPhone, cusPassword, cusEmail) values ('" + name + "','" + phone + "','" + pwd + "','" + email + "');";
-
                     OleDbDataAdapter dataAdapter2 = new OleDbDataAdapter(sqlString, connStr);
                     dataAdapter2.Fill(dt);
                     dataAdapter.Dispose();
@@ -89,6 +86,9 @@ namespace _4915M_project
                     this.Hide();
                 }
             }
+
+            
+
         }
 
         private void btnBack_Click_1(object sender, EventArgs e)
@@ -145,6 +145,21 @@ namespace _4915M_project
                 txtPwd2.PasswordChar = '*';
                 txtPwd2.MaxLength = 14;
             }
+        }
+
+        private void btnCreate2_Click(object sender, EventArgs e)
+        {
+            //費事驗證version
+            String phone = txtPhone.Text;
+            String email = txtEmail.Text;
+            String pwd = txtPwd.Text;
+            String name = txtName.Text;
+            DataTable dt = Program.DataTableVar;
+            string connStr = "Provider=Microsoft.ACE.OLEDB.12.0;" + "Data Source=des.accdb";
+            string sqlString = "Insert into Customer (cusName, cusPhone, cusPassword, cusEmail) values ('" + name + "','" + phone + "','" + pwd + "','" + email + "');";
+            OleDbDataAdapter dataAdapter = new OleDbDataAdapter(sqlString, connStr);
+            dataAdapter.Fill(dt);
+            MessageBox.Show("Your Account has been Successfully Created", "Registration success", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

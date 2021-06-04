@@ -39,7 +39,7 @@ namespace _4915M_project
             String vPwd = "";
             string vPosition = "";
 
-            DataTable dt = new DataTable();
+            DataTable dt = Program.DataTableVar;
             String connStr = "";
 
             string sqlStr = "Select stfID,stfPassword,stfPosition from Staff where stfID = '" + staffID + "'";

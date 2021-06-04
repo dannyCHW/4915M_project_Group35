@@ -14,8 +14,6 @@ namespace _4915M_project
     public partial class CustomerLogin : Form
     {
 
-
-
         public CustomerLogin()
         {
             InitializeComponent();
@@ -27,7 +25,7 @@ namespace _4915M_project
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            DataTable dt = new DataTable();
+            DataTable dt = Program.DataTableVar;
             String connStr = "Provider=Microsoft.ACE.OLEDB.12.0;" + "Data Source=des.accdb";
 
             String email = txtEmail.Text;
@@ -84,7 +82,7 @@ namespace _4915M_project
             }
 
             dataAdapter.Dispose();
-
+            dt = null;
         }
 
         private void btnBack_Click_1(object sender, EventArgs e)
