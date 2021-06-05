@@ -143,13 +143,13 @@ namespace _4915M_project
             // 
             // pictureBox4
             // 
-            this.pictureBox4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(134, 207);
+            this.pictureBox4.Location = new System.Drawing.Point(82, 144);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(296, 246);
+            this.pictureBox4.Padding = new System.Windows.Forms.Padding(30);
+            this.pictureBox4.Size = new System.Drawing.Size(400, 373);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 62;
+            this.pictureBox4.TabIndex = 36;
             this.pictureBox4.TabStop = false;
             // 
             // Main

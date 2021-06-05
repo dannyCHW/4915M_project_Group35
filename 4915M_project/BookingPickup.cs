@@ -43,46 +43,43 @@ namespace _4915M_project
                 DataTable dt = Program.DataTableVar;
                 String connStr = "Provider=Microsoft.ACE.OLEDB.12.0;" + "Data Source=des.accdb";
                 int this_order = Convert.ToInt32(txtOrder.Text);
-
-                string sqlStr = "Select orderStatus,dateOfPickUp from ShipmentOrder where orderID = " + this_order + " AND cusID = " + CustomerLogin.currentCustomerID;
+                dt.Clear();
+                string sqlStr = "Select orderStatus,dateOfPickUp from ShipmentOrder where orderID = " + this_order + " AND cusID = " + CustomerLogin.currentCustomerID + ";";
 
                 OleDbDataAdapter dataAdapter = new OleDbDataAdapter(sqlStr, connStr);
                 dataAdapter.Fill(dt);
 
+
                 if (dt.Rows.Count > 0)
                 {
-                    MessageBox.Show("Successful update a booking", "Update Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     String status = dt.Rows[0]["orderStatus"].ToString();
                     if (status == "waitingBooking")
                     {
-                        DateTime createDate = (DateTime)dateTime.Value;
+                        String createDate = dateTime.Value.ToString();
+
                         string strSqlStr = "Update ShipmentOrder set orderStatus = 'waitingPickup' , dateOfPickUp = " + "'" + createDate + "'" + " where orderID = " + this_order;
                         OleDbDataAdapter dataAdapter2 = new OleDbDataAdapter(strSqlStr, connStr);
+                        dataAdapter2.Fill(dt);
                         dataAdapter.Dispose();
+
                         dataAdapter2.Dispose();
-                        dt.Clear();
                         MessageBox.Show("Successful create a booking", "Booking Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     } else if (status == "waitingPickup") {
-                        String exceptedDate = dt.Rows[0]["dateOfPickUp"].ToString();
-                        DateTime today = DateTime.Now;
+                        String createDate = dateTime.Value.ToString();
 
+                        string strSqlStr = "Update ShipmentOrder set  dateOfPickUp = '" + createDate + "' where orderID = " + this_order;
 
-                            string strSqlStr = "Update ShipmentOrder set orderStatus = 'waitingPickup' , dateOfPickUp = " + "'" + exceptedDate + "'" + " where orderID = " + this_order;
-                            OleDbDataAdapter dataAdapter2 = new OleDbDataAdapter(strSqlStr, connStr);
+                         OleDbDataAdapter dataAdapter2 = new OleDbDataAdapter(strSqlStr, connStr);
+                        dataAdapter2.Fill(dt);
 
-
+                        MessageBox.Show("Successful Edit a booking", "Booking Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         dt.Clear();
+                        dataAdapter2.Dispose();
                     }
                     else {
-                        dataAdapter.Dispose();
-                        dt.Clear();
                     }
                 } 
-            else {
-                MessageBox.Show("Cannot found this order", "Fail Login", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-
             }
             else {
                 MessageBox.Show("Must input the order number", "Fail Login", MessageBoxButtons.OK, MessageBoxIcon.Warning);
