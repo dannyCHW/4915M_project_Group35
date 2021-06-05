@@ -22,7 +22,7 @@ namespace _4915M_project
         {
             DeleteStaffAccout deletestaff = new DeleteStaffAccout();
             deletestaff.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void btnBack_Click(object sender, EventArgs e)
