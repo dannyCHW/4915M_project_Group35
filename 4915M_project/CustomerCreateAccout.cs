@@ -147,6 +147,13 @@ namespace _4915M_project
             }
         }
 
-        
+        private void txtPhone_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+            if (!Char.IsNumber(e.KeyChar) && (!char.IsControl(e.KeyChar)))
+            {
+                e.Handled = true;
+            }
+        }
     }
 }

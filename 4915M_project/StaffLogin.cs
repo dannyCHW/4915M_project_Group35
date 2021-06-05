@@ -123,7 +123,7 @@ namespace _4915M_project
         private void txtStaffID_KeyPress(object sender, KeyPressEventArgs e)
         {
             char ch = e.KeyChar;
-            if (!Char.IsDigit(ch) && ch != 46)
+            if (!Char.IsNumber(e.KeyChar) && (!char.IsControl(e.KeyChar)))
             {
                 e.Handled = true;
             }
