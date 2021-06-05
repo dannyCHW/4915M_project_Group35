@@ -51,6 +51,7 @@ namespace _4915M_project
 
                 if (dt.Rows.Count > 0)
                 {
+                    MessageBox.Show("Successful update a booking", "Update Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     String status = dt.Rows[0]["orderStatus"].ToString();
                     if (status == "waitingBooking")
                     {
@@ -60,20 +61,18 @@ namespace _4915M_project
                         dataAdapter.Dispose();
                         dataAdapter2.Dispose();
                         dt.Clear();
-                        MessageBox.Show("Successful create a booking", "Fail Login", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        MessageBox.Show("Successful create a booking", "Booking Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     } else if (status == "waitingPickup") {
                         String exceptedDate = dt.Rows[0]["dateOfPickUp"].ToString();
                         DateTime today = DateTime.Now;
-                        MessageBox.Show(exceptedDate, "Fail Login", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        /*if () {
-                            string strSqlStr = "Update ShipmentOrder set orderStatus = 'waitingPickup' , dateOfPickUp = " + "'" + date + "'" + " where orderID = " + this_order;
+
+
+                            string strSqlStr = "Update ShipmentOrder set orderStatus = 'waitingPickup' , dateOfPickUp = " + "'" + exceptedDate + "'" + " where orderID = " + this_order;
                             OleDbDataAdapter dataAdapter2 = new OleDbDataAdapter(strSqlStr, connStr);
 
 
-                        }
-                        */
-
+                        dt.Clear();
                     }
                     else {
                         dataAdapter.Dispose();

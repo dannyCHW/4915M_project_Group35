@@ -44,12 +44,10 @@ namespace _4915M_project
 
                 OleDbDataAdapter dataAdapter = new OleDbDataAdapter(sqlStr, connStr);
                 dataAdapter.Fill(dt);
-                MessageBox.Show("dll,", "Fail Login", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 if (dt.Rows.Count > 0)
                 {
                     String status = dt.Rows[0]["orderStatus"].ToString();
                     String date = dt.Rows[0]["dateOfPickUp"].ToString();
-                    MessageBox.Show(status, "Fail Login", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     if (status == "waitingBooking")
                     {
                         dataAdapter.Dispose();
@@ -60,7 +58,7 @@ namespace _4915M_project
                     {
                         dataAdapter.Dispose();
                         dt.Clear();
-                        MessageBox.Show("Is already booking , the booking is in " + date + " You can edit before 3 day of the booking", "Fail Login", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        MessageBox.Show("Is already booking , the booking is in " + date + " You can edit before 3 day of the booking", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                 }
                 else
