@@ -31,14 +31,13 @@ namespace _4915M_project
         {
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.txtOrder = new System.Windows.Forms.TextBox();
-            this.txtTime = new System.Windows.Forms.TextBox();
             this.dateTime = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
-            this.btnSubmit = new System.Windows.Forms.Button();
             this.btnBack = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.btnCreate = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -60,53 +59,37 @@ namespace _4915M_project
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.label3.Location = new System.Drawing.Point(305, 241);
+            this.label3.Location = new System.Drawing.Point(330, 267);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(74, 28);
             this.label3.TabIndex = 111;
             this.label3.Text = "Date:";
-            // 
-            // label4
-            // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.label4.Location = new System.Drawing.Point(306, 305);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(73, 28);
-            this.label4.TabIndex = 112;
-            this.label4.Text = "Time:";
             // 
             // txtOrder
             // 
             this.txtOrder.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtOrder.BackColor = System.Drawing.SystemColors.Control;
             this.txtOrder.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtOrder.Location = new System.Drawing.Point(429, 179);
+            this.txtOrder.Location = new System.Drawing.Point(454, 205);
             this.txtOrder.Name = "txtOrder";
-            this.txtOrder.Size = new System.Drawing.Size(205, 27);
+            this.txtOrder.Size = new System.Drawing.Size(222, 27);
             this.txtOrder.TabIndex = 113;
-            // 
-            // txtTime
-            // 
-            this.txtTime.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtTime.BackColor = System.Drawing.SystemColors.Control;
-            this.txtTime.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTime.Location = new System.Drawing.Point(429, 303);
-            this.txtTime.Name = "txtTime";
-            this.txtTime.Size = new System.Drawing.Size(205, 27);
-            this.txtTime.TabIndex = 114;
+            this.txtOrder.TextChanged += new System.EventHandler(this.txtOrder_TextChanged);
+            this.txtOrder.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtOrder_KeyPress);
             // 
             // dateTime
             // 
             this.dateTime.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.dateTime.CalendarMonthBackground = System.Drawing.SystemColors.Control;
+            this.dateTime.CustomFormat = "yyyy-MM-dd tt HH:mm:ss";
             this.dateTime.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTime.Location = new System.Drawing.Point(429, 244);
+            this.dateTime.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTime.Location = new System.Drawing.Point(454, 270);
             this.dateTime.Name = "dateTime";
-            this.dateTime.Size = new System.Drawing.Size(205, 27);
+            this.dateTime.Size = new System.Drawing.Size(222, 27);
             this.dateTime.TabIndex = 115;
+            this.dateTime.Value = new System.DateTime(2021, 6, 7, 0, 0, 0, 0);
+            this.dateTime.ValueChanged += new System.EventHandler(this.dateTime_ValueChanged);
             // 
             // label2
             // 
@@ -114,28 +97,12 @@ namespace _4915M_project
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.label2.Location = new System.Drawing.Point(197, 174);
+            this.label2.Location = new System.Drawing.Point(222, 200);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(182, 28);
             this.label2.TabIndex = 117;
             this.label2.Text = "order Number:";
-            // 
-            // btnSubmit
-            // 
-            this.btnSubmit.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnSubmit.AutoSize = true;
-            this.btnSubmit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.btnSubmit.FlatAppearance.BorderSize = 0;
-            this.btnSubmit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSubmit.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSubmit.ForeColor = System.Drawing.Color.White;
-            this.btnSubmit.Location = new System.Drawing.Point(310, 407);
-            this.btnSubmit.Name = "btnSubmit";
-            this.btnSubmit.Size = new System.Drawing.Size(324, 49);
-            this.btnSubmit.TabIndex = 119;
-            this.btnSubmit.Text = "Confirm And Submit";
-            this.btnSubmit.UseVisualStyleBackColor = false;
-            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // btnBack
             // 
@@ -157,13 +124,12 @@ namespace _4915M_project
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel1.Controls.Add(this.btnCreate);
+            this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.btnBack);
-            this.panel1.Controls.Add(this.btnSubmit);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.dateTime);
-            this.panel1.Controls.Add(this.txtTime);
             this.panel1.Controls.Add(this.txtOrder);
-            this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -171,6 +137,34 @@ namespace _4915M_project
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(918, 622);
             this.panel1.TabIndex = 110;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.label5.Location = new System.Drawing.Point(544, 300);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(72, 12);
+            this.label5.TabIndex = 121;
+            this.label5.Text = "*0900 - 17:00";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
+            // 
+            // btnCreate
+            // 
+            this.btnCreate.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnCreate.AutoSize = true;
+            this.btnCreate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.btnCreate.FlatAppearance.BorderSize = 0;
+            this.btnCreate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCreate.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCreate.ForeColor = System.Drawing.Color.White;
+            this.btnCreate.Location = new System.Drawing.Point(361, 370);
+            this.btnCreate.Name = "btnCreate";
+            this.btnCreate.Size = new System.Drawing.Size(203, 49);
+            this.btnCreate.TabIndex = 122;
+            this.btnCreate.Text = "Edit or Create";
+            this.btnCreate.UseVisualStyleBackColor = false;
+            this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
             // 
             // BookingPickup
             // 
@@ -192,13 +186,12 @@ namespace _4915M_project
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtOrder;
-        private System.Windows.Forms.TextBox txtTime;
         private System.Windows.Forms.DateTimePicker dateTime;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button btnSubmit;
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button btnCreate;
     }
 }
