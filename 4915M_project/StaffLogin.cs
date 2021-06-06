@@ -35,34 +35,38 @@ namespace _4915M_project
         {
             String staffID = txtStaffID.Text;
             String pswd = txtPassword.Text;
-            String vID = "";
+            int vID;
             String vPwd = "";
-            string vPosition = "";
+            String vPosition;
+            int sstaffID = Convert.ToInt32(txtStaffID.Text);
 
             DataTable dt = Program.DataTableVar;
-            String connStr = "";
+            String connStr = "Provider=Microsoft.ACE.OLEDB.12.0;" + "Data Source=des.accdb";
 
-            string sqlStr = "Select stfID,stfPassword,stfPosition from Staff where stfID = '" + staffID + "'";
+            dt.Clear();
+
+            string sqlStr = "Select stfID,stfPassword,stfPosition from Staff where stfID = " + sstaffID;
             OleDbDataAdapter dataAdapter = new OleDbDataAdapter(sqlStr, connStr);
             dataAdapter.Fill(dt);
-
             try
             {
+
                 if (dt.Rows.Count > 0)
                 {
-                    vID = dt.Rows[0]["stfID"].ToString();
+                    vID = Convert.ToInt32(dt.Rows[0]["stfID"]);
                     vPwd = dt.Rows[0]["stfPassword"].ToString();
                     vPosition = dt.Rows[0]["stfPosition"].ToString();
                     //Console.WriteLine(vpswd + vemail);
 
-                    if (staffID == vID && pswd == vPwd && vPosition == "5")
+
+                    if (sstaffID == vID && pswd == vPwd && vPosition == "Manager")
                     {
 
                         ManagerLobby managerLobby = new ManagerLobby();
                         managerLobby.Show();
                         this.Close();
                     }
-                    else if (staffID == vID && pswd == vPwd && vPosition == "1")
+                    else if (sstaffID == vID && pswd == vPwd && vPosition == "Normal Staff")
                     {
                         StaffLobby stafflobby = new StaffLobby();
                         stafflobby.Show();
@@ -71,21 +75,23 @@ namespace _4915M_project
                     else
                     {
                         //temp message, maybe change to messageBox?
-
                         MessageBox.Show("Wrong Id or Password", "Fail Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
 
                 }
                 else
                 {
-                    throw new Exception("");
+                    MessageBox.Show("Wrong Id or Password", "Fail Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-                dataAdapter.Dispose();
             }
             catch (Exception)
             {
-                //temp message, maybe change to messageBox?
-                Console.WriteLine("No such account , please contect manager");
+                MessageBox.Show("Something Wrong", "Fail Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            finally
+            {
+                dt.Clear();
+                dataAdapter.Dispose();
             }
 
         }
@@ -105,6 +111,20 @@ namespace _4915M_project
                 txtPassword.Text = "";
                 txtPassword.PasswordChar = '*';
                 txtPassword.MaxLength = 14;
+            }
+        }
+
+        private void txtPassword_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+        }
+
+        private void txtStaffID_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+            if (!Char.IsNumber(e.KeyChar) && (!char.IsControl(e.KeyChar)))
+            {
+                e.Handled = true;
             }
         }
     }

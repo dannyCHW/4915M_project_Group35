@@ -34,9 +34,9 @@ namespace _4915M_project
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.txtStaffID = new System.Windows.Forms.TextBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.btnLogin = new System.Windows.Forms.Button();
             this.btnBack = new System.Windows.Forms.Button();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -73,6 +73,7 @@ namespace _4915M_project
             this.txtPassword.TabIndex = 30;
             this.txtPassword.Text = "Password";
             this.txtPassword.Click += new System.EventHandler(this.txtPwd_Click);
+            this.txtPassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPassword_KeyPress);
             // 
             // txtStaffID
             // 
@@ -85,16 +86,7 @@ namespace _4915M_project
             this.txtStaffID.TabIndex = 28;
             this.txtStaffID.Text = "Staff ID";
             this.txtStaffID.Click += new System.EventHandler(this.txtID_Click);
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(435, 0);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(296, 246);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 33;
-            this.pictureBox4.TabStop = false;
+            this.txtStaffID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtStaffID_KeyPress);
             // 
             // btnLogin
             // 
@@ -126,6 +118,16 @@ namespace _4915M_project
             this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(435, 0);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(296, 246);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 33;
+            this.pictureBox4.TabStop = false;
+            // 
             // StaffLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -155,8 +157,8 @@ namespace _4915M_project
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.TextBox txtStaffID;
-        private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Button btnBack;
+        private System.Windows.Forms.PictureBox pictureBox4;
     }
 }

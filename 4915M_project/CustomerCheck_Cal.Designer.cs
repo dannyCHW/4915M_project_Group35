@@ -39,7 +39,7 @@ namespace _4915M_project
             this.txtStatus = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.txtCheckOrderNO = new System.Windows.Forms.TextBox();
+            this.txtOrder = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.txtFare = new System.Windows.Forms.TextBox();
@@ -57,7 +57,7 @@ namespace _4915M_project
             this.panel1.Controls.Add(this.txtStatus);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.txtCheckOrderNO);
+            this.panel1.Controls.Add(this.txtOrder);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.txtFare);
@@ -82,6 +82,7 @@ namespace _4915M_project
             this.btnCheck.TabIndex = 124;
             this.btnCheck.Text = "Check to check";
             this.btnCheck.UseVisualStyleBackColor = false;
+            this.btnCheck.Click += new System.EventHandler(this.btnCheck_Click);
             // 
             // btnPayment
             // 
@@ -140,6 +141,7 @@ namespace _4915M_project
             this.label9.Size = new System.Drawing.Size(191, 29);
             this.label9.TabIndex = 119;
             this.label9.Text = "Reject Reason:";
+            this.label9.Visible = false;
             // 
             // txtReason
             // 
@@ -153,6 +155,7 @@ namespace _4915M_project
             this.txtReason.Size = new System.Drawing.Size(288, 100);
             this.txtReason.TabIndex = 118;
             this.txtReason.Text = "output here (if have)";
+            this.txtReason.Visible = false;
             // 
             // txtStatus
             // 
@@ -189,15 +192,16 @@ namespace _4915M_project
             this.label5.TabIndex = 115;
             this.label5.Text = "Order Number:";
             // 
-            // txtCheckOrderNO
+            // txtOrder
             // 
-            this.txtCheckOrderNO.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtCheckOrderNO.BackColor = System.Drawing.SystemColors.Control;
-            this.txtCheckOrderNO.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCheckOrderNO.Location = new System.Drawing.Point(361, 130);
-            this.txtCheckOrderNO.Name = "txtCheckOrderNO";
-            this.txtCheckOrderNO.Size = new System.Drawing.Size(272, 27);
-            this.txtCheckOrderNO.TabIndex = 114;
+            this.txtOrder.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtOrder.BackColor = System.Drawing.SystemColors.Control;
+            this.txtOrder.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtOrder.Location = new System.Drawing.Point(361, 130);
+            this.txtOrder.Name = "txtOrder";
+            this.txtOrder.Size = new System.Drawing.Size(272, 27);
+            this.txtOrder.TabIndex = 114;
+            this.txtOrder.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtOrder_KeyPress);
             // 
             // label4
             // 
@@ -243,6 +247,7 @@ namespace _4915M_project
             this.Controls.Add(this.panel1);
             this.Name = "CustomerCheck_Cal";
             this.Text = "CustomerCheck_Cal";
+            this.Load += new System.EventHandler(this.CustomerCheck_Cal_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -260,7 +265,7 @@ namespace _4915M_project
         private System.Windows.Forms.TextBox txtStatus;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtCheckOrderNO;
+        private System.Windows.Forms.TextBox txtOrder;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtFare;

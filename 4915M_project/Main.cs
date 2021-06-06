@@ -13,7 +13,8 @@ namespace _4915M_project
     public partial class Main : Form
     {
 
-        public static int position = 1;
+        public static int position;
+        public static int customerID;
 
         public Main()
         {
@@ -43,6 +44,11 @@ namespace _4915M_project
             CustomerCreateAccout cusCreateAccount = new CustomerCreateAccout();
             cusCreateAccount.Show();
             this.Hide();
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

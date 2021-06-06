@@ -139,6 +139,7 @@ namespace _4915M_project
             this.txtPhone.TabIndex = 42;
             this.txtPhone.Text = "Phone";
             this.txtPhone.Click += new System.EventHandler(this.txtPhone_Click);
+            this.txtPhone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPhone_KeyPress);
             // 
             // pictureBox5
             // 

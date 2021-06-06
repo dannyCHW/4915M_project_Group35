@@ -35,10 +35,10 @@ namespace _4915M_project
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.btnReject = new System.Windows.Forms.Button();
             this.btnAccept = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridView = new System.Windows.Forms.DataGridView();
             this.label8 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -49,7 +49,7 @@ namespace _4915M_project
             this.panel1.Controls.Add(this.richTextBox1);
             this.panel1.Controls.Add(this.btnReject);
             this.panel1.Controls.Add(this.btnAccept);
-            this.panel1.Controls.Add(this.dataGridView1);
+            this.panel1.Controls.Add(this.dataGridView);
             this.panel1.Controls.Add(this.label8);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -127,15 +127,15 @@ namespace _4915M_project
             this.btnAccept.Text = "Accept";
             this.btnAccept.UseVisualStyleBackColor = false;
             // 
-            // dataGridView1
+            // dataGridView
             // 
-            this.dataGridView1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(46, 90);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1091, 286);
-            this.dataGridView1.TabIndex = 46;
+            this.dataGridView.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView.Location = new System.Drawing.Point(46, 90);
+            this.dataGridView.Name = "dataGridView";
+            this.dataGridView.RowTemplate.Height = 24;
+            this.dataGridView.Size = new System.Drawing.Size(1091, 286);
+            this.dataGridView.TabIndex = 46;
             // 
             // label8
             // 
@@ -160,7 +160,7 @@ namespace _4915M_project
             this.Text = "VerifyOrder";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -169,7 +169,7 @@ namespace _4915M_project
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridView;
         private System.Windows.Forms.Button btnReject;
         private System.Windows.Forms.Button btnAccept;
         private System.Windows.Forms.Label label9;

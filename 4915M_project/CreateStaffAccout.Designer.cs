@@ -40,11 +40,15 @@ namespace _4915M_project
             this.txtStaffName = new System.Windows.Forms.TextBox();
             this.label30 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.comboBox1);
+            this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.btnDelete);
             this.panel1.Controls.Add(this.btnUpdate);
             this.panel1.Controls.Add(this.btnBack);
@@ -87,12 +91,13 @@ namespace _4915M_project
             this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUpdate.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdate.ForeColor = System.Drawing.Color.White;
-            this.btnUpdate.Location = new System.Drawing.Point(511, 431);
+            this.btnUpdate.Location = new System.Drawing.Point(508, 468);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(178, 50);
             this.btnUpdate.TabIndex = 121;
             this.btnUpdate.Text = "Create";
             this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnBack
             // 
@@ -114,7 +119,7 @@ namespace _4915M_project
             // 
             this.txtPassword2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtPassword2.Font = new System.Drawing.Font("PMingLiU", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.txtPassword2.Location = new System.Drawing.Point(434, 364);
+            this.txtPassword2.Location = new System.Drawing.Point(436, 334);
             this.txtPassword2.Name = "txtPassword2";
             this.txtPassword2.Size = new System.Drawing.Size(348, 27);
             this.txtPassword2.TabIndex = 86;
@@ -127,7 +132,7 @@ namespace _4915M_project
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.label2.Location = new System.Drawing.Point(425, 317);
+            this.label2.Location = new System.Drawing.Point(427, 287);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(302, 38);
             this.label2.TabIndex = 85;
@@ -137,7 +142,7 @@ namespace _4915M_project
             // 
             this.txtPassword.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtPassword.Font = new System.Drawing.Font("PMingLiU", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.txtPassword.Location = new System.Drawing.Point(434, 258);
+            this.txtPassword.Location = new System.Drawing.Point(434, 243);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(348, 27);
             this.txtPassword.TabIndex = 84;
@@ -150,7 +155,7 @@ namespace _4915M_project
             this.label28.AutoSize = true;
             this.label28.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label28.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.label28.Location = new System.Drawing.Point(425, 211);
+            this.label28.Location = new System.Drawing.Point(425, 196);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(161, 38);
             this.label28.TabIndex = 83;
@@ -190,6 +195,30 @@ namespace _4915M_project
             this.label1.TabIndex = 13;
             this.label1.Text = "Create Staff Account";
             // 
+            // label3
+            // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.label3.Location = new System.Drawing.Point(427, 378);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(134, 38);
+            this.label3.TabIndex = 123;
+            this.label3.Text = "Position";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.Font = new System.Drawing.Font("PMingLiU", 12F);
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Normal Staff",
+            "Manager"});
+            this.comboBox1.Location = new System.Drawing.Point(436, 419);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(348, 24);
+            this.comboBox1.TabIndex = 124;
+            // 
             // CreateStaffAccout
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -199,6 +228,7 @@ namespace _4915M_project
             this.Controls.Add(this.panel1);
             this.Name = "CreateStaffAccout";
             this.Text = "CreateStaffAccout";
+            this.Load += new System.EventHandler(this.CreateStaffAccout_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -218,5 +248,7 @@ namespace _4915M_project
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label3;
     }
 }
