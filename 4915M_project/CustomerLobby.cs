@@ -116,7 +116,7 @@ namespace _4915M_project
 
         private void CustomerLobby_Load(object sender, EventArgs e)
         {
-
+            MessageBox.Show("DLLM", "Goods Alert", MessageBoxButtons.OK, MessageBoxIcon.Information);
             lblCurrentUser.Text = "You are now login as " + CustomerLogin.currentCustomerName;
 
 
