@@ -123,7 +123,6 @@ namespace _4915M_project
             string connStr = "Provider=Microsoft.ACE.OLEDB.12.0;" + "Data Source=des.accdb";
 
             string sqlStr = "Select orderStatus ,dateOfPickUp from ShipmentOrder where reiceverEmail = '" + CustomerLogin.customerEmail + "' AND orderStatus = 'processing' ";
-            MessageBox.Show(CustomerLogin.customerEmail, "Goods Alert", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             OleDbDataAdapter dataAdapter = new OleDbDataAdapter(sqlStr, connStr);
             dataAdapter.Fill(dt);
@@ -143,7 +142,7 @@ namespace _4915M_project
                         var v_exDay = DateTime.Parse(pickupDate);
                         DateTime expectedDate = (DateTime)v_exDay;
 
-                        int result = DateTime.Compare(expectedDate, localDate);
+                        int result = DateTime.Compare(expectedDate.AddDays(7), localDate);
                         if (result <= 3)
                         {
                             MessageBox.Show("The goods you need to receive already arrived locally, please pay attention to the time", "Goods Alert", MessageBoxButtons.OK, MessageBoxIcon.Information);
