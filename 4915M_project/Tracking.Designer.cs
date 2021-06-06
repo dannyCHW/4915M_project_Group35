@@ -71,6 +71,7 @@ namespace _4915M_project
             this.btnCheck.TabIndex = 123;
             this.btnCheck.Text = "Check";
             this.btnCheck.UseVisualStyleBackColor = false;
+            this.btnCheck.Click += new System.EventHandler(this.btnCheck_Click);
             // 
             // label3
             // 
@@ -129,6 +130,7 @@ namespace _4915M_project
             this.txtOrder.Name = "txtOrder";
             this.txtOrder.Size = new System.Drawing.Size(272, 27);
             this.txtOrder.TabIndex = 111;
+            this.txtOrder.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtOrder_KeyPress);
             // 
             // label1
             // 
