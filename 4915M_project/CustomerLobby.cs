@@ -44,9 +44,7 @@ namespace _4915M_project
 
         private void btnBooking_Click(object sender, EventArgs e)
         {
-            CheckBooking check = new CheckBooking();
-            check.Show();
-            this.Hide();
+            openChildForm(new BookingPickup());
         }
 
         private void btnBooking2_Click(object sender, EventArgs e)
