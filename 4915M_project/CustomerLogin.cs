@@ -29,7 +29,7 @@ namespace _4915M_project
         private void btnLogin_Click(object sender, EventArgs e)
         {
             DataTable dt = Program.DataTableVar;
-            String connStr = "Provider=Microsoft.ACE.OLEDB.12.0;" + "Data Source=des.accdb";
+            string connStr = Program.connStr; ;
 
             String email = txtEmail.Text;
             String pswd = txtPassword.Text;

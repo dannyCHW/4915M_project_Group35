@@ -11,6 +11,7 @@ namespace _4915M_project
     static class Program
     {
         public static DataTable DataTableVar = new DataTable();
+        public static string connStr = "Provider=Microsoft.ACE.OLEDB.12.0;" + "Data Source=des.accdb";
 
         /// <summary>
         /// The main entry point for the application.

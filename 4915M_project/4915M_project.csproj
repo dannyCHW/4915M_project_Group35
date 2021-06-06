@@ -99,6 +99,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>desDataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Good.cs" />
     <Compile Include="Invoice.cs">
       <SubType>Form</SubType>
     </Compile>

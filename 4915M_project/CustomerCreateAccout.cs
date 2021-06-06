@@ -22,7 +22,7 @@ namespace _4915M_project
         private void btnCreateAccout_Click_1(object sender, EventArgs e)
         {
             DataTable dt = Program.DataTableVar;
-            string connStr = "Provider=Microsoft.ACE.OLEDB.12.0;" + "Data Source=des.accdb";
+            string connStr = Program.connStr;
             if (txtPhone.Text == "" || txtEmail.Text == "" || txtPwd2.Text == "" || txtPwd.Text == "" || txtName.Text == "")
             {
                 MessageBox.Show("Please enter value in all field", "Invalid", MessageBoxButtons.OK, MessageBoxIcon.Error);
