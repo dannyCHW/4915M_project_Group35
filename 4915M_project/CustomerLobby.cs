@@ -116,19 +116,17 @@ namespace _4915M_project
 
         private void CustomerLobby_Load(object sender, EventArgs e)
         {
-            MessageBox.Show("DLLM", "Goods Alert", MessageBoxButtons.OK, MessageBoxIcon.Information);
             lblCurrentUser.Text = "You are now login as " + CustomerLogin.currentCustomerName;
 
 
             /*   here is the code */
-            MessageBox.Show("DLLM", "Goods Alert", MessageBoxButtons.OK, MessageBoxIcon.Information);
             DataTable dt = Program.DataTableVar;
             dt.Clear();
             string connStr = "Provider=Microsoft.ACE.OLEDB.12.0;" + "Data Source=des.accdb";
 
             string sqlStr = "Select orderStatus ,dateOfPickUp from ShipmentOrder where reiceverEmail = '" + CustomerLogin.customerEmail + "' AND orderStatus = 'processing' ";
-
             MessageBox.Show(CustomerLogin.customerEmail, "Goods Alert", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
             OleDbDataAdapter dataAdapter = new OleDbDataAdapter(sqlStr, connStr);
             dataAdapter.Fill(dt);
 

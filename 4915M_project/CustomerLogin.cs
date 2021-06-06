@@ -65,7 +65,7 @@ namespace _4915M_project
                         vpswd = null;
                         currentCustomerID = Convert.ToInt32(dt.Rows[0]["cusID"]);
                         currentCustomerName = dt.Rows[0]["cusName"].ToString();
-                        customerEmail = vemail;
+                        customerEmail = dt.Rows[0]["cusEmail"].ToString(); ;
                         cusPage.Show();
                         this.Close();
                     }
