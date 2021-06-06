@@ -18,18 +18,18 @@ namespace _4915M_project
             InitializeComponent();
         }
 
-        private void btnPayment_Click(object sender, EventArgs e)
-        {
-            Payment payment = new Payment();
-            payment.Show();
-            this.Hide();
-        }
 
         private void btnBack_Click_1(object sender, EventArgs e)
         {
             CustomerLobby custLobby = new CustomerLobby();
             custLobby.Show();
-            this.Hide();
+            this.Close();
+        }
+        private void btnPayment_Click(object sender, EventArgs e)
+        {
+            Payment payment = new Payment();
+            payment.Show();
+            this.Close();
         }
 
         private void btnCheck_Click(object sender, EventArgs e)

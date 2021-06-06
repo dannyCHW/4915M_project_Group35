@@ -16,6 +16,7 @@ namespace _4915M_project
 
         public static int currentCustomerID;
         public static String currentCustomerName;
+        public static String customerEmail;
 
         public CustomerLogin()
         {
@@ -64,6 +65,7 @@ namespace _4915M_project
                         vpswd = null;
                         currentCustomerID = Convert.ToInt32(dt.Rows[0]["cusID"]);
                         currentCustomerName = dt.Rows[0]["cusName"].ToString();
+                        customerEmail = vemail;
                         cusPage.Show();
                         this.Close();
                     }

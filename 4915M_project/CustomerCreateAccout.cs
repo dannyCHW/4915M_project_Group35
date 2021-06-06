@@ -61,7 +61,7 @@ namespace _4915M_project
                 if (dt.Rows.Count > 0)
                 {
                     dataAdapter.Dispose();
-
+                    dt.Clear();
                     MessageBox.Show("This Email Already Been used", "Invalid Email", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                 }
@@ -76,6 +76,7 @@ namespace _4915M_project
                  */
                 else {
                     dataAdapter.Dispose();
+                    dt.Clear();
                     string sqlString = "Insert into Customer (cusName, cusPhone, cusPassword, cusEmail) values ('" + name + "','" + phone + "','" + pwd + "','" + email + "');";
                     OleDbDataAdapter dataAdapter2 = new OleDbDataAdapter(sqlString, connStr);
                     dataAdapter2.Fill(dt);

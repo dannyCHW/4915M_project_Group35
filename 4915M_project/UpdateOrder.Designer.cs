@@ -179,6 +179,7 @@ namespace _4915M_project
             "waitingBooking",
             "waitingPickup",
             "processing",
+            "waitingRecieve",
             "completed",
             "rejected"});
             this.comboStatus.Location = new System.Drawing.Point(312, 492);

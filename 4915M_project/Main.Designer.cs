@@ -35,10 +35,10 @@ namespace _4915M_project
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.btnStaffLogin = new System.Windows.Forms.Button();
             this.btnCustomerCreateAccount = new System.Windows.Forms.Button();
             this.btnCustomerLogin = new System.Windows.Forms.Button();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -92,6 +92,18 @@ namespace _4915M_project
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(565, 661);
             this.panel3.TabIndex = 37;
+            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(114, 180);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(320, 270);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 62;
+            this.pictureBox4.TabStop = false;
             // 
             // btnStaffLogin
             // 
@@ -140,17 +152,6 @@ namespace _4915M_project
             this.btnCustomerLogin.Text = "Login";
             this.btnCustomerLogin.UseVisualStyleBackColor = false;
             this.btnCustomerLogin.Click += new System.EventHandler(this.btnCustomerLogin_Click);
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(114, 180);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(320, 270);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 62;
-            this.pictureBox4.TabStop = false;
             // 
             // Main
             // 
