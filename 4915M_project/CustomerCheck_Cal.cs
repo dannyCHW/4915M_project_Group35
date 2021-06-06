@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.OleDb;
 
 namespace _4915M_project
 {
@@ -29,6 +30,68 @@ namespace _4915M_project
             CustomerLobby custLobby = new CustomerLobby();
             custLobby.Show();
             this.Hide();
+        }
+
+        private void btnCheck_Click(object sender, EventArgs e)
+        {
+            if (txtOrder.Text == "")
+            {
+                MessageBox.Show("You need to input order number", "Fail Action", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+            }
+            else {
+                int orderID = Convert.ToInt32(txtOrder.Text);
+
+                DataTable dt = Program.DataTableVar;
+                String connStr = "Provider=Microsoft.ACE.OLEDB.12.0;" + "Data Source=des.accdb";
+
+                string sqlStr = "Select  orderStatus , rejectReason from ShipmentOrder where orderID = " + orderID + " AND cusID = " + CustomerLogin.currentCustomerID + ";";   /* Price 未攞*/
+
+                dt.Clear();
+
+                OleDbDataAdapter dataAdapter = new OleDbDataAdapter(sqlStr, connStr);
+                dataAdapter.Fill(dt);
+
+                if (dt.Rows.Count > 0)
+                {
+                    String status = dt.Rows[0]["orderStatus"].ToString();
+                    String rejectReason = dt.Rows[0]["rejectReason"].ToString();
+
+                    if (status == "waitingPayment" && status != "waitingBooking" && status != "processing" && status != "waitingPickup")
+                    {
+                        txtStatus.Text = status;
+                        /* get     price*/
+                    }
+                    else if (status == "rejected")
+                    {
+                        label9.Visible = true;
+                        txtReason.Visible = true;
+                        txtReason.Text = rejectReason;
+                        txtStatus.Text = status;
+                        txtFare.Text = "Null";
+                    }
+                    else if (status == "completed") {
+                        MessageBox.Show("Order is comepleted , Please check your invoice", "Fail Action", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
+
+                else {
+                    MessageBox.Show("No this order", "Fail Action", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+        }
+
+        private void txtOrder_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+            if (!Char.IsNumber(e.KeyChar) && (!char.IsControl(e.KeyChar)))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void CustomerCheck_Cal_Load(object sender, EventArgs e)
+        {
         }
     }
 }

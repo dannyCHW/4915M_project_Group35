@@ -75,7 +75,6 @@ namespace _4915M_project
                     else
                     {
                         //temp message, maybe change to messageBox?
-
                         MessageBox.Show("Wrong Id or Password", "Fail Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
 

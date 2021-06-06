@@ -36,7 +36,7 @@ namespace _4915M_project
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label32 = new System.Windows.Forms.Label();
-            this.txtOrderNumber = new System.Windows.Forms.TextBox();
+            this.txtOrder = new System.Windows.Forms.TextBox();
             this.comboStatus = new System.Windows.Forms.ComboBox();
             this.comboLocation = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -58,7 +58,7 @@ namespace _4915M_project
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label32);
-            this.panel1.Controls.Add(this.txtOrderNumber);
+            this.panel1.Controls.Add(this.txtOrder);
             this.panel1.Controls.Add(this.comboStatus);
             this.panel1.Controls.Add(this.comboLocation);
             this.panel1.Controls.Add(this.label3);
@@ -89,6 +89,7 @@ namespace _4915M_project
             this.btnUpdate.TabIndex = 120;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnBack
             // 
@@ -157,20 +158,29 @@ namespace _4915M_project
             this.label32.TabIndex = 90;
             this.label32.Text = "Order Number";
             // 
-            // txtOrderNumber
+            // txtOrder
             // 
-            this.txtOrderNumber.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtOrderNumber.Font = new System.Drawing.Font("PMingLiU", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.txtOrderNumber.Location = new System.Drawing.Point(312, 435);
-            this.txtOrderNumber.Name = "txtOrderNumber";
-            this.txtOrderNumber.Size = new System.Drawing.Size(253, 27);
-            this.txtOrderNumber.TabIndex = 89;
+            this.txtOrder.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtOrder.Font = new System.Drawing.Font("PMingLiU", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.txtOrder.Location = new System.Drawing.Point(312, 435);
+            this.txtOrder.Name = "txtOrder";
+            this.txtOrder.Size = new System.Drawing.Size(253, 27);
+            this.txtOrder.TabIndex = 89;
+            this.txtOrder.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtOrder_KeyPress);
             // 
             // comboStatus
             // 
             this.comboStatus.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.comboStatus.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboStatus.FormattingEnabled = true;
+            this.comboStatus.Items.AddRange(new object[] {
+            "waitingVerify",
+            "waitingPayment",
+            "waitingBooking",
+            "waitingPickup",
+            "processing",
+            "completed",
+            "rejected"});
             this.comboStatus.Location = new System.Drawing.Point(312, 492);
             this.comboStatus.Name = "comboStatus";
             this.comboStatus.Size = new System.Drawing.Size(253, 27);
@@ -181,6 +191,11 @@ namespace _4915M_project
             this.comboLocation.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.comboLocation.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboLocation.FormattingEnabled = true;
+            this.comboLocation.Items.AddRange(new object[] {
+            "Hong Kong",
+            "Australia",
+            "Japan",
+            "China Shanghai"});
             this.comboLocation.Location = new System.Drawing.Point(883, 440);
             this.comboLocation.Name = "comboLocation";
             this.comboLocation.Size = new System.Drawing.Size(269, 27);
@@ -276,6 +291,7 @@ namespace _4915M_project
             this.Controls.Add(this.panel1);
             this.Name = "UpdateOrder";
             this.Text = "UpdateOrder";
+            this.Load += new System.EventHandler(this.UpdateOrder_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -295,7 +311,7 @@ namespace _4915M_project
         private System.Windows.Forms.ComboBox comboColumn;
         private System.Windows.Forms.TextBox txtInput;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.TextBox txtOrderNumber;
+        private System.Windows.Forms.TextBox txtOrder;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label32;
         private System.Windows.Forms.Label label5;
