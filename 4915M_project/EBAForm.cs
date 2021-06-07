@@ -96,8 +96,6 @@ namespace _4915M_project
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            Payment payment = new Payment();
-            payment.Show();
             this.Close();
         }
     }

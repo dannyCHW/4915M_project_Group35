@@ -85,5 +85,10 @@ namespace _4915M_project
                 }
             }
         }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

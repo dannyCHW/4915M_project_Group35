@@ -101,5 +101,10 @@ namespace _4915M_project
         {
 
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+            this.Close();
+        }
     }
 }

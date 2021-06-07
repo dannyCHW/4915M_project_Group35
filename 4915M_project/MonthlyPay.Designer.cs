@@ -118,6 +118,7 @@ namespace _4915M_project
             this.btnBack.TabIndex = 128;
             this.btnBack.Text = "<-Back";
             this.btnBack.UseVisualStyleBackColor = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // label1
             // 
@@ -127,9 +128,9 @@ namespace _4915M_project
             this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(33, 37);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(448, 38);
+            this.label1.Size = new System.Drawing.Size(287, 38);
             this.label1.TabIndex = 127;
-            this.label1.Text = "Simulate external payments";
+            this.label1.Text = "Monthly Payment";
             // 
             // MonthlyPay
             // 
