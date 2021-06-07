@@ -20,9 +20,7 @@ namespace _4915M_project
         }
         private void btnBack_Click_1(object sender, EventArgs e)
         {
-            CustomerCheck_Cal cusCheck = new CustomerCheck_Cal();
-            cusCheck.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void btnEBA_Click(object sender, EventArgs e)
