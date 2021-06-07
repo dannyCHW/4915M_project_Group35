@@ -36,8 +36,8 @@ namespace _4915M_project
             this.label2 = new System.Windows.Forms.Label();
             this.btnBack = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
             this.btnCreate = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -72,7 +72,7 @@ namespace _4915M_project
             this.txtOrder.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtOrder.Location = new System.Drawing.Point(454, 205);
             this.txtOrder.Name = "txtOrder";
-            this.txtOrder.Size = new System.Drawing.Size(222, 27);
+            this.txtOrder.Size = new System.Drawing.Size(255, 27);
             this.txtOrder.TabIndex = 113;
             this.txtOrder.TextChanged += new System.EventHandler(this.txtOrder_TextChanged);
             this.txtOrder.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtOrder_KeyPress);
@@ -86,9 +86,9 @@ namespace _4915M_project
             this.dateTime.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTime.Location = new System.Drawing.Point(454, 270);
             this.dateTime.Name = "dateTime";
-            this.dateTime.Size = new System.Drawing.Size(222, 27);
+            this.dateTime.Size = new System.Drawing.Size(255, 27);
             this.dateTime.TabIndex = 115;
-            this.dateTime.Value = new System.DateTime(2021, 6, 7, 0, 0, 0, 0);
+            this.dateTime.Value = new System.DateTime(1989, 6, 4, 16, 9, 0, 0);
             this.dateTime.ValueChanged += new System.EventHandler(this.dateTime_ValueChanged);
             // 
             // label2
@@ -138,17 +138,6 @@ namespace _4915M_project
             this.panel1.Size = new System.Drawing.Size(918, 622);
             this.panel1.TabIndex = 110;
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.label5.Location = new System.Drawing.Point(544, 300);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(72, 12);
-            this.label5.TabIndex = 121;
-            this.label5.Text = "*0900 - 17:00";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
-            // 
             // btnCreate
             // 
             this.btnCreate.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -165,6 +154,17 @@ namespace _4915M_project
             this.btnCreate.Text = "Edit or Create";
             this.btnCreate.UseVisualStyleBackColor = false;
             this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.label5.Location = new System.Drawing.Point(544, 300);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(72, 12);
+            this.label5.TabIndex = 121;
+            this.label5.Text = "*0900 - 17:00";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // BookingPickup
             // 
