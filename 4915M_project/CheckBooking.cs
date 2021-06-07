@@ -60,6 +60,12 @@ namespace _4915M_project
                         dt.Clear();
                         MessageBox.Show("Is already booking , the booking is in " + date + " You can edit before 3 day of the booking", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
+                    else {
+                        dataAdapter.Dispose();
+                        dt.Clear();
+                        MessageBox.Show("This order cannot booking , please check the status" ,"Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+
                 }
                 else
                 {

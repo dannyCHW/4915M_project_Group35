@@ -45,7 +45,7 @@ namespace _4915M_project
                 DataTable dt = Program.DataTableVar;
                 String connStr = "Provider=Microsoft.ACE.OLEDB.12.0;" + "Data Source=des.accdb";
 
-                string sqlStr = "Select  orderStatus , rejectReason from ShipmentOrder where orderID = " + orderID + " AND cusID = " + CustomerLogin.currentCustomerID + ";";   /* Price 未攞*/
+                string sqlStr = "Select  orderStatus , rejectReason from ShipmentOrder where orderID = " + orderID + " AND (cusID = " + CustomerLogin.currentCustomerID + " OR reiceverEmail = '" + CustomerLogin.customerEmail + "') ;";   /* Price 未攞*/
 
                 dt.Clear();
 
@@ -54,13 +54,26 @@ namespace _4915M_project
 
                 if (dt.Rows.Count > 0)
                 {
+
                     String status = dt.Rows[0]["orderStatus"].ToString();
                     String rejectReason = dt.Rows[0]["rejectReason"].ToString();
 
-                    if (status == "waitingPayment" && status != "waitingBooking" && status != "processing" && status != "waitingPickup")
+                    if (status == "waitingPayment" || status == "waitingBooking" || status == "processing" || status == "waitingPickup")
                     {
+
                         txtStatus.Text = status;
-                        /* get     price*/
+
+                        dt.Clear();
+                        string strSqlStr = "Select price from Payment where paymentID =" + orderID + ";";
+                        OleDbDataAdapter dataAdapter2 = new OleDbDataAdapter(strSqlStr, connStr);
+                        dataAdapter2.Fill(dt);
+                        if (dt.Rows.Count > 0) { }
+                            /* get     price*/
+                            txtFare.Text = dt.Rows[0]["price"].ToString();
+                            dt.Clear();
+                            dataAdapter2.Dispose();
+                            dataAdapter.Dispose();
+
                     }
                     else if (status == "rejected")
                     {

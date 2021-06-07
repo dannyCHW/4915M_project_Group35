@@ -30,6 +30,8 @@ namespace _4915M_project
         private void InitializeComponent()
         {
             this.btnCash = new System.Windows.Forms.Panel();
+            this.btnMon = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
             this.btnBack = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.btnCredit = new System.Windows.Forms.Button();
@@ -38,15 +40,13 @@ namespace _4915M_project
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
             this.btnCash.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnCash
             // 
             this.btnCash.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.btnCash.Controls.Add(this.button1);
+            this.btnCash.Controls.Add(this.btnMon);
             this.btnCash.Controls.Add(this.label5);
             this.btnCash.Controls.Add(this.btnBack);
             this.btnCash.Controls.Add(this.button3);
@@ -61,6 +61,35 @@ namespace _4915M_project
             this.btnCash.Name = "btnCash";
             this.btnCash.Size = new System.Drawing.Size(918, 622);
             this.btnCash.TabIndex = 0;
+            // 
+            // btnMon
+            // 
+            this.btnMon.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnMon.AutoSize = true;
+            this.btnMon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.btnMon.FlatAppearance.BorderSize = 0;
+            this.btnMon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMon.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMon.ForeColor = System.Drawing.Color.White;
+            this.btnMon.Location = new System.Drawing.Point(376, 426);
+            this.btnMon.Name = "btnMon";
+            this.btnMon.Size = new System.Drawing.Size(270, 80);
+            this.btnMon.TabIndex = 123;
+            this.btnMon.Text = "Monthly";
+            this.btnMon.UseVisualStyleBackColor = false;
+            this.btnMon.Click += new System.EventHandler(this.btnMon_Click);
+            // 
+            // label5
+            // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.label5.Location = new System.Drawing.Point(226, 451);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(116, 28);
+            this.label5.TabIndex = 122;
+            this.label5.Text = "Choice 4";
             // 
             // btnBack
             // 
@@ -88,7 +117,7 @@ namespace _4915M_project
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(547, 310);
+            this.button3.Location = new System.Drawing.Point(376, 310);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(270, 80);
             this.button3.TabIndex = 120;
@@ -105,7 +134,7 @@ namespace _4915M_project
             this.btnCredit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCredit.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCredit.ForeColor = System.Drawing.Color.White;
-            this.btnCredit.Location = new System.Drawing.Point(547, 197);
+            this.btnCredit.Location = new System.Drawing.Point(376, 197);
             this.btnCredit.Name = "btnCredit";
             this.btnCredit.Size = new System.Drawing.Size(270, 80);
             this.btnCredit.TabIndex = 119;
@@ -122,11 +151,11 @@ namespace _4915M_project
             this.btnEBA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEBA.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEBA.ForeColor = System.Drawing.Color.White;
-            this.btnEBA.Location = new System.Drawing.Point(547, 88);
+            this.btnEBA.Location = new System.Drawing.Point(376, 88);
             this.btnEBA.Name = "btnEBA";
             this.btnEBA.Size = new System.Drawing.Size(270, 80);
             this.btnEBA.TabIndex = 118;
-            this.btnEBA.Text = "Extenal Billing Agreement";
+            this.btnEBA.Text = "Cash On Delivery";
             this.btnEBA.UseVisualStyleBackColor = false;
             this.btnEBA.Click += new System.EventHandler(this.btnEBA_Click);
             // 
@@ -136,7 +165,7 @@ namespace _4915M_project
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.label4.Location = new System.Drawing.Point(397, 335);
+            this.label4.Location = new System.Drawing.Point(226, 335);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(116, 28);
             this.label4.TabIndex = 116;
@@ -148,7 +177,7 @@ namespace _4915M_project
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.label3.Location = new System.Drawing.Point(397, 221);
+            this.label3.Location = new System.Drawing.Point(226, 221);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(116, 28);
             this.label3.TabIndex = 114;
@@ -160,7 +189,7 @@ namespace _4915M_project
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.label2.Location = new System.Drawing.Point(397, 112);
+            this.label2.Location = new System.Drawing.Point(226, 112);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(116, 28);
             this.label2.TabIndex = 113;
@@ -178,34 +207,6 @@ namespace _4915M_project
             this.label1.TabIndex = 110;
             this.label1.Text = "Payment";
             // 
-            // button1
-            // 
-            this.button1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.button1.AutoSize = true;
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(547, 426);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(270, 80);
-            this.button1.TabIndex = 123;
-            this.button1.Text = "Monthly";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // label5
-            // 
-            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.label5.Location = new System.Drawing.Point(397, 451);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(116, 28);
-            this.label5.TabIndex = 122;
-            this.label5.Text = "Choice 4";
-            // 
             // Payment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -215,6 +216,7 @@ namespace _4915M_project
             this.Controls.Add(this.btnCash);
             this.Name = "Payment";
             this.Text = "Payment";
+            this.Load += new System.EventHandler(this.Payment_Load);
             this.btnCash.ResumeLayout(false);
             this.btnCash.PerformLayout();
             this.ResumeLayout(false);
@@ -232,7 +234,7 @@ namespace _4915M_project
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button btnCredit;
         private System.Windows.Forms.Button btnEBA;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnMon;
         private System.Windows.Forms.Label label5;
     }
 }

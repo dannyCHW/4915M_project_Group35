@@ -31,8 +31,6 @@ namespace _4915M_project
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            CheckBooking bookingCheck = new CheckBooking();
-            bookingCheck.Show();
             this.Close();
         }
 
@@ -112,6 +110,12 @@ namespace _4915M_project
 
         private void dateTime_ValueChanged(object sender, EventArgs e)
         {
+            DateTime select = dateTime.Value;
+            DateTime today = DateTime.Today;
+            int result = DateTime.Compare(select, today.AddDays(3));
+            if (result < 0) {
+                MessageBox.Show("You must choose a date after 3 days", "Select wrong date", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
 
         }
 
