@@ -34,8 +34,6 @@ namespace _4915M_project {
         
         private StaffDataTable tableStaff;
         
-        private global::System.Data.DataRelation relationStaffShipmentOrder;
-        
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -292,7 +290,6 @@ namespace _4915M_project {
                     this.tableStaff.InitVars();
                 }
             }
-            this.relationStaffShipmentOrder = this.Relations["StaffShipmentOrder"];
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -313,10 +310,6 @@ namespace _4915M_project {
             base.Tables.Add(this.tableShipmentOrder);
             this.tableStaff = new StaffDataTable();
             base.Tables.Add(this.tableStaff);
-            this.relationStaffShipmentOrder = new global::System.Data.DataRelation("StaffShipmentOrder", new global::System.Data.DataColumn[] {
-                        this.tableStaff.stfIDColumn}, new global::System.Data.DataColumn[] {
-                        this.tableShipmentOrder.staffIDColumn}, false);
-            this.Relations.Add(this.relationStaffShipmentOrder);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1710,7 +1703,7 @@ namespace _4915M_project {
                         string areaCode, 
                         string orderStatus, 
                         System.DateTime dateOfPickUp, 
-                        StaffRow parentStaffRowByStaffShipmentOrder, 
+                        int staffID, 
                         string senderCompanyName, 
                         string senderAddress, 
                         string receiverCountry, 
@@ -1731,7 +1724,7 @@ namespace _4915M_project {
                         areaCode,
                         orderStatus,
                         dateOfPickUp,
-                        null,
+                        staffID,
                         senderCompanyName,
                         senderAddress,
                         receiverCountry,
@@ -1739,9 +1732,6 @@ namespace _4915M_project {
                         currentLocation,
                         receiverCompanyName,
                         senderName};
-                if ((parentStaffRowByStaffShipmentOrder != null)) {
-                    columnValuesArray[11] = parentStaffRowByStaffShipmentOrder[0];
-                }
                 rowShipmentOrderRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowShipmentOrderRow);
                 return rowShipmentOrderRow;
@@ -3123,17 +3113,6 @@ namespace _4915M_project {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public StaffRow StaffRow {
-                get {
-                    return ((StaffRow)(this.GetParentRow(this.Table.ParentRelations["StaffShipmentOrder"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["StaffShipmentOrder"]);
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IscusIDNull() {
                 return this.IsNull(this.tableShipmentOrder.cusIDColumn);
             }
@@ -3456,17 +3435,6 @@ namespace _4915M_project {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetstfPasswordNull() {
                 this[this.tableStaff.stfPasswordColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public ShipmentOrderRow[] GetShipmentOrderRows() {
-                if ((this.Table.ChildRelations["StaffShipmentOrder"] == null)) {
-                    return new ShipmentOrderRow[0];
-                }
-                else {
-                    return ((ShipmentOrderRow[])(base.GetChildRows(this.Table.ChildRelations["StaffShipmentOrder"])));
-                }
             }
         }
         
@@ -6675,15 +6643,6 @@ namespace _4915M_project.desDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private int UpdateUpdatedRows(desDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._staffTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Staff.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._staffTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
             if ((this._customerTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.Customer.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
@@ -6720,6 +6679,15 @@ namespace _4915M_project.desDataSetTableAdapters {
                     allChangedRows.AddRange(updatedRows);
                 }
             }
+            if ((this._staffTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Staff.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._staffTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
             return result;
         }
         
@@ -6730,14 +6698,6 @@ namespace _4915M_project.desDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private int UpdateInsertedRows(desDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._staffTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Staff.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._staffTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
             if ((this._customerTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.Customer.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
@@ -6770,6 +6730,14 @@ namespace _4915M_project.desDataSetTableAdapters {
                     allAddedRows.AddRange(addedRows);
                 }
             }
+            if ((this._staffTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Staff.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._staffTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
             return result;
         }
         
@@ -6780,6 +6748,14 @@ namespace _4915M_project.desDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private int UpdateDeletedRows(desDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
+            if ((this._staffTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Staff.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._staffTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
             if ((this._shipmentOrderTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.ShipmentOrder.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
@@ -6809,14 +6785,6 @@ namespace _4915M_project.desDataSetTableAdapters {
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
                     result = (result + this._customerTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
-            if ((this._staffTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Staff.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._staffTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }

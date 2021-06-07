@@ -171,6 +171,7 @@ namespace _4915M_project
             this.btnVerify.TabIndex = 9;
             this.btnVerify.Text = "Verify Order";
             this.btnVerify.UseVisualStyleBackColor = false;
+            this.btnVerify.Click += new System.EventHandler(this.btnVerify_Click);
             // 
             // panelChildForm
             // 
@@ -202,6 +203,7 @@ namespace _4915M_project
             this.Controls.Add(this.panel1);
             this.Name = "StaffLobby";
             this.Text = "StaffLobby";
+            this.Load += new System.EventHandler(this.StaffLobby_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panelLogo.ResumeLayout(false);
