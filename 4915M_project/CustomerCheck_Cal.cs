@@ -34,13 +34,13 @@ namespace _4915M_project
 
         private void btnCheck_Click(object sender, EventArgs e)
         {
-            if (txtOrder.Text == "")
+            if (cboOrderID.Text == "")
             {
-                MessageBox.Show("You need to input order number", "Fail Action", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("You need to select a shipment order", "Fail Action", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
             }
             else {
-                int orderID = Convert.ToInt32(txtOrder.Text);
+                int orderID = Convert.ToInt32(cboOrderID.SelectedItem);
 
                 DataTable dt = Program.DataTableVar;
                 String connStr = "Provider=Microsoft.ACE.OLEDB.12.0;" + "Data Source=des.accdb";
@@ -105,6 +105,20 @@ namespace _4915M_project
 
         private void CustomerCheck_Cal_Load(object sender, EventArgs e)
         {
+            cboOrderID.Items.Clear();
+            DataTable dt = Program.DataTableVar;
+            string connStr = Program.connStr;
+            string sqlStr = "SELECT orderID FROM ShipmentOrder WHERE cusID=" + CustomerLogin.currentCustomerID + ";";
+            OleDbDataAdapter dataAdapter = new OleDbDataAdapter(sqlStr, connStr);
+            dataAdapter.Fill(dt);
+
+            foreach(DataRow dr in dt.Rows)
+            {
+                cboOrderID.Items.Add(dr["orderID"].ToString());
+            }
+
+            dataAdapter.Dispose();
+            
         }
     }
 }

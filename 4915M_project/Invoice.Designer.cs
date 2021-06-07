@@ -63,6 +63,10 @@ namespace _4915M_project
             this.btnback = new System.Windows.Forms.Button();
             this.label19 = new System.Windows.Forms.Label();
             this.txtReference = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.InvoicePanel = new System.Windows.Forms.Panel();
+            this.label21 = new System.Windows.Forms.Label();
+            this.InvoicePanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // label18
@@ -427,12 +431,44 @@ namespace _4915M_project
             this.txtReference.Size = new System.Drawing.Size(115, 23);
             this.txtReference.TabIndex = 110;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(535, 544);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 112;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // InvoicePanel
+            // 
+            this.InvoicePanel.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.InvoicePanel.Controls.Add(this.label21);
+            this.InvoicePanel.Location = new System.Drawing.Point(292, 257);
+            this.InvoicePanel.Name = "InvoicePanel";
+            this.InvoicePanel.Size = new System.Drawing.Size(444, 310);
+            this.InvoicePanel.TabIndex = 113;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.ForeColor = System.Drawing.Color.Black;
+            this.label21.Location = new System.Drawing.Point(12, 9);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(131, 38);
+            this.label21.TabIndex = 72;
+            this.label21.Text = "Invoice";
+            // 
             // Invoice
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
             this.ClientSize = new System.Drawing.Size(918, 622);
+            this.Controls.Add(this.InvoicePanel);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label19);
             this.Controls.Add(this.txtReference);
             this.Controls.Add(this.btnback);
@@ -469,6 +505,8 @@ namespace _4915M_project
             this.Controls.Add(this.label1);
             this.Name = "Invoice";
             this.Text = "Invoice";
+            this.InvoicePanel.ResumeLayout(false);
+            this.InvoicePanel.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -510,5 +548,8 @@ namespace _4915M_project
         private System.Windows.Forms.Button btnback;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.TextBox txtReference;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Panel InvoicePanel;
+        private System.Windows.Forms.Label label21;
     }
 }
