@@ -31,6 +31,8 @@ namespace _4915M_project
         {
             this.btnNext = new System.Windows.Forms.Button();
             this.AirwayBillPanel1 = new System.Windows.Forms.Panel();
+            this.txtReceiverEmail = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.label39 = new System.Windows.Forms.Label();
             this.txtReceiverCompanyName = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
@@ -41,7 +43,6 @@ namespace _4915M_project
             this.label33 = new System.Windows.Forms.Label();
             this.txtSenderAddress = new System.Windows.Forms.TextBox();
             this.label37 = new System.Windows.Forms.Label();
-            this.cboBoxSenderCountry = new System.Windows.Forms.ComboBox();
             this.label36 = new System.Windows.Forms.Label();
             this.label35 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -77,8 +78,9 @@ namespace _4915M_project
             this.label29 = new System.Windows.Forms.Label();
             this.txtDescription = new System.Windows.Forms.TextBox();
             this.AirwayBillPanelGood = new System.Windows.Forms.Panel();
+            this.rdoTypePackage = new System.Windows.Forms.RadioButton();
+            this.rdoTypeDoc = new System.Windows.Forms.RadioButton();
             this.lblCurrentGood = new System.Windows.Forms.Label();
-            this.txtType = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtPiece = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -87,8 +89,7 @@ namespace _4915M_project
             this.txtHarmonizedCode = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnAddGood = new System.Windows.Forms.Button();
-            this.txtReceiverEmail = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.txtSenderCountry = new System.Windows.Forms.TextBox();
             this.AirwayBillPanel1.SuspendLayout();
             this.AirwayBillPanelGood.SuspendLayout();
             this.SuspendLayout();
@@ -111,6 +112,7 @@ namespace _4915M_project
             // 
             this.AirwayBillPanel1.AutoScroll = true;
             this.AirwayBillPanel1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.AirwayBillPanel1.Controls.Add(this.txtSenderCountry);
             this.AirwayBillPanel1.Controls.Add(this.txtReceiverEmail);
             this.AirwayBillPanel1.Controls.Add(this.label5);
             this.AirwayBillPanel1.Controls.Add(this.label39);
@@ -123,7 +125,6 @@ namespace _4915M_project
             this.AirwayBillPanel1.Controls.Add(this.label33);
             this.AirwayBillPanel1.Controls.Add(this.txtSenderAddress);
             this.AirwayBillPanel1.Controls.Add(this.label37);
-            this.AirwayBillPanel1.Controls.Add(this.cboBoxSenderCountry);
             this.AirwayBillPanel1.Controls.Add(this.label36);
             this.AirwayBillPanel1.Controls.Add(this.label35);
             this.AirwayBillPanel1.Controls.Add(this.panel1);
@@ -147,6 +148,27 @@ namespace _4915M_project
             this.AirwayBillPanel1.Size = new System.Drawing.Size(918, 622);
             this.AirwayBillPanel1.TabIndex = 95;
             this.AirwayBillPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.AirwayBillPanel1_Paint);
+            // 
+            // txtReceiverEmail
+            // 
+            this.txtReceiverEmail.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtReceiverEmail.Font = new System.Drawing.Font("PMingLiU", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.txtReceiverEmail.Location = new System.Drawing.Point(70, 1059);
+            this.txtReceiverEmail.Name = "txtReceiverEmail";
+            this.txtReceiverEmail.Size = new System.Drawing.Size(442, 27);
+            this.txtReceiverEmail.TabIndex = 113;
+            // 
+            // label5
+            // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.label5.Location = new System.Drawing.Point(64, 1024);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(306, 32);
+            this.label5.TabIndex = 112;
+            this.label5.Text = "Receiver  Email(if any)";
             // 
             // label39
             // 
@@ -255,24 +277,6 @@ namespace _4915M_project
             this.label37.TabIndex = 102;
             this.label37.Text = "Sender Address";
             // 
-            // cboBoxSenderCountry
-            // 
-            this.cboBoxSenderCountry.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.cboBoxSenderCountry.Font = new System.Drawing.Font("PMingLiU", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.cboBoxSenderCountry.FormattingEnabled = true;
-            this.cboBoxSenderCountry.Items.AddRange(new object[] {
-            "Japen",
-            "Hong Kong",
-            "Australia",
-            "Shanghai",
-            "Toronto",
-            "New York",
-            "London"});
-            this.cboBoxSenderCountry.Location = new System.Drawing.Point(70, 190);
-            this.cboBoxSenderCountry.Name = "cboBoxSenderCountry";
-            this.cboBoxSenderCountry.Size = new System.Drawing.Size(347, 24);
-            this.cboBoxSenderCountry.TabIndex = 101;
-            // 
             // label36
             // 
             this.label36.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -341,13 +345,9 @@ namespace _4915M_project
             this.cboBoxReceiverCountry.Font = new System.Drawing.Font("PMingLiU", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.cboBoxReceiverCountry.FormattingEnabled = true;
             this.cboBoxReceiverCountry.Items.AddRange(new object[] {
-            "Japen",
-            "Hong Kong",
+            "Japan",
             "Australia",
-            "Shanghai",
-            "Toronto",
-            "New York",
-            "London"});
+            "Shanghai"});
             this.cboBoxReceiverCountry.Location = new System.Drawing.Point(71, 644);
             this.cboBoxReceiverCountry.Name = "cboBoxReceiverCountry";
             this.cboBoxReceiverCountry.Size = new System.Drawing.Size(357, 24);
@@ -586,7 +586,7 @@ namespace _4915M_project
             this.label25.AutoSize = true;
             this.label25.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label25.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.label25.Location = new System.Drawing.Point(484, 89);
+            this.label25.Location = new System.Drawing.Point(495, 89);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(117, 38);
             this.label25.TabIndex = 80;
@@ -596,7 +596,7 @@ namespace _4915M_project
             // 
             this.txtHeight.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtHeight.Font = new System.Drawing.Font("PMingLiU", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.txtHeight.Location = new System.Drawing.Point(491, 130);
+            this.txtHeight.Location = new System.Drawing.Point(502, 130);
             this.txtHeight.Name = "txtHeight";
             this.txtHeight.Size = new System.Drawing.Size(113, 27);
             this.txtHeight.TabIndex = 81;
@@ -608,7 +608,7 @@ namespace _4915M_project
             this.label23.AutoSize = true;
             this.label23.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label23.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.label23.Location = new System.Drawing.Point(610, 134);
+            this.label23.Location = new System.Drawing.Point(621, 134);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(45, 25);
             this.label23.TabIndex = 82;
@@ -622,9 +622,9 @@ namespace _4915M_project
             this.label27.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
             this.label27.Location = new System.Drawing.Point(682, 89);
             this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(124, 38);
+            this.label27.Size = new System.Drawing.Size(196, 38);
             this.label27.TabIndex = 83;
-            this.label27.Text = "Weight";
+            this.label27.Text = "TotalWeight";
             // 
             // txtWeight
             // 
@@ -632,7 +632,7 @@ namespace _4915M_project
             this.txtWeight.Font = new System.Drawing.Font("PMingLiU", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.txtWeight.Location = new System.Drawing.Point(689, 130);
             this.txtWeight.Name = "txtWeight";
-            this.txtWeight.Size = new System.Drawing.Size(113, 27);
+            this.txtWeight.Size = new System.Drawing.Size(145, 27);
             this.txtWeight.TabIndex = 84;
             this.txtWeight.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtWeight_KeyPress);
             // 
@@ -642,7 +642,7 @@ namespace _4915M_project
             this.label26.AutoSize = true;
             this.label26.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label26.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.label26.Location = new System.Drawing.Point(808, 132);
+            this.label26.Location = new System.Drawing.Point(840, 132);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(38, 25);
             this.label26.TabIndex = 85;
@@ -672,8 +672,9 @@ namespace _4915M_project
             // AirwayBillPanelGood
             // 
             this.AirwayBillPanelGood.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.AirwayBillPanelGood.Controls.Add(this.rdoTypePackage);
+            this.AirwayBillPanelGood.Controls.Add(this.rdoTypeDoc);
             this.AirwayBillPanelGood.Controls.Add(this.lblCurrentGood);
-            this.AirwayBillPanelGood.Controls.Add(this.txtType);
             this.AirwayBillPanelGood.Controls.Add(this.label4);
             this.AirwayBillPanelGood.Controls.Add(this.txtPiece);
             this.AirwayBillPanelGood.Controls.Add(this.label3);
@@ -706,6 +707,32 @@ namespace _4915M_project
             this.AirwayBillPanelGood.TabIndex = 96;
             this.AirwayBillPanelGood.Visible = false;
             // 
+            // rdoTypePackage
+            // 
+            this.rdoTypePackage.AutoSize = true;
+            this.rdoTypePackage.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdoTypePackage.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.rdoTypePackage.Location = new System.Drawing.Point(672, 291);
+            this.rdoTypePackage.Name = "rdoTypePackage";
+            this.rdoTypePackage.Size = new System.Drawing.Size(98, 23);
+            this.rdoTypePackage.TabIndex = 99;
+            this.rdoTypePackage.TabStop = true;
+            this.rdoTypePackage.Text = "Package";
+            this.rdoTypePackage.UseVisualStyleBackColor = true;
+            // 
+            // rdoTypeDoc
+            // 
+            this.rdoTypeDoc.AutoSize = true;
+            this.rdoTypeDoc.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdoTypeDoc.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.rdoTypeDoc.Location = new System.Drawing.Point(672, 320);
+            this.rdoTypeDoc.Name = "rdoTypeDoc";
+            this.rdoTypeDoc.Size = new System.Drawing.Size(108, 23);
+            this.rdoTypeDoc.TabIndex = 98;
+            this.rdoTypeDoc.TabStop = true;
+            this.rdoTypeDoc.Text = "Document";
+            this.rdoTypeDoc.UseVisualStyleBackColor = true;
+            // 
             // lblCurrentGood
             // 
             this.lblCurrentGood.AutoSize = true;
@@ -717,22 +744,13 @@ namespace _4915M_project
             this.lblCurrentGood.TabIndex = 97;
             this.lblCurrentGood.Text = "Current Goods Added : ";
             // 
-            // txtType
-            // 
-            this.txtType.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtType.Font = new System.Drawing.Font("PMingLiU", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.txtType.Location = new System.Drawing.Point(491, 319);
-            this.txtType.Name = "txtType";
-            this.txtType.Size = new System.Drawing.Size(113, 27);
-            this.txtType.TabIndex = 96;
-            // 
             // label4
             // 
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.label4.Location = new System.Drawing.Point(484, 278);
+            this.label4.Location = new System.Drawing.Point(576, 291);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(90, 38);
             this.label4.TabIndex = 95;
@@ -819,26 +837,16 @@ namespace _4915M_project
             this.btnAddGood.UseVisualStyleBackColor = false;
             this.btnAddGood.Click += new System.EventHandler(this.btnAddGood_Click);
             // 
-            // txtReceiverEmail
+            // txtSenderCountry
             // 
-            this.txtReceiverEmail.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtReceiverEmail.Font = new System.Drawing.Font("PMingLiU", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.txtReceiverEmail.Location = new System.Drawing.Point(70, 1059);
-            this.txtReceiverEmail.Name = "txtReceiverEmail";
-            this.txtReceiverEmail.Size = new System.Drawing.Size(442, 27);
-            this.txtReceiverEmail.TabIndex = 113;
-            // 
-            // label5
-            // 
-            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.label5.Location = new System.Drawing.Point(64, 1024);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(306, 32);
-            this.label5.TabIndex = 112;
-            this.label5.Text = "Receiver  Email(if any)";
+            this.txtSenderCountry.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtSenderCountry.Font = new System.Drawing.Font("PMingLiU", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.txtSenderCountry.Location = new System.Drawing.Point(69, 190);
+            this.txtSenderCountry.Name = "txtSenderCountry";
+            this.txtSenderCountry.ReadOnly = true;
+            this.txtSenderCountry.Size = new System.Drawing.Size(348, 27);
+            this.txtSenderCountry.TabIndex = 114;
+            this.txtSenderCountry.Text = "Hong Kong";
             // 
             // AirwayBill1
             // 
@@ -905,7 +913,6 @@ namespace _4915M_project
         private System.Windows.Forms.Label label33;
         private System.Windows.Forms.TextBox txtSenderAddress;
         private System.Windows.Forms.Label label37;
-        private System.Windows.Forms.ComboBox cboBoxSenderCountry;
         private System.Windows.Forms.Label label39;
         private System.Windows.Forms.TextBox txtReceiverCompanyName;
         private System.Windows.Forms.Label label15;
@@ -916,10 +923,12 @@ namespace _4915M_project
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtNumberOfItem;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtType;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label lblCurrentGood;
         private System.Windows.Forms.TextBox txtReceiverEmail;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.RadioButton rdoTypePackage;
+        private System.Windows.Forms.RadioButton rdoTypeDoc;
+        private System.Windows.Forms.TextBox txtSenderCountry;
     }
 }
