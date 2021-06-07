@@ -13,6 +13,7 @@ namespace _4915M_project
     public partial class StaffLobby : Form
     {
 
+
         public StaffLobby()
         {
             InitializeComponent();
@@ -23,6 +24,18 @@ namespace _4915M_project
             Main main = new Main();
             main.Show();
             this.Hide();
+        }
+
+        private void btnVerify_Click(object sender, EventArgs e)
+        {
+            VerifyOrder verify = new VerifyOrder();
+            verify.Show();
+            this.Close();
+        }
+
+        private void StaffLobby_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

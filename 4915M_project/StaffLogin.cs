@@ -13,7 +13,7 @@ namespace _4915M_project
 {
     public partial class StaffLogin : Form
     {
-        
+        public static DataTable DataTableVar2 = new DataTable();
 
         public StaffLogin()
         {
