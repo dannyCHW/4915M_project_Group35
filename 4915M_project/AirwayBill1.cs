@@ -22,6 +22,7 @@ namespace _4915M_project
 
         int goodCounter = 0;
         int curOrderID;
+        double payPrice;
         string date = DateTime.UtcNow.ToString("MM/dd/yyyy HH:mm");
 
         
@@ -34,7 +35,37 @@ namespace _4915M_project
 
         private void btnAddGood_Click(object sender, EventArgs e)
         {
-            addAnotherGood();
+            if (txtLength.Text == "" || txtHeight.Text == "" || txtHarmonizedCode.Text == "" || 
+                txtNumberOfItem.Text == "" || txtPiece.Text == "" || txtWeight.Text == "" || txtWidth.Text == ""||
+                rdoTypeDoc.Checked==false&&rdoTypePackage.Checked==false) 
+            {
+                MessageBox.Show("Please enter all field required", "Invalid", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            } 
+            else if (rdoTypePackage.Checked==true && Convert.ToDouble(txtWeight.Text) > 999)
+            {
+                MessageBox.Show("The max weight of package is 999", "Invalid", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            } 
+            else if (rdoTypeDoc.Checked == true && Convert.ToDouble(txtLength.Text) > 25 || Convert.ToInt32(txtWidth.Text) > 35)
+            {
+                MessageBox.Show("Size of EDE Express Document Envelope: 25cm(L) x 35cm(W)", "Invalid", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (rdoTypeDoc.Checked == true && Convert.ToDouble(txtWeight.Text) > 3)
+            {
+                string message = "Please notice that document weight over 3kg will be delivered through Express Freight, \nDo you want to submit?";
+                string caption = "Warning";
+                MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+                DialogResult result;
+
+                result = MessageBox.Show(message, caption, buttons);
+                if (result == System.Windows.Forms.DialogResult.Yes)
+                {
+                    addAnotherGood();
+                }
+            } else
+            {
+                addAnotherGood();
+            }
+
         }
 
         public void addAnotherGood()
@@ -48,7 +79,23 @@ namespace _4915M_project
             harmonizedCode = txtHarmonizedCode.Text;
             piece = txtPiece.Text;
             numOfItem = txtNumberOfItem.Text;
-            type = txtType.Text;
+
+            if (rdoTypeDoc.Checked == true && Convert.ToDouble(txtWeight.Text) > 3)
+            {
+                type = rdoTypePackage.Text;
+            } 
+            else
+            {
+                if (rdoTypeDoc.Checked == true)
+                {
+                    type = rdoTypeDoc.Text;
+                }
+                else if (rdoTypePackage.Checked == true)
+                {
+                    type = rdoTypePackage.Text;
+                }
+            }
+            
 
             Good good = new Good(length, width, height, weight, description, harmonizedCode, piece, numOfItem, type);
             goodAarry[goodCounter] = good;
@@ -61,7 +108,8 @@ namespace _4915M_project
             txtWeight.ResetText();
             txtDescription.ResetText();
             txtHarmonizedCode.ResetText();
-            txtType.ResetText();
+            rdoTypePackage.Checked = false;
+            rdoTypeDoc.Checked = false;
             txtNumberOfItem.ResetText();
             txtPiece.ResetText();
 
@@ -70,6 +118,8 @@ namespace _4915M_project
 
 
         }
+
+        
 
         
         private void createbtn_Click(object sender, EventArgs e)
@@ -83,8 +133,7 @@ namespace _4915M_project
         {
             int n;
             Boolean go = true;
-            if (cboBoxSenderCountry.Text==""||
-                txtSenderName.Text==""||txtSenderAddress.Text==""||cboBoxReceiverCountry.Text==""||
+            if (txtSenderName.Text==""||txtSenderAddress.Text==""||cboBoxReceiverCountry.Text==""||
                 txtAreaCode.Text==""||txtReceiverAddress.Text==""||txtReceiverName.Text==""||
                 txtContactPerson.Text==""||txtContactPhone.Text=="")
             {
@@ -97,26 +146,11 @@ namespace _4915M_project
                 MessageBox.Show(n + " is not allowed, ContactPhone must be number and length more or equals 8", "Invalid", MessageBoxButtons.OK, MessageBoxIcon.Error);
             } 
             
-            if (cboBoxSenderCountry.Text=="Japen"||
-                cboBoxSenderCountry.Text == "Hong Kong"||
-                cboBoxSenderCountry.Text == "Australia"||
-                cboBoxSenderCountry.Text == "Shanghai"||
-                cboBoxSenderCountry.Text == "Toronto"||
-                cboBoxSenderCountry.Text=="New York"||
-                cboBoxSenderCountry.Text=="London")
-            {
-                go = true;
-            } 
-            else
-            {
-                go = false;
-                MessageBox.Show("please select valid Country", "Invalid", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
 
 
             if (go)
             {
-                sCountry = this.cboBoxSenderCountry.SelectedItem.ToString();
+                sCountry = this.txtSenderCountry.Text;
                 sName = txtSenderName.Text;
                 sAddress = txtSenderAddress.Text;
                 sCompany = txtSenderComanyName.Text;
@@ -141,12 +175,33 @@ namespace _4915M_project
         private void btnBack_Click(object sender, EventArgs e)
         {
             AirwayBillPanelGood.Visible = false;
+            txtLength.ResetText();
+            txtWidth.ResetText();
+            txtHeight.ResetText();
+            txtWeight.ResetText();
+            txtDescription.ResetText();
+            txtHarmonizedCode.ResetText();
+            rdoTypePackage.Checked = false;
+            rdoTypeDoc.Checked = false;
+            txtNumberOfItem.ResetText();
+            txtPiece.ResetText();
         }
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
-            addShipmentOrderUsingConnection();
-            addGoodToShipmentOrder();
+            if (goodCounter <= 0)
+            {
+                MessageBox.Show("There are not goods added.", "Invalid", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            } 
+            else
+            {
+                addShipmentOrderUsingConnection();
+                addGoodToShipmentOrder();
+                addPayment();
+                MessageBox.Show("Your shipment order has been submited.", "Invalid", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Close();
+            }
+            
         }
 
         public void addShipmentOrder()
@@ -218,7 +273,8 @@ namespace _4915M_project
             string connStr = Program.connStr;
             OleDbDataAdapter dataAdapter;
             string sqlStr;
-
+            double money = 0;
+            
             Good tmp = new Good();
             int i = 0;
             while (i < goodCounter)
@@ -230,10 +286,113 @@ namespace _4915M_project
                          "VALUES(" + "'" + curOrderID + "'," + "'" + tmp.getDescription() + "'," + "'" + tmp.getHeight() + "'," + "'" + tmp.getLength() + "'," + "'" + tmp.getWidth() + "'," + "'" + tmp.getHeight() + "'," + "'" + tmp.getType() + "'," + "'" + tmp.getHarmonizedCode() + "'," + "'" + tmp.getNumOfItem() + "'," + "'" + tmp.getPiece() + "'" + ");";
                 dataAdapter = new OleDbDataAdapter(sqlStr, connStr);
                 dataAdapter.Fill(dt);
+
+                if (tmp.getType().ToString().Equals("Document"))
+                {
+                    double kg = Convert.ToDouble(tmp.getWeight());
+                    //Console.WriteLine(kg);
+                    if(kg > 0.5)
+                    {
+                        while (kg > 0.5)
+                        {
+                            money = money + 150;
+                            kg = kg - 0.5;
+                        }
+                    }
+                    money = money + 158;
+                    
+                } 
+                else if (tmp.getType().ToString().Equals("Package"))
+                {
+                    double kg = Convert.ToDouble(tmp.getWeight());
+                    if (kg >= 3 && kg <= 15)
+                    {
+                        if (rCountry.Equals("Australia") || rCountry.Equals("Japan"))
+                        {
+                            money = money + (kg * 75);
+                        } 
+                        else
+                        {
+                            money = money + (kg * 45);
+                        }
+                    } 
+                    else if (kg >= 16 && kg <= 29)
+                    {
+                        if (rCountry.Equals("Australia") || rCountry.Equals("Japan"))
+                        {
+                            money = money + (kg * 70);
+                        }
+                        else
+                        {
+                            money = money + (kg * 40);
+                        }
+                    }
+                    else if (kg >= 30 && kg <= 44)
+                    {
+                        if (rCountry.Equals("Australia") || rCountry.Equals("Japan"))
+                        {
+                            money = money + (kg * 65);
+                        }
+                        else
+                        {
+                            money = money + (kg * 37);
+                        }
+                    }
+                    else if (kg >= 45 && kg <= 69)
+                    {
+                        if (rCountry.Equals("Australia") || rCountry.Equals("Japan"))
+                        {
+                            money = money + (kg * 62);
+                        }
+                        else
+                        {
+                            money = money + (kg * 35);
+                        }
+                    }
+                    else if (kg >= 70 && kg <= 99)
+                    {
+                        if (rCountry.Equals("Australia") || rCountry.Equals("Japan"))
+                        {
+                            money = money + (kg * 61);
+                        }
+                        else
+                        {
+                            money = money + (kg * 33);
+                        }
+                    }
+                    else if (kg >= 100 && kg <= 999)
+                    {
+                        if (rCountry.Equals("Australia") || rCountry.Equals("Japan"))
+                        {
+                            money = money + (kg * 58);
+                        }
+                        else
+                        {
+                            money = money + (kg * 32);
+                        }
+                    }
+                }
+                
                 i++;
             }
+            payPrice = payPrice + money;
+            money = 0;
+            dataAdapter = null;
+            dt = null;
+        }
 
-            
+        public void addPayment()
+        {
+            DataTable dt = Program.DataTableVar;
+            string connStr = Program.connStr;
+
+            string sqlStr = "Insert into Payment " +
+                "(paymentID, price, paymentStatus)" +
+                "values (" + "'" + curOrderID + "'," + "'" + payPrice + "'," + "'unPaid'" + ");";
+
+            OleDbDataAdapter dataAdapter = new OleDbDataAdapter(sqlStr, connStr);
+            dataAdapter.Fill(dt);
+            payPrice = 0;
             dataAdapter = null;
             dt = null;
         }
