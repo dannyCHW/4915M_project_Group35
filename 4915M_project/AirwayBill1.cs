@@ -18,7 +18,7 @@ namespace _4915M_project
         LinkedList<Good> goodsList = new LinkedList<Good>();
         
         Object[] goodAarry = new object[9];
-        String sCountry, sName, sAddress, sCompany, rCountry, areaCode, rAddress, rName, rCompany, length, width, height, weight, description, harmonizedCode, piece, numOfItem, type, cPerson, cPhone;
+        String sCountry, sName, sAddress, sCompany, rEmail, rCountry, areaCode, rAddress, rName, rCompany, length, width, height, weight, description, harmonizedCode, piece, numOfItem, type, cPerson, cPhone;
 
         int goodCounter = 0;
         int curOrderID;
@@ -95,7 +95,9 @@ namespace _4915M_project
             {
                 go = false;
                 MessageBox.Show(n + " is not allowed, ContactPhone must be number and length more or equals 8", "Invalid", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            } else if (cboBoxSenderCountry.Text=="Japen"||
+            } 
+            
+            if (cboBoxSenderCountry.Text=="Japen"||
                 cboBoxSenderCountry.Text == "Hong Kong"||
                 cboBoxSenderCountry.Text == "Australia"||
                 cboBoxSenderCountry.Text == "Shanghai"||
@@ -124,6 +126,7 @@ namespace _4915M_project
                 rAddress = txtReceiverAddress.Text;
                 rName = txtReceiverName.Text;
                 rCompany = txtReceiverCompanyName.Text;
+                rEmail = txtReceiverEmail.Text;
 
                 cPerson = txtContactPerson.Text;
                 cPhone = txtContactPhone.Text;
@@ -174,8 +177,8 @@ namespace _4915M_project
                 
 
                 Command.CommandText = @"INSERT INTO ShipmentOrder 
-                          (cusID, receiverAddress, receiverName, contactPerson, contactPhone, dateOfOrder, senderCountry, areaCode, orderStatus, dateOfPickUp, staffID, senderCompanyName, senderAddress, receiverCountry, rejectReason, currentLocation, receiverCompanyName, senderName) 
-                          VALUES (@VcusID, @VreceiverAddress, @VreceiverName, @VcontactPerson, @VcontactPhone, @VdateOfOrder, @VsenderCountry, @VareaCode, @VorderStatus, @VdateOfPickUp, @VstaffID, @VsenderCompanyName, @VsenderAddress, @VreceiverCountry, @VrejectReason, @VcurrentLocation, @VreceiverCompanyName, @VsenderName)";
+                          (cusID, receiverAddress, receiverName, contactPerson, contactPhone, dateOfOrder, senderCountry, areaCode, orderStatus, dateOfPickUp, staffID, senderCompanyName, senderAddress, receiverCountry, rejectReason, currentLocation, receiverCompanyName, senderName, receiverEmail) 
+                          VALUES (@VcusID, @VreceiverAddress, @VreceiverName, @VcontactPerson, @VcontactPhone, @VdateOfOrder, @VsenderCountry, @VareaCode, @VorderStatus, @VdateOfPickUp, @VstaffID, @VsenderCompanyName, @VsenderAddress, @VreceiverCountry, @VrejectReason, @VcurrentLocation, @VreceiverCompanyName, @VsenderName, @VreceiverEmail)";
 
                 Command.Parameters.AddRange(new OleDbParameter[]
                 {
@@ -196,7 +199,8 @@ namespace _4915M_project
                     new OleDbParameter("@VrejectReason", ""),
                     new OleDbParameter("@VcurrentLocation", ""),
                     new OleDbParameter("@VreceiverCompanyName", rCompany),
-                    new OleDbParameter("@VsenderName", sName)
+                    new OleDbParameter("@VsenderName", sName),
+                    new OleDbParameter("@VreceiverEmail", rEmail)
                 });
 
                 Command.ExecuteNonQuery();
