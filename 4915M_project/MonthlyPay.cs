@@ -11,18 +11,16 @@ using System.Data.OleDb;
 
 namespace _4915M_project
 {
-    public partial class PaymentGateway : Form
+    public partial class MonthlyPay : Form
     {
-        public PaymentGateway()
+        public MonthlyPay()
         {
             InitializeComponent();
         }
 
-        private void btnBack_Click(object sender, EventArgs e)
+        private void MonthlyPay_Load(object sender, EventArgs e)
         {
-            Payment payment = new Payment();
-            payment.Show();
-            this.Close();
+
         }
 
         private void btnConfirm_Click(object sender, EventArgs e)
@@ -62,11 +60,11 @@ namespace _4915M_project
                             dataAdapter2.Fill(dt);
 
                             dt.Clear();
-                            string str2SqlStr = "Update  Payment set paymentStatus = 'paid'  where paymentID = " + orderID;
+                            string str2SqlStr = "Update  Payment set paymentStatus = 'Monthly'  where paymentID = " + orderID;
                             OleDbDataAdapter dataAdapter3 = new OleDbDataAdapter(str2SqlStr, connStr);
                             dataAdapter3.Fill(dt);
 
-                            MessageBox.Show("Finish Payment , please booking a pickup later", "Payment Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show("Finish Monthly Payment , please booking a pickup later", "Payment Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                         }
                         else
@@ -86,20 +84,6 @@ namespace _4915M_project
                     MessageBox.Show("Something Wrong", "Action Fail", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
-        }
-
-        private void txtOrder_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            char ch = e.KeyChar;
-            if (!Char.IsNumber(e.KeyChar) && (!char.IsControl(e.KeyChar)))
-            {
-                e.Handled = true;
-            }
-        }
-
-        private void PaymentGateway_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

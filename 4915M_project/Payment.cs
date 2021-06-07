@@ -54,5 +54,12 @@ namespace _4915M_project
         {
 
         }
+
+        private void btnMon_Click(object sender, EventArgs e)
+        {
+            MonthlyPay month = new MonthlyPay();
+            month.Show();
+            month.Close();
+        }
     }
 }

@@ -30,7 +30,7 @@ namespace _4915M_project
         private void InitializeComponent()
         {
             this.btnCash = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnMon = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.btnBack = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -46,7 +46,7 @@ namespace _4915M_project
             // btnCash
             // 
             this.btnCash.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.btnCash.Controls.Add(this.button1);
+            this.btnCash.Controls.Add(this.btnMon);
             this.btnCash.Controls.Add(this.label5);
             this.btnCash.Controls.Add(this.btnBack);
             this.btnCash.Controls.Add(this.button3);
@@ -62,21 +62,22 @@ namespace _4915M_project
             this.btnCash.Size = new System.Drawing.Size(918, 622);
             this.btnCash.TabIndex = 0;
             // 
-            // button1
+            // btnMon
             // 
-            this.button1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.button1.AutoSize = true;
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(376, 426);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(270, 80);
-            this.button1.TabIndex = 123;
-            this.button1.Text = "Monthly";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnMon.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnMon.AutoSize = true;
+            this.btnMon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.btnMon.FlatAppearance.BorderSize = 0;
+            this.btnMon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMon.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMon.ForeColor = System.Drawing.Color.White;
+            this.btnMon.Location = new System.Drawing.Point(376, 426);
+            this.btnMon.Name = "btnMon";
+            this.btnMon.Size = new System.Drawing.Size(270, 80);
+            this.btnMon.TabIndex = 123;
+            this.btnMon.Text = "Monthly";
+            this.btnMon.UseVisualStyleBackColor = false;
+            this.btnMon.Click += new System.EventHandler(this.btnMon_Click);
             // 
             // label5
             // 
@@ -233,7 +234,7 @@ namespace _4915M_project
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button btnCredit;
         private System.Windows.Forms.Button btnEBA;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnMon;
         private System.Windows.Forms.Label label5;
     }
 }

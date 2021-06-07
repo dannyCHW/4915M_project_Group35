@@ -1,7 +1,7 @@
 ﻿
 namespace _4915M_project
 {
-    partial class PaymentGateway
+    partial class MonthlyPay
     {
         /// <summary>
         /// Required designer variable.
@@ -51,7 +51,7 @@ namespace _4915M_project
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(918, 622);
-            this.panel1.TabIndex = 0;
+            this.panel1.TabIndex = 1;
             // 
             // btnConfirm
             // 
@@ -90,7 +90,6 @@ namespace _4915M_project
             this.txtOrder.Name = "txtOrder";
             this.txtOrder.Size = new System.Drawing.Size(695, 27);
             this.txtOrder.TabIndex = 130;
-            this.txtOrder.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtOrder_KeyPress);
             // 
             // lable2
             // 
@@ -119,7 +118,6 @@ namespace _4915M_project
             this.btnBack.TabIndex = 128;
             this.btnBack.Text = "<-Back";
             this.btnBack.UseVisualStyleBackColor = false;
-            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // label1
             // 
@@ -133,15 +131,15 @@ namespace _4915M_project
             this.label1.TabIndex = 127;
             this.label1.Text = "Simulate external payments";
             // 
-            // PaymentGateway
+            // MonthlyPay
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(918, 622);
             this.Controls.Add(this.panel1);
-            this.Name = "PaymentGateway";
-            this.Text = "PaymentGateway";
-            this.Load += new System.EventHandler(this.PaymentGateway_Load);
+            this.Name = "MonthlyPay";
+            this.Text = "MonthlyPay";
+            this.Load += new System.EventHandler(this.MonthlyPay_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
