@@ -36,5 +36,10 @@ namespace _4915M_project
         private void StaffLobby_Load(object sender, EventArgs e)
         {
         }
+
+        private void btnPay_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

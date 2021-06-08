@@ -36,6 +36,10 @@ namespace _4915M_project
 
         private void btnCreate_Click(object sender, EventArgs e)
         {
+            DateTime today = DateTime.Today;
+            DateTime select = dateTime.Value;
+            int result = DateTime.Compare(select, today.AddDays(3));
+
             if (txtOrder.Text != "")
             {
                 DataTable dt = Program.DataTableVar;
@@ -50,32 +54,52 @@ namespace _4915M_project
 
                 if (dt.Rows.Count > 0)
                 {
-                    String status = dt.Rows[0]["orderStatus"].ToString();
-                    if (status == "waitingBooking")
+                    if (result < 0)
                     {
-                        String createDate = dateTime.Value.ToString();
-
-                        string strSqlStr = "Update ShipmentOrder set orderStatus = 'waitingPickup' , dateOfPickUp = " + "'" + createDate + "'" + " where orderID = " + this_order;
-                        OleDbDataAdapter dataAdapter2 = new OleDbDataAdapter(strSqlStr, connStr);
-                        dataAdapter2.Fill(dt);
-                        dataAdapter.Dispose();
-
-                        dataAdapter2.Dispose();
-                        MessageBox.Show("Successful create a booking", "Booking Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                    } else if (status == "waitingPickup") {
-                        String createDate = dateTime.Value.ToString();
-
-                        string strSqlStr = "Update ShipmentOrder set  dateOfPickUp = '" + createDate + "' where orderID = " + this_order;
-
-                         OleDbDataAdapter dataAdapter2 = new OleDbDataAdapter(strSqlStr, connStr);
-                        dataAdapter2.Fill(dt);
-
-                        MessageBox.Show("Successful Edit a booking", "Booking Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        dt.Clear();
-                        dataAdapter2.Dispose();
+                        MessageBox.Show("You must choose a date after 3 days", "Select wrong date", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
-                    else {
+                    else if (dateTime.Value.Hour < 9)
+                    {
+                        MessageBox.Show("Not the working time", "Select wrong time", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                    else if (dateTime.Value.Hour > 16)
+                    {
+                        MessageBox.Show("Not the working time", "Select wrong time", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                    else
+                    {
+
+                        String status = dt.Rows[0]["orderStatus"].ToString();
+                        if (status == "waitingBooking")
+                        {
+                            String createDate = dateTime.Value.ToString();
+
+                            string strSqlStr = "Update ShipmentOrder set orderStatus = 'waitingPickup' , dateOfPickUp = " + "'" + createDate + "'" + " where orderID = " + this_order;
+                            OleDbDataAdapter dataAdapter2 = new OleDbDataAdapter(strSqlStr, connStr);
+                            dataAdapter2.Fill(dt);
+                            dataAdapter.Dispose();
+
+                            dataAdapter2.Dispose();
+                            MessageBox.Show("Successful create a booking", "Booking Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        }
+                        else if (status == "waitingPickup")
+                        {
+                            String createDate = dateTime.Value.ToString();
+
+                            string strSqlStr = "Update ShipmentOrder set  dateOfPickUp = '" + createDate + "' where orderID = " + this_order;
+
+                            OleDbDataAdapter dataAdapter2 = new OleDbDataAdapter(strSqlStr, connStr);
+                            dataAdapter2.Fill(dt);
+
+                            MessageBox.Show("Successful Edit a booking", "Booking Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            dt.Clear();
+                            dataAdapter2.Dispose();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Something Wroing", "Action Fail", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        }
                     }
                 } 
             }
@@ -114,8 +138,8 @@ namespace _4915M_project
             DateTime today = DateTime.Today;
             int result = DateTime.Compare(select, today.AddDays(3));
             if (result < 0) {
-                MessageBox.Show("You must choose a date after 3 days", "Select wrong date", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
+                MessageBox.Show("You must choose a date after 3 days", "Select wrong date", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            } 
 
         }
 

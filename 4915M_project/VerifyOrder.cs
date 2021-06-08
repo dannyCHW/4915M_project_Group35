@@ -64,10 +64,7 @@ namespace _4915M_project
 
         }
 
-        private void dataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
 
-        }
 
         private void dataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
         {

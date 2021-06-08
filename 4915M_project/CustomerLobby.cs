@@ -122,7 +122,7 @@ namespace _4915M_project
             dt3.Clear();
             string connStr = "Provider=Microsoft.ACE.OLEDB.12.0;" + "Data Source=des.accdb";
 
-            string sqlStr = "Select orderStatus,dateOfPickUp from ShipmentOrder where receiverEmail = '" + CustomerLogin.customerEmail + "' AND orderStatus = 'processing' ;";
+            string sqlStr = "Select orderStatus,dateOfPickUp,currentLocation,receiverCountry from ShipmentOrder where receiverEmail = '" + CustomerLogin.customerEmail + "' AND orderStatus = 'processing' ;";
 
             OleDbDataAdapter dataAdapter = new OleDbDataAdapter(sqlStr, connStr);
             dataAdapter.Fill(dt3);
@@ -134,22 +134,22 @@ namespace _4915M_project
                 {
                     String status = dt3.Rows[loop]["orderStatus"].ToString();
                     String pickupDate = dt3.Rows[loop]["dateOfPickUp"].ToString();
+                    String vcurrentLocation = dt3.Rows[loop]["currentLocation"].ToString();
+                    String vreceiverCountry = dt3.Rows[loop]["receiverCountry"].ToString();
 
-                    if (status == "processing")
-                    {
                         DateTime localDate = DateTime.Now;
 
                         var v_exDay = DateTime.Parse(pickupDate);
                         DateTime expectedDate = (DateTime)v_exDay;
 
                         int result = DateTime.Compare(expectedDate.AddDays(7), localDate);
-                        if (result <= 3)
-                        {
-                            MessageBox.Show("The goods you need to receive already arrived locally, please pay attention to the time", "Goods Alert", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        }
+                    if (result <= 2 && vcurrentLocation == vreceiverCountry)
+                    {
+                        MessageBox.Show("The goods you need to receive already arrived locally, please confirm the estimated time of delivery", "Goods Alert", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    } else if (result <= 2) {
+                        MessageBox.Show("The cargo is expected to arrive in the last two days, please pay attention to the cargo location and login information", "Goods Alert", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
-                    dt3.Clear();
-                    dataAdapter.Dispose();
+                    loop++;
 
                 }
 

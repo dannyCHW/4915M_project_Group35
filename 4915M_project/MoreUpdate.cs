@@ -98,6 +98,7 @@ namespace _4915M_project
                         string strSqlStr2 = "Update ShipmentOrder set contactPhone = " + intOrderID + " where orderID = " + Convert.ToInt32(txtOrder.Text) + " ;";
                         OleDbDataAdapter dataAdapter2 = new OleDbDataAdapter(strSqlStr2, connStr2);
                         dataAdapter2.Fill(dtUpdate);
+                        btnSearch_Click(sender, e);
                         MessageBox.Show("Update Successful", "Fail Update", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     catch {

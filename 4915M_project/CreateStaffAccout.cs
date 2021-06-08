@@ -87,20 +87,30 @@ namespace _4915M_project
             else
             {
                 DataTable dt = Program.DataTableVar;
-                string connStr = "Provider=Microsoft.ACE.OLEDB.12.0;" + "Data Source=des.accdb";
+
                 String name = txtStaffName.Text;
                 String pwd = txtPassword.Text;
                 String position = comboBox1.Text;
 
                 string sqlString = "Insert into Staff (stfName, stfPosition, stfPassword) values ('" + name + "','" + position + "','" + pwd + "');";
-                OleDbDataAdapter dataAdapter = new OleDbDataAdapter(sqlString, connStr);
+                OleDbDataAdapter dataAdapter = new OleDbDataAdapter(sqlString, Program.connStr);
                 dataAdapter.Fill(dt);
                 dataAdapter.Dispose();
                 dt.Clear();
                 name = null;
                 pwd = null;
                 position = null;
-                MessageBox.Show("Staff Account has been Successfully Created", "Registration success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                DataTable dt2 = Program.DataTableVar;
+                string sqlString2 = "Select stfID from Staff where stfName = '"+ txtStaffName.Text +"' AND stfPassword = '" + txtPassword.Text + "' And  stfPosition = '" + comboBox1.Text + "'; ";
+                OleDbDataAdapter dataAdapter2 = new OleDbDataAdapter(sqlString2, Program.connStr);
+                dataAdapter2.Fill(dt2);
+                String id = dt.Rows[0]["stfID"].ToString();
+                dataAdapter2.Dispose();
+                dt2.Clear();
+
+
+                MessageBox.Show("Staff Account has been Successfully Created , the staff ID is " + id, "Registration success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
     }
