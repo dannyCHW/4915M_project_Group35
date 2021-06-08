@@ -89,6 +89,7 @@ namespace _4915M_project
                 doc.Add(new iTextSharp.text.Paragraph(Environment.NewLine));
 
                 doc.Add(new iTextSharp.text.Paragraph("Sender Name : " + sName));
+                doc.Add(new iTextSharp.text.Paragraph("Sender Company : " + sCompany));
 
             }
             catch (Exception ex)
