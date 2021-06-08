@@ -61,13 +61,14 @@ namespace _4915M_project
 
                     if (sstaffID == vID && pswd == vPwd && vPosition == "Manager")
                     {
-
+                        Main.position = 5;
                         ManagerLobby managerLobby = new ManagerLobby();
                         managerLobby.Show();
                         this.Close();
                     }
                     else if (sstaffID == vID && pswd == vPwd && vPosition == "Normal Staff")
                     {
+                        Main.position = 1;
                         StaffLobby stafflobby = new StaffLobby();
                         stafflobby.Show();
                         this.Hide();

@@ -35,7 +35,6 @@ namespace _4915M_project
 
         private void StaffLobby_Load(object sender, EventArgs e)
         {
-
         }
     }
 }

@@ -20,9 +20,18 @@ namespace _4915M_project
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            StaffLobby stafflobby = new StaffLobby();
-            stafflobby.Show();
-            this.Hide();
+            if (Main.position == 1)
+            {
+                StaffLobby stafflobby = new StaffLobby();
+                stafflobby.Show();
+                this.Hide();
+            }
+            else
+            {
+                ManagerLobby managerLobby = new ManagerLobby();
+                managerLobby.Show();
+                this.Close();
+            }
         }
 
         private void UpdateOrder_Load(object sender, EventArgs e)
