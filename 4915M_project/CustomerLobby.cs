@@ -148,7 +148,6 @@ namespace _4915M_project
                             MessageBox.Show("The goods you need to receive already arrived locally, please pay attention to the time", "Goods Alert", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
                     }
-
                     dt3.Clear();
                     dataAdapter.Dispose();
 
