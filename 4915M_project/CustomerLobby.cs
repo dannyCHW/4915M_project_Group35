@@ -122,7 +122,7 @@ namespace _4915M_project
             dt3.Clear();
             string connStr = "Provider=Microsoft.ACE.OLEDB.12.0;" + "Data Source=des.accdb";
 
-            string sqlStr = "Select orderStatus,dateOfPickUp from ShipmentOrder where reiceverEmail = '" + CustomerLogin.customerEmail + "' AND orderStatus = 'processing' ;";
+            string sqlStr = "Select orderStatus,dateOfPickUp from ShipmentOrder where receiverEmail = '" + CustomerLogin.customerEmail + "' AND orderStatus = 'processing' ;";
 
             OleDbDataAdapter dataAdapter = new OleDbDataAdapter(sqlStr, connStr);
             dataAdapter.Fill(dt3);

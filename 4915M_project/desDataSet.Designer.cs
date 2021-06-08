@@ -34,6 +34,12 @@ namespace _4915M_project {
         
         private StaffDataTable tableStaff;
         
+        private global::System.Data.DataRelation relationShipmentOrderGood;
+        
+        private global::System.Data.DataRelation relationCustomerShipmentOrder;
+        
+        private global::System.Data.DataRelation relationPaymentShipmentOrder;
+        
         private global::System.Data.DataRelation relationStaffShipmentOrder;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
@@ -292,6 +298,9 @@ namespace _4915M_project {
                     this.tableStaff.InitVars();
                 }
             }
+            this.relationShipmentOrderGood = this.Relations["ShipmentOrderGood"];
+            this.relationCustomerShipmentOrder = this.Relations["CustomerShipmentOrder"];
+            this.relationPaymentShipmentOrder = this.Relations["PaymentShipmentOrder"];
             this.relationStaffShipmentOrder = this.Relations["StaffShipmentOrder"];
         }
         
@@ -300,7 +309,7 @@ namespace _4915M_project {
         private void InitClass() {
             this.DataSetName = "desDataSet";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/desDataSet.xsd";
+            this.Namespace = "http://tempuri.org/desDataSet1.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tableCustomer = new CustomerDataTable();
@@ -313,6 +322,18 @@ namespace _4915M_project {
             base.Tables.Add(this.tableShipmentOrder);
             this.tableStaff = new StaffDataTable();
             base.Tables.Add(this.tableStaff);
+            this.relationShipmentOrderGood = new global::System.Data.DataRelation("ShipmentOrderGood", new global::System.Data.DataColumn[] {
+                        this.tableShipmentOrder.orderIDColumn}, new global::System.Data.DataColumn[] {
+                        this.tableGood.orderIDColumn}, false);
+            this.Relations.Add(this.relationShipmentOrderGood);
+            this.relationCustomerShipmentOrder = new global::System.Data.DataRelation("CustomerShipmentOrder", new global::System.Data.DataColumn[] {
+                        this.tableCustomer.cusIDColumn}, new global::System.Data.DataColumn[] {
+                        this.tableShipmentOrder.cusIDColumn}, false);
+            this.Relations.Add(this.relationCustomerShipmentOrder);
+            this.relationPaymentShipmentOrder = new global::System.Data.DataRelation("PaymentShipmentOrder", new global::System.Data.DataColumn[] {
+                        this.tablePayment.paymentIDColumn}, new global::System.Data.DataColumn[] {
+                        this.tableShipmentOrder.orderIDColumn}, false);
+            this.Relations.Add(this.relationPaymentShipmentOrder);
             this.relationStaffShipmentOrder = new global::System.Data.DataRelation("StaffShipmentOrder", new global::System.Data.DataColumn[] {
                         this.tableStaff.stfIDColumn}, new global::System.Data.DataColumn[] {
                         this.tableShipmentOrder.staffIDColumn}, false);
@@ -926,10 +947,10 @@ namespace _4915M_project {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public GoodRow AddGoodRow(string orderID, string description, int totalWeight, int length, int width, int height, string type, int harmonizedCode, int numberOfItem, int piece) {
+            public GoodRow AddGoodRow(ShipmentOrderRow parentShipmentOrderRowByShipmentOrderGood, string description, int totalWeight, int length, int width, int height, string type, int harmonizedCode, int numberOfItem, int piece) {
                 GoodRow rowGoodRow = ((GoodRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        orderID,
+                        null,
                         description,
                         totalWeight,
                         length,
@@ -940,6 +961,9 @@ namespace _4915M_project {
                         numberOfItem,
                         piece,
                         null};
+                if ((parentShipmentOrderRowByShipmentOrderGood != null)) {
+                    columnValuesArray[0] = parentShipmentOrderRowByShipmentOrderGood[0];
+                }
                 rowGoodRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowGoodRow);
                 return rowGoodRow;
@@ -985,7 +1009,7 @@ namespace _4915M_project {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             private void InitClass() {
-                this.columnorderID = new global::System.Data.DataColumn("orderID", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columnorderID = new global::System.Data.DataColumn("orderID", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnorderID);
                 this.columndescription = new global::System.Data.DataColumn("description", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndescription);
@@ -1009,7 +1033,6 @@ namespace _4915M_project {
                 base.Columns.Add(this.columngoodID);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columngoodID}, true));
-                this.columnorderID.MaxLength = 255;
                 this.columndescription.MaxLength = 255;
                 this.columntype.MaxLength = 255;
                 this.columngoodID.AutoIncrement = true;
@@ -1250,7 +1273,7 @@ namespace _4915M_project {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public PaymentRow AddPaymentRow(string paymentID, int price, string paymentStatus) {
+            public PaymentRow AddPaymentRow(int paymentID, int price, string paymentStatus) {
                 PaymentRow rowPaymentRow = ((PaymentRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         paymentID,
@@ -1263,7 +1286,7 @@ namespace _4915M_project {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public PaymentRow FindBypaymentID(string paymentID) {
+            public PaymentRow FindBypaymentID(int paymentID) {
                 return ((PaymentRow)(this.Rows.Find(new object[] {
                             paymentID})));
             }
@@ -1293,7 +1316,7 @@ namespace _4915M_project {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             private void InitClass() {
-                this.columnpaymentID = new global::System.Data.DataColumn("paymentID", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columnpaymentID = new global::System.Data.DataColumn("paymentID", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnpaymentID);
                 this.columnprice = new global::System.Data.DataColumn("price", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnprice);
@@ -1303,7 +1326,6 @@ namespace _4915M_project {
                                 this.columnpaymentID}, true));
                 this.columnpaymentID.AllowDBNull = false;
                 this.columnpaymentID.Unique = true;
-                this.columnpaymentID.MaxLength = 255;
                 this.columnpaymentStatus.MaxLength = 255;
             }
             
@@ -1475,6 +1497,8 @@ namespace _4915M_project {
             private global::System.Data.DataColumn columnreceiverCompanyName;
             
             private global::System.Data.DataColumn columnsenderName;
+            
+            private global::System.Data.DataColumn columnreceiverEmail;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
@@ -1663,6 +1687,14 @@ namespace _4915M_project {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn receiverEmailColumn {
+                get {
+                    return this.columnreceiverEmail;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -1699,8 +1731,7 @@ namespace _4915M_project {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public ShipmentOrderRow AddShipmentOrderRow(
-                        short orderID, 
-                        string cusID, 
+                        CustomerRow parentCustomerRowByCustomerShipmentOrder, 
                         string receiverAddress, 
                         string receiverName, 
                         string contactPerson, 
@@ -1709,7 +1740,7 @@ namespace _4915M_project {
                         string senderCountry, 
                         string areaCode, 
                         string orderStatus, 
-                        System.DateTime dateOfPickUp, 
+                        string dateOfPickUp, 
                         StaffRow parentStaffRowByStaffShipmentOrder, 
                         string senderCompanyName, 
                         string senderAddress, 
@@ -1717,11 +1748,12 @@ namespace _4915M_project {
                         string rejectReason, 
                         string currentLocation, 
                         string receiverCompanyName, 
-                        string senderName) {
+                        string senderName, 
+                        string receiverEmail) {
                 ShipmentOrderRow rowShipmentOrderRow = ((ShipmentOrderRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        orderID,
-                        cusID,
+                        null,
+                        null,
                         receiverAddress,
                         receiverName,
                         contactPerson,
@@ -1738,7 +1770,11 @@ namespace _4915M_project {
                         rejectReason,
                         currentLocation,
                         receiverCompanyName,
-                        senderName};
+                        senderName,
+                        receiverEmail};
+                if ((parentCustomerRowByCustomerShipmentOrder != null)) {
+                    columnValuesArray[1] = parentCustomerRowByCustomerShipmentOrder[0];
+                }
                 if ((parentStaffRowByStaffShipmentOrder != null)) {
                     columnValuesArray[11] = parentStaffRowByStaffShipmentOrder[0];
                 }
@@ -1749,7 +1785,7 @@ namespace _4915M_project {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public ShipmentOrderRow FindByorderID(short orderID) {
+            public ShipmentOrderRow FindByorderID(int orderID) {
                 return ((ShipmentOrderRow)(this.Rows.Find(new object[] {
                             orderID})));
             }
@@ -1790,14 +1826,15 @@ namespace _4915M_project {
                 this.columncurrentLocation = base.Columns["currentLocation"];
                 this.columnreceiverCompanyName = base.Columns["receiverCompanyName"];
                 this.columnsenderName = base.Columns["senderName"];
+                this.columnreceiverEmail = base.Columns["receiverEmail"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             private void InitClass() {
-                this.columnorderID = new global::System.Data.DataColumn("orderID", typeof(short), null, global::System.Data.MappingType.Element);
+                this.columnorderID = new global::System.Data.DataColumn("orderID", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnorderID);
-                this.columncusID = new global::System.Data.DataColumn("cusID", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columncusID = new global::System.Data.DataColumn("cusID", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columncusID);
                 this.columnreceiverAddress = new global::System.Data.DataColumn("receiverAddress", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnreceiverAddress);
@@ -1815,7 +1852,7 @@ namespace _4915M_project {
                 base.Columns.Add(this.columnareaCode);
                 this.columnorderStatus = new global::System.Data.DataColumn("orderStatus", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnorderStatus);
-                this.columndateOfPickUp = new global::System.Data.DataColumn("dateOfPickUp", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                this.columndateOfPickUp = new global::System.Data.DataColumn("dateOfPickUp", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndateOfPickUp);
                 this.columnstaffID = new global::System.Data.DataColumn("staffID", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnstaffID);
@@ -1833,17 +1870,22 @@ namespace _4915M_project {
                 base.Columns.Add(this.columnreceiverCompanyName);
                 this.columnsenderName = new global::System.Data.DataColumn("senderName", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnsenderName);
+                this.columnreceiverEmail = new global::System.Data.DataColumn("receiverEmail", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnreceiverEmail);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnorderID}, true));
+                this.columnorderID.AutoIncrement = true;
+                this.columnorderID.AutoIncrementSeed = -1;
+                this.columnorderID.AutoIncrementStep = -1;
                 this.columnorderID.AllowDBNull = false;
                 this.columnorderID.Unique = true;
-                this.columncusID.MaxLength = 255;
                 this.columnreceiverAddress.MaxLength = 255;
                 this.columnreceiverName.MaxLength = 255;
                 this.columncontactPerson.MaxLength = 255;
                 this.columnsenderCountry.MaxLength = 255;
                 this.columnareaCode.MaxLength = 255;
                 this.columnorderStatus.MaxLength = 255;
+                this.columndateOfPickUp.MaxLength = 255;
                 this.columnsenderCompanyName.MaxLength = 255;
                 this.columnsenderAddress.MaxLength = 255;
                 this.columnreceiverCountry.MaxLength = 255;
@@ -1851,6 +1893,7 @@ namespace _4915M_project {
                 this.columncurrentLocation.MaxLength = 255;
                 this.columnreceiverCompanyName.MaxLength = 255;
                 this.columnsenderName.MaxLength = 255;
+                this.columnreceiverEmail.MaxLength = 255;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2094,7 +2137,7 @@ namespace _4915M_project {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public StaffRow AddStaffRow(string stfName, int stfPosition, string stfPassword) {
+            public StaffRow AddStaffRow(string stfName, string stfPosition, string stfPassword) {
                 StaffRow rowStaffRow = ((StaffRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -2143,7 +2186,7 @@ namespace _4915M_project {
                 base.Columns.Add(this.columnstfID);
                 this.columnstfName = new global::System.Data.DataColumn("stfName", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnstfName);
-                this.columnstfPosition = new global::System.Data.DataColumn("stfPosition", typeof(int), null, global::System.Data.MappingType.Element);
+                this.columnstfPosition = new global::System.Data.DataColumn("stfPosition", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnstfPosition);
                 this.columnstfPassword = new global::System.Data.DataColumn("stfPassword", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnstfPassword);
@@ -2155,6 +2198,7 @@ namespace _4915M_project {
                 this.columnstfID.AllowDBNull = false;
                 this.columnstfID.Unique = true;
                 this.columnstfName.MaxLength = 255;
+                this.columnstfPosition.MaxLength = 255;
                 this.columnstfPassword.MaxLength = 255;
             }
             
@@ -2418,6 +2462,17 @@ namespace _4915M_project {
             public void SetcusEmailNull() {
                 this[this.tableCustomer.cusEmailColumn] = global::System.Convert.DBNull;
             }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public ShipmentOrderRow[] GetShipmentOrderRows() {
+                if ((this.Table.ChildRelations["CustomerShipmentOrder"] == null)) {
+                    return new ShipmentOrderRow[0];
+                }
+                else {
+                    return ((ShipmentOrderRow[])(base.GetChildRows(this.Table.ChildRelations["CustomerShipmentOrder"])));
+                }
+            }
         }
         
         /// <summary>
@@ -2436,10 +2491,10 @@ namespace _4915M_project {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string orderID {
+            public int orderID {
                 get {
                     try {
-                        return ((string)(this[this.tableGood.orderIDColumn]));
+                        return ((int)(this[this.tableGood.orderIDColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'orderID\' in table \'Good\' is DBNull.", e);
@@ -2607,6 +2662,17 @@ namespace _4915M_project {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public ShipmentOrderRow ShipmentOrderRow {
+                get {
+                    return ((ShipmentOrderRow)(this.GetParentRow(this.Table.ParentRelations["ShipmentOrderGood"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["ShipmentOrderGood"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsorderIDNull() {
                 return this.IsNull(this.tableGood.orderIDColumn);
             }
@@ -2742,9 +2808,9 @@ namespace _4915M_project {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string paymentID {
+            public int paymentID {
                 get {
-                    return ((string)(this[this.tablePayment.paymentIDColumn]));
+                    return ((int)(this[this.tablePayment.paymentIDColumn]));
                 }
                 set {
                     this[this.tablePayment.paymentIDColumn] = value;
@@ -2806,6 +2872,17 @@ namespace _4915M_project {
             public void SetpaymentStatusNull() {
                 this[this.tablePayment.paymentStatusColumn] = global::System.Convert.DBNull;
             }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public ShipmentOrderRow[] GetShipmentOrderRows() {
+                if ((this.Table.ChildRelations["PaymentShipmentOrder"] == null)) {
+                    return new ShipmentOrderRow[0];
+                }
+                else {
+                    return ((ShipmentOrderRow[])(base.GetChildRows(this.Table.ChildRelations["PaymentShipmentOrder"])));
+                }
+            }
         }
         
         /// <summary>
@@ -2824,9 +2901,9 @@ namespace _4915M_project {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public short orderID {
+            public int orderID {
                 get {
-                    return ((short)(this[this.tableShipmentOrder.orderIDColumn]));
+                    return ((int)(this[this.tableShipmentOrder.orderIDColumn]));
                 }
                 set {
                     this[this.tableShipmentOrder.orderIDColumn] = value;
@@ -2835,10 +2912,10 @@ namespace _4915M_project {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string cusID {
+            public int cusID {
                 get {
                     try {
-                        return ((string)(this[this.tableShipmentOrder.cusIDColumn]));
+                        return ((int)(this[this.tableShipmentOrder.cusIDColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'cusID\' in table \'ShipmentOrder\' is DBNull.", e);
@@ -2979,10 +3056,10 @@ namespace _4915M_project {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public System.DateTime dateOfPickUp {
+            public string dateOfPickUp {
                 get {
                     try {
-                        return ((global::System.DateTime)(this[this.tableShipmentOrder.dateOfPickUpColumn]));
+                        return ((string)(this[this.tableShipmentOrder.dateOfPickUpColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'dateOfPickUp\' in table \'ShipmentOrder\' is DBNull.", e);
@@ -3118,6 +3195,44 @@ namespace _4915M_project {
                 }
                 set {
                     this[this.tableShipmentOrder.senderNameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string receiverEmail {
+                get {
+                    try {
+                        return ((string)(this[this.tableShipmentOrder.receiverEmailColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'receiverEmail\' in table \'ShipmentOrder\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableShipmentOrder.receiverEmailColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public CustomerRow CustomerRow {
+                get {
+                    return ((CustomerRow)(this.GetParentRow(this.Table.ParentRelations["CustomerShipmentOrder"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["CustomerShipmentOrder"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public PaymentRow PaymentRow {
+                get {
+                    return ((PaymentRow)(this.GetParentRow(this.Table.ParentRelations["PaymentShipmentOrder"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["PaymentShipmentOrder"]);
                 }
             }
             
@@ -3347,6 +3462,29 @@ namespace _4915M_project {
             public void SetsenderNameNull() {
                 this[this.tableShipmentOrder.senderNameColumn] = global::System.Convert.DBNull;
             }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsreceiverEmailNull() {
+                return this.IsNull(this.tableShipmentOrder.receiverEmailColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetreceiverEmailNull() {
+                this[this.tableShipmentOrder.receiverEmailColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public GoodRow[] GetGoodRows() {
+                if ((this.Table.ChildRelations["ShipmentOrderGood"] == null)) {
+                    return new GoodRow[0];
+                }
+                else {
+                    return ((GoodRow[])(base.GetChildRows(this.Table.ChildRelations["ShipmentOrderGood"])));
+                }
+            }
         }
         
         /// <summary>
@@ -3392,10 +3530,10 @@ namespace _4915M_project {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int stfPosition {
+            public string stfPosition {
                 get {
                     try {
-                        return ((int)(this[this.tableStaff.stfPositionColumn]));
+                        return ((string)(this[this.tableStaff.stfPositionColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'stfPosition\' in table \'Staff\' is DBNull.", e);
@@ -3816,7 +3954,7 @@ namespace _4915M_project.desDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.OleDb.OleDbConnection();
-            this._connection.ConnectionString = global::_4915M_project.Properties.Settings.Default.desConnectionString;
+            this._connection.ConnectionString = global::_4915M_project.Properties.Settings.Default.desConnectionString2;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4170,7 +4308,7 @@ namespace _4915M_project.desDataSetTableAdapters {
             this._adapter.DeleteCommand.CommandText = @"DELETE FROM `Good` WHERE (((? = 1 AND `orderID` IS NULL) OR (`orderID` = ?)) AND ((? = 1 AND `description` IS NULL) OR (`description` = ?)) AND ((? = 1 AND `totalWeight` IS NULL) OR (`totalWeight` = ?)) AND ((? = 1 AND `length` IS NULL) OR (`length` = ?)) AND ((? = 1 AND `width` IS NULL) OR (`width` = ?)) AND ((? = 1 AND `height` IS NULL) OR (`height` = ?)) AND ((? = 1 AND `type` IS NULL) OR (`type` = ?)) AND ((? = 1 AND `harmonizedCode` IS NULL) OR (`harmonizedCode` = ?)) AND ((? = 1 AND `numberOfItem` IS NULL) OR (`numberOfItem` = ?)) AND ((? = 1 AND `piece` IS NULL) OR (`piece` = ?)) AND (`goodID` = ?))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_orderID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "orderID", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_orderID", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "orderID", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_orderID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "orderID", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_description", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "description", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_description", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "description", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_totalWeight", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "totalWeight", global::System.Data.DataRowVersion.Original, true, null));
@@ -4196,7 +4334,7 @@ namespace _4915M_project.desDataSetTableAdapters {
                 "height`, `type`, `harmonizedCode`, `numberOfItem`, `piece`) VALUES (?, ?, ?, ?, " +
                 "?, ?, ?, ?, ?, ?)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("orderID", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "orderID", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("orderID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "orderID", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("description", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "description", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("totalWeight", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "totalWeight", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("length", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "length", global::System.Data.DataRowVersion.Current, false, null));
@@ -4210,7 +4348,7 @@ namespace _4915M_project.desDataSetTableAdapters {
             this._adapter.UpdateCommand.Connection = this.Connection;
             this._adapter.UpdateCommand.CommandText = @"UPDATE `Good` SET `orderID` = ?, `description` = ?, `totalWeight` = ?, `length` = ?, `width` = ?, `height` = ?, `type` = ?, `harmonizedCode` = ?, `numberOfItem` = ?, `piece` = ? WHERE (((? = 1 AND `orderID` IS NULL) OR (`orderID` = ?)) AND ((? = 1 AND `description` IS NULL) OR (`description` = ?)) AND ((? = 1 AND `totalWeight` IS NULL) OR (`totalWeight` = ?)) AND ((? = 1 AND `length` IS NULL) OR (`length` = ?)) AND ((? = 1 AND `width` IS NULL) OR (`width` = ?)) AND ((? = 1 AND `height` IS NULL) OR (`height` = ?)) AND ((? = 1 AND `type` IS NULL) OR (`type` = ?)) AND ((? = 1 AND `harmonizedCode` IS NULL) OR (`harmonizedCode` = ?)) AND ((? = 1 AND `numberOfItem` IS NULL) OR (`numberOfItem` = ?)) AND ((? = 1 AND `piece` IS NULL) OR (`piece` = ?)) AND (`goodID` = ?))";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("orderID", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "orderID", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("orderID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "orderID", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("description", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "description", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("totalWeight", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "totalWeight", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("length", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "length", global::System.Data.DataRowVersion.Current, false, null));
@@ -4221,7 +4359,7 @@ namespace _4915M_project.desDataSetTableAdapters {
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("numberOfItem", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "numberOfItem", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("piece", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "piece", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_orderID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "orderID", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_orderID", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "orderID", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_orderID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "orderID", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_description", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "description", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_description", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "description", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_totalWeight", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "totalWeight", global::System.Data.DataRowVersion.Original, true, null));
@@ -4247,7 +4385,7 @@ namespace _4915M_project.desDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.OleDb.OleDbConnection();
-            this._connection.ConnectionString = global::_4915M_project.Properties.Settings.Default.desConnectionString;
+            this._connection.ConnectionString = global::_4915M_project.Properties.Settings.Default.desConnectionString2;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4318,14 +4456,9 @@ namespace _4915M_project.desDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(string Original_orderID, string Original_description, global::System.Nullable<int> Original_totalWeight, global::System.Nullable<int> Original_length, global::System.Nullable<int> Original_width, global::System.Nullable<int> Original_height, string Original_type, global::System.Nullable<int> Original_harmonizedCode, global::System.Nullable<int> Original_numberOfItem, global::System.Nullable<int> Original_piece, int Original_goodID) {
-            if ((Original_orderID == null)) {
-                throw new global::System.ArgumentNullException("Original_orderID");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[0].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_orderID));
-            }
+        public virtual int Delete(int Original_orderID, string Original_description, global::System.Nullable<int> Original_totalWeight, global::System.Nullable<int> Original_length, global::System.Nullable<int> Original_width, global::System.Nullable<int> Original_height, string Original_type, global::System.Nullable<int> Original_harmonizedCode, global::System.Nullable<int> Original_numberOfItem, global::System.Nullable<int> Original_piece, int Original_goodID) {
+            this.Adapter.DeleteCommand.Parameters[0].Value = ((object)(0));
+            this.Adapter.DeleteCommand.Parameters[1].Value = ((int)(Original_orderID));
             if ((Original_description == null)) {
                 this.Adapter.DeleteCommand.Parameters[2].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[3].Value = global::System.DBNull.Value;
@@ -4419,13 +4552,8 @@ namespace _4915M_project.desDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string orderID, string description, global::System.Nullable<int> totalWeight, global::System.Nullable<int> length, global::System.Nullable<int> width, global::System.Nullable<int> height, string type, global::System.Nullable<int> harmonizedCode, global::System.Nullable<int> numberOfItem, global::System.Nullable<int> piece) {
-            if ((orderID == null)) {
-                throw new global::System.ArgumentNullException("orderID");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(orderID));
-            }
+        public virtual int Insert(int orderID, string description, global::System.Nullable<int> totalWeight, global::System.Nullable<int> length, global::System.Nullable<int> width, global::System.Nullable<int> height, string type, global::System.Nullable<int> harmonizedCode, global::System.Nullable<int> numberOfItem, global::System.Nullable<int> piece) {
+            this.Adapter.InsertCommand.Parameters[0].Value = ((int)(orderID));
             if ((description == null)) {
                 this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
@@ -4501,7 +4629,7 @@ namespace _4915M_project.desDataSetTableAdapters {
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
         public virtual int Update(
-                    string orderID, 
+                    int orderID, 
                     string description, 
                     global::System.Nullable<int> totalWeight, 
                     global::System.Nullable<int> length, 
@@ -4511,7 +4639,7 @@ namespace _4915M_project.desDataSetTableAdapters {
                     global::System.Nullable<int> harmonizedCode, 
                     global::System.Nullable<int> numberOfItem, 
                     global::System.Nullable<int> piece, 
-                    string Original_orderID, 
+                    int Original_orderID, 
                     string Original_description, 
                     global::System.Nullable<int> Original_totalWeight, 
                     global::System.Nullable<int> Original_length, 
@@ -4522,12 +4650,7 @@ namespace _4915M_project.desDataSetTableAdapters {
                     global::System.Nullable<int> Original_numberOfItem, 
                     global::System.Nullable<int> Original_piece, 
                     int Original_goodID) {
-            if ((orderID == null)) {
-                throw new global::System.ArgumentNullException("orderID");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(orderID));
-            }
+            this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(orderID));
             if ((description == null)) {
                 this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
@@ -4582,13 +4705,8 @@ namespace _4915M_project.desDataSetTableAdapters {
             else {
                 this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
             }
-            if ((Original_orderID == null)) {
-                throw new global::System.ArgumentNullException("Original_orderID");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(Original_orderID));
-            }
+            this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(0));
+            this.Adapter.UpdateCommand.Parameters[11].Value = ((int)(Original_orderID));
             if ((Original_description == null)) {
                 this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[13].Value = global::System.DBNull.Value;
@@ -4810,7 +4928,7 @@ namespace _4915M_project.desDataSetTableAdapters {
                 "R (`price` = ?)) AND ((? = 1 AND `paymentStatus` IS NULL) OR (`paymentStatus` = " +
                 "?)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_paymentID", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "paymentID", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_paymentID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "paymentID", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_price", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "price", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_price", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "price", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_paymentStatus", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "paymentStatus", global::System.Data.DataRowVersion.Original, true, null));
@@ -4819,7 +4937,7 @@ namespace _4915M_project.desDataSetTableAdapters {
             this._adapter.InsertCommand.Connection = this.Connection;
             this._adapter.InsertCommand.CommandText = "INSERT INTO `Payment` (`paymentID`, `price`, `paymentStatus`) VALUES (?, ?, ?)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("paymentID", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "paymentID", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("paymentID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "paymentID", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("price", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "price", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("paymentStatus", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "paymentStatus", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand = new global::System.Data.OleDb.OleDbCommand();
@@ -4828,10 +4946,10 @@ namespace _4915M_project.desDataSetTableAdapters {
                 "aymentID` = ?) AND ((? = 1 AND `price` IS NULL) OR (`price` = ?)) AND ((? = 1 AN" +
                 "D `paymentStatus` IS NULL) OR (`paymentStatus` = ?)))";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("paymentID", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "paymentID", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("paymentID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "paymentID", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("price", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "price", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("paymentStatus", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "paymentStatus", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_paymentID", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "paymentID", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_paymentID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "paymentID", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_price", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "price", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_price", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "price", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_paymentStatus", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "paymentStatus", global::System.Data.DataRowVersion.Original, true, null));
@@ -4842,7 +4960,7 @@ namespace _4915M_project.desDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.OleDb.OleDbConnection();
-            this._connection.ConnectionString = global::_4915M_project.Properties.Settings.Default.desConnectionString;
+            this._connection.ConnectionString = global::_4915M_project.Properties.Settings.Default.desConnectionString2;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4912,13 +5030,8 @@ namespace _4915M_project.desDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(string Original_paymentID, global::System.Nullable<int> Original_price, string Original_paymentStatus) {
-            if ((Original_paymentID == null)) {
-                throw new global::System.ArgumentNullException("Original_paymentID");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[0].Value = ((string)(Original_paymentID));
-            }
+        public virtual int Delete(int Original_paymentID, global::System.Nullable<int> Original_price, string Original_paymentStatus) {
+            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_paymentID));
             if ((Original_price.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
                 this.Adapter.DeleteCommand.Parameters[2].Value = ((int)(Original_price.Value));
@@ -4954,13 +5067,8 @@ namespace _4915M_project.desDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string paymentID, global::System.Nullable<int> price, string paymentStatus) {
-            if ((paymentID == null)) {
-                throw new global::System.ArgumentNullException("paymentID");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(paymentID));
-            }
+        public virtual int Insert(int paymentID, global::System.Nullable<int> price, string paymentStatus) {
+            this.Adapter.InsertCommand.Parameters[0].Value = ((int)(paymentID));
             if ((price.HasValue == true)) {
                 this.Adapter.InsertCommand.Parameters[1].Value = ((int)(price.Value));
             }
@@ -4993,13 +5101,8 @@ namespace _4915M_project.desDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string paymentID, global::System.Nullable<int> price, string paymentStatus, string Original_paymentID, global::System.Nullable<int> Original_price, string Original_paymentStatus) {
-            if ((paymentID == null)) {
-                throw new global::System.ArgumentNullException("paymentID");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(paymentID));
-            }
+        public virtual int Update(int paymentID, global::System.Nullable<int> price, string paymentStatus, int Original_paymentID, global::System.Nullable<int> Original_price, string Original_paymentStatus) {
+            this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(paymentID));
             if ((price.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(price.Value));
             }
@@ -5012,12 +5115,7 @@ namespace _4915M_project.desDataSetTableAdapters {
             else {
                 this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(paymentStatus));
             }
-            if ((Original_paymentID == null)) {
-                throw new global::System.ArgumentNullException("Original_paymentID");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(Original_paymentID));
-            }
+            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(Original_paymentID));
             if ((Original_price.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[4].Value = ((object)(0));
                 this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(Original_price.Value));
@@ -5053,7 +5151,7 @@ namespace _4915M_project.desDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(global::System.Nullable<int> price, string paymentStatus, string Original_paymentID, global::System.Nullable<int> Original_price, string Original_paymentStatus) {
+        public virtual int Update(global::System.Nullable<int> price, string paymentStatus, int Original_paymentID, global::System.Nullable<int> Original_price, string Original_paymentStatus) {
             return this.Update(Original_paymentID, price, paymentStatus, Original_paymentID, Original_price, Original_paymentStatus);
         }
     }
@@ -5198,14 +5296,15 @@ namespace _4915M_project.desDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("currentLocation", "currentLocation");
             tableMapping.ColumnMappings.Add("receiverCompanyName", "receiverCompanyName");
             tableMapping.ColumnMappings.Add("senderName", "senderName");
+            tableMapping.ColumnMappings.Add("receiverEmail", "receiverEmail");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM `ShipmentOrder` WHERE ((`orderID` = ?) AND ((? = 1 AND `cusID` IS NULL) OR (`cusID` = ?)) AND ((? = 1 AND `receiverAddress` IS NULL) OR (`receiverAddress` = ?)) AND ((? = 1 AND `receiverName` IS NULL) OR (`receiverName` = ?)) AND ((? = 1 AND `contactPerson` IS NULL) OR (`contactPerson` = ?)) AND ((? = 1 AND `contactPhone` IS NULL) OR (`contactPhone` = ?)) AND ((? = 1 AND `dateOfOrder` IS NULL) OR (`dateOfOrder` = ?)) AND ((? = 1 AND `senderCountry` IS NULL) OR (`senderCountry` = ?)) AND ((? = 1 AND `areaCode` IS NULL) OR (`areaCode` = ?)) AND ((? = 1 AND `orderStatus` IS NULL) OR (`orderStatus` = ?)) AND ((? = 1 AND `dateOfPickUp` IS NULL) OR (`dateOfPickUp` = ?)) AND ((? = 1 AND `staffID` IS NULL) OR (`staffID` = ?)) AND ((? = 1 AND `senderCompanyName` IS NULL) OR (`senderCompanyName` = ?)) AND ((? = 1 AND `senderAddress` IS NULL) OR (`senderAddress` = ?)) AND ((? = 1 AND `receiverCountry` IS NULL) OR (`receiverCountry` = ?)) AND ((? = 1 AND `rejectReason` IS NULL) OR (`rejectReason` = ?)) AND ((? = 1 AND `currentLocation` IS NULL) OR (`currentLocation` = ?)) AND ((? = 1 AND `receiverCompanyName` IS NULL) OR (`receiverCompanyName` = ?)) AND ((? = 1 AND `senderName` IS NULL) OR (`senderName` = ?)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM `ShipmentOrder` WHERE ((`orderID` = ?) AND ((? = 1 AND `cusID` IS NULL) OR (`cusID` = ?)) AND ((? = 1 AND `receiverAddress` IS NULL) OR (`receiverAddress` = ?)) AND ((? = 1 AND `receiverName` IS NULL) OR (`receiverName` = ?)) AND ((? = 1 AND `contactPerson` IS NULL) OR (`contactPerson` = ?)) AND ((? = 1 AND `contactPhone` IS NULL) OR (`contactPhone` = ?)) AND ((? = 1 AND `dateOfOrder` IS NULL) OR (`dateOfOrder` = ?)) AND ((? = 1 AND `senderCountry` IS NULL) OR (`senderCountry` = ?)) AND ((? = 1 AND `areaCode` IS NULL) OR (`areaCode` = ?)) AND ((? = 1 AND `orderStatus` IS NULL) OR (`orderStatus` = ?)) AND ((? = 1 AND `dateOfPickUp` IS NULL) OR (`dateOfPickUp` = ?)) AND ((? = 1 AND `staffID` IS NULL) OR (`staffID` = ?)) AND ((? = 1 AND `senderCompanyName` IS NULL) OR (`senderCompanyName` = ?)) AND ((? = 1 AND `senderAddress` IS NULL) OR (`senderAddress` = ?)) AND ((? = 1 AND `receiverCountry` IS NULL) OR (`receiverCountry` = ?)) AND ((? = 1 AND `rejectReason` IS NULL) OR (`rejectReason` = ?)) AND ((? = 1 AND `currentLocation` IS NULL) OR (`currentLocation` = ?)) AND ((? = 1 AND `receiverCompanyName` IS NULL) OR (`receiverCompanyName` = ?)) AND ((? = 1 AND `senderName` IS NULL) OR (`senderName` = ?)) AND ((? = 1 AND `receiverEmail` IS NULL) OR (`receiverEmail` = ?)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_orderID", global::System.Data.OleDb.OleDbType.SmallInt, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "orderID", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_orderID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "orderID", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_cusID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "cusID", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_cusID", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "cusID", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_cusID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "cusID", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_receiverAddress", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "receiverAddress", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_receiverAddress", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "receiverAddress", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_receiverName", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "receiverName", global::System.Data.DataRowVersion.Original, true, null));
@@ -5223,7 +5322,7 @@ namespace _4915M_project.desDataSetTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_orderStatus", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "orderStatus", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_orderStatus", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "orderStatus", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_dateOfPickUp", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "dateOfPickUp", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_dateOfPickUp", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "dateOfPickUp", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_dateOfPickUp", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "dateOfPickUp", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_staffID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "staffID", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_staffID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "staffID", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_senderCompanyName", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "senderCompanyName", global::System.Data.DataRowVersion.Original, true, null));
@@ -5240,12 +5339,13 @@ namespace _4915M_project.desDataSetTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_receiverCompanyName", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "receiverCompanyName", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_senderName", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "senderName", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_senderName", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "senderName", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_receiverEmail", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "receiverEmail", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_receiverEmail", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "receiverEmail", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.InsertCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO `ShipmentOrder` (`orderID`, `cusID`, `receiverAddress`, `receiverName`, `contactPerson`, `contactPhone`, `dateOfOrder`, `senderCountry`, `areaCode`, `orderStatus`, `dateOfPickUp`, `staffID`, `senderCompanyName`, `senderAddress`, `receiverCountry`, `rejectReason`, `currentLocation`, `receiverCompanyName`, `senderName`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO `ShipmentOrder` (`cusID`, `receiverAddress`, `receiverName`, `contactPerson`, `contactPhone`, `dateOfOrder`, `senderCountry`, `areaCode`, `orderStatus`, `dateOfPickUp`, `staffID`, `senderCompanyName`, `senderAddress`, `receiverCountry`, `rejectReason`, `currentLocation`, `receiverCompanyName`, `senderName`, `receiverEmail`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("orderID", global::System.Data.OleDb.OleDbType.SmallInt, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "orderID", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("cusID", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "cusID", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("cusID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "cusID", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("receiverAddress", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "receiverAddress", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("receiverName", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "receiverName", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("contactPerson", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "contactPerson", global::System.Data.DataRowVersion.Current, false, null));
@@ -5254,7 +5354,7 @@ namespace _4915M_project.desDataSetTableAdapters {
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("senderCountry", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "senderCountry", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("areaCode", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "areaCode", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("orderStatus", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "orderStatus", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("dateOfPickUp", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "dateOfPickUp", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("dateOfPickUp", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "dateOfPickUp", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("staffID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "staffID", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("senderCompanyName", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "senderCompanyName", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("senderAddress", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "senderAddress", global::System.Data.DataRowVersion.Current, false, null));
@@ -5263,32 +5363,32 @@ namespace _4915M_project.desDataSetTableAdapters {
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("currentLocation", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "currentLocation", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("receiverCompanyName", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "receiverCompanyName", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("senderName", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "senderName", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("receiverEmail", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "receiverEmail", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = "UPDATE `ShipmentOrder` SET `orderID` = ?, `cusID` = ?, `receiverAddress` = ?, `re" +
-                "ceiverName` = ?, `contactPerson` = ?, `contactPhone` = ?, `dateOfOrder` = ?, `se" +
-                "nderCountry` = ?, `areaCode` = ?, `orderStatus` = ?, `dateOfPickUp` = ?, `staffI" +
-                "D` = ?, `senderCompanyName` = ?, `senderAddress` = ?, `receiverCountry` = ?, `re" +
-                "jectReason` = ?, `currentLocation` = ?, `receiverCompanyName` = ?, `senderName` " +
-                "= ? WHERE ((`orderID` = ?) AND ((? = 1 AND `cusID` IS NULL) OR (`cusID` = ?)) AN" +
-                "D ((? = 1 AND `receiverAddress` IS NULL) OR (`receiverAddress` = ?)) AND ((? = 1" +
-                " AND `receiverName` IS NULL) OR (`receiverName` = ?)) AND ((? = 1 AND `contactPe" +
-                "rson` IS NULL) OR (`contactPerson` = ?)) AND ((? = 1 AND `contactPhone` IS NULL)" +
-                " OR (`contactPhone` = ?)) AND ((? = 1 AND `dateOfOrder` IS NULL) OR (`dateOfOrde" +
-                "r` = ?)) AND ((? = 1 AND `senderCountry` IS NULL) OR (`senderCountry` = ?)) AND " +
-                "((? = 1 AND `areaCode` IS NULL) OR (`areaCode` = ?)) AND ((? = 1 AND `orderStatu" +
-                "s` IS NULL) OR (`orderStatus` = ?)) AND ((? = 1 AND `dateOfPickUp` IS NULL) OR (" +
-                "`dateOfPickUp` = ?)) AND ((? = 1 AND `staffID` IS NULL) OR (`staffID` = ?)) AND " +
-                "((? = 1 AND `senderCompanyName` IS NULL) OR (`senderCompanyName` = ?)) AND ((? =" +
-                " 1 AND `senderAddress` IS NULL) OR (`senderAddress` = ?)) AND ((? = 1 AND `recei" +
-                "verCountry` IS NULL) OR (`receiverCountry` = ?)) AND ((? = 1 AND `rejectReason` " +
-                "IS NULL) OR (`rejectReason` = ?)) AND ((? = 1 AND `currentLocation` IS NULL) OR " +
-                "(`currentLocation` = ?)) AND ((? = 1 AND `receiverCompanyName` IS NULL) OR (`rec" +
-                "eiverCompanyName` = ?)) AND ((? = 1 AND `senderName` IS NULL) OR (`senderName` =" +
-                " ?)))";
+            this._adapter.UpdateCommand.CommandText = "UPDATE `ShipmentOrder` SET `cusID` = ?, `receiverAddress` = ?, `receiverName` = ?" +
+                ", `contactPerson` = ?, `contactPhone` = ?, `dateOfOrder` = ?, `senderCountry` = " +
+                "?, `areaCode` = ?, `orderStatus` = ?, `dateOfPickUp` = ?, `staffID` = ?, `sender" +
+                "CompanyName` = ?, `senderAddress` = ?, `receiverCountry` = ?, `rejectReason` = ?" +
+                ", `currentLocation` = ?, `receiverCompanyName` = ?, `senderName` = ?, `receiverE" +
+                "mail` = ? WHERE ((`orderID` = ?) AND ((? = 1 AND `cusID` IS NULL) OR (`cusID` = " +
+                "?)) AND ((? = 1 AND `receiverAddress` IS NULL) OR (`receiverAddress` = ?)) AND (" +
+                "(? = 1 AND `receiverName` IS NULL) OR (`receiverName` = ?)) AND ((? = 1 AND `con" +
+                "tactPerson` IS NULL) OR (`contactPerson` = ?)) AND ((? = 1 AND `contactPhone` IS" +
+                " NULL) OR (`contactPhone` = ?)) AND ((? = 1 AND `dateOfOrder` IS NULL) OR (`date" +
+                "OfOrder` = ?)) AND ((? = 1 AND `senderCountry` IS NULL) OR (`senderCountry` = ?)" +
+                ") AND ((? = 1 AND `areaCode` IS NULL) OR (`areaCode` = ?)) AND ((? = 1 AND `orde" +
+                "rStatus` IS NULL) OR (`orderStatus` = ?)) AND ((? = 1 AND `dateOfPickUp` IS NULL" +
+                ") OR (`dateOfPickUp` = ?)) AND ((? = 1 AND `staffID` IS NULL) OR (`staffID` = ?)" +
+                ") AND ((? = 1 AND `senderCompanyName` IS NULL) OR (`senderCompanyName` = ?)) AND" +
+                " ((? = 1 AND `senderAddress` IS NULL) OR (`senderAddress` = ?)) AND ((? = 1 AND " +
+                "`receiverCountry` IS NULL) OR (`receiverCountry` = ?)) AND ((? = 1 AND `rejectRe" +
+                "ason` IS NULL) OR (`rejectReason` = ?)) AND ((? = 1 AND `currentLocation` IS NUL" +
+                "L) OR (`currentLocation` = ?)) AND ((? = 1 AND `receiverCompanyName` IS NULL) OR" +
+                " (`receiverCompanyName` = ?)) AND ((? = 1 AND `senderName` IS NULL) OR (`senderN" +
+                "ame` = ?)) AND ((? = 1 AND `receiverEmail` IS NULL) OR (`receiverEmail` = ?)))";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("orderID", global::System.Data.OleDb.OleDbType.SmallInt, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "orderID", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("cusID", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "cusID", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("cusID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "cusID", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("receiverAddress", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "receiverAddress", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("receiverName", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "receiverName", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("contactPerson", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "contactPerson", global::System.Data.DataRowVersion.Current, false, null));
@@ -5297,7 +5397,7 @@ namespace _4915M_project.desDataSetTableAdapters {
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("senderCountry", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "senderCountry", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("areaCode", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "areaCode", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("orderStatus", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "orderStatus", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("dateOfPickUp", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "dateOfPickUp", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("dateOfPickUp", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "dateOfPickUp", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("staffID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "staffID", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("senderCompanyName", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "senderCompanyName", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("senderAddress", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "senderAddress", global::System.Data.DataRowVersion.Current, false, null));
@@ -5306,9 +5406,10 @@ namespace _4915M_project.desDataSetTableAdapters {
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("currentLocation", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "currentLocation", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("receiverCompanyName", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "receiverCompanyName", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("senderName", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "senderName", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_orderID", global::System.Data.OleDb.OleDbType.SmallInt, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "orderID", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("receiverEmail", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "receiverEmail", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_orderID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "orderID", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_cusID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "cusID", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_cusID", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "cusID", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_cusID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "cusID", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_receiverAddress", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "receiverAddress", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_receiverAddress", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "receiverAddress", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_receiverName", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "receiverName", global::System.Data.DataRowVersion.Original, true, null));
@@ -5326,7 +5427,7 @@ namespace _4915M_project.desDataSetTableAdapters {
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_orderStatus", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "orderStatus", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_orderStatus", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "orderStatus", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_dateOfPickUp", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "dateOfPickUp", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_dateOfPickUp", global::System.Data.OleDb.OleDbType.Date, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "dateOfPickUp", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_dateOfPickUp", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "dateOfPickUp", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_staffID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "staffID", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_staffID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "staffID", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_senderCompanyName", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "senderCompanyName", global::System.Data.DataRowVersion.Original, true, null));
@@ -5343,13 +5444,15 @@ namespace _4915M_project.desDataSetTableAdapters {
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_receiverCompanyName", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "receiverCompanyName", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_senderName", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "senderName", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_senderName", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "senderName", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_receiverEmail", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "receiverEmail", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_receiverEmail", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "receiverEmail", global::System.Data.DataRowVersion.Original, false, null));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.OleDb.OleDbConnection();
-            this._connection.ConnectionString = global::_4915M_project.Properties.Settings.Default.desConnectionString;
+            this._connection.ConnectionString = global::_4915M_project.Properties.Settings.Default.desConnectionString2;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5358,7 +5461,7 @@ namespace _4915M_project.desDataSetTableAdapters {
             this._commandCollection = new global::System.Data.OleDb.OleDbCommand[1];
             this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT orderID, cusID, receiverAddress, receiverName, contactPerson, contactPhone, dateOfOrder, senderCountry, areaCode, orderStatus, dateOfPickUp, staffID, senderCompanyName, senderAddress, receiverCountry, rejectReason, currentLocation, receiverCompanyName, senderName FROM ShipmentOrder";
+            this._commandCollection[0].CommandText = @"SELECT orderID, cusID, receiverAddress, receiverName, contactPerson, contactPhone, dateOfOrder, senderCountry, areaCode, orderStatus, dateOfPickUp, staffID, senderCompanyName, senderAddress, receiverCountry, rejectReason, currentLocation, receiverCompanyName, senderName, receiverEmail FROM ShipmentOrder";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -5420,8 +5523,8 @@ namespace _4915M_project.desDataSetTableAdapters {
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
         public virtual int Delete(
-                    short Original_orderID, 
-                    string Original_cusID, 
+                    int Original_orderID, 
+                    global::System.Nullable<int> Original_cusID, 
                     string Original_receiverAddress, 
                     string Original_receiverName, 
                     string Original_contactPerson, 
@@ -5430,7 +5533,7 @@ namespace _4915M_project.desDataSetTableAdapters {
                     string Original_senderCountry, 
                     string Original_areaCode, 
                     string Original_orderStatus, 
-                    global::System.Nullable<global::System.DateTime> Original_dateOfPickUp, 
+                    string Original_dateOfPickUp, 
                     global::System.Nullable<int> Original_staffID, 
                     string Original_senderCompanyName, 
                     string Original_senderAddress, 
@@ -5438,15 +5541,16 @@ namespace _4915M_project.desDataSetTableAdapters {
                     string Original_rejectReason, 
                     string Original_currentLocation, 
                     string Original_receiverCompanyName, 
-                    string Original_senderName) {
-            this.Adapter.DeleteCommand.Parameters[0].Value = ((short)(Original_orderID));
-            if ((Original_cusID == null)) {
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[2].Value = global::System.DBNull.Value;
+                    string Original_senderName, 
+                    string Original_receiverEmail) {
+            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_orderID));
+            if ((Original_cusID.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((int)(Original_cusID.Value));
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_cusID));
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
             if ((Original_receiverAddress == null)) {
                 this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(1));
@@ -5512,13 +5616,13 @@ namespace _4915M_project.desDataSetTableAdapters {
                 this.Adapter.DeleteCommand.Parameters[17].Value = ((object)(0));
                 this.Adapter.DeleteCommand.Parameters[18].Value = ((string)(Original_orderStatus));
             }
-            if ((Original_dateOfPickUp.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[19].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[20].Value = ((System.DateTime)(Original_dateOfPickUp.Value));
-            }
-            else {
+            if ((Original_dateOfPickUp == null)) {
                 this.Adapter.DeleteCommand.Parameters[19].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[20].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[19].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[20].Value = ((string)(Original_dateOfPickUp));
             }
             if ((Original_staffID.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[21].Value = ((object)(0));
@@ -5584,6 +5688,14 @@ namespace _4915M_project.desDataSetTableAdapters {
                 this.Adapter.DeleteCommand.Parameters[35].Value = ((object)(0));
                 this.Adapter.DeleteCommand.Parameters[36].Value = ((string)(Original_senderName));
             }
+            if ((Original_receiverEmail == null)) {
+                this.Adapter.DeleteCommand.Parameters[37].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[38].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[37].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[38].Value = ((string)(Original_receiverEmail));
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -5605,8 +5717,7 @@ namespace _4915M_project.desDataSetTableAdapters {
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
         public virtual int Insert(
-                    short orderID, 
-                    string cusID, 
+                    global::System.Nullable<int> cusID, 
                     string receiverAddress, 
                     string receiverName, 
                     string contactPerson, 
@@ -5615,7 +5726,7 @@ namespace _4915M_project.desDataSetTableAdapters {
                     string senderCountry, 
                     string areaCode, 
                     string orderStatus, 
-                    global::System.Nullable<global::System.DateTime> dateOfPickUp, 
+                    string dateOfPickUp, 
                     global::System.Nullable<int> staffID, 
                     string senderCompanyName, 
                     string senderAddress, 
@@ -5623,115 +5734,121 @@ namespace _4915M_project.desDataSetTableAdapters {
                     string rejectReason, 
                     string currentLocation, 
                     string receiverCompanyName, 
-                    string senderName) {
-            this.Adapter.InsertCommand.Parameters[0].Value = ((short)(orderID));
-            if ((cusID == null)) {
+                    string senderName, 
+                    string receiverEmail) {
+            if ((cusID.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[0].Value = ((int)(cusID.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            if ((receiverAddress == null)) {
                 this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(cusID));
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(receiverAddress));
             }
-            if ((receiverAddress == null)) {
+            if ((receiverName == null)) {
                 this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(receiverAddress));
+                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(receiverName));
             }
-            if ((receiverName == null)) {
+            if ((contactPerson == null)) {
                 this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(receiverName));
-            }
-            if ((contactPerson == null)) {
-                this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(contactPerson));
+                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(contactPerson));
             }
             if ((contactPhone.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[5].Value = ((int)(contactPhone.Value));
+                this.Adapter.InsertCommand.Parameters[4].Value = ((int)(contactPhone.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            if ((dateOfOrder.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[5].Value = ((System.DateTime)(dateOfOrder.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
             }
-            if ((dateOfOrder.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[6].Value = ((System.DateTime)(dateOfOrder.Value));
-            }
-            else {
+            if ((senderCountry == null)) {
                 this.Adapter.InsertCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
-            if ((senderCountry == null)) {
+            else {
+                this.Adapter.InsertCommand.Parameters[6].Value = ((string)(senderCountry));
+            }
+            if ((areaCode == null)) {
                 this.Adapter.InsertCommand.Parameters[7].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[7].Value = ((string)(senderCountry));
+                this.Adapter.InsertCommand.Parameters[7].Value = ((string)(areaCode));
             }
-            if ((areaCode == null)) {
+            if ((orderStatus == null)) {
                 this.Adapter.InsertCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[8].Value = ((string)(areaCode));
+                this.Adapter.InsertCommand.Parameters[8].Value = ((string)(orderStatus));
             }
-            if ((orderStatus == null)) {
+            if ((dateOfPickUp == null)) {
                 this.Adapter.InsertCommand.Parameters[9].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[9].Value = ((string)(orderStatus));
+                this.Adapter.InsertCommand.Parameters[9].Value = ((string)(dateOfPickUp));
             }
-            if ((dateOfPickUp.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[10].Value = ((System.DateTime)(dateOfPickUp.Value));
+            if ((staffID.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[10].Value = ((int)(staffID.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[10].Value = global::System.DBNull.Value;
             }
-            if ((staffID.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[11].Value = ((int)(staffID.Value));
-            }
-            else {
+            if ((senderCompanyName == null)) {
                 this.Adapter.InsertCommand.Parameters[11].Value = global::System.DBNull.Value;
             }
-            if ((senderCompanyName == null)) {
+            else {
+                this.Adapter.InsertCommand.Parameters[11].Value = ((string)(senderCompanyName));
+            }
+            if ((senderAddress == null)) {
                 this.Adapter.InsertCommand.Parameters[12].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[12].Value = ((string)(senderCompanyName));
+                this.Adapter.InsertCommand.Parameters[12].Value = ((string)(senderAddress));
             }
-            if ((senderAddress == null)) {
+            if ((receiverCountry == null)) {
                 this.Adapter.InsertCommand.Parameters[13].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[13].Value = ((string)(senderAddress));
+                this.Adapter.InsertCommand.Parameters[13].Value = ((string)(receiverCountry));
             }
-            if ((receiverCountry == null)) {
+            if ((rejectReason == null)) {
                 this.Adapter.InsertCommand.Parameters[14].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[14].Value = ((string)(receiverCountry));
+                this.Adapter.InsertCommand.Parameters[14].Value = ((string)(rejectReason));
             }
-            if ((rejectReason == null)) {
+            if ((currentLocation == null)) {
                 this.Adapter.InsertCommand.Parameters[15].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[15].Value = ((string)(rejectReason));
+                this.Adapter.InsertCommand.Parameters[15].Value = ((string)(currentLocation));
             }
-            if ((currentLocation == null)) {
+            if ((receiverCompanyName == null)) {
                 this.Adapter.InsertCommand.Parameters[16].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[16].Value = ((string)(currentLocation));
+                this.Adapter.InsertCommand.Parameters[16].Value = ((string)(receiverCompanyName));
             }
-            if ((receiverCompanyName == null)) {
+            if ((senderName == null)) {
                 this.Adapter.InsertCommand.Parameters[17].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[17].Value = ((string)(receiverCompanyName));
+                this.Adapter.InsertCommand.Parameters[17].Value = ((string)(senderName));
             }
-            if ((senderName == null)) {
+            if ((receiverEmail == null)) {
                 this.Adapter.InsertCommand.Parameters[18].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[18].Value = ((string)(senderName));
+                this.Adapter.InsertCommand.Parameters[18].Value = ((string)(receiverEmail));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -5754,8 +5871,7 @@ namespace _4915M_project.desDataSetTableAdapters {
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
         public virtual int Update(
-                    short orderID, 
-                    string cusID, 
+                    global::System.Nullable<int> cusID, 
                     string receiverAddress, 
                     string receiverName, 
                     string contactPerson, 
@@ -5764,7 +5880,7 @@ namespace _4915M_project.desDataSetTableAdapters {
                     string senderCountry, 
                     string areaCode, 
                     string orderStatus, 
-                    global::System.Nullable<global::System.DateTime> dateOfPickUp, 
+                    string dateOfPickUp, 
                     global::System.Nullable<int> staffID, 
                     string senderCompanyName, 
                     string senderAddress, 
@@ -5773,8 +5889,9 @@ namespace _4915M_project.desDataSetTableAdapters {
                     string currentLocation, 
                     string receiverCompanyName, 
                     string senderName, 
-                    short Original_orderID, 
-                    string Original_cusID, 
+                    string receiverEmail, 
+                    int Original_orderID, 
+                    global::System.Nullable<int> Original_cusID, 
                     string Original_receiverAddress, 
                     string Original_receiverName, 
                     string Original_contactPerson, 
@@ -5783,7 +5900,7 @@ namespace _4915M_project.desDataSetTableAdapters {
                     string Original_senderCountry, 
                     string Original_areaCode, 
                     string Original_orderStatus, 
-                    global::System.Nullable<global::System.DateTime> Original_dateOfPickUp, 
+                    string Original_dateOfPickUp, 
                     global::System.Nullable<int> Original_staffID, 
                     string Original_senderCompanyName, 
                     string Original_senderAddress, 
@@ -5791,124 +5908,130 @@ namespace _4915M_project.desDataSetTableAdapters {
                     string Original_rejectReason, 
                     string Original_currentLocation, 
                     string Original_receiverCompanyName, 
-                    string Original_senderName) {
-            this.Adapter.UpdateCommand.Parameters[0].Value = ((short)(orderID));
-            if ((cusID == null)) {
+                    string Original_senderName, 
+                    string Original_receiverEmail) {
+            if ((cusID.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(cusID.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            if ((receiverAddress == null)) {
                 this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(cusID));
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(receiverAddress));
             }
-            if ((receiverAddress == null)) {
+            if ((receiverName == null)) {
                 this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(receiverAddress));
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(receiverName));
             }
-            if ((receiverName == null)) {
+            if ((contactPerson == null)) {
                 this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(receiverName));
-            }
-            if ((contactPerson == null)) {
-                this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(contactPerson));
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(contactPerson));
             }
             if ((contactPhone.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(contactPhone.Value));
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(contactPhone.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            if ((dateOfOrder.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((System.DateTime)(dateOfOrder.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
             }
-            if ((dateOfOrder.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((System.DateTime)(dateOfOrder.Value));
-            }
-            else {
+            if ((senderCountry == null)) {
                 this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
-            if ((senderCountry == null)) {
+            else {
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(senderCountry));
+            }
+            if ((areaCode == null)) {
                 this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(senderCountry));
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(areaCode));
             }
-            if ((areaCode == null)) {
+            if ((orderStatus == null)) {
                 this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(areaCode));
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(orderStatus));
             }
-            if ((orderStatus == null)) {
+            if ((dateOfPickUp == null)) {
                 this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(orderStatus));
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(dateOfPickUp));
             }
-            if ((dateOfPickUp.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((System.DateTime)(dateOfPickUp.Value));
+            if ((staffID.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((int)(staffID.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
             }
-            if ((staffID.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((int)(staffID.Value));
-            }
-            else {
+            if ((senderCompanyName == null)) {
                 this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
             }
-            if ((senderCompanyName == null)) {
+            else {
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(senderCompanyName));
+            }
+            if ((senderAddress == null)) {
                 this.Adapter.UpdateCommand.Parameters[12].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((string)(senderCompanyName));
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((string)(senderAddress));
             }
-            if ((senderAddress == null)) {
+            if ((receiverCountry == null)) {
                 this.Adapter.UpdateCommand.Parameters[13].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((string)(senderAddress));
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((string)(receiverCountry));
             }
-            if ((receiverCountry == null)) {
+            if ((rejectReason == null)) {
                 this.Adapter.UpdateCommand.Parameters[14].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((string)(receiverCountry));
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((string)(rejectReason));
             }
-            if ((rejectReason == null)) {
+            if ((currentLocation == null)) {
                 this.Adapter.UpdateCommand.Parameters[15].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[15].Value = ((string)(rejectReason));
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((string)(currentLocation));
             }
-            if ((currentLocation == null)) {
+            if ((receiverCompanyName == null)) {
                 this.Adapter.UpdateCommand.Parameters[16].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[16].Value = ((string)(currentLocation));
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((string)(receiverCompanyName));
             }
-            if ((receiverCompanyName == null)) {
+            if ((senderName == null)) {
                 this.Adapter.UpdateCommand.Parameters[17].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[17].Value = ((string)(receiverCompanyName));
+                this.Adapter.UpdateCommand.Parameters[17].Value = ((string)(senderName));
             }
-            if ((senderName == null)) {
+            if ((receiverEmail == null)) {
                 this.Adapter.UpdateCommand.Parameters[18].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[18].Value = ((string)(senderName));
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((string)(receiverEmail));
             }
-            this.Adapter.UpdateCommand.Parameters[19].Value = ((short)(Original_orderID));
-            if ((Original_cusID == null)) {
-                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[21].Value = global::System.DBNull.Value;
+            this.Adapter.UpdateCommand.Parameters[19].Value = ((int)(Original_orderID));
+            if ((Original_cusID.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[21].Value = ((int)(Original_cusID.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[21].Value = ((string)(Original_cusID));
+                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[21].Value = global::System.DBNull.Value;
             }
             if ((Original_receiverAddress == null)) {
                 this.Adapter.UpdateCommand.Parameters[22].Value = ((object)(1));
@@ -5974,13 +6097,13 @@ namespace _4915M_project.desDataSetTableAdapters {
                 this.Adapter.UpdateCommand.Parameters[36].Value = ((object)(0));
                 this.Adapter.UpdateCommand.Parameters[37].Value = ((string)(Original_orderStatus));
             }
-            if ((Original_dateOfPickUp.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[38].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[39].Value = ((System.DateTime)(Original_dateOfPickUp.Value));
-            }
-            else {
+            if ((Original_dateOfPickUp == null)) {
                 this.Adapter.UpdateCommand.Parameters[38].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[39].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[38].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[39].Value = ((string)(Original_dateOfPickUp));
             }
             if ((Original_staffID.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[40].Value = ((object)(0));
@@ -6046,6 +6169,14 @@ namespace _4915M_project.desDataSetTableAdapters {
                 this.Adapter.UpdateCommand.Parameters[54].Value = ((object)(0));
                 this.Adapter.UpdateCommand.Parameters[55].Value = ((string)(Original_senderName));
             }
+            if ((Original_receiverEmail == null)) {
+                this.Adapter.UpdateCommand.Parameters[56].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[57].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[56].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[57].Value = ((string)(Original_receiverEmail));
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -6060,51 +6191,6 @@ namespace _4915M_project.desDataSetTableAdapters {
                     this.Adapter.UpdateCommand.Connection.Close();
                 }
             }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(
-                    string cusID, 
-                    string receiverAddress, 
-                    string receiverName, 
-                    string contactPerson, 
-                    global::System.Nullable<int> contactPhone, 
-                    global::System.Nullable<global::System.DateTime> dateOfOrder, 
-                    string senderCountry, 
-                    string areaCode, 
-                    string orderStatus, 
-                    global::System.Nullable<global::System.DateTime> dateOfPickUp, 
-                    global::System.Nullable<int> staffID, 
-                    string senderCompanyName, 
-                    string senderAddress, 
-                    string receiverCountry, 
-                    string rejectReason, 
-                    string currentLocation, 
-                    string receiverCompanyName, 
-                    string senderName, 
-                    short Original_orderID, 
-                    string Original_cusID, 
-                    string Original_receiverAddress, 
-                    string Original_receiverName, 
-                    string Original_contactPerson, 
-                    global::System.Nullable<int> Original_contactPhone, 
-                    global::System.Nullable<global::System.DateTime> Original_dateOfOrder, 
-                    string Original_senderCountry, 
-                    string Original_areaCode, 
-                    string Original_orderStatus, 
-                    global::System.Nullable<global::System.DateTime> Original_dateOfPickUp, 
-                    global::System.Nullable<int> Original_staffID, 
-                    string Original_senderCompanyName, 
-                    string Original_senderAddress, 
-                    string Original_receiverCountry, 
-                    string Original_rejectReason, 
-                    string Original_currentLocation, 
-                    string Original_receiverCompanyName, 
-                    string Original_senderName) {
-            return this.Update(Original_orderID, cusID, receiverAddress, receiverName, contactPerson, contactPhone, dateOfOrder, senderCountry, areaCode, orderStatus, dateOfPickUp, staffID, senderCompanyName, senderAddress, receiverCountry, rejectReason, currentLocation, receiverCompanyName, senderName, Original_orderID, Original_cusID, Original_receiverAddress, Original_receiverName, Original_contactPerson, Original_contactPhone, Original_dateOfOrder, Original_senderCountry, Original_areaCode, Original_orderStatus, Original_dateOfPickUp, Original_staffID, Original_senderCompanyName, Original_senderAddress, Original_receiverCountry, Original_rejectReason, Original_currentLocation, Original_receiverCompanyName, Original_senderName);
         }
     }
     
@@ -6244,7 +6330,7 @@ namespace _4915M_project.desDataSetTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_stfName", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "stfName", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_stfName", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "stfName", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_stfPosition", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "stfPosition", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_stfPosition", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "stfPosition", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_stfPosition", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "stfPosition", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_stfPassword", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "stfPassword", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_stfPassword", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "stfPassword", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.InsertCommand = new global::System.Data.OleDb.OleDbCommand();
@@ -6252,20 +6338,20 @@ namespace _4915M_project.desDataSetTableAdapters {
             this._adapter.InsertCommand.CommandText = "INSERT INTO `Staff` (`stfName`, `stfPosition`, `stfPassword`) VALUES (?, ?, ?)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("stfName", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "stfName", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("stfPosition", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "stfPosition", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("stfPosition", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "stfPosition", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("stfPassword", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "stfPassword", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
             this._adapter.UpdateCommand.CommandText = @"UPDATE `Staff` SET `stfName` = ?, `stfPosition` = ?, `stfPassword` = ? WHERE ((`stfID` = ?) AND ((? = 1 AND `stfName` IS NULL) OR (`stfName` = ?)) AND ((? = 1 AND `stfPosition` IS NULL) OR (`stfPosition` = ?)) AND ((? = 1 AND `stfPassword` IS NULL) OR (`stfPassword` = ?)))";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("stfName", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "stfName", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("stfPosition", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "stfPosition", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("stfPosition", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "stfPosition", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("stfPassword", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "stfPassword", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_stfID", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "stfID", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_stfName", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "stfName", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_stfName", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "stfName", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_stfPosition", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "stfPosition", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_stfPosition", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "stfPosition", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_stfPosition", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "stfPosition", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_stfPassword", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "stfPassword", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_stfPassword", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "stfPassword", global::System.Data.DataRowVersion.Original, false, null));
         }
@@ -6274,7 +6360,7 @@ namespace _4915M_project.desDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.OleDb.OleDbConnection();
-            this._connection.ConnectionString = global::_4915M_project.Properties.Settings.Default.desConnectionString;
+            this._connection.ConnectionString = global::_4915M_project.Properties.Settings.Default.desConnectionString2;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6344,7 +6430,7 @@ namespace _4915M_project.desDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_stfID, string Original_stfName, global::System.Nullable<int> Original_stfPosition, string Original_stfPassword) {
+        public virtual int Delete(int Original_stfID, string Original_stfName, string Original_stfPosition, string Original_stfPassword) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_stfID));
             if ((Original_stfName == null)) {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
@@ -6354,13 +6440,13 @@ namespace _4915M_project.desDataSetTableAdapters {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
                 this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_stfName));
             }
-            if ((Original_stfPosition.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((int)(Original_stfPosition.Value));
-            }
-            else {
+            if ((Original_stfPosition == null)) {
                 this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_stfPosition));
             }
             if ((Original_stfPassword == null)) {
                 this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(1));
@@ -6390,18 +6476,18 @@ namespace _4915M_project.desDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string stfName, global::System.Nullable<int> stfPosition, string stfPassword) {
+        public virtual int Insert(string stfName, string stfPosition, string stfPassword) {
             if ((stfName == null)) {
                 this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.InsertCommand.Parameters[0].Value = ((string)(stfName));
             }
-            if ((stfPosition.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((int)(stfPosition.Value));
+            if ((stfPosition == null)) {
+                this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(stfPosition));
             }
             if ((stfPassword == null)) {
                 this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
@@ -6429,18 +6515,18 @@ namespace _4915M_project.desDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string stfName, global::System.Nullable<int> stfPosition, string stfPassword, int Original_stfID, string Original_stfName, global::System.Nullable<int> Original_stfPosition, string Original_stfPassword) {
+        public virtual int Update(string stfName, string stfPosition, string stfPassword, int Original_stfID, string Original_stfName, string Original_stfPosition, string Original_stfPassword) {
             if ((stfName == null)) {
                 this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(stfName));
             }
-            if ((stfPosition.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(stfPosition.Value));
+            if ((stfPosition == null)) {
+                this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(stfPosition));
             }
             if ((stfPassword == null)) {
                 this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
@@ -6457,13 +6543,13 @@ namespace _4915M_project.desDataSetTableAdapters {
                 this.Adapter.UpdateCommand.Parameters[4].Value = ((object)(0));
                 this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(Original_stfName));
             }
-            if ((Original_stfPosition.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(Original_stfPosition.Value));
-            }
-            else {
+            if ((Original_stfPosition == null)) {
                 this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(Original_stfPosition));
             }
             if ((Original_stfPassword == null)) {
                 this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(1));
@@ -6675,30 +6761,12 @@ namespace _4915M_project.desDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private int UpdateUpdatedRows(desDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._staffTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Staff.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._staffTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
             if ((this._customerTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.Customer.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
                     result = (result + this._customerTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
-            if ((this._goodTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Good.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._goodTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -6711,12 +6779,30 @@ namespace _4915M_project.desDataSetTableAdapters {
                     allChangedRows.AddRange(updatedRows);
                 }
             }
+            if ((this._staffTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Staff.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._staffTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
             if ((this._shipmentOrderTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.ShipmentOrder.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
                     result = (result + this._shipmentOrderTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
+            if ((this._goodTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Good.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._goodTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -6730,27 +6816,11 @@ namespace _4915M_project.desDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private int UpdateInsertedRows(desDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._staffTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Staff.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._staffTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
             if ((this._customerTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.Customer.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
                     result = (result + this._customerTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
-            if ((this._goodTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Good.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._goodTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -6762,11 +6832,27 @@ namespace _4915M_project.desDataSetTableAdapters {
                     allAddedRows.AddRange(addedRows);
                 }
             }
+            if ((this._staffTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Staff.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._staffTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
             if ((this._shipmentOrderTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.ShipmentOrder.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
                     result = (result + this._shipmentOrderTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
+            if ((this._goodTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Good.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._goodTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -6780,11 +6866,27 @@ namespace _4915M_project.desDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private int UpdateDeletedRows(desDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
+            if ((this._goodTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Good.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._goodTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
             if ((this._shipmentOrderTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.ShipmentOrder.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
                     result = (result + this._shipmentOrderTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this._staffTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Staff.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._staffTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -6796,27 +6898,11 @@ namespace _4915M_project.desDataSetTableAdapters {
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._goodTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Good.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._goodTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
             if ((this._customerTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.Customer.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
                     result = (result + this._customerTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
-            if ((this._staffTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Staff.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._staffTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }

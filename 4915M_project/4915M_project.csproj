@@ -139,13 +139,10 @@
     <Compile Include="DeleteStaffAccout.Designer.cs">
       <DependentUpon>DeleteStaffAccout.cs</DependentUpon>
     </Compile>
-    <Compile Include="desDataSet1.cs">
-      <DependentUpon>desDataSet1.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="desDataSet1.Designer.cs">
+    <Compile Include="desDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>desDataSet1.xsd</DependentUpon>
+      <DependentUpon>desDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="EBAForm.cs">
       <SubType>Form</SubType>
@@ -321,16 +318,16 @@
     <EmbeddedResource Include="ViewDatabase.resx">
       <DependentUpon>ViewDatabase.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="desDataSet1.xsc">
-      <DependentUpon>desDataSet1.xsd</DependentUpon>
+    <None Include="desDataSet.xsc">
+      <DependentUpon>desDataSet.xsd</DependentUpon>
     </None>
-    <None Include="desDataSet1.xsd">
+    <None Include="desDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>desDataSet1.Designer.cs</LastGenOutput>
+      <LastGenOutput>desDataSet.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="desDataSet1.xss">
-      <DependentUpon>desDataSet1.xsd</DependentUpon>
+    <None Include="desDataSet.xss">
+      <DependentUpon>desDataSet.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

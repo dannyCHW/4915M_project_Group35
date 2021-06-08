@@ -132,7 +132,7 @@ namespace _4915M_project
         private void btnGoNext_Click(object sender, EventArgs e)
         {
             int n;
-            Boolean go = true;
+            Boolean go;
             if (txtSenderName.Text==""||txtSenderAddress.Text==""||cboBoxReceiverCountry.Text==""||
                 txtAreaCode.Text==""||txtReceiverAddress.Text==""||txtReceiverName.Text==""||
                 txtContactPerson.Text==""||txtContactPhone.Text=="")
@@ -140,13 +140,14 @@ namespace _4915M_project
                 go = false;
                 MessageBox.Show("Please enter all field required", "Invalid", MessageBoxButtons.OK, MessageBoxIcon.Error);
             } 
-            else if (!(int.TryParse(txtContactPhone.Text, out n)) || txtContactPhone.Text.Length < 8)
+            else if (!(int.TryParse(txtContactPhone.Text, out n)) || txtContactPhone.Text.Length <= 8)
             {
                 go = false;
                 MessageBox.Show(n + " is not allowed, ContactPhone must be number and length more or equals 8", "Invalid", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            } 
-            
-
+            } else
+            {
+                go = true;
+            }
 
             if (go)
             {
