@@ -119,7 +119,7 @@ namespace _4915M_project
             this.view.Location = new System.Drawing.Point(227, 223);
             this.view.Name = "view";
             this.view.RowTemplate.Height = 24;
-            this.view.Size = new System.Drawing.Size(847, 184);
+            this.view.Size = new System.Drawing.Size(847, 195);
             this.view.TabIndex = 96;
             this.view.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.view_CellClick);
             // 

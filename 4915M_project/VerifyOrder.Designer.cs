@@ -140,7 +140,6 @@ namespace _4915M_project
             this.dataGridView.Size = new System.Drawing.Size(1101, 282);
             this.dataGridView.TabIndex = 91;
             this.dataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_CellClick);
-            this.dataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_CellContentClick);
             // 
             // txtID
             // 
