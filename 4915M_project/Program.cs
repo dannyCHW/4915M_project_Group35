@@ -35,7 +35,7 @@ namespace _4915M_project
 
                 foreach (var form in forms)
                 {
-                    form.FormClosed += (s, args) =>
+                    form.FormClosed += (s, args) => 
                     {
                         if (Interlocked.Decrement(ref openForms) == 0)
                             ExitThread();
