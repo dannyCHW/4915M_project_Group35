@@ -30,20 +30,18 @@ namespace _4915M_project
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cboOrderID = new System.Windows.Forms.ComboBox();
             this.btnCheck = new System.Windows.Forms.Button();
             this.btnPayment = new System.Windows.Forms.Button();
-            this.btnBack = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.txtReason = new System.Windows.Forms.RichTextBox();
             this.txtStatus = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.txtOrder = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.txtFare = new System.Windows.Forms.TextBox();
-            this.cboOrderID = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -52,14 +50,12 @@ namespace _4915M_project
             this.panel1.Controls.Add(this.cboOrderID);
             this.panel1.Controls.Add(this.btnCheck);
             this.panel1.Controls.Add(this.btnPayment);
-            this.panel1.Controls.Add(this.btnBack);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.txtReason);
             this.panel1.Controls.Add(this.txtStatus);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.txtOrder);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.txtFare);
@@ -68,6 +64,15 @@ namespace _4915M_project
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(918, 622);
             this.panel1.TabIndex = 0;
+            // 
+            // cboOrderID
+            // 
+            this.cboOrderID.Font = new System.Drawing.Font("PMingLiU", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.cboOrderID.FormattingEnabled = true;
+            this.cboOrderID.Location = new System.Drawing.Point(360, 136);
+            this.cboOrderID.Name = "cboOrderID";
+            this.cboOrderID.Size = new System.Drawing.Size(272, 24);
+            this.cboOrderID.TabIndex = 125;
             // 
             // btnCheck
             // 
@@ -102,23 +107,6 @@ namespace _4915M_project
             this.btnPayment.Text = "Confirm and go to payment ->";
             this.btnPayment.UseVisualStyleBackColor = false;
             this.btnPayment.Click += new System.EventHandler(this.btnPayment_Click);
-            // 
-            // btnBack
-            // 
-            this.btnBack.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnBack.AutoSize = true;
-            this.btnBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.btnBack.FlatAppearance.BorderSize = 0;
-            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBack.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBack.ForeColor = System.Drawing.Color.White;
-            this.btnBack.Location = new System.Drawing.Point(12, 560);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(338, 50);
-            this.btnBack.TabIndex = 122;
-            this.btnBack.Text = "<- Back";
-            this.btnBack.UseVisualStyleBackColor = false;
-            this.btnBack.Click += new System.EventHandler(this.btnBack_Click_1);
             // 
             // label1
             // 
@@ -194,17 +182,6 @@ namespace _4915M_project
             this.label5.TabIndex = 115;
             this.label5.Text = "Order Number:";
             // 
-            // txtOrder
-            // 
-            this.txtOrder.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtOrder.BackColor = System.Drawing.SystemColors.Control;
-            this.txtOrder.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtOrder.Location = new System.Drawing.Point(360, 80);
-            this.txtOrder.Name = "txtOrder";
-            this.txtOrder.Size = new System.Drawing.Size(272, 27);
-            this.txtOrder.TabIndex = 114;
-            this.txtOrder.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtOrder_KeyPress);
-            // 
             // label4
             // 
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -240,15 +217,6 @@ namespace _4915M_project
             this.txtFare.TabIndex = 111;
             this.txtFare.Text = "HK$  (output)";
             // 
-            // cboOrderID
-            // 
-            this.cboOrderID.Font = new System.Drawing.Font("PMingLiU", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.cboOrderID.FormattingEnabled = true;
-            this.cboOrderID.Location = new System.Drawing.Point(360, 136);
-            this.cboOrderID.Name = "cboOrderID";
-            this.cboOrderID.Size = new System.Drawing.Size(272, 24);
-            this.cboOrderID.TabIndex = 125;
-            // 
             // CustomerCheck_Cal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -269,14 +237,12 @@ namespace _4915M_project
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnPayment;
-        private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.RichTextBox txtReason;
         private System.Windows.Forms.TextBox txtStatus;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtOrder;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtFare;
