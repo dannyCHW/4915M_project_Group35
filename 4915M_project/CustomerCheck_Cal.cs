@@ -122,5 +122,12 @@ namespace _4915M_project
             dataAdapter.Dispose();
             
         }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            CustomerLobby cuts = new CustomerLobby();
+            cuts.Show();
+            this.Close();
+        }
     }
 }

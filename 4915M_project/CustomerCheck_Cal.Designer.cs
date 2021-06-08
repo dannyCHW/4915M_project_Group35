@@ -42,11 +42,13 @@ namespace _4915M_project
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.txtFare = new System.Windows.Forms.TextBox();
+            this.btnBack = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.btnBack);
             this.panel1.Controls.Add(this.cboOrderID);
             this.panel1.Controls.Add(this.btnCheck);
             this.panel1.Controls.Add(this.btnPayment);
@@ -87,7 +89,7 @@ namespace _4915M_project
             this.btnCheck.Name = "btnCheck";
             this.btnCheck.Size = new System.Drawing.Size(167, 34);
             this.btnCheck.TabIndex = 124;
-            this.btnCheck.Text = "Check to check";
+            this.btnCheck.Text = "Click to check";
             this.btnCheck.UseVisualStyleBackColor = false;
             this.btnCheck.Click += new System.EventHandler(this.btnCheck_Click);
             // 
@@ -217,6 +219,23 @@ namespace _4915M_project
             this.txtFare.TabIndex = 111;
             this.txtFare.Text = "HK$  (output)";
             // 
+            // btnBack
+            // 
+            this.btnBack.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnBack.AutoSize = true;
+            this.btnBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.btnBack.FlatAppearance.BorderSize = 0;
+            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBack.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBack.ForeColor = System.Drawing.Color.White;
+            this.btnBack.Location = new System.Drawing.Point(26, 560);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(192, 50);
+            this.btnBack.TabIndex = 126;
+            this.btnBack.Text = "<-Back";
+            this.btnBack.UseVisualStyleBackColor = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
             // CustomerCheck_Cal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -248,5 +267,6 @@ namespace _4915M_project
         private System.Windows.Forms.TextBox txtFare;
         private System.Windows.Forms.Button btnCheck;
         private System.Windows.Forms.ComboBox cboOrderID;
+        private System.Windows.Forms.Button btnBack;
     }
 }
