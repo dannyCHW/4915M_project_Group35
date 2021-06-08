@@ -23,9 +23,7 @@ namespace _4915M_project
 
         private void btnback_Click(object sender, EventArgs e)
         {
-            CustomerLobby custLobby = new CustomerLobby();
-            custLobby.Show();
-            this.Hide();
+            
         }
 
         private void btnNext_Click(object sender, EventArgs e)
@@ -65,9 +63,14 @@ namespace _4915M_project
             DataTable dt = Program.DataTableVar;
             string connStr = Program.connStr;
 
-            string sqlStr = "Select orderID,  from ShipmentOrder where cusEmail LIKE ";
+            string sqlStr = "SELECT orderID FROM ShipmentOrder WHERE cusID =" + CustomerLogin.currentCustomerID +";";
             OleDbDataAdapter dataAdapter = new OleDbDataAdapter(sqlStr, connStr);
             dataAdapter.Fill(dt);
+            foreach (DataRow dr in dt.Rows)
+            {
+                comboInvoice.Items.Clear();
+                comboInvoice.Items.Add(dr["orderID"].ToString());
+            }
         }
 
         private void Invoice_Load(object sender, EventArgs e)

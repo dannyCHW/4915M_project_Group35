@@ -45,8 +45,8 @@ namespace _4915M_project
                 DataTable dt = Program.DataTableVar;
                 String connStr = "Provider=Microsoft.ACE.OLEDB.12.0;" + "Data Source=des.accdb";
 
-                string sqlStr = "Select orderStatus , rejectReason  from ShipmentOrder where orderID =" + orderID + ";";
-                    // + "where orderID = " + orderID + " AND (cusID = " + CustomerLogin.currentCustomerID + " OR reiceverEmail = '" + CustomerLogin.customerEmail + "') ;";   /* Price 未攞*/
+                string sqlStr = "Select orderStatus , rejectReason from ShipmentOrder where orderID = " + orderID + ";";
+                    //" AND (cusID = " + CustomerLogin.currentCustomerID + " OR receiverEmail = '" + CustomerLogin.customerEmail + "') ;";   /* Price 未攞*/
 
                 dt.Clear();
 
@@ -115,6 +115,7 @@ namespace _4915M_project
 
             foreach(DataRow dr in dt.Rows)
             {
+                cboOrderID.Items.Clear();
                 cboOrderID.Items.Add(dr["orderID"].ToString());
             }
 

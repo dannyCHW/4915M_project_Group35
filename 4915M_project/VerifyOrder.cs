@@ -100,7 +100,7 @@ namespace _4915M_project
             DataTable dt = StaffLogin.DataTableVar2;
             dt.Clear();
             string connStr = "Provider=Microsoft.ACE.OLEDB.12.0;" + "Data Source=des.accdb";
-            string sqlStr = "select ShipmentOrder.orderID,cusID,receiverAddress,receiverName,contactPerson,contactPhone,senderCountry,areaCode,senderCompanyName,senderAddress,receiverCountry,rejectReason,receiverCompanyName,senderName,reiceverEmail from ShipmentOrder where orderStatus = 'unVerify' ;";
+            string sqlStr = "select ShipmentOrder.orderID,cusID,receiverAddress,receiverName,contactPerson,contactPhone,senderCountry,areaCode,senderCompanyName,senderAddress,receiverCountry,rejectReason,receiverCompanyName,senderName,receiverEmail from ShipmentOrder where orderStatus = 'unVerify' ;";
             OleDbDataAdapter dataAdapter = new OleDbDataAdapter(sqlStr, connStr);
             dataAdapter.Fill(dt);
             dataGridView.DataSource = dt;

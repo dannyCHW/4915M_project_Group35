@@ -40,7 +40,7 @@ namespace _4915M_project
 
                 PaymentGateway paymentgateway = new PaymentGateway();
                 paymentgateway.Show();
-                    this.Close();
+                this.Close();
 
             }
         }
