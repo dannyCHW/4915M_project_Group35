@@ -46,7 +46,6 @@ namespace _4915M_project
         {
             try
             {
-                MessageBox.Show(Main.staffID.ToString(), "Verify Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 DataTable dt3 = StaffLogin.DataTableVar2;
                 dt3.Clear();
                 string connnStr = "Provider=Microsoft.ACE.OLEDB.12.0;" + "Data Source=des.accdb";
