@@ -50,5 +50,10 @@ namespace _4915M_project
             verifyorder.Show();
             this.Hide();
         }
+
+        private void ManagerLobby_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

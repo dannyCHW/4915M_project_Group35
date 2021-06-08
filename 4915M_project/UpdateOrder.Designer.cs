@@ -40,11 +40,13 @@ namespace _4915M_project
             this.comboStatus = new System.Windows.Forms.ComboBox();
             this.comboLocation = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.label21);
             this.panel1.Controls.Add(this.btnMore);
             this.panel1.Controls.Add(this.btnUpdate);
             this.panel1.Controls.Add(this.btnBack);
@@ -86,7 +88,7 @@ namespace _4915M_project
             this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUpdate.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdate.ForeColor = System.Drawing.Color.White;
-            this.btnUpdate.Location = new System.Drawing.Point(483, 361);
+            this.btnUpdate.Location = new System.Drawing.Point(476, 365);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(178, 50);
             this.btnUpdate.TabIndex = 120;
@@ -116,7 +118,7 @@ namespace _4915M_project
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.label5.Location = new System.Drawing.Point(587, 172);
+            this.label5.Location = new System.Drawing.Point(580, 242);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(272, 38);
             this.label5.TabIndex = 92;
@@ -128,7 +130,7 @@ namespace _4915M_project
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.label4.Location = new System.Drawing.Point(195, 221);
+            this.label4.Location = new System.Drawing.Point(188, 291);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(108, 38);
             this.label4.TabIndex = 91;
@@ -140,7 +142,7 @@ namespace _4915M_project
             this.label32.AutoSize = true;
             this.label32.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label32.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.label32.Location = new System.Drawing.Point(65, 164);
+            this.label32.Location = new System.Drawing.Point(58, 234);
             this.label32.Name = "label32";
             this.label32.Size = new System.Drawing.Size(238, 38);
             this.label32.TabIndex = 90;
@@ -150,7 +152,7 @@ namespace _4915M_project
             // 
             this.txtOrder.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtOrder.Font = new System.Drawing.Font("PMingLiU", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.txtOrder.Location = new System.Drawing.Point(310, 175);
+            this.txtOrder.Location = new System.Drawing.Point(303, 245);
             this.txtOrder.Name = "txtOrder";
             this.txtOrder.Size = new System.Drawing.Size(253, 27);
             this.txtOrder.TabIndex = 89;
@@ -170,7 +172,7 @@ namespace _4915M_project
             "waitingRecieve",
             "completed",
             "rejected"});
-            this.comboStatus.Location = new System.Drawing.Point(310, 232);
+            this.comboStatus.Location = new System.Drawing.Point(303, 302);
             this.comboStatus.Name = "comboStatus";
             this.comboStatus.Size = new System.Drawing.Size(253, 27);
             this.comboStatus.TabIndex = 88;
@@ -185,7 +187,7 @@ namespace _4915M_project
             "Australia",
             "Japan",
             "China Shanghai"});
-            this.comboLocation.Location = new System.Drawing.Point(881, 180);
+            this.comboLocation.Location = new System.Drawing.Point(874, 250);
             this.comboLocation.Name = "comboLocation";
             this.comboLocation.Size = new System.Drawing.Size(269, 27);
             this.comboLocation.TabIndex = 87;
@@ -197,11 +199,22 @@ namespace _4915M_project
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.label3.Location = new System.Drawing.Point(30, 94);
+            this.label3.Location = new System.Drawing.Point(81, 176);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(215, 36);
             this.label3.TabIndex = 84;
             this.label3.Text = "Update Order:";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.ForeColor = System.Drawing.Color.Black;
+            this.label21.Location = new System.Drawing.Point(29, 19);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(435, 38);
+            this.label21.TabIndex = 122;
+            this.label21.Text = "Update location and Status";
             // 
             // UpdateOrder
             // 
@@ -232,5 +245,6 @@ namespace _4915M_project
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnMore;
+        private System.Windows.Forms.Label label21;
     }
 }

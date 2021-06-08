@@ -70,6 +70,9 @@ namespace _4915M_project
             dataAdapter.Fill(dt);
         }
 
-        
+        private void Invoice_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

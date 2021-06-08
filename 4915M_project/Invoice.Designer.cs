@@ -505,6 +505,7 @@ namespace _4915M_project
             this.Controls.Add(this.label1);
             this.Name = "Invoice";
             this.Text = "Invoice";
+            this.Load += new System.EventHandler(this.Invoice_Load);
             this.InvoicePanel.ResumeLayout(false);
             this.InvoicePanel.PerformLayout();
             this.ResumeLayout(false);

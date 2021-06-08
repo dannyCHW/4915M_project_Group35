@@ -31,6 +31,8 @@ namespace _4915M_project
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ManagerLobby));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.btnCreateStaff = new System.Windows.Forms.Button();
             this.btnLogOut = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -42,8 +44,6 @@ namespace _4915M_project
             this.btnVerify = new System.Windows.Forms.Button();
             this.panelChildForm = new System.Windows.Forms.Panel();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.btnCreateStaff = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -69,6 +69,31 @@ namespace _4915M_project
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(250, 638);
             this.panel1.TabIndex = 3;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label3.Location = new System.Drawing.Point(25, 311);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(203, 12);
+            this.label3.TabIndex = 21;
+            this.label3.Text = "_________________________________";
+            // 
+            // btnCreateStaff
+            // 
+            this.btnCreateStaff.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.btnCreateStaff.FlatAppearance.BorderSize = 0;
+            this.btnCreateStaff.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCreateStaff.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCreateStaff.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnCreateStaff.Location = new System.Drawing.Point(3, 326);
+            this.btnCreateStaff.Name = "btnCreateStaff";
+            this.btnCreateStaff.Size = new System.Drawing.Size(244, 54);
+            this.btnCreateStaff.TabIndex = 20;
+            this.btnCreateStaff.Text = "Management Staff Accout";
+            this.btnCreateStaff.UseVisualStyleBackColor = false;
+            this.btnCreateStaff.Click += new System.EventHandler(this.btnCreateStaff_Click);
             // 
             // btnLogOut
             // 
@@ -200,31 +225,6 @@ namespace _4915M_project
             this.pictureBox4.TabIndex = 12;
             this.pictureBox4.TabStop = false;
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label3.Location = new System.Drawing.Point(25, 311);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(203, 12);
-            this.label3.TabIndex = 21;
-            this.label3.Text = "_________________________________";
-            // 
-            // btnCreateStaff
-            // 
-            this.btnCreateStaff.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.btnCreateStaff.FlatAppearance.BorderSize = 0;
-            this.btnCreateStaff.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCreateStaff.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCreateStaff.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnCreateStaff.Location = new System.Drawing.Point(3, 326);
-            this.btnCreateStaff.Name = "btnCreateStaff";
-            this.btnCreateStaff.Size = new System.Drawing.Size(244, 54);
-            this.btnCreateStaff.TabIndex = 20;
-            this.btnCreateStaff.Text = "Management Staff Accout";
-            this.btnCreateStaff.UseVisualStyleBackColor = false;
-            this.btnCreateStaff.Click += new System.EventHandler(this.btnCreateStaff_Click);
-            // 
             // ManagerLobby
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -235,6 +235,7 @@ namespace _4915M_project
             this.Controls.Add(this.panel1);
             this.Name = "ManagerLobby";
             this.Text = "ManagerLobby";
+            this.Load += new System.EventHandler(this.ManagerLobby_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panelLogo.ResumeLayout(false);
