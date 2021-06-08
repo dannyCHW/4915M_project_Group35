@@ -90,5 +90,17 @@ namespace _4915M_project
                 e.Handled = true;
             }
         }
+
+        private void txtInput_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MoreUpdate moreupdate = new MoreUpdate();
+            moreupdate.Show();
+            this.Close();
+        }
     }
 }

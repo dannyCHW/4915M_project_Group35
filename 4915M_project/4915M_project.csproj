@@ -142,6 +142,12 @@
     <Compile Include="MonthlyPay.Designer.cs">
       <DependentUpon>MonthlyPay.cs</DependentUpon>
     </Compile>
+    <Compile Include="MoreUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MoreUpdate.Designer.cs">
+      <DependentUpon>MoreUpdate.cs</DependentUpon>
+    </Compile>
     <Compile Include="Payment.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -236,6 +242,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MonthlyPay.resx">
       <DependentUpon>MonthlyPay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MoreUpdate.resx">
+      <DependentUpon>MoreUpdate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Payment.resx">
       <DependentUpon>Payment.cs</DependentUpon>

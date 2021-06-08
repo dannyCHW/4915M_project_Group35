@@ -118,22 +118,22 @@ namespace _4915M_project
 
 
             /*   here is the code */
-            DataTable dt = Program.DataTableVar;
-            dt.Clear();
+            DataTable dt3 = Program.DataTableVar;
+            dt3.Clear();
             string connStr = "Provider=Microsoft.ACE.OLEDB.12.0;" + "Data Source=des.accdb";
 
-            string sqlStr = "Select orderStatus ,dateOfPickUp from ShipmentOrder where receiverEmail = '" + CustomerLogin.customerEmail + "' AND orderStatus = 'processing' ";
+            string sqlStr = "Select orderStatus,dateOfPickUp from ShipmentOrder where reiceverEmail = '" + CustomerLogin.customerEmail + "' AND orderStatus = 'processing' ;";
 
             OleDbDataAdapter dataAdapter = new OleDbDataAdapter(sqlStr, connStr);
-            dataAdapter.Fill(dt);
+            dataAdapter.Fill(dt3);
 
-            if (dt.Rows.Count > 0)
+            if (dt3.Rows.Count > 0)
             {
                 int loop = 0;
-                while (loop < dt.Rows.Count)
+                while (loop < dt3.Rows.Count)
                 {
-                    String status = dt.Rows[loop]["orderStatus"].ToString();
-                    String pickupDate = dt.Rows[loop]["dateOfPickUp"].ToString();
+                    String status = dt3.Rows[loop]["orderStatus"].ToString();
+                    String pickupDate = dt3.Rows[loop]["dateOfPickUp"].ToString();
 
                     if (status == "processing")
                     {
@@ -149,7 +149,7 @@ namespace _4915M_project
                         }
                     }
 
-                    dt.Clear();
+                    dt3.Clear();
                     dataAdapter.Dispose();
 
                 }
