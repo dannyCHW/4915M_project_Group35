@@ -246,7 +246,7 @@ namespace _4915M_project
                     new OleDbParameter("@VdateOfOrder", date),
                     new OleDbParameter("@VsenderCountry", sCountry),
                     new OleDbParameter("@VareaCode", areaCode),
-                    new OleDbParameter("@VorderStatus", "waitingVerify"),
+                    new OleDbParameter("@VorderStatus", "unVerify"),
                     new OleDbParameter("@VdateOfPickUp", ""),
                     new OleDbParameter("@VstaffID", '0'),
                     new OleDbParameter("@VsenderCompanyName", sCompany),

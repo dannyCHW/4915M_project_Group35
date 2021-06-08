@@ -47,7 +47,7 @@ namespace _4915M_project
             dt.Clear();
             string connStr = "Provider=Microsoft.ACE.OLEDB.12.0;" + "Data Source=des.accdb";
 
-            string sqlStr = "Select orderStatus from ShipmentOrder where orderID = " + orderID;
+            string sqlStr = "Select orderStatus,paymentStatus from ShipmentOrder,Payment where ShipmentOrder.orderID = Payment.paymentID and ShipmentOrder.orderID =" + orderID;
 
             OleDbDataAdapter dataAdapter = new OleDbDataAdapter(sqlStr, connStr);
             dataAdapter.Fill(dt);
@@ -58,35 +58,62 @@ namespace _4915M_project
                 if (dt.Rows.Count > 0)
                 {
                     String vStatus= dt.Rows[0]["orderStatus"].ToString();
+                    String vPayStatus = dt.Rows[0]["paymentStatus"].ToString();
                     if (vStatus != "completed")
                     {
-                        dt.Clear();
-                        string strSqlStr = "Update ShipmentOrder set orderStatus = '" + comboStatus.Text + "', currentLocation = '" + comboLocation.Text + "' where orderID = " + orderID;
-                        OleDbDataAdapter dataAdapter2 = new OleDbDataAdapter(strSqlStr, connStr);
-                        dataAdapter2.Fill(dt);
-                        MessageBox.Show("Update Successful", "Sccessful Update", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        dataAdapter2.Dispose();
-                        dataAdapter.Dispose();
-                        dt.Clear();
+                        if (checkBox1.Checked && vStatus == "waitingPayment") {
+                            dt.Clear();
+                            string strSqlStr = "Update ShipmentOrder set orderStatus = 'waitingBooking' where orderID = " + orderID + ";";
+                            string strSqlStr2 = "Update Payment set paymentStatus = 'paid' where paymentID = " + orderID + ";";
+                            OleDbDataAdapter dataAdapter2 = new OleDbDataAdapter(strSqlStr, connStr);
+                            dataAdapter2.Fill(dt);
+                            dt.Clear();
+                            OleDbDataAdapter dataAdapter3 = new OleDbDataAdapter(strSqlStr2, connStr);
+                            dataAdapter3.Fill(dt);
+
+                            MessageBox.Show("Cash Payment Successful", "Sccessful Update", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        } else if (checkBox2.Checked|| vPayStatus== "extenal") {
+                            dt.Clear();
+                            string strSqlStr = "Update ShipmentOrder set orderStatus = 'waitingBooking' where orderID = " + orderID + ";";
+                            string strSqlStr2 = "Update Payment set paymentStatus = 'paid' where paymentID = " + orderID + ";";
+                            OleDbDataAdapter dataAdapter2 = new OleDbDataAdapter(strSqlStr, connStr);
+                            dataAdapter2.Fill(dt);
+                            dt.Clear();
+                            OleDbDataAdapter dataAdapter3 = new OleDbDataAdapter(strSqlStr2, connStr);
+                            dataAdapter3.Fill(dt);
+
+                            MessageBox.Show("Cash Payment Successful", "Sccessful Update", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        else {
+                            dt.Clear();
+                            string strSqlStr = "Update ShipmentOrder set orderStatus = '" + comboStatus.Text + "', currentLocation = '" + comboLocation.Text + "' where orderID = " + orderID;
+                            OleDbDataAdapter dataAdapter2 = new OleDbDataAdapter(strSqlStr, connStr);
+                            dataAdapter2.Fill(dt);
+                            MessageBox.Show("Update Successful", "Sccessful Update", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            dataAdapter2.Dispose();
+                            dataAdapter.Dispose();
+                            dt.Clear();
+                        }
 
 
                     }
                     else {
                         dt.Clear();
                         dataAdapter.Dispose();
-                        MessageBox.Show("This order cannot change", "Fail Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("This order cannot change", "Fail Action", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
 
 
                 }
                 else
                 {
-                    MessageBox.Show("Wrong OrderID", "Fail Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Wrong OrderID", "Fail Action", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
             catch (Exception)
             {
-                MessageBox.Show("Something Wrong", "Fail Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Something Wrong, may be wrong payment method", "Fail Action", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
         }
@@ -110,6 +137,50 @@ namespace _4915M_project
             MoreUpdate moreupdate = new MoreUpdate();
             moreupdate.Show();
             this.Close();
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox2.Checked && checkBox1.Checked) {
+                checkBox1.Checked = false;
+                MessageBox.Show("You cannot select more than one check box", "Fail Action", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }if (checkBox2.Checked || checkBox1.Checked) {
+                label5.Visible = false;
+                comboLocation.Visible = false;
+                comboStatus.Visible = false;
+                label4.Visible = false;
+            }
+            if (!checkBox2.Checked && !checkBox1.Checked)
+            {
+                label5.Visible = true;
+                comboLocation.Visible = true;
+                comboStatus.Visible = true;
+                label4.Visible = true;
+            }
+        }
+
+        private void checkBox2_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox2.Checked && checkBox1.Checked)
+            {
+                checkBox2.Checked = false;
+
+                MessageBox.Show("You cannot select more than one check box", "Fail Action", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            if (checkBox2.Checked || checkBox1.Checked)
+            {
+                label5.Visible = false;
+                comboLocation.Visible = false;
+                comboStatus.Visible = false;
+                label4.Visible = false;
+            }
+            if (!checkBox2.Checked && !checkBox1.Checked)
+            {
+                label5.Visible = true;
+                comboLocation.Visible = true;
+                comboStatus.Visible = true;
+                label4.Visible = true;
+            }
         }
     }
 }

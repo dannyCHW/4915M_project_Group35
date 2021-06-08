@@ -170,7 +170,7 @@ namespace _4915M_project
             this.btnUpdateOrder.Name = "btnUpdateOrder";
             this.btnUpdateOrder.Size = new System.Drawing.Size(243, 54);
             this.btnUpdateOrder.TabIndex = 13;
-            this.btnUpdateOrder.Text = "Update Order";
+            this.btnUpdateOrder.Text = "Handing and Update Order";
             this.btnUpdateOrder.UseVisualStyleBackColor = false;
             this.btnUpdateOrder.Click += new System.EventHandler(this.btnUpdateOrder_Click);
             // 

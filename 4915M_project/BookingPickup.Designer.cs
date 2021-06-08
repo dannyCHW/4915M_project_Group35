@@ -159,11 +159,11 @@ namespace _4915M_project
             // 
             this.label5.AutoSize = true;
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.label5.Location = new System.Drawing.Point(544, 300);
+            this.label5.Location = new System.Drawing.Point(501, 300);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(72, 12);
+            this.label5.Size = new System.Drawing.Size(145, 12);
             this.label5.TabIndex = 121;
-            this.label5.Text = "*0900 - 17:00";
+            this.label5.Text = "*Working TIme 0900 - 17:00";
             this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // BookingPickup

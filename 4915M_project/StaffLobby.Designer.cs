@@ -141,7 +141,7 @@ namespace _4915M_project
             this.btnUpdateOrder.Name = "btnUpdateOrder";
             this.btnUpdateOrder.Size = new System.Drawing.Size(243, 54);
             this.btnUpdateOrder.TabIndex = 13;
-            this.btnUpdateOrder.Text = "Update Order";
+            this.btnUpdateOrder.Text = "Handing Or Update Order";
             this.btnUpdateOrder.UseVisualStyleBackColor = false;
             // 
             // btnViewRecord
