@@ -66,6 +66,7 @@ namespace _4915M_project
                         currentCustomerID = Convert.ToInt32(dt.Rows[0]["cusID"]);
                         currentCustomerName = dt.Rows[0]["cusName"].ToString();
                         customerEmail = dt.Rows[0]["cusEmail"].ToString(); ;
+                        Console.WriteLine("currentCustomerID = " + currentCustomerID);
                         cusPage.Show();
                         this.Close();
                     }
