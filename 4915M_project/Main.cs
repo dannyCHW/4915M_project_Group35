@@ -15,6 +15,7 @@ namespace _4915M_project
 
         public static int position;
         public static int customerID;
+        public static int staffID;
 
         public Main()
         {

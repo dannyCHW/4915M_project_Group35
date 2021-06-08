@@ -54,6 +54,7 @@ namespace _4915M_project
                 if (dt.Rows.Count > 0)
                 {
                     vID = Convert.ToInt32(dt.Rows[0]["stfID"]);
+                    Main.staffID = Convert.ToInt32(dt.Rows[0]["stfID"]); ;
                     vPwd = dt.Rows[0]["stfPassword"].ToString();
                     vPosition = dt.Rows[0]["stfPosition"].ToString();
                     //Console.WriteLine(vpswd + vemail);

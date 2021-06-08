@@ -132,6 +132,7 @@ namespace _4915M_project
             // 
             // dataGridView
             // 
+            this.dataGridView.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView.Location = new System.Drawing.Point(46, 93);
             this.dataGridView.Name = "dataGridView";
@@ -200,6 +201,7 @@ namespace _4915M_project
             // 
             // dataGridView1
             // 
+            this.dataGridView1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(46, 438);
             this.dataGridView1.Name = "dataGridView1";
