@@ -55,7 +55,7 @@ namespace _4915M_project
                         {
 
                             dt.Clear();
-                            string strSqlStr = "Update  ShipmentOrder set orderStatus = 'waitingPickup'  where orderID = " + orderID;
+                            string strSqlStr = "Update  ShipmentOrder set orderStatus = 'waitingBooking'  where orderID = " + orderID;
                             OleDbDataAdapter dataAdapter2 = new OleDbDataAdapter(strSqlStr, connStr);
                             dataAdapter2.Fill(dt);
 

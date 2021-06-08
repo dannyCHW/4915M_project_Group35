@@ -212,7 +212,7 @@ namespace _4915M_project
 
             string sqlStr = "Insert into ShipmentOrder " +
                 "(cusID, receiverAddress, receiverName, contactPerson, contactPhone, dateOfOrder, senderCountry, areaCode, orderStatus, dateOfPickUp, staffID, senderCompanyName, senderAddress, receiverCountry, rejectReason, currentLocation, receiverCompanyName, senderName) " +
-                "values (" + CustomerLogin.currentCustomerID + ",'" + rAddress + "','" + rName + "','" + cPerson + "'," + cPhone + ",'" + date + "','" + sCountry + "','" + areaCode + "','" + "waitingVerify" + "','" + "" + "'," + 0 + ",'" + sCompany + "','" + sAddress + "','" + rCountry + "','" + "" + "','" + "" + "','" + rCompany + "','" + sName + "'" + ");";
+                "values (" + CustomerLogin.currentCustomerID + ",'" + rAddress + "','" + rName + "','" + cPerson + "'," + cPhone + ",'" + date + "','" + sCountry + "','" + areaCode + "','" + "unVerify" + "','" + "" + "'," + 0 + ",'" + sCompany + "','" + sAddress + "','" + rCountry + "','" + "" + "','" + "" + "','" + rCompany + "','" + sName + "'" + ");";
 
             OleDbDataAdapter dataAdapter = new OleDbDataAdapter(sqlStr, connStr);
             dataAdapter.Fill(dt);

@@ -66,7 +66,7 @@ namespace _4915M_project
             this.btnAccept.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAccept.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAccept.ForeColor = System.Drawing.Color.White;
-            this.btnAccept.Location = new System.Drawing.Point(323, 587);
+            this.btnAccept.Location = new System.Drawing.Point(317, 645);
             this.btnAccept.Name = "btnAccept";
             this.btnAccept.Size = new System.Drawing.Size(178, 50);
             this.btnAccept.TabIndex = 86;
@@ -82,7 +82,7 @@ namespace _4915M_project
             this.btnReject.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReject.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReject.ForeColor = System.Drawing.Color.White;
-            this.btnReject.Location = new System.Drawing.Point(670, 587);
+            this.btnReject.Location = new System.Drawing.Point(664, 645);
             this.btnReject.Name = "btnReject";
             this.btnReject.Size = new System.Drawing.Size(178, 50);
             this.btnReject.TabIndex = 87;
@@ -96,7 +96,7 @@ namespace _4915M_project
             this.txtReason.BackColor = System.Drawing.SystemColors.Window;
             this.txtReason.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtReason.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.txtReason.Location = new System.Drawing.Point(670, 659);
+            this.txtReason.Location = new System.Drawing.Point(664, 717);
             this.txtReason.Name = "txtReason";
             this.txtReason.Size = new System.Drawing.Size(451, 100);
             this.txtReason.TabIndex = 88;
@@ -108,7 +108,7 @@ namespace _4915M_project
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.label9.Location = new System.Drawing.Point(677, 740);
+            this.label9.Location = new System.Drawing.Point(671, 798);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(120, 19);
             this.label9.TabIndex = 89;
@@ -122,7 +122,7 @@ namespace _4915M_project
             this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBack.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBack.ForeColor = System.Drawing.Color.White;
-            this.btnBack.Location = new System.Drawing.Point(59, 810);
+            this.btnBack.Location = new System.Drawing.Point(46, 841);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(178, 50);
             this.btnBack.TabIndex = 90;
@@ -193,7 +193,7 @@ namespace _4915M_project
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.label1.Location = new System.Drawing.Point(42, 564);
+            this.label1.Location = new System.Drawing.Point(42, 613);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(66, 19);
             this.label1.TabIndex = 95;
@@ -206,7 +206,7 @@ namespace _4915M_project
             this.dataGridView1.Location = new System.Drawing.Point(46, 438);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1097, 123);
+            this.dataGridView1.Size = new System.Drawing.Size(1097, 172);
             this.dataGridView1.TabIndex = 94;
             // 
             // VerifyOrder

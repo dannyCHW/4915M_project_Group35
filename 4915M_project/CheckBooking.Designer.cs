@@ -81,9 +81,9 @@ namespace _4915M_project
             this.btnCreate.ForeColor = System.Drawing.Color.White;
             this.btnCreate.Location = new System.Drawing.Point(345, 326);
             this.btnCreate.Name = "btnCreate";
-            this.btnCreate.Size = new System.Drawing.Size(203, 49);
+            this.btnCreate.Size = new System.Drawing.Size(245, 49);
             this.btnCreate.TabIndex = 131;
-            this.btnCreate.Text = "Create Booking";
+            this.btnCreate.Text = "Check Can You Booking";
             this.btnCreate.UseVisualStyleBackColor = false;
             this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
             // 

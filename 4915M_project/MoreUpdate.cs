@@ -35,7 +35,7 @@ namespace _4915M_project
 
             String strOrderID = txtOrder.Text;
             int orderID = Convert.ToInt32(strOrderID);
-            string sqlStr = "select ShipmentOrder.orderID,cusID,receiverAddress,receiverName,contactPerson,contactPhone,senderCountry,areaCode,senderCompanyName,senderAddress,receiverCountry,rejectReason,receiverCompanyName,senderName,reiceverEmail from ShipmentOrder where orderID = " + orderID + " ;";
+            string sqlStr = "select ShipmentOrder.orderID,cusID,receiverAddress,receiverName,contactPerson,contactPhone,senderCountry,areaCode,senderCompanyName,senderAddress,receiverCountry,rejectReason,receiverCompanyName,senderName,receiverEmail from ShipmentOrder where orderID = " + orderID + " ;";
             OleDbDataAdapter dataAdapter = new OleDbDataAdapter(sqlStr, connStr);
             dataAdapter.Fill(dtSearch);
 
