@@ -43,11 +43,13 @@ namespace _4915M_project
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.txtFare = new System.Windows.Forms.TextBox();
+            this.cboOrderID = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.cboOrderID);
             this.panel1.Controls.Add(this.btnCheck);
             this.panel1.Controls.Add(this.btnPayment);
             this.panel1.Controls.Add(this.btnBack);
@@ -197,7 +199,7 @@ namespace _4915M_project
             this.txtOrder.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtOrder.BackColor = System.Drawing.SystemColors.Control;
             this.txtOrder.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtOrder.Location = new System.Drawing.Point(361, 130);
+            this.txtOrder.Location = new System.Drawing.Point(360, 80);
             this.txtOrder.Name = "txtOrder";
             this.txtOrder.Size = new System.Drawing.Size(272, 27);
             this.txtOrder.TabIndex = 114;
@@ -238,6 +240,15 @@ namespace _4915M_project
             this.txtFare.TabIndex = 111;
             this.txtFare.Text = "HK$  (output)";
             // 
+            // cboOrderID
+            // 
+            this.cboOrderID.Font = new System.Drawing.Font("PMingLiU", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.cboOrderID.FormattingEnabled = true;
+            this.cboOrderID.Location = new System.Drawing.Point(360, 136);
+            this.cboOrderID.Name = "cboOrderID";
+            this.cboOrderID.Size = new System.Drawing.Size(272, 24);
+            this.cboOrderID.TabIndex = 125;
+            // 
             // CustomerCheck_Cal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -270,5 +281,6 @@ namespace _4915M_project
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtFare;
         private System.Windows.Forms.Button btnCheck;
+        private System.Windows.Forms.ComboBox cboOrderID;
     }
 }
