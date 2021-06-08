@@ -45,7 +45,7 @@ namespace _4915M_project
                 DataTable dt = Program.DataTableVar;
                 String connStr = "Provider=Microsoft.ACE.OLEDB.12.0;" + "Data Source=des.accdb";
 
-                string sqlStr = "Select orderStatus , rejectReason  from ShipmentOrder where orderID =" + orderID + ";";
+                string sqlStr = "Select orderStatus , rejectReason  from ShipmentOrder where orderID =" + orderID + " AND (cusID = " + CustomerLogin.currentCustomerID + " OR receiverEmail = '" + CustomerLogin.customerEmail + "') ;";
                     // + "where orderID = " + orderID + " AND (cusID = " + CustomerLogin.currentCustomerID + " OR reiceverEmail = '" + CustomerLogin.customerEmail + "') ;";   /* Price 未攞*/
 
                 dt.Clear();
@@ -69,11 +69,11 @@ namespace _4915M_project
                         OleDbDataAdapter dataAdapter2 = new OleDbDataAdapter(strSqlStr, connStr);
                         dataAdapter2.Fill(dt);
                         if (dt.Rows.Count > 0) { }
-                            /* get     price*/
-                            txtFare.Text = dt.Rows[0]["price"].ToString();
-                            dt.Clear();
-                            dataAdapter2.Dispose();
-                            dataAdapter.Dispose();
+                        /* get     price*/
+                        txtFare.Text = dt.Rows[0]["price"].ToString();
+                        dt.Clear();
+                        dataAdapter2.Dispose();
+                        dataAdapter.Dispose();
 
                     }
                     else if (status == "rejected")
@@ -84,8 +84,12 @@ namespace _4915M_project
                         txtStatus.Text = status;
                         txtFare.Text = "Null";
                     }
-                    else if (status == "completed") {
+                    else if (status == "completed")
+                    {
                         MessageBox.Show("Order is comepleted , Please check your invoice", "Fail Action", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                    else {
+                        MessageBox.Show("This order is not allow to check", "Fail Action", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                 }
 
