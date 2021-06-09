@@ -69,11 +69,11 @@ namespace _4915M_project
                         OleDbDataAdapter dataAdapter2 = new OleDbDataAdapter(strSqlStr, connStr);
                         dataAdapter2.Fill(dt);
                         if (dt.Rows.Count > 0) { }
-                            /* get     price*/
-                            txtFare.Text = dt.Rows[0]["price"].ToString();
-                            dt.Clear();
-                            dataAdapter2.Dispose();
-                            dataAdapter.Dispose();
+                        /* get     price*/
+                        txtFare.Text = dt.Rows[0]["price"].ToString();
+                        dt.Clear();
+                        dataAdapter2.Dispose();
+                        dataAdapter.Dispose();
 
                     }
                     else if (status == "rejected")
@@ -85,7 +85,24 @@ namespace _4915M_project
                         txtFare.Text = "Null";
                     }
                     else if (status == "completed") {
+
                         MessageBox.Show("Order is comepleted , Please check your invoice", "Fail Action", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                    } else if (status == "unVerify") {
+
+                        txtStatus.Text = status;
+
+                        dt.Clear();
+                        string strSqlStr = "Select price from Payment where paymentID =" + orderID + ";";
+                        OleDbDataAdapter dataAdapter2 = new OleDbDataAdapter(strSqlStr, connStr);
+                        dataAdapter2.Fill(dt);
+                        if (dt.Rows.Count > 0) { }
+                        /* get     price*/
+                        txtFare.Text = dt.Rows[0]["price"].ToString();
+                        dt.Clear();
+                        dataAdapter2.Dispose();
+                        dataAdapter.Dispose();
+
                     }
                 }
 

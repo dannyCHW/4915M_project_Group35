@@ -30,7 +30,6 @@ namespace _4915M_project
         private void InitializeComponent()
         {
             this.btnSearch = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
             this.comboColumn = new System.Windows.Forms.ComboBox();
             this.txtInput = new System.Windows.Forms.TextBox();
             this.view = new System.Windows.Forms.DataGridView();
@@ -60,19 +59,6 @@ namespace _4915M_project
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = false;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
-            // 
-            // label2
-            // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(448, 295);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(373, 36);
-            this.label2.TabIndex = 99;
-            this.label2.Text = "(Display in process order)";
             // 
             // comboColumn
             // 
@@ -236,7 +222,6 @@ namespace _4915M_project
             this.Controls.Add(this.txtOrder);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnSearch);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.comboColumn);
             this.Controls.Add(this.txtInput);
             this.Controls.Add(this.view);
@@ -254,7 +239,6 @@ namespace _4915M_project
         #endregion
 
         private System.Windows.Forms.Button btnSearch;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox comboColumn;
         private System.Windows.Forms.TextBox txtInput;
         private System.Windows.Forms.DataGridView view;
