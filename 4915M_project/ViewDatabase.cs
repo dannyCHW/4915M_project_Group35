@@ -36,8 +36,9 @@ namespace _4915M_project
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
- 
-                if (comboBox1.Text == "(column)")
+            try
+            {
+            else if (comboBox1.Text == "(column)")
                 {
                     MessageBox.Show("Need to select the colunm to search.", "Attention", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
@@ -54,14 +55,18 @@ namespace _4915M_project
                 }
                 else if (isString == false)
                 {
-                DataTable dtSearch = StaffLogin.DataTableVar2;
+                    DataTable dtSearch = StaffLogin.DataTableVar2;
 
-                dtSearch.Clear();
+                    dtSearch.Clear();
 
-                string sqlStr = "select * from ShipmentOrder where " + comboBox1.Text + " = " + Convert.ToInt32(intInput.Text) + " ;";
-                OleDbDataAdapter dataAdapter = new OleDbDataAdapter(sqlStr, Program.connStr);
-                dataAdapter.Fill(dtSearch);
-                dataGridView1.DataSource = dtSearch;
+                    string sqlStr = "select * from ShipmentOrder where " + comboBox1.Text + " = " + Convert.ToInt32(intInput.Text) + " ;";
+                    OleDbDataAdapter dataAdapter = new OleDbDataAdapter(sqlStr, Program.connStr);
+                    dataAdapter.Fill(dtSearch);
+                    dataGridView1.DataSource = dtSearch;
+                }
+            }
+            catch {
+                MessageBox.Show("You need to select or input something", "Attention", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -144,9 +149,9 @@ namespace _4915M_project
 
         private void txtInput_Click(object sender, EventArgs e)
         {
-            if (intInput.Text == "(Input here)")
+            if (txtInput.Text == "(Input here)")
             {
-                intInput.Text = "";
+                txtInput.Text = "";
             }
         }
     }
