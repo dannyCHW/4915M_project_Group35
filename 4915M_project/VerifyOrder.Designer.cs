@@ -143,6 +143,7 @@ namespace _4915M_project
             // 
             // txtID
             // 
+            this.txtID.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtID.Location = new System.Drawing.Point(1088, 850);
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(33, 22);

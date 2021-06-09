@@ -157,12 +157,6 @@
     <Compile Include="Invoice.Designer.cs">
       <DependentUpon>Invoice.cs</DependentUpon>
     </Compile>
-    <Compile Include="Invoice2.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Invoice2.Designer.cs">
-      <DependentUpon>Invoice2.cs</DependentUpon>
-    </Compile>
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -281,9 +275,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Invoice.resx">
       <DependentUpon>Invoice.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Invoice2.resx">
-      <DependentUpon>Invoice2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>

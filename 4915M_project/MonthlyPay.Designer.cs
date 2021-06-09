@@ -72,6 +72,7 @@ namespace _4915M_project
             // 
             // checkBox
             // 
+            this.checkBox.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.checkBox.AutoSize = true;
             this.checkBox.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));

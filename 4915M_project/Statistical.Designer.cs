@@ -30,6 +30,7 @@ namespace _4915M_project
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnBack = new System.Windows.Forms.Button();
             this.timeMonth = new System.Windows.Forms.DateTimePicker();
             this.timeDay = new System.Windows.Forms.DateTimePicker();
             this.txtMoney = new System.Windows.Forms.TextBox();
@@ -39,7 +40,6 @@ namespace _4915M_project
             this.btnMonth = new System.Windows.Forms.Button();
             this.btnDay = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnBack = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -61,8 +61,25 @@ namespace _4915M_project
             this.panel1.Size = new System.Drawing.Size(1186, 638);
             this.panel1.TabIndex = 0;
             // 
+            // btnBack
+            // 
+            this.btnBack.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.btnBack.FlatAppearance.BorderSize = 0;
+            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBack.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBack.ForeColor = System.Drawing.Color.White;
+            this.btnBack.Location = new System.Drawing.Point(38, 564);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(178, 50);
+            this.btnBack.TabIndex = 99;
+            this.btnBack.Text = "<-Back";
+            this.btnBack.UseVisualStyleBackColor = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
             // timeMonth
             // 
+            this.timeMonth.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.timeMonth.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
             this.timeMonth.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.timeMonth.Location = new System.Drawing.Point(429, 270);
@@ -75,6 +92,7 @@ namespace _4915M_project
             // 
             // timeDay
             // 
+            this.timeDay.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.timeDay.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold);
             this.timeDay.Location = new System.Drawing.Point(429, 270);
             this.timeDay.MinDate = new System.DateTime(2021, 5, 25, 0, 0, 0, 0);
@@ -173,22 +191,6 @@ namespace _4915M_project
             this.label1.Size = new System.Drawing.Size(256, 38);
             this.label1.TabIndex = 128;
             this.label1.Text = "Statistical Data:";
-            // 
-            // btnBack
-            // 
-            this.btnBack.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.btnBack.FlatAppearance.BorderSize = 0;
-            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBack.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBack.ForeColor = System.Drawing.Color.White;
-            this.btnBack.Location = new System.Drawing.Point(38, 564);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(178, 50);
-            this.btnBack.TabIndex = 99;
-            this.btnBack.Text = "<-Back";
-            this.btnBack.UseVisualStyleBackColor = false;
-            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // Statistical
             // 

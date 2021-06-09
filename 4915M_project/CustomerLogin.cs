@@ -73,7 +73,7 @@ namespace _4915M_project
                     else
                     {
                         //temp message, maybe change to messageBox?
-                        Console.WriteLine("Wrong password or email");
+                        MessageBox.Show("Wrong password or email", "Attention", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
 
                 } 
@@ -122,7 +122,14 @@ namespace _4915M_project
             if (txtPassword.Text == "Password")
             {
                 txtPassword.Text = "";
+                txtPassword.PasswordChar = '*';
+                txtPassword.MaxLength = 14;
             }
+        }
+
+        private void txtPassword_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
         }
     }
 }
