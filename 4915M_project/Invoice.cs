@@ -57,7 +57,7 @@ namespace _4915M_project
             try
             {
                 
-                PdfWriter.GetInstance(doc, new FileStream("Invoice1.pdf", FileMode.Create));
+                PdfWriter.GetInstance(doc, new FileStream("Invoice.pdf", FileMode.Create));
                 doc.Open();
 
                 iTextSharp.text.Image logo = iTextSharp.text.Image.GetInstance("Logo.png");
@@ -76,7 +76,7 @@ namespace _4915M_project
 
                 doc.Add(new iTextSharp.text.Paragraph(Environment.NewLine));
 
-                string invoiceStr = @"Invoice";
+                string invoiceStr = @"Invoice(Receipt)";
                 Paragraph invoice = new Paragraph(invoiceStr);
                 invoice.Alignment = Element.ALIGN_CENTER;
                 doc.Add(invoice);
@@ -88,8 +88,33 @@ namespace _4915M_project
 
                 doc.Add(new iTextSharp.text.Paragraph(Environment.NewLine));
 
+                doc.Add(new iTextSharp.text.Paragraph("Shipment Order Number : " + orderNumber));
+                doc.Add(new iTextSharp.text.Paragraph(Environment.NewLine));
                 doc.Add(new iTextSharp.text.Paragraph("Sender Name : " + sName));
                 doc.Add(new iTextSharp.text.Paragraph("Sender Company : " + sCompany));
+                doc.Add(new iTextSharp.text.Paragraph("Contact Phone : " + cPhone));
+                doc.Add(new iTextSharp.text.Paragraph("Contact Person : " + cPerson));
+                doc.Add(new iTextSharp.text.Paragraph("Sender Address : " + sAddress));
+
+                doc.Add(new iTextSharp.text.Paragraph(Environment.NewLine));
+                doc.Add(new iTextSharp.text.Paragraph("SHIP TO"));
+                doc.Add(new iTextSharp.text.Paragraph(Environment.NewLine));
+
+                doc.Add(new iTextSharp.text.Paragraph("Country/Area : " + rCountry));
+                doc.Add(new iTextSharp.text.Paragraph("Receiver : " + rName));
+                doc.Add(new iTextSharp.text.Paragraph("Area Code : " + areaCode));
+                doc.Add(new iTextSharp.text.Paragraph("Receiver Address : " + rAddress));
+                doc.Add(new iTextSharp.text.Paragraph(Environment.NewLine));
+                doc.Add(new iTextSharp.text.Paragraph("Total Price : HK$" + price));
+
+                doc.Add(underLine);
+                doc.Add(new iTextSharp.text.Paragraph(Environment.NewLine));
+                doc.Add(new iTextSharp.text.Paragraph(Environment.NewLine));
+                doc.Add(new iTextSharp.text.Paragraph("For and behalf of Eastern Delivery Express (EDE) Limited."));
+                doc.Add(new iTextSharp.text.Paragraph(Environment.NewLine));
+                doc.Add(new iTextSharp.text.Paragraph(Environment.NewLine));
+                doc.Add(new iTextSharp.text.Paragraph("___________________________"));
+                doc.Add(new iTextSharp.text.Paragraph("                   Signature"));
 
             }
             catch (Exception ex)
@@ -214,4 +239,6 @@ namespace _4915M_project
         }
 
     }
+
+
 }

@@ -163,5 +163,10 @@ namespace _4915M_project
             monthmanage.Show();
             this.Hide();
         }
+
+        private void label6_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
