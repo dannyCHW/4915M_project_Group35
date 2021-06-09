@@ -175,6 +175,12 @@
     <Compile Include="ManagerLobby.Designer.cs">
       <DependentUpon>ManagerLobby.cs</DependentUpon>
     </Compile>
+    <Compile Include="MonthlyManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MonthlyManagement.Designer.cs">
+      <DependentUpon>MonthlyManagement.cs</DependentUpon>
+    </Compile>
     <Compile Include="MonthlyPay.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -284,6 +290,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ManagerLobby.resx">
       <DependentUpon>ManagerLobby.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MonthlyManagement.resx">
+      <DependentUpon>MonthlyManagement.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MonthlyPay.resx">
       <DependentUpon>MonthlyPay.cs</DependentUpon>

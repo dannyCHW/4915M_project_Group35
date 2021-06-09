@@ -156,5 +156,12 @@ namespace _4915M_project
             }
             /* code end*/
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MonthlyManagement monthmanage = new MonthlyManagement();
+            monthmanage.Show();
+            this.Hide();
+        }
     }
 }

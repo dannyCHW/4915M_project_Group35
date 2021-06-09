@@ -60,7 +60,7 @@ namespace _4915M_project
                             dataAdapter2.Fill(dt);
 
                             dt.Clear();
-                            string str2SqlStr = "Update  Payment set paymentStatus = 'Monthly'  where paymentID = " + orderID;
+                            string str2SqlStr = "Update  Payment set paymentStatus = 'monthly'  where paymentID = " + orderID;
                             OleDbDataAdapter dataAdapter3 = new OleDbDataAdapter(str2SqlStr, connStr);
                             dataAdapter3.Fill(dt);
 

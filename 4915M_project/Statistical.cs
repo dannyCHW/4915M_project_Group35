@@ -108,5 +108,12 @@ namespace _4915M_project
                 MessageBox.Show("Something Wrong", "Action Fail", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            ViewDatabase view = new ViewDatabase();
+            view.Show();
+            this.Close();
+        }
     }
 }
