@@ -34,18 +34,18 @@ namespace _4915M_project
             this.btnCreate = new System.Windows.Forms.Button();
             this.btnBack = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtOrder = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.cbo = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.cbo);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.btnCreate);
             this.panel1.Controls.Add(this.btnBack);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.txtOrder);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -79,7 +79,7 @@ namespace _4915M_project
             this.btnCreate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCreate.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCreate.ForeColor = System.Drawing.Color.White;
-            this.btnCreate.Location = new System.Drawing.Point(345, 326);
+            this.btnCreate.Location = new System.Drawing.Point(345, 310);
             this.btnCreate.Name = "btnCreate";
             this.btnCreate.Size = new System.Drawing.Size(245, 49);
             this.btnCreate.TabIndex = 131;
@@ -116,16 +116,6 @@ namespace _4915M_project
             this.label2.TabIndex = 127;
             this.label2.Text = "order Number:";
             // 
-            // txtOrder
-            // 
-            this.txtOrder.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtOrder.BackColor = System.Drawing.SystemColors.Control;
-            this.txtOrder.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtOrder.Location = new System.Drawing.Point(471, 231);
-            this.txtOrder.Name = "txtOrder";
-            this.txtOrder.Size = new System.Drawing.Size(205, 27);
-            this.txtOrder.TabIndex = 125;
-            // 
             // label1
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -137,6 +127,16 @@ namespace _4915M_project
             this.label1.Size = new System.Drawing.Size(235, 38);
             this.label1.TabIndex = 123;
             this.label1.Text = "Booking Chck";
+            // 
+            // cbo
+            // 
+            this.cbo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.cbo.FormattingEnabled = true;
+            this.cbo.Location = new System.Drawing.Point(427, 230);
+            this.cbo.Name = "cbo";
+            this.cbo.Size = new System.Drawing.Size(234, 27);
+            this.cbo.TabIndex = 133;
             // 
             // CheckBooking
             // 
@@ -159,8 +159,8 @@ namespace _4915M_project
         private System.Windows.Forms.Button btnCreate;
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtOrder;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ComboBox cbo;
     }
 }
