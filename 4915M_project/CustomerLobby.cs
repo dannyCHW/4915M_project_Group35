@@ -140,13 +140,13 @@ namespace _4915M_project
                         DateTime localDate = DateTime.Now;
 
                         var v_exDay = DateTime.Parse(pickupDate);
-                        DateTime expectedDate = (DateTime)v_exDay;
+                        DateTime expectedDate = (DateTime)v_exDay.AddDays(7);
 
-                        int result = DateTime.Compare(expectedDate.AddDays(3), localDate);
-                    if (result > 0 && vcurrentLocation == vreceiverCountry)
+                    int result = localDate.Day - expectedDate.Day;
+                    if (result >= -2 && vcurrentLocation == vreceiverCountry)
                     {
                         MessageBox.Show("The goods you need to receive already arrived locally, please confirm the estimated time of delivery", "Goods Alert", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    } else if (result > 0) {
+                    } else if (result >= -2) {
                         MessageBox.Show("The cargo is expected to arrive in the last two days, please pay attention to the cargo location and login information", "Goods Alert", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     loop++;
