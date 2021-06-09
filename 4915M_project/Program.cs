@@ -22,8 +22,8 @@ namespace _4915M_project
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Main());
-            //Application.Run(new MultiFormContext(new Main(), new Main()));
+            //Application.Run(new Main());
+            Application.Run(new MultiFormContext(new Main(), new StaffLogin()));
         }
 
         public class MultiFormContext : ApplicationContext

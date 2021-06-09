@@ -42,6 +42,7 @@ namespace _4915M_project
             if (selected == true)
             {
                 bornPDF();
+                MessageBox.Show("PDF generate", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             } 
             else
             {

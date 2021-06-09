@@ -140,7 +140,7 @@ namespace _4915M_project
                 go = false;
                 MessageBox.Show("Please enter all field required", "Invalid", MessageBoxButtons.OK, MessageBoxIcon.Error);
             } 
-            else if (!(int.TryParse(txtContactPhone.Text, out n)) || txtContactPhone.Text.Length <= 8)
+            else if (!(int.TryParse(txtContactPhone.Text, out n)) || txtContactPhone.Text.Length < 8)
             {
                 go = false;
                 MessageBox.Show(n + " is not allowed, ContactPhone must be number and length more or equals 8", "Invalid", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -456,6 +456,7 @@ namespace _4915M_project
 
         private void AirwayBill1_Load(object sender, EventArgs e)
         {
+            cboBoxReceiverCountry.DropDownStyle = ComboBoxStyle.DropDownList;
             txtSenderName.Text = CustomerLogin.currentCustomerName;
         }
 
