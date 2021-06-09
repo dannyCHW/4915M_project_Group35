@@ -122,7 +122,7 @@ namespace _4915M_project
             this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBack.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBack.ForeColor = System.Drawing.Color.White;
-            this.btnBack.Location = new System.Drawing.Point(46, 841);
+            this.btnBack.Location = new System.Drawing.Point(35, 822);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(178, 50);
             this.btnBack.TabIndex = 90;

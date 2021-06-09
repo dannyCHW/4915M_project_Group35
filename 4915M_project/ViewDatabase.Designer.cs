@@ -30,28 +30,30 @@ namespace _4915M_project
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnStatis = new System.Windows.Forms.Button();
+            this.intInput = new System.Windows.Forms.TextBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.btnBack = new System.Windows.Forms.Button();
             this.btnSearch = new System.Windows.Forms.Button();
             this.txtInput = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.intInput = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.AutoScroll = true;
+            this.panel1.Controls.Add(this.btnStatis);
             this.panel1.Controls.Add(this.intInput);
             this.panel1.Controls.Add(this.comboBox1);
             this.panel1.Controls.Add(this.label5);
@@ -70,6 +72,120 @@ namespace _4915M_project
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1186, 638);
             this.panel1.TabIndex = 0;
+            // 
+            // btnStatis
+            // 
+            this.btnStatis.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnStatis.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.btnStatis.FlatAppearance.BorderSize = 0;
+            this.btnStatis.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnStatis.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStatis.ForeColor = System.Drawing.Color.White;
+            this.btnStatis.Location = new System.Drawing.Point(936, 715);
+            this.btnStatis.Name = "btnStatis";
+            this.btnStatis.Size = new System.Drawing.Size(178, 50);
+            this.btnStatis.TabIndex = 106;
+            this.btnStatis.Text = "statistical ->";
+            this.btnStatis.UseVisualStyleBackColor = false;
+            this.btnStatis.Click += new System.EventHandler(this.btnStatis_Click);
+            // 
+            // intInput
+            // 
+            this.intInput.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.intInput.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.intInput.Location = new System.Drawing.Point(524, 91);
+            this.intInput.Name = "intInput";
+            this.intInput.Size = new System.Drawing.Size(297, 27);
+            this.intInput.TabIndex = 105;
+            this.intInput.Text = "(Input here)";
+            this.intInput.Click += new System.EventHandler(this.intInput_Click);
+            this.intInput.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.intInput_KeyPress);
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.comboBox1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "orderID",
+            "cusID",
+            "receiverAddress",
+            "receiverName",
+            "contactPerson",
+            "contactPhone",
+            "senderCountry",
+            "areaCode",
+            "orderStatus",
+            "senderCompanyName",
+            "senderAddress",
+            "receiverCountry",
+            "rejectReason",
+            "currentLocation",
+            "receiverCompanyName",
+            "senderName",
+            "receiverEmail"});
+            this.comboBox1.Location = new System.Drawing.Point(231, 91);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(236, 27);
+            this.comboBox1.TabIndex = 104;
+            this.comboBox1.Text = "(column)";
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // label5
+            // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.label5.Location = new System.Drawing.Point(34, 570);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(85, 19);
+            this.label5.TabIndex = 103;
+            this.label5.Text = "*Payment";
+            // 
+            // label4
+            // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.label4.Location = new System.Drawing.Point(47, 402);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(66, 19);
+            this.label4.TabIndex = 102;
+            this.label4.Text = "*Goods";
+            // 
+            // label3
+            // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.label3.Location = new System.Drawing.Point(47, 159);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(60, 19);
+            this.label3.TabIndex = 101;
+            this.label3.Text = "*Order";
+            // 
+            // dataGridView3
+            // 
+            this.dataGridView3.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView3.Location = new System.Drawing.Point(129, 570);
+            this.dataGridView3.Name = "dataGridView3";
+            this.dataGridView3.RowTemplate.Height = 24;
+            this.dataGridView3.Size = new System.Drawing.Size(921, 62);
+            this.dataGridView3.TabIndex = 100;
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Location = new System.Drawing.Point(129, 402);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.RowTemplate.Height = 24;
+            this.dataGridView2.Size = new System.Drawing.Size(921, 124);
+            this.dataGridView2.TabIndex = 99;
             // 
             // btnBack
             // 
@@ -112,6 +228,7 @@ namespace _4915M_project
             this.txtInput.Size = new System.Drawing.Size(297, 27);
             this.txtInput.TabIndex = 95;
             this.txtInput.Text = "(Input here)";
+            this.txtInput.Click += new System.EventHandler(this.txtInput_Click);
             // 
             // label6
             // 
@@ -148,103 +265,6 @@ namespace _4915M_project
             this.label1.TabIndex = 76;
             this.label1.Text = "View Record";
             // 
-            // dataGridView2
-            // 
-            this.dataGridView2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(129, 402);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(921, 124);
-            this.dataGridView2.TabIndex = 99;
-            // 
-            // dataGridView3
-            // 
-            this.dataGridView3.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Location = new System.Drawing.Point(129, 570);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.RowTemplate.Height = 24;
-            this.dataGridView3.Size = new System.Drawing.Size(921, 62);
-            this.dataGridView3.TabIndex = 100;
-            // 
-            // label3
-            // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.label3.Location = new System.Drawing.Point(47, 159);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(60, 19);
-            this.label3.TabIndex = 101;
-            this.label3.Text = "*Order";
-            // 
-            // label4
-            // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.label4.Location = new System.Drawing.Point(47, 402);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(66, 19);
-            this.label4.TabIndex = 102;
-            this.label4.Text = "*Goods";
-            // 
-            // label5
-            // 
-            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.label5.Location = new System.Drawing.Point(34, 570);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(85, 19);
-            this.label5.TabIndex = 103;
-            this.label5.Text = "*Payment";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.comboBox1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "orderID",
-            "cusID",
-            "receiverAddress",
-            "receiverName",
-            "contactPerson",
-            "contactPhone",
-            "senderCountry",
-            "areaCode",
-            "orderStatus",
-            "senderCompanyName",
-            "senderAddress",
-            "receiverCountry",
-            "rejectReason",
-            "currentLocation",
-            "receiverCompanyName",
-            "senderName",
-            "receiverEmail"});
-            this.comboBox1.Location = new System.Drawing.Point(231, 91);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(236, 27);
-            this.comboBox1.TabIndex = 104;
-            this.comboBox1.Text = "(column)";
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
-            // 
-            // intInput
-            // 
-            this.intInput.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.intInput.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.intInput.Location = new System.Drawing.Point(524, 91);
-            this.intInput.Name = "intInput";
-            this.intInput.Size = new System.Drawing.Size(297, 27);
-            this.intInput.TabIndex = 105;
-            this.intInput.Text = "(Input here)";
-            this.intInput.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.intInput_KeyPress);
-            // 
             // ViewDatabase
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -257,9 +277,9 @@ namespace _4915M_project
             this.Load += new System.EventHandler(this.ViewDatabase_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -280,5 +300,6 @@ namespace _4915M_project
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.TextBox intInput;
+        private System.Windows.Forms.Button btnStatis;
     }
 }

@@ -127,5 +127,27 @@ namespace _4915M_project
                 MessageBox.Show("Don't press it indiscriminately", "Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
+
+        private void btnStatis_Click(object sender, EventArgs e)
+        {
+            Statistical statisical = new Statistical();
+            statisical.Show();
+            this.Close();
+        }
+
+        private void intInput_Click(object sender, EventArgs e)
+        {
+            if (intInput.Text == "(Input here)") {
+                intInput.Text = "";
+            }
+        }
+
+        private void txtInput_Click(object sender, EventArgs e)
+        {
+            if (intInput.Text == "(Input here)")
+            {
+                intInput.Text = "";
+            }
+        }
     }
 }

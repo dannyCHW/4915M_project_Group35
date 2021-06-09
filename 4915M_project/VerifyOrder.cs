@@ -38,7 +38,7 @@ namespace _4915M_project
 
         private void VerifyOrder_Load(object sender, EventArgs e)
         {
- 
+            btnLoad_Click(sender, e);
 
         }
 
@@ -54,6 +54,8 @@ namespace _4915M_project
                 dataAdapter.Fill(dt3);
 
                 MessageBox.Show("Verify Successful", "Verify Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                btnLoad_Click(sender, e);
             }
             catch {
                 MessageBox.Show("Something Wrong", "Verify Fail", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -120,6 +122,7 @@ namespace _4915M_project
                     dataAdapter.Fill(dt4);
 
                     MessageBox.Show("Reject Suceessful", "Attention", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    btnLoad_Click(sender, e);
                 }
 
             }

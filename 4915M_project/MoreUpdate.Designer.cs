@@ -91,7 +91,7 @@ namespace _4915M_project
             "receiverCountry",
             "receiverCompanyName",
             "senderName",
-            "reiceverEmail"});
+            "receiverEmail"});
             this.comboColumn.Location = new System.Drawing.Point(361, 170);
             this.comboColumn.Name = "comboColumn";
             this.comboColumn.Size = new System.Drawing.Size(191, 27);

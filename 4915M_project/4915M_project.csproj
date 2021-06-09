@@ -213,6 +213,12 @@
     <Compile Include="StaffLogin.Designer.cs">
       <DependentUpon>StaffLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Statistical.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Statistical.Designer.cs">
+      <DependentUpon>Statistical.cs</DependentUpon>
+    </Compile>
     <Compile Include="Tracking.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -305,6 +311,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="StaffLogin.resx">
       <DependentUpon>StaffLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Statistical.resx">
+      <DependentUpon>Statistical.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Tracking.resx">
       <DependentUpon>Tracking.cs</DependentUpon>
