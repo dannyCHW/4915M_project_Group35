@@ -95,7 +95,7 @@ namespace _4915M_project
             // 
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label2.Location = new System.Drawing.Point(25, 251);
+            this.label2.Location = new System.Drawing.Point(22, 248);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(203, 12);
             this.label2.TabIndex = 16;
@@ -151,7 +151,7 @@ namespace _4915M_project
             this.btnViewRecord.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnViewRecord.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnViewRecord.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnViewRecord.Location = new System.Drawing.Point(4, 266);
+            this.btnViewRecord.Location = new System.Drawing.Point(1, 263);
             this.btnViewRecord.Name = "btnViewRecord";
             this.btnViewRecord.Size = new System.Drawing.Size(243, 54);
             this.btnViewRecord.TabIndex = 8;

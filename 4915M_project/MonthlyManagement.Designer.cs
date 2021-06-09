@@ -137,6 +137,7 @@ namespace _4915M_project
             // 
             // view
             // 
+            this.view.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.view.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.view.Location = new System.Drawing.Point(189, 103);
             this.view.Name = "view";

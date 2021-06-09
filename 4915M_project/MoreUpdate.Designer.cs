@@ -63,6 +63,7 @@ namespace _4915M_project
             // comboColumn
             // 
             this.comboColumn.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.comboColumn.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboColumn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboColumn.FormattingEnabled = true;
             this.comboColumn.Items.AddRange(new object[] {
@@ -82,7 +83,6 @@ namespace _4915M_project
             this.comboColumn.Name = "comboColumn";
             this.comboColumn.Size = new System.Drawing.Size(191, 27);
             this.comboColumn.TabIndex = 98;
-            this.comboColumn.Text = "(column)";
             this.comboColumn.SelectedIndexChanged += new System.EventHandler(this.comboColumn_SelectedIndexChanged);
             // 
             // txtInput

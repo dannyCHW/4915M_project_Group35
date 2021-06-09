@@ -42,6 +42,7 @@ namespace _4915M_project
             // 
             // panel1
             // 
+            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.panel1.BackColor = System.Drawing.SystemColors.Window;
             this.panel1.Controls.Add(this.btnLobby);
             this.panel1.Controls.Add(this.btnBack);
@@ -50,7 +51,6 @@ namespace _4915M_project
             this.panel1.Controls.Add(this.txtStaffID);
             this.panel1.Controls.Add(this.label30);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1186, 638);

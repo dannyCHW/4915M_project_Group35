@@ -83,7 +83,7 @@ namespace _4915M_project
             // 
             this.label6.AutoSize = true;
             this.label6.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label6.Location = new System.Drawing.Point(25, 467);
+            this.label6.Location = new System.Drawing.Point(25, 457);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(203, 12);
             this.label6.TabIndex = 21;
@@ -97,7 +97,7 @@ namespace _4915M_project
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.Gainsboro;
-            this.button1.Location = new System.Drawing.Point(7, 480);
+            this.button1.Location = new System.Drawing.Point(7, 470);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(237, 54);
             this.button1.TabIndex = 20;
@@ -269,6 +269,7 @@ namespace _4915M_project
             // 
             // pictureBox4
             // 
+            this.pictureBox4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
             this.pictureBox4.Location = new System.Drawing.Point(255, 113);
             this.pictureBox4.Name = "pictureBox4";
@@ -292,6 +293,7 @@ namespace _4915M_project
             // 
             // lblCurrentUser
             // 
+            this.lblCurrentUser.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblCurrentUser.AutoSize = true;
             this.lblCurrentUser.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCurrentUser.Location = new System.Drawing.Point(6, 9);
