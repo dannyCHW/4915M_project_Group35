@@ -122,9 +122,9 @@ namespace _4915M_project
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
             this.label2.Location = new System.Drawing.Point(239, 226);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(182, 28);
+            this.label2.Size = new System.Drawing.Size(187, 28);
             this.label2.TabIndex = 127;
-            this.label2.Text = "order Number:";
+            this.label2.Text = "Order Number:";
             // 
             // label1
             // 

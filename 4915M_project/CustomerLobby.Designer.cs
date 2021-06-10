@@ -101,7 +101,7 @@ namespace _4915M_project
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(237, 54);
             this.button1.TabIndex = 20;
-            this.button1.Text = "Monthly statement payment";
+            this.button1.Text = "Monthly Statement Payment";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -203,7 +203,7 @@ namespace _4915M_project
             this.btnCustomerCheck.Name = "btnCustomerCheck";
             this.btnCustomerCheck.Size = new System.Drawing.Size(243, 54);
             this.btnCustomerCheck.TabIndex = 13;
-            this.btnCustomerCheck.Text = "Checking status/Calculate Fare/Payment";
+            this.btnCustomerCheck.Text = "Checking / Booking";
             this.btnCustomerCheck.UseVisualStyleBackColor = false;
             this.btnCustomerCheck.Click += new System.EventHandler(this.btnCustomerCheck_Click);
             // 

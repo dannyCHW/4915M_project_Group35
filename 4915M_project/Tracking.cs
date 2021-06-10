@@ -73,7 +73,7 @@ namespace _4915M_project
 
             catch (Exception)
             {
-                MessageBox.Show("Something Wrong", "Fail Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Something wrong", "Fail Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
 
         }

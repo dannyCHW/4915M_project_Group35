@@ -75,7 +75,7 @@ namespace _4915M_project
             this.btnMon.Name = "btnMon";
             this.btnMon.Size = new System.Drawing.Size(270, 80);
             this.btnMon.TabIndex = 123;
-            this.btnMon.Text = "Monthly";
+            this.btnMon.Text = "Monthly Statement";
             this.btnMon.UseVisualStyleBackColor = false;
             this.btnMon.Click += new System.EventHandler(this.btnMon_Click);
             // 

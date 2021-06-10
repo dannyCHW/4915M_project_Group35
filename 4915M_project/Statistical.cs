@@ -68,7 +68,7 @@ namespace _4915M_project
                     loop++;
                 }
                 txtCount.Text = count.ToString();
-                txtMoney.Text = price.ToString();
+                txtMoney.Text = "$HKD " + price.ToString();
             }
             catch {
 
@@ -100,7 +100,7 @@ namespace _4915M_project
                     loop++;
                 }
                 txtCount.Text = count.ToString();
-                txtMoney.Text = price.ToString();
+                txtMoney.Text = "$HKD " + price.ToString();
             }
             catch
             {

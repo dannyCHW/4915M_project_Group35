@@ -828,9 +828,9 @@ namespace _4915M_project
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
             this.label1.Location = new System.Drawing.Point(301, 190);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(290, 38);
+            this.label1.Size = new System.Drawing.Size(293, 38);
             this.label1.TabIndex = 89;
-            this.label1.Text = "harmonized code";
+            this.label1.Text = "Harmonized code";
             // 
             // btnAddGood
             // 
