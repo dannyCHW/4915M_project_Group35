@@ -30,12 +30,12 @@ namespace _4915M_project
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cbo = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
             this.btnCreate = new System.Windows.Forms.Button();
             this.btnBack = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.cbo = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -52,6 +52,16 @@ namespace _4915M_project
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(918, 622);
             this.panel1.TabIndex = 0;
+            // 
+            // cbo
+            // 
+            this.cbo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.cbo.FormattingEnabled = true;
+            this.cbo.Location = new System.Drawing.Point(427, 230);
+            this.cbo.Name = "cbo";
+            this.cbo.Size = new System.Drawing.Size(234, 27);
+            this.cbo.TabIndex = 133;
             // 
             // button1
             // 
@@ -122,21 +132,11 @@ namespace _4915M_project
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(76, 19);
+            this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(235, 38);
+            this.label1.Size = new System.Drawing.Size(255, 38);
             this.label1.TabIndex = 123;
-            this.label1.Text = "Booking Chck";
-            // 
-            // cbo
-            // 
-            this.cbo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
-            this.cbo.FormattingEnabled = true;
-            this.cbo.Location = new System.Drawing.Point(427, 230);
-            this.cbo.Name = "cbo";
-            this.cbo.Size = new System.Drawing.Size(234, 27);
-            this.cbo.TabIndex = 133;
+            this.label1.Text = "Booking Check";
             // 
             // CheckBooking
             // 

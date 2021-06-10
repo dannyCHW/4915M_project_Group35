@@ -84,7 +84,7 @@ namespace _4915M_project
             cbo.Items.Clear();
             DataTable dt = Program.DataTableVar;
             string connStr = Program.connStr;
-            string sqlStr = "SELECT orderID FROM ShipmentOrder WHERE cusID=" + CustomerLogin.currentCustomerID + " AND (orderStatus = 'waitingPickup' OR orderStatus = 'waitingPayment');";
+            string sqlStr = "SELECT orderID FROM ShipmentOrder WHERE cusID=" + CustomerLogin.currentCustomerID + " AND orderStatus LIKE 'waitingPickup' OR orderStatus LIKE 'waitingPayment' or orderStatus LIKE 'waitingBooking';";
             OleDbDataAdapter dataAdapter = new OleDbDataAdapter(sqlStr, connStr);
             dataAdapter.Fill(dt);
 

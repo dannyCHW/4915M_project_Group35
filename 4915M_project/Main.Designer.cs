@@ -82,7 +82,8 @@ namespace _4915M_project
             // 
             // panel3
             // 
-            this.panel3.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
             this.panel3.Controls.Add(this.pictureBox4);
             this.panel3.Controls.Add(this.btnStaffLogin);
@@ -121,7 +122,6 @@ namespace _4915M_project
             // 
             // btnCustomerCreateAccount
             // 
-            this.btnCustomerCreateAccount.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnCustomerCreateAccount.BackColor = System.Drawing.Color.WhiteSmoke;
             this.btnCustomerCreateAccount.FlatAppearance.BorderSize = 0;
             this.btnCustomerCreateAccount.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -137,7 +137,6 @@ namespace _4915M_project
             // 
             // btnCustomerLogin
             // 
-            this.btnCustomerLogin.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnCustomerLogin.BackColor = System.Drawing.Color.WhiteSmoke;
             this.btnCustomerLogin.FlatAppearance.BorderSize = 0;
             this.btnCustomerLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
