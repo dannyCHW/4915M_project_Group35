@@ -31,11 +31,11 @@ namespace _4915M_project
         {
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtOrder = new System.Windows.Forms.TextBox();
             this.dateTime = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
             this.btnBack = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cbo = new System.Windows.Forms.ComboBox();
             this.btnCreate = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
@@ -64,18 +64,6 @@ namespace _4915M_project
             this.label3.Size = new System.Drawing.Size(74, 28);
             this.label3.TabIndex = 111;
             this.label3.Text = "Date:";
-            // 
-            // txtOrder
-            // 
-            this.txtOrder.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtOrder.BackColor = System.Drawing.SystemColors.Control;
-            this.txtOrder.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtOrder.Location = new System.Drawing.Point(454, 205);
-            this.txtOrder.Name = "txtOrder";
-            this.txtOrder.Size = new System.Drawing.Size(255, 27);
-            this.txtOrder.TabIndex = 113;
-            this.txtOrder.TextChanged += new System.EventHandler(this.txtOrder_TextChanged);
-            this.txtOrder.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtOrder_KeyPress);
             // 
             // dateTime
             // 
@@ -124,12 +112,12 @@ namespace _4915M_project
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel1.Controls.Add(this.cbo);
             this.panel1.Controls.Add(this.btnCreate);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.btnBack);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.dateTime);
-            this.panel1.Controls.Add(this.txtOrder);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -137,6 +125,15 @@ namespace _4915M_project
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(918, 622);
             this.panel1.TabIndex = 110;
+            // 
+            // cbo
+            // 
+            this.cbo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.cbo.FormattingEnabled = true;
+            this.cbo.Location = new System.Drawing.Point(454, 201);
+            this.cbo.Name = "cbo";
+            this.cbo.Size = new System.Drawing.Size(255, 27);
+            this.cbo.TabIndex = 123;
             // 
             // btnCreate
             // 
@@ -187,12 +184,12 @@ namespace _4915M_project
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtOrder;
         private System.Windows.Forms.DateTimePicker dateTime;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnCreate;
+        private System.Windows.Forms.ComboBox cbo;
     }
 }
