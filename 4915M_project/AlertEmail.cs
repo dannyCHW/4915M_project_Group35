@@ -57,11 +57,20 @@ namespace _4915M_project
             }
         }
 
-        public void sendEmail(String to)
+        public void sendEmail(String id)
         {
 
+            DataTable dt = Program.DataTableVar;
+            String connStr = Program.connStr;
+            string sqlStr = "SELECT receiverEmail FROM ShipmentOrder WHERE orderID = " + id + ";";
+            dt.Clear();
+            OleDbDataAdapter dataAdapter = new OleDbDataAdapter(sqlStr, connStr);
+            dataAdapter.Fill(dt);
+
+            String to;
+            to = dt.Rows[0]["receiverEmail"].ToString();
+
             String from = txtUsername.Text;
-            
             String pass = txtPassword.Text;
 
             MailMessage message = new MailMessage();
