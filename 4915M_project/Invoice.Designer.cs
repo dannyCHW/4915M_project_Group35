@@ -62,6 +62,7 @@ namespace _4915M_project
             // 
             // label17
             // 
+            this.label17.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
@@ -73,6 +74,7 @@ namespace _4915M_project
             // 
             // txtReCountry
             // 
+            this.txtReCountry.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtReCountry.BackColor = System.Drawing.Color.LightGray;
             this.txtReCountry.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtReCountry.Location = new System.Drawing.Point(139, 381);
@@ -83,6 +85,7 @@ namespace _4915M_project
             // 
             // label8
             // 
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
@@ -94,6 +97,7 @@ namespace _4915M_project
             // 
             // label16
             // 
+            this.label16.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
@@ -105,6 +109,7 @@ namespace _4915M_project
             // 
             // txtReCode
             // 
+            this.txtReCode.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtReCode.BackColor = System.Drawing.Color.LightGray;
             this.txtReCode.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtReCode.Location = new System.Drawing.Point(564, 421);
@@ -115,6 +120,7 @@ namespace _4915M_project
             // 
             // label12
             // 
+            this.label12.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
@@ -126,6 +132,7 @@ namespace _4915M_project
             // 
             // txtReAddress
             // 
+            this.txtReAddress.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtReAddress.BackColor = System.Drawing.Color.LightGray;
             this.txtReAddress.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtReAddress.Location = new System.Drawing.Point(138, 496);
@@ -136,6 +143,7 @@ namespace _4915M_project
             // 
             // label14
             // 
+            this.label14.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
@@ -147,6 +155,7 @@ namespace _4915M_project
             // 
             // txtReCompanyName
             // 
+            this.txtReCompanyName.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtReCompanyName.BackColor = System.Drawing.Color.LightGray;
             this.txtReCompanyName.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtReCompanyName.Location = new System.Drawing.Point(140, 415);
@@ -157,6 +166,7 @@ namespace _4915M_project
             // 
             // label9
             // 
+            this.label9.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
@@ -168,6 +178,7 @@ namespace _4915M_project
             // 
             // txtContactPhone
             // 
+            this.txtContactPhone.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtContactPhone.BackColor = System.Drawing.Color.LightGray;
             this.txtContactPhone.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtContactPhone.Location = new System.Drawing.Point(140, 243);
@@ -178,6 +189,7 @@ namespace _4915M_project
             // 
             // label7
             // 
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
@@ -189,6 +201,7 @@ namespace _4915M_project
             // 
             // txtContactName
             // 
+            this.txtContactName.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtContactName.BackColor = System.Drawing.Color.LightGray;
             this.txtContactName.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtContactName.Location = new System.Drawing.Point(564, 209);
@@ -199,6 +212,7 @@ namespace _4915M_project
             // 
             // label6
             // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
@@ -210,6 +224,7 @@ namespace _4915M_project
             // 
             // txtSenderAddress
             // 
+            this.txtSenderAddress.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtSenderAddress.BackColor = System.Drawing.Color.LightGray;
             this.txtSenderAddress.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSenderAddress.Location = new System.Drawing.Point(140, 283);
@@ -220,6 +235,7 @@ namespace _4915M_project
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
@@ -231,6 +247,7 @@ namespace _4915M_project
             // 
             // txtCompany
             // 
+            this.txtCompany.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtCompany.BackColor = System.Drawing.Color.LightGray;
             this.txtCompany.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCompany.Location = new System.Drawing.Point(140, 209);
@@ -241,6 +258,7 @@ namespace _4915M_project
             // 
             // label5
             // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
@@ -252,6 +270,7 @@ namespace _4915M_project
             // 
             // label3
             // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
@@ -263,6 +282,7 @@ namespace _4915M_project
             // 
             // comboInvoice
             // 
+            this.comboInvoice.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.comboInvoice.BackColor = System.Drawing.SystemColors.Window;
             this.comboInvoice.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboInvoice.FormattingEnabled = true;
@@ -274,6 +294,7 @@ namespace _4915M_project
             // 
             // label19
             // 
+            this.label19.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
@@ -286,6 +307,7 @@ namespace _4915M_project
             // 
             // txtPrice
             // 
+            this.txtPrice.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtPrice.BackColor = System.Drawing.Color.LightGray;
             this.txtPrice.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPrice.Location = new System.Drawing.Point(564, 456);
@@ -297,6 +319,7 @@ namespace _4915M_project
             // 
             // button1
             // 
+            this.button1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.button1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.WhiteSmoke;
@@ -346,6 +369,7 @@ namespace _4915M_project
             // 
             // txtSender
             // 
+            this.txtSender.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtSender.BackColor = System.Drawing.Color.LightGray;
             this.txtSender.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSender.Location = new System.Drawing.Point(140, 139);
@@ -356,6 +380,7 @@ namespace _4915M_project
             // 
             // txtReceiverName
             // 
+            this.txtReceiverName.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtReceiverName.BackColor = System.Drawing.Color.LightGray;
             this.txtReceiverName.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtReceiverName.Location = new System.Drawing.Point(138, 453);
@@ -366,6 +391,7 @@ namespace _4915M_project
             // 
             // label13
             // 
+            this.label13.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
@@ -377,6 +403,7 @@ namespace _4915M_project
             // 
             // label21
             // 
+            this.label21.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label21.ForeColor = System.Drawing.Color.Black;

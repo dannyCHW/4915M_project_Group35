@@ -145,9 +145,9 @@ namespace _4915M_project
             // 
             this.pictureBox5.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(259, 317);
+            this.pictureBox5.Location = new System.Drawing.Point(264, 332);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(40, 41);
+            this.pictureBox5.Size = new System.Drawing.Size(33, 31);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox5.TabIndex = 41;
             this.pictureBox5.TabStop = false;
@@ -156,9 +156,9 @@ namespace _4915M_project
             // 
             this.pictureBox3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(259, 264);
+            this.pictureBox3.Location = new System.Drawing.Point(264, 278);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(40, 40);
+            this.pictureBox3.Size = new System.Drawing.Size(35, 26);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 40;
             this.pictureBox3.TabStop = false;
@@ -166,9 +166,10 @@ namespace _4915M_project
             // pictureBox2
             // 
             this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.pictureBox2.Location = new System.Drawing.Point(250, 475);
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(261, 475);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(49, 40);
+            this.pictureBox2.Size = new System.Drawing.Size(36, 40);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 39;
             this.pictureBox2.TabStop = false;
@@ -177,9 +178,9 @@ namespace _4915M_project
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(250, 419);
+            this.pictureBox1.Location = new System.Drawing.Point(262, 423);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(49, 40);
+            this.pictureBox1.Size = new System.Drawing.Size(35, 36);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 38;
             this.pictureBox1.TabStop = false;
