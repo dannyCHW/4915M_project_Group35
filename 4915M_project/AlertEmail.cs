@@ -68,9 +68,9 @@ namespace _4915M_project
             SmtpClient smtp = new SmtpClient();
             message.From = new MailAddress(from);
             message.To.Add(new MailAddress(to));
-            message.Subject = "Test";
+            message.Subject = "Your package is coming.";
             message.IsBodyHtml = true; 
-            message.Body = "TEST";
+            message.Body = "Your package will be delivery to you in a short time. ";
             smtp.Port = 587;
             smtp.Host = "smtp.gmail.com";   
             smtp.EnableSsl = true;
