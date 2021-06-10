@@ -120,7 +120,7 @@ namespace _4915M_project
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(244, 48);
             this.btnBack.TabIndex = 35;
-            this.btnBack.Text = "<-back";
+            this.btnBack.Text = "<Back";
             this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 

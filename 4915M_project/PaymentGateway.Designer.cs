@@ -131,9 +131,9 @@ namespace _4915M_project
             this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(33, 37);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(448, 38);
+            this.label1.Size = new System.Drawing.Size(442, 38);
             this.label1.TabIndex = 127;
-            this.label1.Text = "Simulate external payments";
+            this.label1.Text = "Simulate External Payments";
             // 
             // PaymentGateway
             // 

@@ -120,7 +120,7 @@ namespace _4915M_project
             // txtStaffID
             // 
             this.txtStaffID.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtStaffID.Font = new System.Drawing.Font("PMingLiU", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.txtStaffID.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.txtStaffID.Location = new System.Drawing.Point(455, 224);
             this.txtStaffID.Name = "txtStaffID";
             this.txtStaffID.Size = new System.Drawing.Size(313, 27);
