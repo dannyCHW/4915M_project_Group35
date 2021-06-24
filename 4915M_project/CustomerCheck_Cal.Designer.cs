@@ -164,7 +164,7 @@ namespace _4915M_project
             this.txtReason.ReadOnly = true;
             this.txtReason.Size = new System.Drawing.Size(288, 100);
             this.txtReason.TabIndex = 118;
-            this.txtReason.Text = "output here (if have)";
+            this.txtReason.Text = "";
             this.txtReason.Visible = false;
             // 
             // txtStatus

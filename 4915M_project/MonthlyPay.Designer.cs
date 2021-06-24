@@ -78,9 +78,9 @@ namespace _4915M_project
             this.checkBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.checkBox.Location = new System.Drawing.Point(148, 275);
             this.checkBox.Name = "checkBox";
-            this.checkBox.Size = new System.Drawing.Size(278, 23);
+            this.checkBox.Size = new System.Drawing.Size(345, 23);
             this.checkBox.TabIndex = 131;
-            this.checkBox.Text = "I\'m sure it is paid by the recipient";
+            this.checkBox.Text = "I\'m Sure It Is Paid By The Monthly Payment";
             this.checkBox.UseVisualStyleBackColor = true;
             // 
             // txtOrder

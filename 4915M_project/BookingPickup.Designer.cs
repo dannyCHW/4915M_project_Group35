@@ -87,9 +87,9 @@ namespace _4915M_project
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
             this.label2.Location = new System.Drawing.Point(222, 200);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(182, 28);
+            this.label2.Size = new System.Drawing.Size(187, 28);
             this.label2.TabIndex = 117;
-            this.label2.Text = "order Number:";
+            this.label2.Text = "Order Number:";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // btnBack
@@ -149,7 +149,7 @@ namespace _4915M_project
             this.btnCreate.Name = "btnCreate";
             this.btnCreate.Size = new System.Drawing.Size(203, 49);
             this.btnCreate.TabIndex = 122;
-            this.btnCreate.Text = "Edit or Create";
+            this.btnCreate.Text = "Edit Or Create";
             this.btnCreate.UseVisualStyleBackColor = false;
             this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
             // 

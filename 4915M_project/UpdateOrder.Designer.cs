@@ -100,9 +100,9 @@ namespace _4915M_project
             this.label21.ForeColor = System.Drawing.Color.Black;
             this.label21.Location = new System.Drawing.Point(29, 19);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(435, 38);
+            this.label21.Size = new System.Drawing.Size(444, 38);
             this.label21.TabIndex = 122;
-            this.label21.Text = "Update location and Status";
+            this.label21.Text = "Update Location And Status";
             // 
             // btnMore
             // 
