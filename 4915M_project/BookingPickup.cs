@@ -23,7 +23,7 @@ namespace _4915M_project
             cbo.Items.Clear();
             DataTable dt = Program.DataTableVar;
             string connStr = Program.connStr;
-            string sqlStr = "SELECT orderID FROM ShipmentOrder WHERE cusID=" + CustomerLogin.currentCustomerID + " AND (orderStatus = 'waitingPickup' OR orderStatus = 'waitingPayment'OR orderStatus = 'waitingBooking');";
+            string sqlStr = "SELECT orderID FROM ShipmentOrder WHERE cusID=" + CustomerLogin.currentCustomerID + " AND (orderStatus = 'Waiting Pickup' OR orderStatus = 'Waiting Payment'OR orderStatus = 'Waiting Booking');";
             OleDbDataAdapter dataAdapter = new OleDbDataAdapter(sqlStr, connStr);
             dataAdapter.Fill(dt);
 
@@ -83,11 +83,11 @@ namespace _4915M_project
                     {
 
                         String status = dt.Rows[0]["orderStatus"].ToString();
-                        if (status == "waitingBooking")
+                        if (status == "Waiting Booking")
                         {
                             String createDate = dateTime.Value.ToString();
 
-                            string strSqlStr = "Update ShipmentOrder set orderStatus = 'waitingPickup' , dateOfPickUp = " + "'" + createDate + "'" + " where orderID = " + this_order;
+                            string strSqlStr = "Update ShipmentOrder set orderStatus = 'Waiting Pickup' , dateOfPickUp = " + "'" + createDate + "'" + " where orderID = " + this_order;
                             OleDbDataAdapter dataAdapter2 = new OleDbDataAdapter(strSqlStr, connStr);
                             dataAdapter2.Fill(dt);
                             dataAdapter.Dispose();
@@ -96,7 +96,7 @@ namespace _4915M_project
                             MessageBox.Show("Successful create a booking", "Booking Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                         }
-                        else if (status == "waitingPickup")
+                        else if (status == "Waiting Pickup")
                         {
                             String createDate = dateTime.Value.ToString();
 
@@ -105,7 +105,7 @@ namespace _4915M_project
                             OleDbDataAdapter dataAdapter2 = new OleDbDataAdapter(strSqlStr, connStr);
                             dataAdapter2.Fill(dt);
 
-                            MessageBox.Show("Successful Edit a booking", "Booking Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show("Successful Edit Booking", "Booking Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             dt.Clear();
                             dataAdapter2.Dispose();
                         }

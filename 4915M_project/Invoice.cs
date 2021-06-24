@@ -134,7 +134,7 @@ namespace _4915M_project
             DataTable dt = Program.DataTableVar;
             string connStr = Program.connStr;
 
-            string sqlStr = "SELECT orderID FROM ShipmentOrder WHERE cusID = " + CustomerLogin.currentCustomerID + " AND " + "orderStatus LIKE" + "'completed'" + ";";
+            string sqlStr = "SELECT orderID FROM ShipmentOrder WHERE cusID = " + CustomerLogin.currentCustomerID + " AND " + "orderStatus LIKE" + "'Completed'" + ";";
             OleDbDataAdapter dataAdapter = new OleDbDataAdapter(sqlStr, connStr);
             dataAdapter.Fill(dt);
             foreach (DataRow dr in dt.Rows)

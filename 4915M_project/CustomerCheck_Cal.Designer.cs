@@ -107,7 +107,7 @@ namespace _4915M_project
             this.btnCheck.Name = "btnCheck";
             this.btnCheck.Size = new System.Drawing.Size(167, 34);
             this.btnCheck.TabIndex = 124;
-            this.btnCheck.Text = "Click to check";
+            this.btnCheck.Text = "Click To Check";
             this.btnCheck.UseVisualStyleBackColor = false;
             this.btnCheck.Click += new System.EventHandler(this.btnCheck_Click);
             // 
@@ -176,7 +176,6 @@ namespace _4915M_project
             this.txtStatus.ReadOnly = true;
             this.txtStatus.Size = new System.Drawing.Size(272, 27);
             this.txtStatus.TabIndex = 117;
-            this.txtStatus.Text = "(output)";
             // 
             // label6
             // 
@@ -210,9 +209,9 @@ namespace _4915M_project
             this.label4.ForeColor = System.Drawing.Color.Black;
             this.label4.Location = new System.Drawing.Point(12, 9);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(589, 38);
+            this.label4.Size = new System.Drawing.Size(590, 38);
             this.label4.TabIndex = 113;
-            this.label4.Text = "Airway-bill Status and Calculate Fare";
+            this.label4.Text = "Airway-Bill Status And Calculate Fare";
             // 
             // label3
             // 
@@ -235,7 +234,6 @@ namespace _4915M_project
             this.txtFare.ReadOnly = true;
             this.txtFare.Size = new System.Drawing.Size(272, 27);
             this.txtFare.TabIndex = 111;
-            this.txtFare.Text = "HK$  (output)";
             // 
             // CustomerCheck_Cal
             // 

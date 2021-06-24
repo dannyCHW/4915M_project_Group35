@@ -51,11 +51,11 @@ namespace _4915M_project
                     if (dt.Rows.Count > 0)
                     {
                         String status = dt.Rows[0]["orderStatus"].ToString();
-                        if (status == "waitingPayment")
+                        if (status == "Waiting Booking")
                         {
 
                             dt.Clear();
-                            string strSqlStr = "Update  ShipmentOrder set orderStatus = 'waitingBooking'  where orderID = " + orderID;
+                            string strSqlStr = "Update  ShipmentOrder set orderStatus = 'Waiting Booking'  where orderID = " + orderID;
                             OleDbDataAdapter dataAdapter2 = new OleDbDataAdapter(strSqlStr, connStr);
                             dataAdapter2.Fill(dt);
 

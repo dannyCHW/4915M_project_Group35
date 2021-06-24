@@ -59,11 +59,11 @@ namespace _4915M_project
                 {
                     String vStatus= dt.Rows[0]["orderStatus"].ToString();
                     String vPayStatus = dt.Rows[0]["paymentStatus"].ToString();
-                    if (vStatus != "completed")
+                    if (vStatus != "Completed")
                     {
-                        if (checkBox1.Checked && vStatus == "waitingPayment") {
+                        if (checkBox1.Checked && vStatus == "Waiting Payment") {
                             dt.Clear();
-                            string strSqlStr = "Update ShipmentOrder set orderStatus = 'waitingBooking' where orderID = " + orderID + ";";
+                            string strSqlStr = "Update ShipmentOrder set orderStatus = 'Waiting Booking' where orderID = " + orderID + ";";
                             string strSqlStr2 = "Update Payment set paymentStatus = 'paid' where paymentID = " + orderID + ";";
                             OleDbDataAdapter dataAdapter2 = new OleDbDataAdapter(strSqlStr, connStr);
                             dataAdapter2.Fill(dt);
@@ -75,7 +75,7 @@ namespace _4915M_project
 
                         } else if (checkBox2.Checked|| vPayStatus== "extenal") {
                             dt.Clear();
-                            string strSqlStr = "Update ShipmentOrder set orderStatus = 'waitingBooking' where orderID = " + orderID + ";";
+                            string strSqlStr = "Update ShipmentOrder set orderStatus = 'Waiting Booking' where orderID = " + orderID + ";";
                             string strSqlStr2 = "Update Payment set paymentStatus = 'paid' where paymentID = " + orderID + ";";
                             OleDbDataAdapter dataAdapter2 = new OleDbDataAdapter(strSqlStr, connStr);
                             dataAdapter2.Fill(dt);

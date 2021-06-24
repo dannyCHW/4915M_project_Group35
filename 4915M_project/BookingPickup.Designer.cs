@@ -128,6 +128,7 @@ namespace _4915M_project
             // 
             // cbo
             // 
+            this.cbo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.cbo.FormattingEnabled = true;
             this.cbo.Location = new System.Drawing.Point(454, 201);
