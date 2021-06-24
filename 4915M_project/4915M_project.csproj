@@ -205,6 +205,12 @@
     <Compile Include="PaymentGateway.Designer.cs">
       <DependentUpon>PaymentGateway.cs</DependentUpon>
     </Compile>
+    <Compile Include="problem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="problem.Designer.cs">
+      <DependentUpon>problem.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StaffLobby.cs">
@@ -305,6 +311,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PaymentGateway.resx">
       <DependentUpon>PaymentGateway.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="problem.resx">
+      <DependentUpon>problem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

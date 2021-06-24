@@ -237,9 +237,9 @@ namespace _4915M_project
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.label3.Location = new System.Drawing.Point(43, 174);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(253, 36);
+            this.label3.Size = new System.Drawing.Size(217, 36);
             this.label3.TabIndex = 84;
-            this.label3.Text = "Handing Update:";
+            this.label3.Text = "Update Status:";
             // 
             // UpdateOrder
             // 

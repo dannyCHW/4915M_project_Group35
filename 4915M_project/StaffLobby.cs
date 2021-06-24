@@ -41,5 +41,22 @@ namespace _4915M_project
         {
 
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnProblem_Click(object sender, EventArgs e)
+        {
+            problem problem = new problem();
+            problem.Show();
+            this.Close();
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

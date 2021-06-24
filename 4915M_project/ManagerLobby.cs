@@ -62,5 +62,12 @@ namespace _4915M_project
             alertpickup.Show();
             this.Hide();
         }
+
+        private void btnProblem_Click(object sender, EventArgs e)
+        {
+            problem problem = new problem();
+            problem.Show();
+            this.Close();
+        }
     }
 }

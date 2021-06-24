@@ -31,6 +31,8 @@ namespace _4915M_project
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StaffLobby));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.btnProblem = new System.Windows.Forms.Button();
             this.btnLogOut = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -52,6 +54,8 @@ namespace _4915M_project
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.btnProblem);
             this.panel1.Controls.Add(this.btnLogOut);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label2);
@@ -65,6 +69,33 @@ namespace _4915M_project
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(250, 638);
             this.panel1.TabIndex = 2;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label3.Location = new System.Drawing.Point(22, 308);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(203, 12);
+            this.label3.TabIndex = 21;
+            this.label3.Text = "_________________________________";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
+            // 
+            // btnProblem
+            // 
+            this.btnProblem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.btnProblem.FlatAppearance.BorderSize = 0;
+            this.btnProblem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnProblem.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProblem.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnProblem.Location = new System.Drawing.Point(1, 323);
+            this.btnProblem.Name = "btnProblem";
+            this.btnProblem.Size = new System.Drawing.Size(243, 54);
+            this.btnProblem.TabIndex = 20;
+            this.btnProblem.Text = "Pickup Problem";
+            this.btnProblem.UseVisualStyleBackColor = false;
+            this.btnProblem.Click += new System.EventHandler(this.btnProblem_Click);
             // 
             // btnLogOut
             // 
@@ -141,7 +172,7 @@ namespace _4915M_project
             this.btnUpdateOrder.Name = "btnUpdateOrder";
             this.btnUpdateOrder.Size = new System.Drawing.Size(243, 54);
             this.btnUpdateOrder.TabIndex = 13;
-            this.btnUpdateOrder.Text = "Handing Or Update Order";
+            this.btnUpdateOrder.Text = "Update Or Edit Order";
             this.btnUpdateOrder.UseVisualStyleBackColor = false;
             // 
             // btnViewRecord
@@ -228,5 +259,7 @@ namespace _4915M_project
         private System.Windows.Forms.Button btnVerify;
         private System.Windows.Forms.Panel panelChildForm;
         private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button btnProblem;
     }
 }
