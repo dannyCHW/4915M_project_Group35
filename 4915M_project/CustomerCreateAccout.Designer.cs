@@ -83,6 +83,7 @@ namespace _4915M_project
             this.txtName.TabIndex = 46;
             this.txtName.Text = "Full Name";
             this.txtName.Click += new System.EventHandler(this.txtName_Click);
+            this.txtName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtName_KeyPress);
             // 
             // btnBack
             // 
@@ -197,6 +198,7 @@ namespace _4915M_project
             this.txtPwd2.TabIndex = 37;
             this.txtPwd2.Text = "Repeated Password";
             this.txtPwd2.Click += new System.EventHandler(this.txtPwd2_Click);
+            this.txtPwd2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPwd2_KeyPress);
             // 
             // txtPwd
             // 
@@ -210,6 +212,7 @@ namespace _4915M_project
             this.txtPwd.TabIndex = 36;
             this.txtPwd.Text = "Password";
             this.txtPwd.Click += new System.EventHandler(this.txtPwd_Click);
+            this.txtPwd.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPwd_KeyPress);
             // 
             // txtEmail
             // 
@@ -223,6 +226,7 @@ namespace _4915M_project
             this.txtEmail.TabIndex = 35;
             this.txtEmail.Text = "Email";
             this.txtEmail.Click += new System.EventHandler(this.txtEmail_Click);
+            this.txtEmail.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtEmail_KeyPress);
             // 
             // CustomerCreateAccout
             // 

@@ -143,12 +143,14 @@ namespace _4915M_project
             // 
             this.txtPassword2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtPassword2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.txtPassword2.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.txtPassword2.Location = new System.Drawing.Point(436, 334);
             this.txtPassword2.Name = "txtPassword2";
             this.txtPassword2.Size = new System.Drawing.Size(348, 27);
             this.txtPassword2.TabIndex = 86;
             this.txtPassword2.Text = "Repeated Password";
             this.txtPassword2.Click += new System.EventHandler(this.txtStfPwd2);
+            this.txtPassword2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPassword2_KeyPress);
             // 
             // label2
             // 
@@ -166,12 +168,14 @@ namespace _4915M_project
             // 
             this.txtPassword.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtPassword.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.txtPassword.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.txtPassword.Location = new System.Drawing.Point(434, 243);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(348, 27);
             this.txtPassword.TabIndex = 84;
             this.txtPassword.Text = "Password";
             this.txtPassword.Click += new System.EventHandler(this.txtStfPwd_Click);
+            this.txtPassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPassword_KeyPress);
             // 
             // label28
             // 
@@ -189,12 +193,14 @@ namespace _4915M_project
             // 
             this.txtStaffName.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtStaffName.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.txtStaffName.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.txtStaffName.Location = new System.Drawing.Point(434, 157);
             this.txtStaffName.Name = "txtStaffName";
             this.txtStaffName.Size = new System.Drawing.Size(348, 27);
             this.txtStaffName.TabIndex = 82;
             this.txtStaffName.Text = "Staff Full Name";
             this.txtStaffName.Click += new System.EventHandler(this.txtStaffname_Click);
+            this.txtStaffName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtStaffName_KeyPress);
             // 
             // label30
             // 

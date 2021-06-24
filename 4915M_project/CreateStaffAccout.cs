@@ -53,7 +53,7 @@ namespace _4915M_project
 
         private void txtStfPwd_Click(object sender, EventArgs e)
         {
-            if (txtPassword.Text == "Passwrod")
+            if (txtPassword.Text == "Password")
             {
                 txtPassword.Text = "";
                 txtPassword.PasswordChar = '*';
@@ -112,6 +112,21 @@ namespace _4915M_project
 
                 MessageBox.Show("Staff Account has been Successfully Created , the staff ID is " + id, "Registration success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+        }
+
+        private void txtStaffName_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            txtStaffName.ForeColor = Color.Black;
+        }
+
+        private void txtPassword_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            txtPassword.ForeColor = Color.Black;
+        }
+
+        private void txtPassword2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            txtPassword2.ForeColor = Color.Black;
         }
     }
 }

@@ -130,7 +130,13 @@ namespace _4915M_project
 
         private void txtPassword_KeyPress(object sender, KeyPressEventArgs e)
         {
+            txtPassword.ForeColor = Color.Black;
+            txtPassword.PasswordChar = '*';
+        }
 
+        private void txtEmail_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            txtEmail.ForeColor = Color.Black;
         }
     }
 }

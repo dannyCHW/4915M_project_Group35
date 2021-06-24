@@ -150,11 +150,34 @@ namespace _4915M_project
 
         private void txtPhone_KeyPress(object sender, KeyPressEventArgs e)
         {
+            txtPhone.ForeColor = Color.Black;
             char ch = e.KeyChar;
             if (!Char.IsNumber(e.KeyChar) && (!char.IsControl(e.KeyChar)))
             {
                 e.Handled = true;
             }
+        }
+
+        private void txtEmail_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            txtEmail.ForeColor = Color.Black;
+        }
+
+        private void txtName_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            txtName.ForeColor = Color.Black;
+        }
+
+        private void txtPwd_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            txtPwd.ForeColor = Color.Black;
+            txtPwd.PasswordChar = '*';
+        }
+
+        private void txtPwd2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            txtPwd2.ForeColor = Color.Black;
+            txtPwd2.PasswordChar = '*';
         }
     }
 }

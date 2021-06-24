@@ -133,6 +133,7 @@ namespace _4915M_project
             this.txtEmail.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtEmail.Click += new System.EventHandler(this.txtEmail_Click);
             this.txtEmail.TextChanged += new System.EventHandler(this.txtEmail_TextChanged);
+            this.txtEmail.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtEmail_KeyPress);
             this.txtEmail.MouseEnter += new System.EventHandler(this.txtEmail_MouseEnter);
             this.txtEmail.MouseLeave += new System.EventHandler(this.txtEmail_MouseLeave);
             // 

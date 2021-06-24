@@ -69,7 +69,7 @@ namespace _4915M_project
             this.txtPassword.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
             this.txtPassword.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPassword.ForeColor = System.Drawing.SystemColors.Window;
+            this.txtPassword.ForeColor = System.Drawing.SystemColors.ScrollBar;
             this.txtPassword.Location = new System.Drawing.Point(517, 378);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(229, 26);
@@ -83,7 +83,7 @@ namespace _4915M_project
             this.txtStaffID.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtStaffID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
             this.txtStaffID.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtStaffID.ForeColor = System.Drawing.SystemColors.Window;
+            this.txtStaffID.ForeColor = System.Drawing.SystemColors.ScrollBar;
             this.txtStaffID.Location = new System.Drawing.Point(517, 312);
             this.txtStaffID.Name = "txtStaffID";
             this.txtStaffID.Size = new System.Drawing.Size(229, 26);

@@ -118,12 +118,14 @@ namespace _4915M_project
 
         private void txtPassword_KeyPress(object sender, KeyPressEventArgs e)
         {
-
+            txtPassword.PasswordChar = '*';
+            txtPassword.ForeColor = Color.White;
         }
 
         private void txtStaffID_KeyPress(object sender, KeyPressEventArgs e)
         {
             char ch = e.KeyChar;
+            txtStaffID.ForeColor = Color.White;
             if (!Char.IsNumber(e.KeyChar) && (!char.IsControl(e.KeyChar)))
             {
                 e.Handled = true;
