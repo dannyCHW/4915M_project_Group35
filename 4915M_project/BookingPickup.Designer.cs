@@ -69,7 +69,7 @@ namespace _4915M_project
             // 
             this.dateTime.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.dateTime.CalendarMonthBackground = System.Drawing.SystemColors.Control;
-            this.dateTime.CustomFormat = "yyyy-MM-dd tt HH:mm:ss";
+            this.dateTime.CustomFormat = "yyyy-MM-dd HH:mm:ss";
             this.dateTime.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTime.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTime.Location = new System.Drawing.Point(454, 270);

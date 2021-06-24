@@ -97,7 +97,6 @@ namespace _4915M_project
             this.intInput.Name = "intInput";
             this.intInput.Size = new System.Drawing.Size(297, 27);
             this.intInput.TabIndex = 105;
-            this.intInput.Text = "(Input here)";
             this.intInput.Click += new System.EventHandler(this.intInput_Click);
             this.intInput.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.intInput_KeyPress);
             // 
@@ -227,7 +226,6 @@ namespace _4915M_project
             this.txtInput.Name = "txtInput";
             this.txtInput.Size = new System.Drawing.Size(297, 27);
             this.txtInput.TabIndex = 95;
-            this.txtInput.Text = "(Input here)";
             this.txtInput.Click += new System.EventHandler(this.txtInput_Click);
             // 
             // label6

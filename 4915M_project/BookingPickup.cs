@@ -147,6 +147,7 @@ namespace _4915M_project
 
         private void dateTime_ValueChanged(object sender, EventArgs e)
         {
+
             DateTime select = dateTime.Value;
             DateTime today = DateTime.Today;
             int result = DateTime.Compare(select, today.AddDays(3));

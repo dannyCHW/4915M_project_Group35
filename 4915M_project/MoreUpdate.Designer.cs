@@ -93,7 +93,6 @@ namespace _4915M_project
             this.txtInput.Name = "txtInput";
             this.txtInput.Size = new System.Drawing.Size(269, 27);
             this.txtInput.TabIndex = 97;
-            this.txtInput.Text = "(Input here)";
             this.txtInput.Visible = false;
             this.txtInput.Click += new System.EventHandler(this.txtInput_Click);
             this.txtInput.TextChanged += new System.EventHandler(this.txtInput_TextChanged);
@@ -196,7 +195,6 @@ namespace _4915M_project
             this.intInput.Name = "intInput";
             this.intInput.Size = new System.Drawing.Size(269, 27);
             this.intInput.TabIndex = 105;
-            this.intInput.Text = "(Input here)";
             this.intInput.Visible = false;
             this.intInput.Click += new System.EventHandler(this.intInput_Click);
             this.intInput.TextChanged += new System.EventHandler(this.intInput_TextChanged);
