@@ -177,9 +177,9 @@ namespace _4915M_project
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
             this.label5.Location = new System.Drawing.Point(64, 1024);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(306, 32);
+            this.label5.Size = new System.Drawing.Size(214, 32);
             this.label5.TabIndex = 112;
-            this.label5.Text = "Receiver  Email(if any)";
+            this.label5.Text = "Receiver  Email";
             // 
             // label39
             // 
@@ -418,7 +418,7 @@ namespace _4915M_project
             this.btnGoNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGoNext.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGoNext.ForeColor = System.Drawing.Color.White;
-            this.btnGoNext.Location = new System.Drawing.Point(16, 1449);
+            this.btnGoNext.Location = new System.Drawing.Point(25, 1449);
             this.btnGoNext.Name = "btnGoNext";
             this.btnGoNext.Size = new System.Drawing.Size(851, 50);
             this.btnGoNext.TabIndex = 0;
@@ -501,7 +501,7 @@ namespace _4915M_project
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label21.ForeColor = System.Drawing.Color.Black;
-            this.label21.Location = new System.Drawing.Point(3, 9);
+            this.label21.Location = new System.Drawing.Point(12, 9);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(157, 38);
             this.label21.TabIndex = 71;
@@ -844,7 +844,7 @@ namespace _4915M_project
             this.btnAddGood.Name = "btnAddGood";
             this.btnAddGood.Size = new System.Drawing.Size(230, 50);
             this.btnAddGood.TabIndex = 88;
-            this.btnAddGood.Text = "Add Another Package";
+            this.btnAddGood.Text = "Add Package";
             this.btnAddGood.UseVisualStyleBackColor = false;
             this.btnAddGood.Click += new System.EventHandler(this.btnAddGood_Click);
             // 

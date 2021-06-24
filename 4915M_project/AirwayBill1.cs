@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Data;
 using System.Data.OleDb;
 
+
 namespace _4915M_project
 {
     public partial class AirwayBill1 : Form
@@ -135,7 +136,7 @@ namespace _4915M_project
             Boolean go;
             if (txtSenderName.Text==""||txtSenderAddress.Text==""||cboBoxReceiverCountry.Text==""||
                 txtAreaCode.Text==""||txtReceiverAddress.Text==""||txtReceiverName.Text==""||
-                txtContactPerson.Text==""||txtContactPhone.Text=="")
+                txtContactPerson.Text==""||txtContactPhone.Text==""|| String.IsNullOrEmpty(txtReceiverEmail.Text.ToString()) )
             {
                 go = false;
                 MessageBox.Show("Please enter all field required", "Invalid", MessageBoxButtons.OK, MessageBoxIcon.Error);

@@ -55,5 +55,12 @@ namespace _4915M_project
         {
 
         }
+
+        private void btnAlertPickUp_Click(object sender, EventArgs e)
+        {
+            AlertEmail alertpickup = new AlertEmail();
+            alertpickup.Show();
+            this.Hide();
+        }
     }
 }

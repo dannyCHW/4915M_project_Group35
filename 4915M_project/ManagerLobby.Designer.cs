@@ -31,6 +31,8 @@ namespace _4915M_project
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ManagerLobby));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.btnAlertPickUp = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.btnCreateStaff = new System.Windows.Forms.Button();
             this.btnLogOut = new System.Windows.Forms.Button();
@@ -54,6 +56,8 @@ namespace _4915M_project
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.btnAlertPickUp);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.btnCreateStaff);
             this.panel1.Controls.Add(this.btnLogOut);
@@ -70,11 +74,36 @@ namespace _4915M_project
             this.panel1.Size = new System.Drawing.Size(250, 638);
             this.panel1.TabIndex = 3;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label4.Location = new System.Drawing.Point(25, 395);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(203, 12);
+            this.label4.TabIndex = 23;
+            this.label4.Text = "_________________________________";
+            // 
+            // btnAlertPickUp
+            // 
+            this.btnAlertPickUp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.btnAlertPickUp.FlatAppearance.BorderSize = 0;
+            this.btnAlertPickUp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAlertPickUp.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAlertPickUp.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnAlertPickUp.Location = new System.Drawing.Point(0, 410);
+            this.btnAlertPickUp.Name = "btnAlertPickUp";
+            this.btnAlertPickUp.Size = new System.Drawing.Size(244, 54);
+            this.btnAlertPickUp.TabIndex = 22;
+            this.btnAlertPickUp.Text = "Alert PickUp";
+            this.btnAlertPickUp.UseVisualStyleBackColor = false;
+            this.btnAlertPickUp.Click += new System.EventHandler(this.btnAlertPickUp_Click);
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label3.Location = new System.Drawing.Point(25, 311);
+            this.label3.Location = new System.Drawing.Point(25, 323);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(203, 12);
             this.label3.TabIndex = 21;
@@ -87,7 +116,7 @@ namespace _4915M_project
             this.btnCreateStaff.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCreateStaff.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCreateStaff.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnCreateStaff.Location = new System.Drawing.Point(3, 326);
+            this.btnCreateStaff.Location = new System.Drawing.Point(3, 338);
             this.btnCreateStaff.Name = "btnCreateStaff";
             this.btnCreateStaff.Size = new System.Drawing.Size(244, 54);
             this.btnCreateStaff.TabIndex = 20;
@@ -262,5 +291,7 @@ namespace _4915M_project
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnCreateStaff;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button btnAlertPickUp;
     }
 }
