@@ -30,7 +30,7 @@ namespace _4915M_project
             DataTable dtmonth = new DataTable();
             dtmonth.Clear();
 
-            string sqlStr = "Select orderID,price,paymentStatus,dateOfOrder from ShipmentOrder,Payment where ShipmentORder.orderID = Payment.paymentID AND paymentStatus = 'monthly' AND cusID = " + CustomerLogin.currentCustomerID + ";";
+            string sqlStr = "Select orderID,price,dateOfOrder from ShipmentOrder,Payment where ShipmentORder.orderID = Payment.paymentID AND paymentStatus = 'monthly' AND cusID = " + CustomerLogin.currentCustomerID + ";";
 
             OleDbDataAdapter dataAdapter = new OleDbDataAdapter(sqlStr, Program.connStr);
             dataAdapter.Fill(dtmonth);
@@ -55,6 +55,12 @@ namespace _4915M_project
             dataAdapterMon.Fill(dtChange);
 
             MessageBox.Show("Payment Successful (Hypothesis)", "Payment Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MonthlyManagement_Load(sender, e);
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
 
         }
     }

@@ -59,7 +59,7 @@ namespace _4915M_project
                     String status = dt.Rows[0]["orderStatus"].ToString();
                     String rejectReason = dt.Rows[0]["rejectReason"].ToString();
 
-                    if (status == "waitingPayment" || status == "waitingBooking" || status == "processing" || status == "waitingPickup")
+                    if (status == "Waiting Payment" || status == "Waiting Booking" || status == "Processing" || status == "Waiting Pickup")
                     {
 
                         txtStatus.Text = status;
@@ -70,13 +70,13 @@ namespace _4915M_project
                         dataAdapter2.Fill(dt);
                         if (dt.Rows.Count > 0) { }
                         /* get     price*/
-                        txtFare.Text = dt.Rows[0]["price"].ToString();
+                        txtFare.Text = "$HKD " + dt.Rows[0]["price"].ToString();
                         dt.Clear();
                         dataAdapter2.Dispose();
                         dataAdapter.Dispose();
 
                     }
-                    else if (status == "rejected")
+                    else if (status == "Rejected")
                     {
                         label9.Visible = true;
                         txtReason.Visible = true;
@@ -84,11 +84,11 @@ namespace _4915M_project
                         txtStatus.Text = status;
                         txtFare.Text = "Null";
                     }
-                    else if (status == "completed") {
+                    else if (status == "Completed") {
 
                         MessageBox.Show("Order is comepleted , Please check your invoice", "Fail Action", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
-                    } else if (status == "unVerify") {
+                    } else if (status == "Unverify") {
 
                         txtStatus.Text = status;
 
@@ -98,7 +98,7 @@ namespace _4915M_project
                         dataAdapter2.Fill(dt);
                         if (dt.Rows.Count > 0) { }
                         /* get     price*/
-                        txtFare.Text = dt.Rows[0]["price"].ToString();
+                        txtFare.Text = "$HKD "+ dt.Rows[0]["price"].ToString();
                         dt.Clear();
                         dataAdapter2.Dispose();
                         dataAdapter.Dispose();

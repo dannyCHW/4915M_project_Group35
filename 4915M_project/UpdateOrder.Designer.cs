@@ -30,6 +30,7 @@ namespace _4915M_project
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.label21 = new System.Windows.Forms.Label();
             this.btnMore = new System.Windows.Forms.Button();
@@ -42,7 +43,6 @@ namespace _4915M_project
             this.comboStatus = new System.Windows.Forms.ComboBox();
             this.comboLocation = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -67,6 +67,19 @@ namespace _4915M_project
             this.panel1.Size = new System.Drawing.Size(1186, 638);
             this.panel1.TabIndex = 0;
             // 
+            // checkBox2
+            // 
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
+            this.checkBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.checkBox2.Location = new System.Drawing.Point(670, 364);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(212, 30);
+            this.checkBox2.TabIndex = 124;
+            this.checkBox2.Text = "Extenal Payment";
+            this.checkBox2.UseVisualStyleBackColor = true;
+            this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
+            // 
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
@@ -87,9 +100,9 @@ namespace _4915M_project
             this.label21.ForeColor = System.Drawing.Color.Black;
             this.label21.Location = new System.Drawing.Point(29, 19);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(435, 38);
+            this.label21.Size = new System.Drawing.Size(444, 38);
             this.label21.TabIndex = 122;
-            this.label21.Text = "Update location and Status";
+            this.label21.Text = "Update Location And Status";
             // 
             // btnMore
             // 
@@ -192,14 +205,9 @@ namespace _4915M_project
             this.comboStatus.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboStatus.FormattingEnabled = true;
             this.comboStatus.Items.AddRange(new object[] {
-            "waitingVerify",
-            "waitingPayment",
-            "waitingBooking",
-            "waitingPickup",
-            "processing",
-            "waitingRecieve",
-            "completed",
-            "rejected"});
+            "Processing",
+            "Completed",
+            "Rejected"});
             this.comboStatus.Location = new System.Drawing.Point(303, 302);
             this.comboStatus.Name = "comboStatus";
             this.comboStatus.Size = new System.Drawing.Size(253, 27);
@@ -232,19 +240,6 @@ namespace _4915M_project
             this.label3.Size = new System.Drawing.Size(253, 36);
             this.label3.TabIndex = 84;
             this.label3.Text = "Handing Update:";
-            // 
-            // checkBox2
-            // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
-            this.checkBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.checkBox2.Location = new System.Drawing.Point(670, 364);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(212, 30);
-            this.checkBox2.TabIndex = 124;
-            this.checkBox2.Text = "Extenal Payment";
-            this.checkBox2.UseVisualStyleBackColor = true;
-            this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
             // 
             // UpdateOrder
             // 

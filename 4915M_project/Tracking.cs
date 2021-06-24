@@ -30,19 +30,18 @@ namespace _4915M_project
 
         private void btnCheck_Click(object sender, EventArgs e)
         {
-            int orderID = Convert.ToInt32(txtOrder.Text);
-            DataTable dt = Program.DataTableVar;
-            dt.Clear();
-            string connStr = "Provider=Microsoft.ACE.OLEDB.12.0;" + "Data Source=des.accdb";
-
-            string sqlStr = "Select orderStatus ,currentLocation,dateOfPickUp from ShipmentOrder where orderID = " + orderID;
-
-            OleDbDataAdapter dataAdapter = new OleDbDataAdapter(sqlStr, connStr);
-            dataAdapter.Fill(dt);
 
             try
             {
+                int orderID = Convert.ToInt32(txtOrder.Text);
+                DataTable dt = Program.DataTableVar;
+                dt.Clear();
+                string connStr = "Provider=Microsoft.ACE.OLEDB.12.0;" + "Data Source=des.accdb";
 
+                string sqlStr = "Select orderStatus ,currentLocation,dateOfPickUp from ShipmentOrder where orderID = " + orderID;
+
+                OleDbDataAdapter dataAdapter = new OleDbDataAdapter(sqlStr, connStr);
+                dataAdapter.Fill(dt);
                 if (dt.Rows.Count > 0)
                 {
                     
@@ -53,7 +52,7 @@ namespace _4915M_project
                     DateTime expectedDate = (DateTime)v_exDay;
                     expectedDate = expectedDate.AddDays(3);
 
-                    if (vStatus == "processing")
+                    if (vStatus == "Processing")
                     {
                         dt.Clear();
                         txtNow.Text = "Now, this shipment is in " + location;
@@ -73,7 +72,7 @@ namespace _4915M_project
 
             catch (Exception)
             {
-                MessageBox.Show("Something wrong", "Fail Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("May be a wrong number , please check yor order", "Fail Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
 
         }

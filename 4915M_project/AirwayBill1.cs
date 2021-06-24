@@ -213,7 +213,7 @@ namespace _4915M_project
 
             string sqlStr = "Insert into ShipmentOrder " +
                 "(cusID, receiverAddress, receiverName, contactPerson, contactPhone, dateOfOrder, senderCountry, areaCode, orderStatus, dateOfPickUp, staffID, senderCompanyName, senderAddress, receiverCountry, rejectReason, currentLocation, receiverCompanyName, senderName) " +
-                "values (" + CustomerLogin.currentCustomerID + ",'" + rAddress + "','" + rName + "','" + cPerson + "'," + cPhone + ",'" + date + "','" + sCountry + "','" + areaCode + "','" + "unVerify" + "','" + "" + "'," + 0 + ",'" + sCompany + "','" + sAddress + "','" + rCountry + "','" + "" + "','" + "" + "','" + rCompany + "','" + sName + "'" + ");";
+                "values (" + CustomerLogin.currentCustomerID + ",'" + rAddress + "','" + rName + "','" + cPerson + "'," + cPhone + ",'" + date + "','" + sCountry + "','" + areaCode + "','" + "Unverify" + "','" + "" + "'," + 0 + ",'" + sCompany + "','" + sAddress + "','" + rCountry + "','" + "" + "','" + "" + "','" + rCompany + "','" + sName + "'" + ");";
 
             OleDbDataAdapter dataAdapter = new OleDbDataAdapter(sqlStr, connStr);
             dataAdapter.Fill(dt);
@@ -247,7 +247,7 @@ namespace _4915M_project
                     new OleDbParameter("@VdateOfOrder", date),
                     new OleDbParameter("@VsenderCountry", sCountry),
                     new OleDbParameter("@VareaCode", areaCode),
-                    new OleDbParameter("@VorderStatus", "unVerify"),
+                    new OleDbParameter("@VorderStatus", "Unverify"),
                     new OleDbParameter("@VdateOfPickUp", ""),
                     new OleDbParameter("@VstaffID", '0'),
                     new OleDbParameter("@VsenderCompanyName", sCompany),

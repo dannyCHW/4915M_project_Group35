@@ -68,7 +68,7 @@ namespace _4915M_project
             this.btnLobby.Name = "btnLobby";
             this.btnLobby.Size = new System.Drawing.Size(178, 50);
             this.btnLobby.TabIndex = 124;
-            this.btnLobby.Text = "Jump to Lobby ->";
+            this.btnLobby.Text = "Jump To Lobby ->";
             this.btnLobby.UseVisualStyleBackColor = false;
             this.btnLobby.Click += new System.EventHandler(this.btnLobby_Click);
             // 
@@ -112,9 +112,9 @@ namespace _4915M_project
             this.checkBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.checkBox.Location = new System.Drawing.Point(455, 297);
             this.checkBox.Name = "checkBox";
-            this.checkBox.Size = new System.Drawing.Size(269, 23);
+            this.checkBox.Size = new System.Drawing.Size(278, 23);
             this.checkBox.TabIndex = 81;
-            this.checkBox.Text = "I comfirm to delete this account";
+            this.checkBox.Text = "I Comfirm To Delete This Account";
             this.checkBox.UseVisualStyleBackColor = true;
             // 
             // txtStaffID

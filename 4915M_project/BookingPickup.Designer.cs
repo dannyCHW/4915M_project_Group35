@@ -69,7 +69,7 @@ namespace _4915M_project
             // 
             this.dateTime.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.dateTime.CalendarMonthBackground = System.Drawing.SystemColors.Control;
-            this.dateTime.CustomFormat = "yyyy-MM-dd tt HH:mm:ss";
+            this.dateTime.CustomFormat = "yyyy-MM-dd HH:mm:ss";
             this.dateTime.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTime.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTime.Location = new System.Drawing.Point(454, 270);
@@ -87,9 +87,9 @@ namespace _4915M_project
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
             this.label2.Location = new System.Drawing.Point(222, 200);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(182, 28);
+            this.label2.Size = new System.Drawing.Size(187, 28);
             this.label2.TabIndex = 117;
-            this.label2.Text = "order Number:";
+            this.label2.Text = "Order Number:";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // btnBack
@@ -128,6 +128,7 @@ namespace _4915M_project
             // 
             // cbo
             // 
+            this.cbo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.cbo.FormattingEnabled = true;
             this.cbo.Location = new System.Drawing.Point(454, 201);
@@ -148,7 +149,7 @@ namespace _4915M_project
             this.btnCreate.Name = "btnCreate";
             this.btnCreate.Size = new System.Drawing.Size(203, 49);
             this.btnCreate.TabIndex = 122;
-            this.btnCreate.Text = "Edit or Create";
+            this.btnCreate.Text = "Edit Or Create";
             this.btnCreate.UseVisualStyleBackColor = false;
             this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
             // 

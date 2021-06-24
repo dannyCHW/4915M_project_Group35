@@ -48,13 +48,13 @@ namespace _4915M_project
                 {
                     String status = dt.Rows[0]["orderStatus"].ToString();
                     String date = dt.Rows[0]["dateOfPickUp"].ToString();
-                    if (status == "waitingBooking")
+                    if (status == "Waiting Booking")
                     {
                         dataAdapter.Dispose();
                         dt.Clear();
                         MessageBox.Show("No booking of this order , Please create a booking", "Fail Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
-                    else if (status == "waitingPickup")
+                    else if (status == "Waiting Pickup")
                     {
                         dataAdapter.Dispose();
                         dt.Clear();
@@ -84,7 +84,7 @@ namespace _4915M_project
             cbo.Items.Clear();
             DataTable dt = Program.DataTableVar;
             string connStr = Program.connStr;
-            string sqlStr = "SELECT orderID FROM ShipmentOrder WHERE cusID=" + CustomerLogin.currentCustomerID + " AND orderStatus LIKE 'waitingPickup' OR orderStatus LIKE 'waitingPayment' or orderStatus LIKE 'waitingBooking';";
+            string sqlStr = "SELECT orderID FROM ShipmentOrder WHERE cusID=" + CustomerLogin.currentCustomerID + " AND orderStatus LIKE 'Waiting Pickup' OR orderStatus LIKE 'Waiting Payment' or orderStatus LIKE 'Waiting Booking';";
             OleDbDataAdapter dataAdapter = new OleDbDataAdapter(sqlStr, connStr);
             dataAdapter.Fill(dt);
 

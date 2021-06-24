@@ -51,7 +51,7 @@ namespace _4915M_project
                     if (dt.Rows.Count > 0)
                     {
                         String status = dt.Rows[0]["orderStatus"].ToString();
-                        if (status == "waitingPayment")
+                        if (status == "Waiting Payment")
                         {
 
                             dt.Clear();
@@ -59,7 +59,7 @@ namespace _4915M_project
                             OleDbDataAdapter dataAdapter2 = new OleDbDataAdapter(strSqlStr, connStr);
                             dataAdapter2.Fill(dt);
                             dt.Clear();
-                            string str2SqlStr = "Update ShipmentOrder set orderStatus = 'waitingBooking' where orderID = " + orderID;
+                            string str2SqlStr = "Update ShipmentOrder set orderStatus = 'Waiting Booking' where orderID = " + orderID;
                             OleDbDataAdapter dataAdapter3 = new OleDbDataAdapter(str2SqlStr, connStr);
                             dataAdapter3.Fill(dt);
 

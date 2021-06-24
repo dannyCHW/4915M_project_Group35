@@ -76,7 +76,7 @@ namespace _4915M_project
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(192, 50);
             this.button1.TabIndex = 132;
-            this.button1.Text = "Create or Edit ->";
+            this.button1.Text = "Create Or Edit ->";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 

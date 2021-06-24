@@ -49,7 +49,7 @@ namespace _4915M_project
                 DataTable dt3 = StaffLogin.DataTableVar2;
                 dt3.Clear();
                 string connnStr = "Provider=Microsoft.ACE.OLEDB.12.0;" + "Data Source=des.accdb";
-                string sqqlStr = "Update ShipmentOrder set orderStatus = 'waitingPayment', staffID = " + Main.staffID + " where orderID = " + Convert.ToInt32(txtID.Text) + "; ";
+                string sqqlStr = "Update ShipmentOrder set orderStatus = 'Waiting Payment', staffID = " + Main.staffID + " where orderID = " + Convert.ToInt32(txtID.Text) + "; ";
                 OleDbDataAdapter dataAdapter = new OleDbDataAdapter(sqqlStr, connnStr);
                 dataAdapter.Fill(dt3);
 
@@ -98,7 +98,7 @@ namespace _4915M_project
             DataTable dt = StaffLogin.DataTableVar2;
             dt.Clear();
             string connStr = "Provider=Microsoft.ACE.OLEDB.12.0;" + "Data Source=des.accdb";
-            string sqlStr = "select ShipmentOrder.orderID,cusID,receiverAddress,receiverName,contactPerson,contactPhone,senderCountry,areaCode,senderCompanyName,senderAddress,receiverCountry,rejectReason,receiverCompanyName,senderName,receiverEmail from ShipmentOrder where orderStatus = 'unVerify' ;";
+            string sqlStr = "select ShipmentOrder.orderID,cusID,receiverAddress,receiverName,contactPerson,contactPhone,senderCountry,areaCode,senderCompanyName,senderAddress,receiverCountry,rejectReason,receiverCompanyName,senderName,receiverEmail from ShipmentOrder where orderStatus = 'Unverify' ;";
             OleDbDataAdapter dataAdapter = new OleDbDataAdapter(sqlStr, connStr);
             dataAdapter.Fill(dt);
             dataGridView.DataSource = dt;
@@ -117,7 +117,7 @@ namespace _4915M_project
                     DataTable dt4 = StaffLogin.DataTableVar2;
                     dt4.Clear();
                     string connnStr = "Provider=Microsoft.ACE.OLEDB.12.0;" + "Data Source=des.accdb";
-                    string sqqlStr = "Update ShipmentOrder set orderStatus = 'reject' , rejectReason = '"  + txtReason.Text + "' , staffID = " + Main.staffID + " where orderID = " + Convert.ToInt32(txtID.Text) + " ; ";
+                    string sqqlStr = "Update ShipmentOrder set orderStatus = 'Reject' , rejectReason = '"  + txtReason.Text + "' , staffID = " + Main.staffID + " where orderID = " + Convert.ToInt32(txtID.Text) + " ; ";
                     OleDbDataAdapter dataAdapter = new OleDbDataAdapter(sqqlStr, connnStr);
                     dataAdapter.Fill(dt4);
 

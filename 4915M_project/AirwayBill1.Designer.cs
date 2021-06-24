@@ -190,7 +190,7 @@ namespace _4915M_project
             this.label39.Name = "label39";
             this.label39.Size = new System.Drawing.Size(325, 38);
             this.label39.TabIndex = 111;
-            this.label39.Text = "Contact information";
+            this.label39.Text = "Contact Information";
             // 
             // txtReceiverCompanyName
             // 
@@ -445,7 +445,7 @@ namespace _4915M_project
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(344, 38);
             this.label24.TabIndex = 75;
-            this.label24.Text = "Shipment information";
+            this.label24.Text = "Shipment Information";
             // 
             // label28
             // 
