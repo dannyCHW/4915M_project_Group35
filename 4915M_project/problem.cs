@@ -291,18 +291,22 @@ namespace _4915M_project
 
                                 MessageBox.Show("Update successful, Email is send to the customer", "Action Fail", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                             } else if (paymentStatus.Equals("paid") || paymentStatus.Equals("addition")) {
+                             
                                 dt.Clear();
                                 ///
-                                string sqlStr5 = "Update Payment SET paymentStatus='addition' ,price =" + newestPrice + ",additionPrice = " + Convert.ToInt32(newPirce) + " where paymentID = " + orderID;
+                                string sqlStr5 = "Update ShipmentOrder SET orderStatus='Addition' where orderID = " + orderID;
                                 OleDbDataAdapter dataAdapter5 = new OleDbDataAdapter(sqlStr5, connStr);
                                 dataAdapter5.Fill(dt);
 
                                 dt.Clear();
                                 ///
                                 string sqlStr6 = "Update Good SET totalWeight=" + newWeight +" where goodID = " + goodID;
-                                MessageBox.Show(toCountry.ToString(), "Fail Action", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                                 OleDbDataAdapter dataAdapter6 = new OleDbDataAdapter(sqlStr6, connStr);
                                 dataAdapter6.Fill(dt);
+
+                                string sqlStr7 = "Update Payment SET paymentStatus='addition' where orderID = " + orderID;
+                                OleDbDataAdapter dataAdapter7 = new OleDbDataAdapter(sqlStr7, connStr);
+                                dataAdapter7.Fill(dt);
 
                                 /* Email send , remind repayment */
 

@@ -71,11 +71,11 @@ namespace _4915M_project
                             OleDbDataAdapter dataAdapter3 = new OleDbDataAdapter(strSqlStr2, connStr);
                             dataAdapter3.Fill(dt);
 
-                            MessageBox.Show("Cash Payment Successful", "Sccessful Update", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show("Cash payment Successful", "Sccessful Update", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                        } else if (checkBox2.Checked|| vPayStatus== "extenal") {
+                        } else if (checkBox2.Checked && vPayStatus == "extenal") {// has change
                             dt.Clear();
-                            string strSqlStr = "Update ShipmentOrder set orderStatus = 'Waiting Booking' where orderID = " + orderID + ";";
+                            string strSqlStr = "Update ShipmentOrder set orderStatus = 'Completed' where orderID = " + orderID + ";";
                             string strSqlStr2 = "Update Payment set paymentStatus = 'paid' where paymentID = " + orderID + ";";
                             OleDbDataAdapter dataAdapter2 = new OleDbDataAdapter(strSqlStr, connStr);
                             dataAdapter2.Fill(dt);
@@ -83,14 +83,25 @@ namespace _4915M_project
                             OleDbDataAdapter dataAdapter3 = new OleDbDataAdapter(strSqlStr2, connStr);
                             dataAdapter3.Fill(dt);
 
-                            MessageBox.Show("Cash Payment Successful", "Sccessful Update", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show("Extenal payment successful", "Sccessful Update", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        } else if (checkBox1.Checked &&  vStatus == "Addition") {
+                            dt.Clear();
+                            string strSqlStr7 = "Update ShipmentOrder set orderStatus = 'Processing' where orderID = " + orderID + ";";
+                            string strSqlStr8 = "Update Payment set paymentStatus = 'paid' where paymentID = " + orderID + ";";
+                            OleDbDataAdapter dataAdapter7 = new OleDbDataAdapter(strSqlStr7, connStr);
+                            dataAdapter7.Fill(dt);
+                            dt.Clear();
+                            OleDbDataAdapter dataAdapter8 = new OleDbDataAdapter(strSqlStr8, connStr);
+                            dataAdapter8.Fill(dt);
+
+                            MessageBox.Show("Cash payment successful, addtion fee has been pay", "Sccessful Update", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
                         else {
                             dt.Clear();
                             string strSqlStr = "Update ShipmentOrder set orderStatus = '" + comboStatus.Text + "', currentLocation = '" + comboLocation.Text + "' where orderID = " + orderID;
                             OleDbDataAdapter dataAdapter2 = new OleDbDataAdapter(strSqlStr, connStr);
                             dataAdapter2.Fill(dt);
-                            MessageBox.Show("Update Successful", "Sccessful Update", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show("Update successful", "Sccessful Update", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             dataAdapter2.Dispose();
                             dataAdapter.Dispose();
                             dt.Clear();

@@ -66,8 +66,24 @@ namespace _4915M_project
                             OleDbDataAdapter dataAdapter3 = new OleDbDataAdapter(str2SqlStr, connStr);
                             dataAdapter3.Fill(dt);
 
-                            MessageBox.Show("Finish Payment , please booking a pickup later", "Payment Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show("Finish payment , please booking a pickup later", "Payment Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
+                        } else if (status == "Addition") { 
+                            
+
+                                dt.Clear();
+                                string strSqlStr7 = "Update  ShipmentOrder set orderStatus = 'Processing'  where orderID = " + orderID;
+                                OleDbDataAdapter dataAdapter7 = new OleDbDataAdapter(strSqlStr7, connStr);
+                                dataAdapter7.Fill(dt);
+
+                                dt.Clear();
+                                string str2SqlStr8 = "Update  Payment set paymentStatus = 'paid'  where paymentID = " + orderID;
+                                OleDbDataAdapter dataAdapter8 = new OleDbDataAdapter(str2SqlStr8, connStr);
+                                dataAdapter8.Fill(dt);
+
+                                MessageBox.Show("Finish payment , addtion fee has been pay", "Payment Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                            
                         }
                         else
                         {
