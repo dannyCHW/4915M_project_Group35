@@ -31,6 +31,8 @@ namespace _4915M_project
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ManagerLobby));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.btnProblem = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.btnAlertPickUp = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
@@ -46,8 +48,6 @@ namespace _4915M_project
             this.btnVerify = new System.Windows.Forms.Button();
             this.panelChildForm = new System.Windows.Forms.Panel();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.btnProblem = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -77,6 +77,31 @@ namespace _4915M_project
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(250, 638);
             this.panel1.TabIndex = 3;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label6.Location = new System.Drawing.Point(25, 467);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(203, 12);
+            this.label6.TabIndex = 25;
+            this.label6.Text = "_________________________________";
+            // 
+            // btnProblem
+            // 
+            this.btnProblem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.btnProblem.FlatAppearance.BorderSize = 0;
+            this.btnProblem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnProblem.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProblem.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnProblem.Location = new System.Drawing.Point(1, 482);
+            this.btnProblem.Name = "btnProblem";
+            this.btnProblem.Size = new System.Drawing.Size(243, 54);
+            this.btnProblem.TabIndex = 24;
+            this.btnProblem.Text = "Pickup Problem";
+            this.btnProblem.UseVisualStyleBackColor = false;
+            this.btnProblem.Click += new System.EventHandler(this.btnProblem_Click);
             // 
             // label4
             // 
@@ -257,31 +282,6 @@ namespace _4915M_project
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 12;
             this.pictureBox4.TabStop = false;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label6.Location = new System.Drawing.Point(25, 455);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(203, 12);
-            this.label6.TabIndex = 25;
-            this.label6.Text = "_________________________________";
-            // 
-            // btnProblem
-            // 
-            this.btnProblem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.btnProblem.FlatAppearance.BorderSize = 0;
-            this.btnProblem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnProblem.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnProblem.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnProblem.Location = new System.Drawing.Point(4, 470);
-            this.btnProblem.Name = "btnProblem";
-            this.btnProblem.Size = new System.Drawing.Size(243, 54);
-            this.btnProblem.TabIndex = 24;
-            this.btnProblem.Text = "Pickup Problem";
-            this.btnProblem.UseVisualStyleBackColor = false;
-            this.btnProblem.Click += new System.EventHandler(this.btnProblem_Click);
             // 
             // ManagerLobby
             // 

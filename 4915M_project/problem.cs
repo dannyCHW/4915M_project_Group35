@@ -8,6 +8,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.OleDb;
+using System.Windows.Forms;
+using System.Net;
+using System.Net.Mail;
+using System.Data.OleDb;
 
 namespace _4915M_project
 {
@@ -339,6 +343,36 @@ namespace _4915M_project
 
             }
 
+        }
+
+
+
+        //用法: sendEmail("ededelivery35@gmail.com", "sdpgroup35", "receiver@gmail.com", "Subject of the email", "Message of the email.");
+        public void sendEmail(String senderEmail, String senderPassword, String receiverEmail, String sbj, String message)
+        {
+            MailMessage msg = new MailMessage();
+            SmtpClient smtp = new SmtpClient();
+            msg.From = new MailAddress(senderEmail);
+            msg.To.Add(new MailAddress(receiverEmail));
+            msg.Subject = sbj;
+            msg.IsBodyHtml = true;
+            msg.Body = message;
+            smtp.Port = 587;
+            smtp.Host = "smtp.gmail.com";
+            smtp.EnableSsl = true;
+            smtp.UseDefaultCredentials = false;
+            smtp.Credentials = new NetworkCredential(senderEmail, senderPassword);
+            smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
+
+            try
+            {
+                smtp.Send(msg);
+                MessageBox.Show("Sended", "Goods Alert", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }
