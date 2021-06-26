@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.OleDb;
+using System.Net.Mail;
+using System.Net;
 
 namespace _4915M_project
 {
@@ -47,7 +49,7 @@ namespace _4915M_project
             dt.Clear();
             string connStr = "Provider=Microsoft.ACE.OLEDB.12.0;" + "Data Source=des.accdb";
 
-            string sqlStr = "Select orderStatus,paymentStatus from ShipmentOrder,Payment where ShipmentOrder.orderID = Payment.paymentID and ShipmentOrder.orderID =" + orderID;
+            string sqlStr = "Select orderStatus,paymentStatus,cusID from ShipmentOrder,Payment where ShipmentOrder.orderID = Payment.paymentID and ShipmentOrder.orderID =" + orderID;
 
             OleDbDataAdapter dataAdapter = new OleDbDataAdapter(sqlStr, connStr);
             dataAdapter.Fill(dt);
@@ -59,6 +61,7 @@ namespace _4915M_project
                 {
                     String vStatus= dt.Rows[0]["orderStatus"].ToString();
                     String vPayStatus = dt.Rows[0]["paymentStatus"].ToString();
+                    int cusID = Convert.ToInt32(dt.Rows[0]["paymentStatus"]);
                     if (vStatus != "Completed")
                     {
                         if (checkBox1.Checked && vStatus == "Waiting Payment") {
@@ -112,6 +115,16 @@ namespace _4915M_project
                             dataAdapter.Dispose();
                             dt.Clear();
                             /* send email (has been sign) , if that not you , cal tell:xxxxxxxx */
+
+                            //get recEmail
+                            string strSqlStr11 = "select cusEmail from Customer where cusID = "+cusID.ToString();
+                            OleDbDataAdapter dataAdapter11 = new OleDbDataAdapter(strSqlStr11, connStr);
+                            dataAdapter11.Fill(dt);
+
+                            String recEmail = dt.Rows[0]["cusEmail"].ToString();
+
+
+                            sendEmail("ededelivery35@gmail.com", "sdpgroup35", recEmail, "Your package has been receiver", "Your package has been receive, orderID is "+orderID.ToString() +"\n \n If that not you, please contect the customer service tel: 95422996.");
 
                         }
                         else {
@@ -227,6 +240,32 @@ namespace _4915M_project
             }
             else {
                 checkBox3.Visible = false;
+            }
+        }
+        public void sendEmail(String senderEmail, String senderPassword, String receiverEmail, String sbj, String message)
+        {
+            MailMessage msg = new MailMessage();
+            SmtpClient smtp = new SmtpClient();
+            msg.From = new MailAddress(senderEmail);
+            msg.To.Add(new MailAddress(receiverEmail));
+            msg.Subject = sbj;
+            msg.IsBodyHtml = true;
+            msg.Body = message;
+            smtp.Port = 587;
+            smtp.Host = "smtp.gmail.com";
+            smtp.EnableSsl = true;
+            smtp.UseDefaultCredentials = false;
+            smtp.Credentials = new NetworkCredential(senderEmail, senderPassword);
+            smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
+
+            try
+            {
+                smtp.Send(msg);
+                MessageBox.Show("Sended", "Goods Alert", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
     }

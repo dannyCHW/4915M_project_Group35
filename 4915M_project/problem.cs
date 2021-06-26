@@ -92,10 +92,11 @@ namespace _4915M_project
                         String type = dt.Rows[0]["type"].ToString();
 
                         dt.Clear();
-                        string sqlStr2 = "Select receiverCountry from ShipmentOrder where orderID = " + orderID;
+                        string sqlStr2 = "Select receiverCountry,cusID from ShipmentOrder where orderID = " + orderID;
                         OleDbDataAdapter dataAdapter2 = new OleDbDataAdapter(sqlStr2, connStr);
                         dataAdapter2.Fill(dt);
 
+                        int cusID = Convert.ToInt32(dt.Rows[0]["cusID"]);
                         String toCountry = dt.Rows[0]["receiverCountry"].ToString();
 
                         /*   origin pirce (cargo)  */
@@ -284,18 +285,35 @@ namespace _4915M_project
                             int oldPrice = Convert.ToInt32(dt.Rows[0]["price"]);
                             int newestPrice = oldPrice + Convert.ToInt32(newPirce);
 
-                            if (paymentStatus.Equals("extenal") || paymentStatus.Equals("Monthly")) {
+                            if (paymentStatus.Equals("extenal") || paymentStatus.Equals("Monthly"))
+                            {
+
+
+
+
 
                                 dt.Clear();
                                 string sqlStr4 = "Update Payment price=" + newestPrice + ",additionPrice = " + newPirce + "  where paymentID = " + orderID;
                                 OleDbDataAdapter dataAdapter4 = new OleDbDataAdapter(sqlStr4, connStr);
                                 dataAdapter4.Fill(dt);
 
+                                dt.Clear();
+                                string sqlStr9 = "Select cusEmail fron Customer where cusID = " + cusID;
+                                OleDbDataAdapter dataAdapter9 = new OleDbDataAdapter(sqlStr9, connStr);
+                                dataAdapter9.Fill(dt);
+                                String recEmail = dt.Rows[0]["cusEmail"].ToString();
+
+
+
+
+                                sendEmail("ededelivery35@gmail.com", "sdpgroup35", recEmail, "The price has been change", "We find out the weight is no match, we update the weight of the goods in order " + orderID.ToString() +" please check the update price." );
                                 /* Email send to increate price*/
 
                                 MessageBox.Show("Update successful, Email is send to the customer", "Action Fail", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                            } else if (paymentStatus.Equals("paid") || paymentStatus.Equals("addition")) {
-                             
+                            }
+                            else if (paymentStatus.Equals("paid") || paymentStatus.Equals("addition"))
+                            {
+
                                 dt.Clear();
                                 ///
                                 string sqlStr5 = "Update ShipmentOrder SET orderStatus='Addition' where orderID = " + orderID;
@@ -304,7 +322,7 @@ namespace _4915M_project
 
                                 dt.Clear();
                                 ///
-                                string sqlStr6 = "Update Good SET totalWeight=" + newWeight +" where goodID = " + goodID;
+                                string sqlStr6 = "Update Good SET totalWeight=" + newWeight + " where goodID = " + goodID;
                                 OleDbDataAdapter dataAdapter6 = new OleDbDataAdapter(sqlStr6, connStr);
                                 dataAdapter6.Fill(dt);
 
@@ -312,7 +330,16 @@ namespace _4915M_project
                                 OleDbDataAdapter dataAdapter7 = new OleDbDataAdapter(sqlStr7, connStr);
                                 dataAdapter7.Fill(dt);
 
-                                /* Email send , remind repayment */
+                                dt.Clear();
+                                string sqlStr10 = "Select cusEmail fron Customer where cusID = " + cusID;
+                                OleDbDataAdapter dataAdapter10 = new OleDbDataAdapter(sqlStr10, connStr);
+                                dataAdapter10.Fill(dt);
+                                String recEmail = dt.Rows[0]["cusEmail"].ToString();
+
+
+
+
+                                sendEmail("ededelivery35@gmail.com", "sdpgroup35", recEmail, "The price has been change, please pay again for the order", "We find out the weight is no match, we update the weight of the goods in order " + orderID.ToString() + " please check the update price and pay again for the order.");
 
                                 MessageBox.Show("Update successful, Email is send to the customer", "Action Fail", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                             }
@@ -321,9 +348,13 @@ namespace _4915M_project
 
 
                         }
-                        else {
+                        else
+                        {
 
                             ///update weight
+                            string sqlStr11 = "Update Good SET totalWeight=" + newWeight + " where goodID = " + goodID;
+                            OleDbDataAdapter dataAdapter11 = new OleDbDataAdapter(sqlStr11, connStr);
+                            dataAdapter11.Fill(dt);
 
                             MessageBox.Show("Update successful, the price no need to change", "Action Fail", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         }
@@ -343,12 +374,7 @@ namespace _4915M_project
 
             }
 
-        }
-
-        }
-
-
-
+        }    
         //用法: sendEmail("ededelivery35@gmail.com", "sdpgroup35", "receiver@gmail.com", "Subject of the email", "Message of the email.");
         public void sendEmail(String senderEmail, String senderPassword, String receiverEmail, String sbj, String message)
         {
@@ -375,6 +401,11 @@ namespace _4915M_project
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void problem_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

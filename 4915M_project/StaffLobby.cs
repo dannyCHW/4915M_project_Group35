@@ -54,5 +54,9 @@ namespace _4915M_project
             this.Close();
         }
 
+        private void btnReceiverProblem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
