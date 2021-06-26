@@ -249,6 +249,12 @@
     <Compile Include="VerifyOrder.Designer.cs">
       <DependentUpon>VerifyOrder.cs</DependentUpon>
     </Compile>
+    <Compile Include="viewAirwayBill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="viewAirwayBill.Designer.cs">
+      <DependentUpon>viewAirwayBill.cs</DependentUpon>
+    </Compile>
     <Compile Include="ViewDatabase.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -341,6 +347,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="VerifyOrder.resx">
       <DependentUpon>VerifyOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="viewAirwayBill.resx">
+      <DependentUpon>viewAirwayBill.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ViewDatabase.resx">
       <DependentUpon>ViewDatabase.cs</DependentUpon>
