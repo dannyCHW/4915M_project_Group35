@@ -164,7 +164,7 @@ namespace _4915M_project
             // 
             this.txtReceiverEmail.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtReceiverEmail.Font = new System.Drawing.Font("PMingLiU", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.txtReceiverEmail.Location = new System.Drawing.Point(70, 1059);
+            this.txtReceiverEmail.Location = new System.Drawing.Point(61, 1059);
             this.txtReceiverEmail.Name = "txtReceiverEmail";
             this.txtReceiverEmail.Size = new System.Drawing.Size(442, 27);
             this.txtReceiverEmail.TabIndex = 113;
@@ -175,7 +175,7 @@ namespace _4915M_project
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.label5.Location = new System.Drawing.Point(64, 1024);
+            this.label5.Location = new System.Drawing.Point(55, 1024);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(214, 32);
             this.label5.TabIndex = 112;
@@ -188,7 +188,7 @@ namespace _4915M_project
             this.label39.ForeColor = System.Drawing.Color.Black;
             this.label39.Location = new System.Drawing.Point(12, 1143);
             this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(325, 38);
+            this.label39.Size = new System.Drawing.Size(326, 38);
             this.label39.TabIndex = 111;
             this.label39.Text = "Contact Information";
             // 
@@ -196,7 +196,7 @@ namespace _4915M_project
             // 
             this.txtReceiverCompanyName.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtReceiverCompanyName.Font = new System.Drawing.Font("PMingLiU", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.txtReceiverCompanyName.Location = new System.Drawing.Point(71, 958);
+            this.txtReceiverCompanyName.Location = new System.Drawing.Point(62, 958);
             this.txtReceiverCompanyName.Name = "txtReceiverCompanyName";
             this.txtReceiverCompanyName.Size = new System.Drawing.Size(442, 27);
             this.txtReceiverCompanyName.TabIndex = 110;
@@ -207,7 +207,7 @@ namespace _4915M_project
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.label15.Location = new System.Drawing.Point(65, 923);
+            this.label15.Location = new System.Drawing.Point(56, 923);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(448, 32);
             this.label15.TabIndex = 109;
@@ -219,7 +219,7 @@ namespace _4915M_project
             this.label38.AutoSize = true;
             this.label38.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label38.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.label38.Location = new System.Drawing.Point(37, 534);
+            this.label38.Location = new System.Drawing.Point(28, 534);
             this.label38.Name = "label38";
             this.label38.Size = new System.Drawing.Size(136, 38);
             this.label38.TabIndex = 108;
@@ -229,7 +229,7 @@ namespace _4915M_project
             // 
             this.txtSenderComanyName.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtSenderComanyName.Font = new System.Drawing.Font("PMingLiU", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.txtSenderComanyName.Location = new System.Drawing.Point(70, 442);
+            this.txtSenderComanyName.Location = new System.Drawing.Point(61, 442);
             this.txtSenderComanyName.Name = "txtSenderComanyName";
             this.txtSenderComanyName.Size = new System.Drawing.Size(432, 27);
             this.txtSenderComanyName.TabIndex = 107;
@@ -240,7 +240,7 @@ namespace _4915M_project
             this.label34.AutoSize = true;
             this.label34.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label34.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.label34.Location = new System.Drawing.Point(64, 407);
+            this.label34.Location = new System.Drawing.Point(55, 407);
             this.label34.Name = "label34";
             this.label34.Size = new System.Drawing.Size(425, 32);
             this.label34.TabIndex = 106;
@@ -250,7 +250,7 @@ namespace _4915M_project
             // 
             this.txtSenderName.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtSenderName.Font = new System.Drawing.Font("PMingLiU", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.txtSenderName.Location = new System.Drawing.Point(69, 270);
+            this.txtSenderName.Location = new System.Drawing.Point(60, 270);
             this.txtSenderName.Name = "txtSenderName";
             this.txtSenderName.Size = new System.Drawing.Size(348, 27);
             this.txtSenderName.TabIndex = 105;
@@ -261,7 +261,7 @@ namespace _4915M_project
             this.label33.AutoSize = true;
             this.label33.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label33.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.label33.Location = new System.Drawing.Point(63, 235);
+            this.label33.Location = new System.Drawing.Point(54, 235);
             this.label33.Name = "label33";
             this.label33.Size = new System.Drawing.Size(194, 32);
             this.label33.TabIndex = 104;
@@ -271,7 +271,7 @@ namespace _4915M_project
             // 
             this.txtSenderAddress.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtSenderAddress.Font = new System.Drawing.Font("PMingLiU", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.txtSenderAddress.Location = new System.Drawing.Point(70, 351);
+            this.txtSenderAddress.Location = new System.Drawing.Point(61, 351);
             this.txtSenderAddress.Name = "txtSenderAddress";
             this.txtSenderAddress.Size = new System.Drawing.Size(550, 27);
             this.txtSenderAddress.TabIndex = 103;
@@ -282,7 +282,7 @@ namespace _4915M_project
             this.label37.AutoSize = true;
             this.label37.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label37.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.label37.Location = new System.Drawing.Point(64, 316);
+            this.label37.Location = new System.Drawing.Point(55, 316);
             this.label37.Name = "label37";
             this.label37.Size = new System.Drawing.Size(220, 32);
             this.label37.TabIndex = 102;
@@ -294,7 +294,7 @@ namespace _4915M_project
             this.label36.AutoSize = true;
             this.label36.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label36.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.label36.Location = new System.Drawing.Point(37, 89);
+            this.label36.Location = new System.Drawing.Point(28, 89);
             this.label36.Name = "label36";
             this.label36.Size = new System.Drawing.Size(92, 38);
             this.label36.TabIndex = 100;
@@ -306,7 +306,7 @@ namespace _4915M_project
             this.label35.AutoSize = true;
             this.label35.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label35.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.label35.Location = new System.Drawing.Point(64, 155);
+            this.label35.Location = new System.Drawing.Point(55, 155);
             this.label35.Name = "label35";
             this.label35.Size = new System.Drawing.Size(194, 32);
             this.label35.TabIndex = 99;
@@ -323,7 +323,7 @@ namespace _4915M_project
             // 
             this.txtAreaCode.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtAreaCode.Font = new System.Drawing.Font("PMingLiU", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.txtAreaCode.Location = new System.Drawing.Point(70, 715);
+            this.txtAreaCode.Location = new System.Drawing.Point(61, 715);
             this.txtAreaCode.Name = "txtAreaCode";
             this.txtAreaCode.Size = new System.Drawing.Size(358, 27);
             this.txtAreaCode.TabIndex = 72;
@@ -334,7 +334,7 @@ namespace _4915M_project
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.label18.Location = new System.Drawing.Point(64, 680);
+            this.label18.Location = new System.Drawing.Point(55, 680);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(160, 32);
             this.label18.TabIndex = 71;
@@ -345,7 +345,7 @@ namespace _4915M_project
             // 
             this.txtReceiverAddress.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtReceiverAddress.Font = new System.Drawing.Font("PMingLiU", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.txtReceiverAddress.Location = new System.Drawing.Point(70, 795);
+            this.txtReceiverAddress.Location = new System.Drawing.Point(61, 795);
             this.txtReceiverAddress.Name = "txtReceiverAddress";
             this.txtReceiverAddress.Size = new System.Drawing.Size(550, 27);
             this.txtReceiverAddress.TabIndex = 84;
@@ -359,7 +359,7 @@ namespace _4915M_project
             "Japan",
             "Australia",
             "Shanghai"});
-            this.cboBoxReceiverCountry.Location = new System.Drawing.Point(71, 644);
+            this.cboBoxReceiverCountry.Location = new System.Drawing.Point(62, 644);
             this.cboBoxReceiverCountry.Name = "cboBoxReceiverCountry";
             this.cboBoxReceiverCountry.Size = new System.Drawing.Size(357, 24);
             this.cboBoxReceiverCountry.TabIndex = 70;
@@ -370,7 +370,7 @@ namespace _4915M_project
             this.label31.AutoSize = true;
             this.label31.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label31.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.label31.Location = new System.Drawing.Point(64, 760);
+            this.label31.Location = new System.Drawing.Point(55, 760);
             this.label31.Name = "label31";
             this.label31.Size = new System.Drawing.Size(243, 32);
             this.label31.TabIndex = 83;
@@ -382,7 +382,7 @@ namespace _4915M_project
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.label13.Location = new System.Drawing.Point(64, 609);
+            this.label13.Location = new System.Drawing.Point(55, 609);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(194, 32);
             this.label13.TabIndex = 69;
@@ -393,7 +393,7 @@ namespace _4915M_project
             // 
             this.txtReceiverName.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtReceiverName.Font = new System.Drawing.Font("PMingLiU", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.txtReceiverName.Location = new System.Drawing.Point(71, 872);
+            this.txtReceiverName.Location = new System.Drawing.Point(62, 872);
             this.txtReceiverName.Name = "txtReceiverName";
             this.txtReceiverName.Size = new System.Drawing.Size(357, 27);
             this.txtReceiverName.TabIndex = 82;
@@ -404,7 +404,7 @@ namespace _4915M_project
             this.label32.AutoSize = true;
             this.label32.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label32.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.label32.Location = new System.Drawing.Point(64, 836);
+            this.label32.Location = new System.Drawing.Point(55, 836);
             this.label32.Name = "label32";
             this.label32.Size = new System.Drawing.Size(217, 32);
             this.label32.TabIndex = 81;
@@ -418,7 +418,7 @@ namespace _4915M_project
             this.btnGoNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGoNext.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGoNext.ForeColor = System.Drawing.Color.White;
-            this.btnGoNext.Location = new System.Drawing.Point(25, 1449);
+            this.btnGoNext.Location = new System.Drawing.Point(16, 1449);
             this.btnGoNext.Name = "btnGoNext";
             this.btnGoNext.Size = new System.Drawing.Size(851, 50);
             this.btnGoNext.TabIndex = 0;
@@ -430,7 +430,7 @@ namespace _4915M_project
             // 
             this.txtContactPhone.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtContactPhone.Font = new System.Drawing.Font("PMingLiU", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.txtContactPhone.Location = new System.Drawing.Point(69, 1359);
+            this.txtContactPhone.Location = new System.Drawing.Point(60, 1359);
             this.txtContactPhone.Name = "txtContactPhone";
             this.txtContactPhone.Size = new System.Drawing.Size(357, 27);
             this.txtContactPhone.TabIndex = 80;
@@ -443,7 +443,7 @@ namespace _4915M_project
             this.label24.ForeColor = System.Drawing.Color.Black;
             this.label24.Location = new System.Drawing.Point(12, 9);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(344, 38);
+            this.label24.Size = new System.Drawing.Size(345, 38);
             this.label24.TabIndex = 75;
             this.label24.Text = "Shipment Information";
             // 
@@ -453,7 +453,7 @@ namespace _4915M_project
             this.label28.AutoSize = true;
             this.label28.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label28.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.label28.Location = new System.Drawing.Point(62, 1318);
+            this.label28.Location = new System.Drawing.Point(53, 1318);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(209, 32);
             this.label28.TabIndex = 79;
@@ -465,7 +465,7 @@ namespace _4915M_project
             this.label30.AutoSize = true;
             this.label30.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label30.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.label30.Location = new System.Drawing.Point(63, 1223);
+            this.label30.Location = new System.Drawing.Point(54, 1223);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(214, 32);
             this.label30.TabIndex = 77;
@@ -475,14 +475,14 @@ namespace _4915M_project
             // 
             this.txtContactPerson.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtContactPerson.Font = new System.Drawing.Font("PMingLiU", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.txtContactPerson.Location = new System.Drawing.Point(68, 1263);
+            this.txtContactPerson.Location = new System.Drawing.Point(59, 1263);
             this.txtContactPerson.Name = "txtContactPerson";
             this.txtContactPerson.Size = new System.Drawing.Size(358, 27);
             this.txtContactPerson.TabIndex = 78;
             // 
             // btnBack
             // 
-            this.btnBack.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnBack.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
             this.btnBack.FlatAppearance.BorderSize = 0;
             this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -509,7 +509,7 @@ namespace _4915M_project
             // 
             // btnSubmit
             // 
-            this.btnSubmit.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnSubmit.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnSubmit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.btnSubmit.FlatAppearance.BorderSize = 0;
             this.btnSubmit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -834,7 +834,7 @@ namespace _4915M_project
             // 
             // btnAddGood
             // 
-            this.btnAddGood.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnAddGood.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAddGood.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
             this.btnAddGood.FlatAppearance.BorderSize = 0;
             this.btnAddGood.FlatStyle = System.Windows.Forms.FlatStyle.Flat;

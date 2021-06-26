@@ -60,10 +60,12 @@ namespace _4915M_project
                 result = MessageBox.Show(message, caption, buttons);
                 if (result == System.Windows.Forms.DialogResult.Yes)
                 {
+                    MessageBox.Show("Goods Added.");
                     addAnotherGood();
                 }
             } else
             {
+                MessageBox.Show("Goods Added.");
                 addAnotherGood();
             }
 
@@ -125,7 +127,7 @@ namespace _4915M_project
         
         private void createbtn_Click(object sender, EventArgs e)
         {
-            //old useless code
+            
         }
 
 

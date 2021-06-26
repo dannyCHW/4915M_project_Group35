@@ -79,7 +79,7 @@ namespace _4915M_project
             // 
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label3.Location = new System.Drawing.Point(21, 317);
+            this.label3.Location = new System.Drawing.Point(22, 323);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(203, 12);
             this.label3.TabIndex = 21;
@@ -92,7 +92,7 @@ namespace _4915M_project
             this.btnProblem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnProblem.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnProblem.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnProblem.Location = new System.Drawing.Point(0, 332);
+            this.btnProblem.Location = new System.Drawing.Point(4, 338);
             this.btnProblem.Name = "btnProblem";
             this.btnProblem.Size = new System.Drawing.Size(243, 54);
             this.btnProblem.TabIndex = 20;
@@ -129,7 +129,7 @@ namespace _4915M_project
             // 
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label2.Location = new System.Drawing.Point(22, 248);
+            this.label2.Location = new System.Drawing.Point(22, 251);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(203, 12);
             this.label2.TabIndex = 16;
@@ -185,7 +185,7 @@ namespace _4915M_project
             this.btnViewRecord.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnViewRecord.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnViewRecord.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnViewRecord.Location = new System.Drawing.Point(1, 263);
+            this.btnViewRecord.Location = new System.Drawing.Point(1, 266);
             this.btnViewRecord.Name = "btnViewRecord";
             this.btnViewRecord.Size = new System.Drawing.Size(243, 54);
             this.btnViewRecord.TabIndex = 8;

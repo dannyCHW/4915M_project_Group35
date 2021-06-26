@@ -67,18 +67,22 @@ namespace _4915M_project
             // 
             // btnSendEmail
             // 
-            this.btnSendEmail.Location = new System.Drawing.Point(673, 181);
+            this.btnSendEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.btnSendEmail.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSendEmail.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSendEmail.ForeColor = System.Drawing.Color.White;
+            this.btnSendEmail.Location = new System.Drawing.Point(675, 301);
             this.btnSendEmail.Name = "btnSendEmail";
-            this.btnSendEmail.Size = new System.Drawing.Size(75, 23);
+            this.btnSendEmail.Size = new System.Drawing.Size(178, 50);
             this.btnSendEmail.TabIndex = 99;
             this.btnSendEmail.Text = "Send Email";
-            this.btnSendEmail.UseVisualStyleBackColor = true;
+            this.btnSendEmail.UseVisualStyleBackColor = false;
             this.btnSendEmail.Click += new System.EventHandler(this.btnSendEmail_Click);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(610, 119);
+            this.label4.Location = new System.Drawing.Point(612, 234);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(57, 12);
             this.label4.TabIndex = 98;
@@ -86,16 +90,15 @@ namespace _4915M_project
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(673, 109);
+            this.txtPassword.Location = new System.Drawing.Point(675, 231);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(155, 22);
+            this.txtPassword.Size = new System.Drawing.Size(178, 22);
             this.txtPassword.TabIndex = 97;
-            this.txtPassword.UseSystemPasswordChar = true;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(605, 88);
+            this.label2.Location = new System.Drawing.Point(607, 206);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(62, 12);
             this.label2.TabIndex = 95;
@@ -103,15 +106,18 @@ namespace _4915M_project
             // 
             // txtUsername
             // 
-            this.txtUsername.Location = new System.Drawing.Point(673, 81);
+            this.txtUsername.Location = new System.Drawing.Point(675, 203);
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(155, 22);
+            this.txtUsername.ReadOnly = true;
+            this.txtUsername.Size = new System.Drawing.Size(178, 22);
             this.txtUsername.TabIndex = 94;
+            this.txtUsername.Text = "ededelivery35@gmail.com";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(754, 186);
+            this.label1.Font = new System.Drawing.Font("PMingLiU", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label1.Location = new System.Drawing.Point(612, 324);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(42, 12);
             this.label1.TabIndex = 92;

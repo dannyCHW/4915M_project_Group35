@@ -104,6 +104,31 @@ namespace _4915M_project
             this.btnProblem.UseVisualStyleBackColor = false;
             this.btnProblem.Click += new System.EventHandler(this.btnProblem_Click);
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label6.Location = new System.Drawing.Point(25, 467);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(203, 12);
+            this.label6.TabIndex = 25;
+            this.label6.Text = "_________________________________";
+            // 
+            // btnProblem
+            // 
+            this.btnProblem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.btnProblem.FlatAppearance.BorderSize = 0;
+            this.btnProblem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnProblem.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProblem.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnProblem.Location = new System.Drawing.Point(1, 482);
+            this.btnProblem.Name = "btnProblem";
+            this.btnProblem.Size = new System.Drawing.Size(243, 54);
+            this.btnProblem.TabIndex = 24;
+            this.btnProblem.Text = "Pickup Problem";
+            this.btnProblem.UseVisualStyleBackColor = false;
+            this.btnProblem.Click += new System.EventHandler(this.btnProblem_Click);
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
