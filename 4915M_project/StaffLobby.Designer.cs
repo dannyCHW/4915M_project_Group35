@@ -46,6 +46,8 @@ namespace _4915M_project
             this.btnVerify = new System.Windows.Forms.Button();
             this.panelChildForm = new System.Windows.Forms.Panel();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.btnRecProblem = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -56,7 +58,9 @@ namespace _4915M_project
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.btnRecProblem);
             this.panel1.Controls.Add(this.btnReceiverProblem);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.btnProblem);
@@ -253,6 +257,30 @@ namespace _4915M_project
             this.pictureBox4.TabIndex = 12;
             this.pictureBox4.TabStop = false;
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label6.Location = new System.Drawing.Point(21, 446);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(203, 12);
+            this.label6.TabIndex = 27;
+            this.label6.Text = "_________________________________";
+            // 
+            // btnRecProblem
+            // 
+            this.btnRecProblem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.btnRecProblem.FlatAppearance.BorderSize = 0;
+            this.btnRecProblem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRecProblem.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRecProblem.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnRecProblem.Location = new System.Drawing.Point(0, 461);
+            this.btnRecProblem.Name = "btnRecProblem";
+            this.btnRecProblem.Size = new System.Drawing.Size(243, 54);
+            this.btnRecProblem.TabIndex = 26;
+            this.btnRecProblem.Text = "Receive Problem";
+            this.btnRecProblem.UseVisualStyleBackColor = false;
+            // 
             // StaffLobby
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -291,5 +319,7 @@ namespace _4915M_project
         private System.Windows.Forms.Button btnProblem;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnReceiverProblem;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button btnRecProblem;
     }
 }
