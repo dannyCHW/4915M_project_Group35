@@ -43,11 +43,13 @@ namespace _4915M_project
             this.comboStatus = new System.Windows.Forms.ComboBox();
             this.comboLocation = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.checkBox3 = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.checkBox3);
             this.panel1.Controls.Add(this.checkBox2);
             this.panel1.Controls.Add(this.checkBox1);
             this.panel1.Controls.Add(this.label21);
@@ -207,11 +209,13 @@ namespace _4915M_project
             this.comboStatus.Items.AddRange(new object[] {
             "Processing",
             "Completed",
-            "Rejected"});
+            "Rejected",
+            "Payment"});
             this.comboStatus.Location = new System.Drawing.Point(303, 302);
             this.comboStatus.Name = "comboStatus";
             this.comboStatus.Size = new System.Drawing.Size(253, 27);
             this.comboStatus.TabIndex = 88;
+            this.comboStatus.SelectedIndexChanged += new System.EventHandler(this.comboStatus_SelectedIndexChanged);
             // 
             // comboLocation
             // 
@@ -240,6 +244,18 @@ namespace _4915M_project
             this.label3.Size = new System.Drawing.Size(217, 36);
             this.label3.TabIndex = 84;
             this.label3.Text = "Update Status:";
+            // 
+            // checkBox3
+            // 
+            this.checkBox3.AutoSize = true;
+            this.checkBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
+            this.checkBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.checkBox3.Location = new System.Drawing.Point(219, 364);
+            this.checkBox3.Name = "checkBox3";
+            this.checkBox3.Size = new System.Drawing.Size(848, 30);
+            this.checkBox3.TabIndex = 125;
+            this.checkBox3.Text = "The Goods Have Been Receive And The Signature Has Also Been Handed In";
+            this.checkBox3.UseVisualStyleBackColor = true;
             // 
             // UpdateOrder
             // 
@@ -273,5 +289,6 @@ namespace _4915M_project
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.CheckBox checkBox3;
     }
 }

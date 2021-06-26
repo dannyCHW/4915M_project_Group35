@@ -48,6 +48,8 @@ namespace _4915M_project
             this.btnVerify = new System.Windows.Forms.Button();
             this.panelChildForm = new System.Windows.Forms.Panel();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.btnRecProblem = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -58,6 +60,8 @@ namespace _4915M_project
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.panel1.Controls.Add(this.label7);
+            this.panel1.Controls.Add(this.btnRecProblem);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.btnProblem);
             this.panel1.Controls.Add(this.label4);
@@ -75,8 +79,9 @@ namespace _4915M_project
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(250, 638);
+            this.panel1.Size = new System.Drawing.Size(250, 701);
             this.panel1.TabIndex = 3;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // label6
             // 
@@ -160,7 +165,7 @@ namespace _4915M_project
             this.btnLogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogOut.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogOut.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnLogOut.Location = new System.Drawing.Point(7, 572);
+            this.btnLogOut.Location = new System.Drawing.Point(7, 635);
             this.btnLogOut.Name = "btnLogOut";
             this.btnLogOut.Size = new System.Drawing.Size(237, 54);
             this.btnLogOut.TabIndex = 19;
@@ -228,7 +233,7 @@ namespace _4915M_project
             this.btnUpdateOrder.Name = "btnUpdateOrder";
             this.btnUpdateOrder.Size = new System.Drawing.Size(243, 54);
             this.btnUpdateOrder.TabIndex = 13;
-            this.btnUpdateOrder.Text = "Handing and Update Order";
+            this.btnUpdateOrder.Text = "Update Or Edit Order";
             this.btnUpdateOrder.UseVisualStyleBackColor = false;
             this.btnUpdateOrder.Click += new System.EventHandler(this.btnUpdateOrder_Click);
             // 
@@ -269,7 +274,7 @@ namespace _4915M_project
             this.panelChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelChildForm.Location = new System.Drawing.Point(250, 0);
             this.panelChildForm.Name = "panelChildForm";
-            this.panelChildForm.Size = new System.Drawing.Size(936, 638);
+            this.panelChildForm.Size = new System.Drawing.Size(936, 701);
             this.panelChildForm.TabIndex = 4;
             // 
             // pictureBox4
@@ -283,12 +288,36 @@ namespace _4915M_project
             this.pictureBox4.TabIndex = 12;
             this.pictureBox4.TabStop = false;
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label7.Location = new System.Drawing.Point(25, 537);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(203, 12);
+            this.label7.TabIndex = 27;
+            this.label7.Text = "_________________________________";
+            // 
+            // btnRecProblem
+            // 
+            this.btnRecProblem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.btnRecProblem.FlatAppearance.BorderSize = 0;
+            this.btnRecProblem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRecProblem.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRecProblem.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnRecProblem.Location = new System.Drawing.Point(0, 552);
+            this.btnRecProblem.Name = "btnRecProblem";
+            this.btnRecProblem.Size = new System.Drawing.Size(243, 54);
+            this.btnRecProblem.TabIndex = 26;
+            this.btnRecProblem.Text = "Receive Problem";
+            this.btnRecProblem.UseVisualStyleBackColor = false;
+            // 
             // ManagerLobby
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(1186, 638);
+            this.ClientSize = new System.Drawing.Size(1186, 701);
             this.Controls.Add(this.panelChildForm);
             this.Controls.Add(this.panel1);
             this.Name = "ManagerLobby";
@@ -324,5 +353,7 @@ namespace _4915M_project
         private System.Windows.Forms.Button btnAlertPickUp;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btnProblem;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button btnRecProblem;
     }
 }
