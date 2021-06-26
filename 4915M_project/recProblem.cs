@@ -88,7 +88,7 @@ namespace _4915M_project
             {
                 DataTable dt3 = StaffLogin.DataTableVar2;
                 dt3.Clear();
-                string sqqlStr = "Update ShipmentOrder set orderStatus = 'On Problem', staffID = " + Main.staffID + " where orderID = " + Convert.ToInt32(txtID.Text) + "; ";
+                string sqqlStr = "Update ShipmentOrder,solveProblemStaffID set orderStatus = 'On Problem', solveProblemStaffID = " + Main.staffID + " where orderID = " + Convert.ToInt32(txtID.Text) + "; ";
                 OleDbDataAdapter dataAdapter3 = new OleDbDataAdapter(sqqlStr, Program.connStr);
                 dataAdapter3.Fill(dt3);
 
