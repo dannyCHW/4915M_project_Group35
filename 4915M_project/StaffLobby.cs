@@ -54,9 +54,5 @@ namespace _4915M_project
             this.Close();
         }
 
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

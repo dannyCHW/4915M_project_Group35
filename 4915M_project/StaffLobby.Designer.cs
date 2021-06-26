@@ -44,6 +44,8 @@ namespace _4915M_project
             this.btnVerify = new System.Windows.Forms.Button();
             this.panelChildForm = new System.Windows.Forms.Panel();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.btnReceiverProblem = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -54,6 +56,8 @@ namespace _4915M_project
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.btnReceiverProblem);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.btnProblem);
             this.panel1.Controls.Add(this.btnLogOut);
@@ -75,12 +79,11 @@ namespace _4915M_project
             // 
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label3.Location = new System.Drawing.Point(22, 308);
+            this.label3.Location = new System.Drawing.Point(21, 317);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(203, 12);
             this.label3.TabIndex = 21;
             this.label3.Text = "_________________________________";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // btnProblem
             // 
@@ -89,11 +92,11 @@ namespace _4915M_project
             this.btnProblem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnProblem.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnProblem.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnProblem.Location = new System.Drawing.Point(1, 323);
+            this.btnProblem.Location = new System.Drawing.Point(0, 332);
             this.btnProblem.Name = "btnProblem";
             this.btnProblem.Size = new System.Drawing.Size(243, 54);
             this.btnProblem.TabIndex = 20;
-            this.btnProblem.Text = "Pickup Problem";
+            this.btnProblem.Text = "Pickup/Weight Problem";
             this.btnProblem.UseVisualStyleBackColor = false;
             this.btnProblem.Click += new System.EventHandler(this.btnProblem_Click);
             // 
@@ -225,6 +228,30 @@ namespace _4915M_project
             this.pictureBox4.TabIndex = 12;
             this.pictureBox4.TabStop = false;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label4.Location = new System.Drawing.Point(21, 386);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(203, 12);
+            this.label4.TabIndex = 23;
+            this.label4.Text = "_________________________________";
+            // 
+            // btnReceiverProblem
+            // 
+            this.btnReceiverProblem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.btnReceiverProblem.FlatAppearance.BorderSize = 0;
+            this.btnReceiverProblem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReceiverProblem.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReceiverProblem.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnReceiverProblem.Location = new System.Drawing.Point(0, 401);
+            this.btnReceiverProblem.Name = "btnReceiverProblem";
+            this.btnReceiverProblem.Size = new System.Drawing.Size(243, 54);
+            this.btnReceiverProblem.TabIndex = 22;
+            this.btnReceiverProblem.Text = "Receive Problem";
+            this.btnReceiverProblem.UseVisualStyleBackColor = false;
+            // 
             // StaffLobby
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -261,5 +288,7 @@ namespace _4915M_project
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnProblem;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button btnReceiverProblem;
     }
 }

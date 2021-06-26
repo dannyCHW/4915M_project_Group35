@@ -180,6 +180,7 @@ namespace _4915M_project
             this.Controls.Add(this.panel1);
             this.Name = "problem";
             this.Text = "Problem";
+            this.Load += new System.EventHandler(this.problem_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

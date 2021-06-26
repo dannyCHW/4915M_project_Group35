@@ -84,7 +84,8 @@ namespace _4915M_project
                             dataAdapter3.Fill(dt);
 
                             MessageBox.Show("Extenal payment successful", "Sccessful Update", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        } else if (checkBox1.Checked &&  vStatus == "Addition") {
+                        } 
+                        else if (checkBox1.Checked && vStatus == "Addition") {
                             dt.Clear();
                             string strSqlStr7 = "Update ShipmentOrder set orderStatus = 'Processing' where orderID = " + orderID + ";";
                             string strSqlStr8 = "Update Payment set paymentStatus = 'paid' where paymentID = " + orderID + ";";
@@ -95,6 +96,23 @@ namespace _4915M_project
                             dataAdapter8.Fill(dt);
 
                             MessageBox.Show("Cash payment successful, addtion fee has been pay", "Sccessful Update", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        else if (comboStatus.Text.ToString() == "Completed" && !checkBox3.Checked)
+                        {
+                            MessageBox.Show("You need to confirm the checkbox", "Sccessful Update", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        }
+                        else if (comboStatus.Text.ToString() == "Completed" && checkBox3.Checked) {
+                            dt.Clear();
+                            string strSqlStr7 = "Update ShipmentOrder set orderStatus = '" + comboStatus.Text + "', currentLocation = '" + comboLocation.Text + "' where orderID = " + orderID;
+                            OleDbDataAdapter dataAdapter7 = new OleDbDataAdapter(strSqlStr7, connStr);
+                            dataAdapter7.Fill(dt);
+                            MessageBox.Show("Update successful", "Sccessful Update", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            dataAdapter7.Dispose();
+                            dataAdapter.Dispose();
+                            dt.Clear();
+                            /* send email (has been sign) , if that not you , cal tell:xxxxxxxx */
+
                         }
                         else {
                             dt.Clear();
@@ -191,6 +209,24 @@ namespace _4915M_project
                 comboLocation.Visible = true;
                 comboStatus.Visible = true;
                 label4.Visible = true;
+            }
+        }
+
+        private void comboStatus_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboStatus.Text.ToString() == "Completed")
+            {
+                checkBox1.Visible = false;
+                checkBox2.Visible = false;
+                checkBox3.Visible = true;
+            }
+            else if (comboStatus.Text.ToString() == "Payment") {
+                checkBox1.Visible = true;
+                checkBox2.Visible = true;
+                checkBox3.Visible = false;
+            }
+            else {
+                checkBox3.Visible = false;
             }
         }
     }

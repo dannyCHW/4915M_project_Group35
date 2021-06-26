@@ -334,10 +334,15 @@ namespace _4915M_project
                 }
                 catch
                 {
-
+                    MessageBox.Show("Something wrong", "Action Fail", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
 
             }
+
+        }
+
+        private void problem_Load(object sender, EventArgs e)
+        {
 
         }
     }
