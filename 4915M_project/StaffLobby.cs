@@ -56,7 +56,16 @@ namespace _4915M_project
 
         private void btnReceiverProblem_Click(object sender, EventArgs e)
         {
+            problem problem = new problem();
+            problem.Show();
+            this.Close();
+        }
 
+        private void btnUpdateOrder_Click(object sender, EventArgs e)
+        {
+            UpdateOrder updateorder = new UpdateOrder();
+            updateorder.Show();
+            this.Hide();
         }
     }
 }

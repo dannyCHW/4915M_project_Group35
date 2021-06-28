@@ -31,7 +31,9 @@ namespace _4915M_project
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StaffLobby));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.btnRecProblem = new System.Windows.Forms.Button();
             this.btnReceiverProblem = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.btnProblem = new System.Windows.Forms.Button();
@@ -46,8 +48,6 @@ namespace _4915M_project
             this.btnVerify = new System.Windows.Forms.Button();
             this.panelChildForm = new System.Windows.Forms.Panel();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.btnRecProblem = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -79,15 +79,39 @@ namespace _4915M_project
             this.panel1.TabIndex = 2;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label6.Location = new System.Drawing.Point(21, 463);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(203, 12);
+            this.label6.TabIndex = 27;
+            this.label6.Text = "_________________________________";
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label4.Location = new System.Drawing.Point(21, 386);
+            this.label4.Location = new System.Drawing.Point(21, 394);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(203, 12);
             this.label4.TabIndex = 23;
             this.label4.Text = "_________________________________";
+            // 
+            // btnRecProblem
+            // 
+            this.btnRecProblem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.btnRecProblem.FlatAppearance.BorderSize = 0;
+            this.btnRecProblem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRecProblem.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRecProblem.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnRecProblem.Location = new System.Drawing.Point(0, 478);
+            this.btnRecProblem.Name = "btnRecProblem";
+            this.btnRecProblem.Size = new System.Drawing.Size(243, 54);
+            this.btnRecProblem.TabIndex = 26;
+            this.btnRecProblem.Text = "Receive Problem";
+            this.btnRecProblem.UseVisualStyleBackColor = false;
             // 
             // btnReceiverProblem
             // 
@@ -96,11 +120,11 @@ namespace _4915M_project
             this.btnReceiverProblem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReceiverProblem.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReceiverProblem.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnReceiverProblem.Location = new System.Drawing.Point(0, 401);
+            this.btnReceiverProblem.Location = new System.Drawing.Point(0, 409);
             this.btnReceiverProblem.Name = "btnReceiverProblem";
             this.btnReceiverProblem.Size = new System.Drawing.Size(243, 54);
             this.btnReceiverProblem.TabIndex = 22;
-            this.btnReceiverProblem.Text = "Receive Problem";
+            this.btnReceiverProblem.Text = "Pickup Problem";
             this.btnReceiverProblem.UseVisualStyleBackColor = false;
             this.btnReceiverProblem.Click += new System.EventHandler(this.btnReceiverProblem_Click);
             // 
@@ -206,6 +230,7 @@ namespace _4915M_project
             this.btnUpdateOrder.TabIndex = 13;
             this.btnUpdateOrder.Text = "Update Or Edit Order";
             this.btnUpdateOrder.UseVisualStyleBackColor = false;
+            this.btnUpdateOrder.Click += new System.EventHandler(this.btnUpdateOrder_Click);
             // 
             // btnViewRecord
             // 
@@ -256,30 +281,6 @@ namespace _4915M_project
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 12;
             this.pictureBox4.TabStop = false;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label6.Location = new System.Drawing.Point(21, 446);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(203, 12);
-            this.label6.TabIndex = 27;
-            this.label6.Text = "_________________________________";
-            // 
-            // btnRecProblem
-            // 
-            this.btnRecProblem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.btnRecProblem.FlatAppearance.BorderSize = 0;
-            this.btnRecProblem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRecProblem.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRecProblem.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnRecProblem.Location = new System.Drawing.Point(0, 461);
-            this.btnRecProblem.Name = "btnRecProblem";
-            this.btnRecProblem.Size = new System.Drawing.Size(243, 54);
-            this.btnRecProblem.TabIndex = 26;
-            this.btnRecProblem.Text = "Receive Problem";
-            this.btnRecProblem.UseVisualStyleBackColor = false;
             // 
             // StaffLobby
             // 

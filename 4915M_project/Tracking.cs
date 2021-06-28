@@ -51,12 +51,14 @@ namespace _4915M_project
                     var v_exDay = DateTime.Parse(dataInput);
                     DateTime expectedDate = (DateTime)v_exDay;
                     expectedDate = expectedDate.AddDays(3);
+                    string format = "M/dd/yyyy hh:mm";
+                    string result = expectedDate.ToString(format);
 
                     if (vStatus == "Processing")
                     {
                         dt.Clear();
                         txtNow.Text = "Now, this shipment is in " + location;
-                        txtExpected.Text = "Date is expected to arrive : " + expectedDate.ToString();
+                        txtExpected.Text = "Date is expected to arrive : " + result;
 
                     }
                     else

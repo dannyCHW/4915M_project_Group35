@@ -76,7 +76,7 @@ namespace _4915M_project
             this.dateTime.Name = "dateTime";
             this.dateTime.Size = new System.Drawing.Size(255, 27);
             this.dateTime.TabIndex = 115;
-            this.dateTime.Value = new System.DateTime(2021, 6, 1, 16, 9, 0, 0);
+            this.dateTime.Value = new System.DateTime(2021, 6, 1, 4, 9, 0, 0);
             this.dateTime.ValueChanged += new System.EventHandler(this.dateTime_ValueChanged);
             // 
             // label2

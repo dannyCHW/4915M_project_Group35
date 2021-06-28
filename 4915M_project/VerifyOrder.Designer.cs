@@ -162,7 +162,7 @@ namespace _4915M_project
             this.btnLoad.Name = "btnLoad";
             this.btnLoad.Size = new System.Drawing.Size(191, 50);
             this.btnLoad.TabIndex = 93;
-            this.btnLoad.Text = "Load And Refreash";
+            this.btnLoad.Text = "Load And Refresh";
             this.btnLoad.UseVisualStyleBackColor = false;
             this.btnLoad.Click += new System.EventHandler(this.btnLoad_Click);
             // 

@@ -85,7 +85,7 @@ namespace _4915M_project
                         String status = dt.Rows[0]["orderStatus"].ToString();
                         if (status == "Waiting Booking")
                         {
-                            String createDate = dateTime.Value.ToString();
+                            String createDate = dateTime.Text.ToString();
 
                             string strSqlStr = "Update ShipmentOrder set orderStatus = 'Waiting Pickup' , dateOfPickUp = " + "'" + createDate + "'" + " where orderID = " + this_order;
                             OleDbDataAdapter dataAdapter2 = new OleDbDataAdapter(strSqlStr, connStr);
@@ -98,7 +98,7 @@ namespace _4915M_project
                         }
                         else if (status == "Waiting Pickup")
                         {
-                            String createDate = dateTime.Value.ToString();
+                            String createDate = dateTime.Text.ToString();
 
                             string strSqlStr = "Update ShipmentOrder set  dateOfPickUp = '" + createDate + "' where orderID = " + this_order;
 

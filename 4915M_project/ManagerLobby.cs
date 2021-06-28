@@ -77,5 +77,11 @@ namespace _4915M_project
 
         }
 
+        private void btnRecProblem_Click(object sender, EventArgs e)
+        {
+            recProblem recproblem = new recProblem();
+            recproblem.Show();
+            this.Close();
+        }
     }
 }
