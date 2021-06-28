@@ -31,7 +31,6 @@ namespace _4915M_project
         public AirwayBill1()
         {
             InitializeComponent();
-            
         }
 
         private void btnAddGood_Click(object sender, EventArgs e)
@@ -202,7 +201,7 @@ namespace _4915M_project
                 addShipmentOrderUsingConnection();
                 addGoodToShipmentOrder();
                 addPayment();
-                MessageBox.Show("Your shipment order has been submited.", "Invalid", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Your shipment order has been submited. Click 'View Airway Bill' to check it. ", "Invalid", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Close();
             }
             

@@ -32,9 +32,9 @@ namespace _4915M_project
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CustomerLobby));
             this.panel1 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
-            this.viewAirwayBill = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.viewAirwayBill = new System.Windows.Forms.Button();
             this.btnLogOut = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -62,9 +62,9 @@ namespace _4915M_project
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
             this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.viewAirwayBill);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.viewAirwayBill);
             this.panel1.Controls.Add(this.btnLogOut);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label4);
@@ -87,31 +87,17 @@ namespace _4915M_project
             // 
             this.label7.AutoSize = true;
             this.label7.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label7.Location = new System.Drawing.Point(25, 539);
+            this.label7.Location = new System.Drawing.Point(25, 395);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(203, 12);
             this.label7.TabIndex = 23;
             this.label7.Text = "_________________________________";
             // 
-            // viewAirwayBill
-            // 
-            this.viewAirwayBill.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.viewAirwayBill.FlatAppearance.BorderSize = 0;
-            this.viewAirwayBill.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.viewAirwayBill.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.viewAirwayBill.ForeColor = System.Drawing.Color.Gainsboro;
-            this.viewAirwayBill.Location = new System.Drawing.Point(3, 554);
-            this.viewAirwayBill.Name = "viewAirwayBill";
-            this.viewAirwayBill.Size = new System.Drawing.Size(244, 48);
-            this.viewAirwayBill.TabIndex = 22;
-            this.viewAirwayBill.Text = "View Airway-bill";
-            this.viewAirwayBill.UseVisualStyleBackColor = false;
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label6.Location = new System.Drawing.Point(25, 467);
+            this.label6.Location = new System.Drawing.Point(25, 533);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(203, 12);
             this.label6.TabIndex = 21;
@@ -125,13 +111,28 @@ namespace _4915M_project
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.Gainsboro;
-            this.button1.Location = new System.Drawing.Point(7, 482);
+            this.button1.Location = new System.Drawing.Point(7, 548);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(237, 54);
             this.button1.TabIndex = 20;
             this.button1.Text = "Monthly Statement Payment";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // viewAirwayBill
+            // 
+            this.viewAirwayBill.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.viewAirwayBill.FlatAppearance.BorderSize = 0;
+            this.viewAirwayBill.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.viewAirwayBill.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.viewAirwayBill.ForeColor = System.Drawing.Color.Gainsboro;
+            this.viewAirwayBill.Location = new System.Drawing.Point(0, 410);
+            this.viewAirwayBill.Name = "viewAirwayBill";
+            this.viewAirwayBill.Size = new System.Drawing.Size(244, 48);
+            this.viewAirwayBill.TabIndex = 22;
+            this.viewAirwayBill.Text = "View Airway-bill";
+            this.viewAirwayBill.UseVisualStyleBackColor = false;
+            this.viewAirwayBill.Click += new System.EventHandler(this.viewAirwayBill_Click);
             // 
             // btnLogOut
             // 
@@ -162,7 +163,7 @@ namespace _4915M_project
             // 
             this.label4.AutoSize = true;
             this.label4.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label4.Location = new System.Drawing.Point(25, 395);
+            this.label4.Location = new System.Drawing.Point(25, 461);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(203, 12);
             this.label4.TabIndex = 17;
@@ -287,7 +288,7 @@ namespace _4915M_project
             this.btnCustomerInvoice.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCustomerInvoice.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCustomerInvoice.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnCustomerInvoice.Location = new System.Drawing.Point(7, 410);
+            this.btnCustomerInvoice.Location = new System.Drawing.Point(3, 476);
             this.btnCustomerInvoice.Name = "btnCustomerInvoice";
             this.btnCustomerInvoice.Size = new System.Drawing.Size(237, 54);
             this.btnCustomerInvoice.TabIndex = 11;

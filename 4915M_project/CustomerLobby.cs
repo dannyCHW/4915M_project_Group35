@@ -32,7 +32,7 @@ namespace _4915M_project
 
         private void btnCustomerCheck_Click(object sender, EventArgs e)
         {
-            openChildForm(new CustomerCheck_Cal());
+            openChildForm(new CustomerCheck_Cal()); 
         }
 
         private void btnPayment_Click(object sender, EventArgs e)
@@ -168,5 +168,12 @@ namespace _4915M_project
         {
 
         }
+
+        private void viewAirwayBill_Click(object sender, EventArgs e)
+        {
+            openChildForm(new viewAirwayBill());
+        }
+
+        
     }
 }
