@@ -232,7 +232,7 @@ namespace _4915M_project
             this.btnCustomerCheck.Name = "btnCustomerCheck";
             this.btnCustomerCheck.Size = new System.Drawing.Size(243, 54);
             this.btnCustomerCheck.TabIndex = 13;
-            this.btnCustomerCheck.Text = "Checking / Booking";
+            this.btnCustomerCheck.Text = "Checking / Payment";
             this.btnCustomerCheck.UseVisualStyleBackColor = false;
             this.btnCustomerCheck.Click += new System.EventHandler(this.btnCustomerCheck_Click);
             // 

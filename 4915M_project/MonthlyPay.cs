@@ -51,7 +51,7 @@ namespace _4915M_project
                     if (dt.Rows.Count > 0)
                     {
                         String status = dt.Rows[0]["orderStatus"].ToString();
-                        if (status == "Waiting Booking")
+                        if (status == "Waiting Payment")
                         {
 
                             dt.Clear();

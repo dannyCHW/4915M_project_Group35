@@ -61,7 +61,7 @@ namespace _4915M_project
                 {
                     String vStatus= dt.Rows[0]["orderStatus"].ToString();
                     String vPayStatus = dt.Rows[0]["paymentStatus"].ToString();
-                    int cusID = Convert.ToInt32(dt.Rows[0]["paymentStatus"]);
+                    int cusID = Convert.ToInt32(dt.Rows[0]["cusID"]);
                     if (vStatus != "Completed")
                     {
                         if (checkBox1.Checked && vStatus == "Waiting Payment") {
@@ -129,11 +129,11 @@ namespace _4915M_project
                         }
                         else {
                             dt.Clear();
-                            string strSqlStr = "Update ShipmentOrder set orderStatus = '" + comboStatus.Text + "', currentLocation = '" + comboLocation.Text + "' where orderID = " + orderID;
-                            OleDbDataAdapter dataAdapter2 = new OleDbDataAdapter(strSqlStr, connStr);
-                            dataAdapter2.Fill(dt);
+                            string strSqlStr12 = "Update ShipmentOrder set orderStatus = '" + comboStatus.Text + "', currentLocation = '" + comboLocation.Text + "' where orderID = " + orderID;
+                            OleDbDataAdapter dataAdapter12 = new OleDbDataAdapter(strSqlStr12, Program.connStr);
+                            dataAdapter12.Fill(dt);
                             MessageBox.Show("Update successful", "Sccessful Update", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            dataAdapter2.Dispose();
+                            dataAdapter12.Dispose();
                             dataAdapter.Dispose();
                             dt.Clear();
                         }
