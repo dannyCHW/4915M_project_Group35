@@ -29,7 +29,7 @@ namespace _4915M_project
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            DataTable dt = Program.DataTableVar;
+            DataTable dt = new DataTable();
             dt.Clear();
             string connStr = Program.connStr;
 

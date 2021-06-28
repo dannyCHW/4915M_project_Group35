@@ -47,8 +47,8 @@ namespace _4915M_project
 
         private void btnPay_Click(object sender, EventArgs e)
         {
-            DataTable dtChange = Program.DataTableVar;
-
+            DataTable dtChange = new DataTable();
+            
             dtChange.Clear();
             string sqlStr2 = "Update Payment,ShipmentOrder set paymentStatus='paid' where ShipmentOrder.orderID = Payment.paymentID AND paymentStatus = 'monthly' AND cusID = " + CustomerLogin.currentCustomerID + " ;";
             OleDbDataAdapter dataAdapterMon = new OleDbDataAdapter(sqlStr2, Program.connStr);

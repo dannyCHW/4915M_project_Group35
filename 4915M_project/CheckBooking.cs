@@ -36,7 +36,7 @@ namespace _4915M_project
         {
             if (cbo.Text != "")
             {
-                DataTable dt = Program.DataTableVar;
+                DataTable dt = new DataTable();
                 String connStr = "Provider=Microsoft.ACE.OLEDB.12.0;" + "Data Source=des.accdb";
                 int this_order = Convert.ToInt32(cbo.Text);
                 dt.Clear();
@@ -82,7 +82,7 @@ namespace _4915M_project
         private void CheckBooking_Load(object sender, EventArgs e)
         {
             cbo.Items.Clear();
-            DataTable dt = Program.DataTableVar;
+            DataTable dt = new DataTable();
             string connStr = Program.connStr;
             string sqlStr = "SELECT orderID FROM ShipmentOrder WHERE cusID=" + CustomerLogin.currentCustomerID + " AND orderStatus LIKE 'Waiting Pickup' OR orderStatus LIKE 'Waiting Payment' or orderStatus LIKE 'Waiting Booking';";
             OleDbDataAdapter dataAdapter = new OleDbDataAdapter(sqlStr, connStr);

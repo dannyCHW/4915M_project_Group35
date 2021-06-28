@@ -36,7 +36,7 @@ namespace _4915M_project
             else
             {
                 int orderID = Convert.ToInt32(txtOrder.Text);
-                DataTable dt = Program.DataTableVar;
+                DataTable dt = new DataTable();
                 dt.Clear();
                 string connStr = "Provider=Microsoft.ACE.OLEDB.12.0;" + "Data Source=des.accdb";
 

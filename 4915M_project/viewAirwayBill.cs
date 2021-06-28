@@ -19,7 +19,7 @@ namespace _4915M_project
     public partial class viewAirwayBill : Form
     {
 
-        String orderNumber = "";
+        protected String orderNumber = "";
         String sName, sAddress, sCompany, rCountry, areaCode, rAddress, rName, rCompany, rEmail, cPerson, cPhone, price;
         String gType, gDescription, gWeight, gPiece, gLength, gWidth, gHeight;
         DataTable goodDT = new DataTable();
@@ -41,6 +41,13 @@ namespace _4915M_project
 
         private void viewAirwayBill_Load(object sender, EventArgs e)
         {
+            orderNumber = null;
+            comboViewAirwaybill.Items.Clear();
+            
+            for(int i = 0; i < comboViewAirwaybill.Items.Count; i++)
+            {
+                comboViewAirwaybill.Items.RemoveAt(0);
+            }
             getRecord();
         }
 
@@ -56,22 +63,16 @@ namespace _4915M_project
 
         }
 
-        public void getAirwaybill()
-        {
-
-        }
-
         public void getRecord()
         {
-            DataTable dt = Program.DataTableVar;
+            DataTable dt = new DataTable();
             string connStr = Program.connStr;
 
-            string sqlStr = "SELECT orderID FROM ShipmentOrder WHERE cusID = " + CustomerLogin.currentCustomerID + " AND " + "orderStatus LIKE" + "'Completed'" + ";";
+            string sqlStr = "SELECT orderID FROM ShipmentOrder WHERE cusID = " + CustomerLogin.currentCustomerID + ";";
             OleDbDataAdapter dataAdapter = new OleDbDataAdapter(sqlStr, connStr);
             dataAdapter.Fill(dt);
             foreach (DataRow dr in dt.Rows)
             {
-                comboViewAirwaybill.Items.Clear();
                 comboViewAirwaybill.Items.Add(dr["orderID"].ToString());
             }
 
