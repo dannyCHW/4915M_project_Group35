@@ -323,9 +323,9 @@ namespace _4915M_project
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.button1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.button1.Location = new System.Drawing.Point(731, 595);
+            this.button1.Location = new System.Drawing.Point(227, 595);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(177, 53);
+            this.button1.Size = new System.Drawing.Size(451, 53);
             this.button1.TabIndex = 112;
             this.button1.Text = "Download Invoice";
             this.button1.UseVisualStyleBackColor = false;

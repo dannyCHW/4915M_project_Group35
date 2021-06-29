@@ -42,7 +42,7 @@ namespace _4915M_project
             else {
                 int orderID = Convert.ToInt32(cboOrderID.SelectedItem);
 
-                DataTable dt = Program.DataTableVar;
+                DataTable dt = new DataTable();
                 String connStr = "Provider=Microsoft.ACE.OLEDB.12.0;" + "Data Source=des.accdb";
 
                 string sqlStr = "Select orderStatus , rejectReason from ShipmentOrder where orderID = " + orderID + ";";
@@ -124,7 +124,7 @@ namespace _4915M_project
         private void CustomerCheck_Cal_Load(object sender, EventArgs e)
         {
             cboOrderID.Items.Clear();
-            DataTable dt = Program.DataTableVar;
+            DataTable dt = new DataTable();
             string connStr = Program.connStr;
             string sqlStr = "SELECT orderID FROM ShipmentOrder WHERE cusID=" + CustomerLogin.currentCustomerID + ";";
             OleDbDataAdapter dataAdapter = new OleDbDataAdapter(sqlStr, connStr);

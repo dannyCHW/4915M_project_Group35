@@ -32,7 +32,7 @@ namespace _4915M_project
 
         public DataTable getRecords()
         {
-            DataTable dt = Program.DataTableVar;
+            DataTable dt = new DataTable();
             String connStr = Program.connStr;
             string sqlStr = "SELECT * FROM ShipmentOrder WHERE orderStatus LIKE 'processing';";
             dt.Clear();
@@ -60,7 +60,7 @@ namespace _4915M_project
         public void sendEmail(String id)
         {
 
-            DataTable dt = Program.DataTableVar;
+            DataTable dt = new DataTable();
             String connStr = Program.connStr;
             string sqlStr = "SELECT receiverEmail FROM ShipmentOrder WHERE orderID = " + id + ";";
             dt.Clear();

@@ -209,7 +209,7 @@ namespace _4915M_project
 
         public void addShipmentOrder()
         {
-            DataTable dt = Program.DataTableVar;
+            DataTable dt = new DataTable();
             string connStr = Program.connStr;
 
             string sqlStr = "Insert into ShipmentOrder " +
@@ -272,7 +272,7 @@ namespace _4915M_project
 
         public void addGoodToShipmentOrder()
         {
-            DataTable dt = Program.DataTableVar;
+            DataTable dt = new DataTable();
             string connStr = Program.connStr;
             OleDbDataAdapter dataAdapter;
             string sqlStr;
@@ -386,7 +386,7 @@ namespace _4915M_project
 
         public void addPayment()
         {
-            DataTable dt = Program.DataTableVar;
+            DataTable dt = new DataTable();
             string connStr = Program.connStr;
 
             string sqlStr = "Insert into Payment " +

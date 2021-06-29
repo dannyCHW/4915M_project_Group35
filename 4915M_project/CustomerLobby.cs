@@ -14,15 +14,34 @@ namespace _4915M_project
     public partial class CustomerLobby : Form
     {
         private Form activeForm = null;
-
+        
         public CustomerLobby()
         {
             InitializeComponent();
+            
         }
 
         private void btnAirwayBill_Click(object sender, EventArgs e)
         {
-            openChildForm(new AirwayBill1());
+            Form form = new AirwayBill1();
+            
+            try
+            {
+                var frm = Application.OpenForms["AirwayBill1"];
+                if (frm == null)
+                {
+                    form = new AirwayBill1();
+                }
+                openChildForm(form);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            
+
+
+            
         }
 
         private void btnAirwayBill2_Click(object sender, EventArgs e)
@@ -171,6 +190,7 @@ namespace _4915M_project
 
         private void viewAirwayBill_Click(object sender, EventArgs e)
         {
+            
             openChildForm(new viewAirwayBill());
         }
 

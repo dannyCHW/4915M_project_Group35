@@ -21,7 +21,7 @@ namespace _4915M_project
 
         private void btnCreateAccout_Click_1(object sender, EventArgs e)
         {
-            DataTable dt = Program.DataTableVar;
+            DataTable dt = new DataTable();
             string connStr = Program.connStr;
             if (txtPhone.Text == "" || txtEmail.Text == "" || txtPwd2.Text == "" || txtPwd.Text == "" || txtName.Text == "")
             {

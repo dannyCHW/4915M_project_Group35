@@ -30,6 +30,10 @@ namespace _4915M_project
         private void InitializeComponent()
         {
             this.AirwayBillPanel1 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.dgvGoods = new System.Windows.Forms.DataGridView();
+            this.txtReCountry = new System.Windows.Forms.TextBox();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.txtSenderCountry = new System.Windows.Forms.TextBox();
             this.txtReceiverEmail = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -49,7 +53,7 @@ namespace _4915M_project
             this.label13 = new System.Windows.Forms.Label();
             this.txtReceiverName = new System.Windows.Forms.TextBox();
             this.label32 = new System.Windows.Forms.Label();
-            this.btnGoNext = new System.Windows.Forms.Button();
+            this.btnDownloadBill = new System.Windows.Forms.Button();
             this.txtContactPhone = new System.Windows.Forms.TextBox();
             this.label28 = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
@@ -57,10 +61,6 @@ namespace _4915M_project
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.comboViewAirwaybill = new System.Windows.Forms.ComboBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.txtReCountry = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.dgvGoods = new System.Windows.Forms.DataGridView();
             this.AirwayBillPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGoods)).BeginInit();
             this.SuspendLayout();
@@ -92,7 +92,7 @@ namespace _4915M_project
             this.AirwayBillPanel1.Controls.Add(this.label13);
             this.AirwayBillPanel1.Controls.Add(this.txtReceiverName);
             this.AirwayBillPanel1.Controls.Add(this.label32);
-            this.AirwayBillPanel1.Controls.Add(this.btnGoNext);
+            this.AirwayBillPanel1.Controls.Add(this.btnDownloadBill);
             this.AirwayBillPanel1.Controls.Add(this.txtContactPhone);
             this.AirwayBillPanel1.Controls.Add(this.label28);
             this.AirwayBillPanel1.Controls.Add(this.label30);
@@ -107,6 +107,45 @@ namespace _4915M_project
             this.AirwayBillPanel1.Size = new System.Drawing.Size(920, 660);
             this.AirwayBillPanel1.TabIndex = 96;
             this.AirwayBillPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.AirwayBillPanel1_Paint);
+            // 
+            // label4
+            // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.label4.Location = new System.Drawing.Point(24, 586);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(66, 19);
+            this.label4.TabIndex = 175;
+            this.label4.Text = "*Goods";
+            // 
+            // dgvGoods
+            // 
+            this.dgvGoods.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.dgvGoods.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvGoods.Location = new System.Drawing.Point(26, 608);
+            this.dgvGoods.Name = "dgvGoods";
+            this.dgvGoods.RowTemplate.Height = 24;
+            this.dgvGoods.Size = new System.Drawing.Size(866, 176);
+            this.dgvGoods.TabIndex = 174;
+            // 
+            // txtReCountry
+            // 
+            this.txtReCountry.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtReCountry.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtReCountry.Location = new System.Drawing.Point(472, 190);
+            this.txtReCountry.Name = "txtReCountry";
+            this.txtReCountry.ReadOnly = true;
+            this.txtReCountry.Size = new System.Drawing.Size(420, 26);
+            this.txtReCountry.TabIndex = 173;
+            // 
+            // panel1
+            // 
+            this.panel1.Location = new System.Drawing.Point(3, 843);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(158, 62);
+            this.panel1.TabIndex = 172;
             // 
             // txtSenderCountry
             // 
@@ -320,20 +359,21 @@ namespace _4915M_project
             this.label32.TabIndex = 156;
             this.label32.Text = "Receiver Name";
             // 
-            // btnGoNext
+            // btnDownloadBill
             // 
-            this.btnGoNext.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnGoNext.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.btnGoNext.FlatAppearance.BorderSize = 0;
-            this.btnGoNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGoNext.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGoNext.ForeColor = System.Drawing.Color.White;
-            this.btnGoNext.Location = new System.Drawing.Point(191, 822);
-            this.btnGoNext.Name = "btnGoNext";
-            this.btnGoNext.Size = new System.Drawing.Size(550, 50);
-            this.btnGoNext.TabIndex = 147;
-            this.btnGoNext.Text = "Download Airwaybill";
-            this.btnGoNext.UseVisualStyleBackColor = false;
+            this.btnDownloadBill.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnDownloadBill.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.btnDownloadBill.FlatAppearance.BorderSize = 0;
+            this.btnDownloadBill.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDownloadBill.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDownloadBill.ForeColor = System.Drawing.Color.White;
+            this.btnDownloadBill.Location = new System.Drawing.Point(191, 822);
+            this.btnDownloadBill.Name = "btnDownloadBill";
+            this.btnDownloadBill.Size = new System.Drawing.Size(550, 50);
+            this.btnDownloadBill.TabIndex = 147;
+            this.btnDownloadBill.Text = "Download Airwaybill";
+            this.btnDownloadBill.UseVisualStyleBackColor = false;
+            this.btnDownloadBill.Click += new System.EventHandler(this.btnDownloadBill_Click);
             // 
             // txtContactPhone
             // 
@@ -415,45 +455,6 @@ namespace _4915M_project
             this.comboViewAirwaybill.TabIndex = 145;
             this.comboViewAirwaybill.SelectedIndexChanged += new System.EventHandler(this.comboViewAirwaybill_SelectedIndexChanged);
             // 
-            // panel1
-            // 
-            this.panel1.Location = new System.Drawing.Point(3, 843);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(158, 62);
-            this.panel1.TabIndex = 172;
-            // 
-            // txtReCountry
-            // 
-            this.txtReCountry.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtReCountry.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtReCountry.Location = new System.Drawing.Point(472, 190);
-            this.txtReCountry.Name = "txtReCountry";
-            this.txtReCountry.ReadOnly = true;
-            this.txtReCountry.Size = new System.Drawing.Size(420, 26);
-            this.txtReCountry.TabIndex = 173;
-            // 
-            // label4
-            // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.label4.Location = new System.Drawing.Point(24, 586);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(66, 19);
-            this.label4.TabIndex = 175;
-            this.label4.Text = "*Goods";
-            // 
-            // dgvGoods
-            // 
-            this.dgvGoods.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.dgvGoods.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvGoods.Location = new System.Drawing.Point(26, 608);
-            this.dgvGoods.Name = "dgvGoods";
-            this.dgvGoods.RowTemplate.Height = 24;
-            this.dgvGoods.Size = new System.Drawing.Size(866, 176);
-            this.dgvGoods.TabIndex = 174;
-            // 
             // viewAirwayBill
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -493,7 +494,7 @@ namespace _4915M_project
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox txtReceiverName;
         private System.Windows.Forms.Label label32;
-        private System.Windows.Forms.Button btnGoNext;
+        private System.Windows.Forms.Button btnDownloadBill;
         private System.Windows.Forms.TextBox txtContactPhone;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.Label label30;

@@ -86,7 +86,7 @@ namespace _4915M_project
             }
             else
             {
-                DataTable dt = Program.DataTableVar;
+                DataTable dt = new DataTable();
 
                 String name = txtStaffName.Text;
                 String pwd = txtPassword.Text;
@@ -101,7 +101,7 @@ namespace _4915M_project
                 pwd = null;
                 position = null;
 
-                DataTable dt2 = Program.DataTableVar;
+                DataTable dt2 = new DataTable();
                 string sqlString2 = "Select stfID from Staff where stfName = '"+ txtStaffName.Text +"' AND stfPassword = '" + txtPassword.Text + "' And  stfPosition = '" + comboBox1.Text + "'; ";
                 OleDbDataAdapter dataAdapter2 = new OleDbDataAdapter(sqlString2, Program.connStr);
                 dataAdapter2.Fill(dt2);

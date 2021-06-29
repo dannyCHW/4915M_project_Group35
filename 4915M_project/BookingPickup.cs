@@ -21,7 +21,7 @@ namespace _4915M_project
         private void BookingPickup_Load(object sender, EventArgs e)
         {
             cbo.Items.Clear();
-            DataTable dt = Program.DataTableVar;
+            DataTable dt = new DataTable();
             string connStr = Program.connStr;
             string sqlStr = "SELECT orderID FROM ShipmentOrder WHERE cusID=" + CustomerLogin.currentCustomerID + " AND (orderStatus = 'Waiting Pickup' OR orderStatus = 'Waiting Payment'OR orderStatus = 'Waiting Booking');";
             OleDbDataAdapter dataAdapter = new OleDbDataAdapter(sqlStr, connStr);
@@ -55,7 +55,7 @@ namespace _4915M_project
 
             if (cbo.Text != "")
             {
-                DataTable dt = Program.DataTableVar;
+                DataTable dt = new DataTable();
                 String connStr = "Provider=Microsoft.ACE.OLEDB.12.0;" + "Data Source=des.accdb";
                 int this_order = Convert.ToInt32(cbo.Text);
                 dt.Clear();

@@ -48,7 +48,7 @@ namespace _4915M_project
                 MessageBox.Show("You need confirm this action", "Fail Action", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else {
-                DataTable dt = Program.DataTableVar;
+                DataTable dt = new DataTable();
                 String connStr = "Provider=Microsoft.ACE.OLEDB.12.0;" + "Data Source=des.accdb";
                 int vStfID = Convert.ToInt32(txtStaffID.Text);
 

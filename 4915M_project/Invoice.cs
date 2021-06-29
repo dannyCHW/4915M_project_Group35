@@ -131,15 +131,15 @@ namespace _4915M_project
 
         public void getRecord()
         {
-            DataTable dt = Program.DataTableVar;
+            DataTable dt = new DataTable();
             string connStr = Program.connStr;
 
             string sqlStr = "SELECT orderID FROM ShipmentOrder WHERE cusID = " + CustomerLogin.currentCustomerID + " AND " + "orderStatus LIKE" + "'Completed'" + ";";
             OleDbDataAdapter dataAdapter = new OleDbDataAdapter(sqlStr, connStr);
             dataAdapter.Fill(dt);
+            
             foreach (DataRow dr in dt.Rows)
             {
-                comboInvoice.Items.Clear();
                 comboInvoice.Items.Add(dr["orderID"].ToString());
             }
 
@@ -228,6 +228,7 @@ namespace _4915M_project
         {
             orderNumber = null;
             comboInvoice.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboInvoice.Items.Clear();
             getRecord();
         }
 
