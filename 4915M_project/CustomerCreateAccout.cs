@@ -29,14 +29,14 @@ namespace _4915M_project
             }
             else if (!this.txtEmail.Text.Contains('@') || !this.txtEmail.Text.Contains('.'))
             {
-                MessageBox.Show("Please Enter A Valid Email", "Invalid Email", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Please enter a valid email", "Invalid Email", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else if (txtPhone.Text.Length < 7 || System.Text.RegularExpressions.Regex.IsMatch(txtPhone.Text, "[^0-9]"))
             {
-                MessageBox.Show("Please Enter A Valid Phone Number", "Invalid Phone", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Please enter a valid phone number", "Invalid Phone", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else if (txtName.Text == "" || System.Text.RegularExpressions.Regex.IsMatch(txtPhone.Text, "[^0-9]")|| txtName.Text.Length<6) {
-                    MessageBox.Show("Please Enter A Valid Name", "Invalid Name", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Please enter a valid name", "Invalid Name", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             else if (txtPwd.Text.Length < 6) {
                 MessageBox.Show("The password cannot short than 6 digit", "Invalid Password", MessageBoxButtons.OK, MessageBoxIcon.Error);

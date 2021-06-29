@@ -117,7 +117,7 @@ namespace _4915M_project
                 } 
             }
             else {
-                MessageBox.Show("Must input the order number", "Fail Login", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Must input the order number", "Fail Action", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 

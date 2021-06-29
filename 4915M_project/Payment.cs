@@ -35,7 +35,7 @@ namespace _4915M_project
 
         private void btnCredit_Click(object sender, EventArgs e)
         {
-            DialogResult diaglog = MessageBox.Show("Now jumping to oayment gateway", "Payment Gateway", MessageBoxButtons.YesNo);
+            DialogResult diaglog = MessageBox.Show("Now jumping to payment gateway", "Payment Gateway", MessageBoxButtons.YesNo);
             if (diaglog == DialogResult.Yes) {
 
                 PaymentGateway paymentgateway = new PaymentGateway();

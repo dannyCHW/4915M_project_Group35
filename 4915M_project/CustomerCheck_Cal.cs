@@ -76,7 +76,7 @@ namespace _4915M_project
                         dataAdapter.Dispose();
 
                     }
-                    else if (status == "Rejected")
+                    else if (status == "Reject")
                     {
                         label9.Visible = true;
                         txtReason.Visible = true;

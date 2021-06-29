@@ -124,7 +124,7 @@ namespace _4915M_project
             this.btnPayment.Name = "btnPayment";
             this.btnPayment.Size = new System.Drawing.Size(338, 50);
             this.btnPayment.TabIndex = 123;
-            this.btnPayment.Text = "Confirm and go to payment ->";
+            this.btnPayment.Text = "Confirm And Go To Payment ->";
             this.btnPayment.UseVisualStyleBackColor = false;
             this.btnPayment.Click += new System.EventHandler(this.btnPayment_Click);
             // 
