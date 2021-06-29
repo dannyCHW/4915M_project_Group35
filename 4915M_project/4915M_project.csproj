@@ -72,6 +72,9 @@
     <Reference Include="itextsharp, Version=5.5.13.2, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
       <HintPath>..\packages\iTextSharp.5.5.13.2\lib\itextsharp.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -155,6 +158,12 @@
     </Compile>
     <Compile Include="EBAForm.Designer.cs">
       <DependentUpon>EBAForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="excelAirwayBill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="excelAirwayBill.Designer.cs">
+      <DependentUpon>excelAirwayBill.cs</DependentUpon>
     </Compile>
     <Compile Include="Good.cs" />
     <Compile Include="Invoice.cs">
@@ -300,6 +309,9 @@
     <EmbeddedResource Include="EBAForm.resx">
       <DependentUpon>EBAForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="excelAirwayBill.resx">
+      <DependentUpon>excelAirwayBill.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Invoice.resx">
       <DependentUpon>Invoice.cs</DependentUpon>
     </EmbeddedResource>
@@ -390,6 +402,20 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Logo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

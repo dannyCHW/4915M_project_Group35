@@ -23,7 +23,7 @@ namespace _4915M_project
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new Main());
-            Application.Run(new MultiFormContext(new Main(), new StaffLogin()));
+            Application.Run(new MultiFormContext(new StaffLogin(), new Main(), new excelAirwayBill()));
         }
 
         public class MultiFormContext : ApplicationContext
