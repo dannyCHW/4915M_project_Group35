@@ -63,18 +63,18 @@ namespace _4915M_project
                     }
                     else
                     {
-                        MessageBox.Show("The order is not processing", "Fail Check", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        MessageBox.Show("The order is not processing", "Fail Track", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Cannot found this order", "Fail Check", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Cannot found this order", "Fail Track", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
 
             catch (Exception)
             {
-                MessageBox.Show("May be a wrong number , please check yor order", "Fail Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("May be is a wrong number , please check your order", "Fail Track", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
 
         }

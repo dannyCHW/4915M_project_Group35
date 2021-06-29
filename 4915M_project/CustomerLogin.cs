@@ -48,13 +48,22 @@ namespace _4915M_project
                 this.Close();
             }
 
+
             string sqlStr = "Select cusID, cusName, cusEmail, cusPassword from Customer where cusEmail LIKE '" + email + "'";
             OleDbDataAdapter dataAdapter = new OleDbDataAdapter(sqlStr, connStr);
             dataAdapter.Fill(dt);
 
             try
             {
-                if (dt.Rows.Count > 0){
+                if (txtEmail.Text.ToString() == "" || txtEmail.Text.ToString() == "Email")
+                {
+                    MessageBox.Show("You need to input email and password to login", "Attention", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else if (txtPassword.Text.ToString() == "" || txtPassword.Text.ToString() == "Password")
+                {
+                    MessageBox.Show("You need to input email and password to login", "Attention", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else if (dt.Rows.Count > 0){
                     vemail = dt.Rows[0]["cusEmail"].ToString();
                     vpswd = dt.Rows[0]["cusPassword"].ToString();
                     //Console.WriteLine(vpswd + vemail);
@@ -80,6 +89,7 @@ namespace _4915M_project
                 } 
                 else
                 {
+                    MessageBox.Show("Wrong password or email", "Attention", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     throw new Exception("");
                 }
                 
@@ -87,7 +97,6 @@ namespace _4915M_project
             catch (Exception)
             {
                 //temp message, maybe change to messageBox?
-                Console.WriteLine("No such account, plz got to register");
             }
 
             dataAdapter.Dispose();

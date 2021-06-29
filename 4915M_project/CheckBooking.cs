@@ -52,7 +52,7 @@ namespace _4915M_project
                     {
                         dataAdapter.Dispose();
                         dt.Clear();
-                        MessageBox.Show("No booking of this order , Please create a booking", "Fail Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("No booking of this order , Please create a booking", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     else if (status == "Waiting Pickup")
                     {
@@ -69,13 +69,13 @@ namespace _4915M_project
                 }
                 else
                 {
-                    MessageBox.Show("Cannot found this order", "Fail Login", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Cannot found this order", "Fail Action", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
 
             }
             else
             {
-                MessageBox.Show("Must input the order number", "Fail Login", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("You need to select the order", "Fail Action", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 

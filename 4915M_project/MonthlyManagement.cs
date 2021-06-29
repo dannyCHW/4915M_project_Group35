@@ -30,7 +30,7 @@ namespace _4915M_project
             DataTable dtmonth = new DataTable();
             dtmonth.Clear();
 
-            string sqlStr = "Select orderID,price,dateOfOrder from ShipmentOrder,Payment where ShipmentORder.orderID = Payment.paymentID AND paymentStatus = 'monthly' AND cusID = " + CustomerLogin.currentCustomerID + ";";
+            string sqlStr = "Select orderID,price,dateOfPickUp from ShipmentOrder,Payment where ShipmentORder.orderID = Payment.paymentID AND paymentStatus = 'monthly' AND cusID = " + CustomerLogin.currentCustomerID + ";";
 
             OleDbDataAdapter dataAdapter = new OleDbDataAdapter(sqlStr, Program.connStr);
             dataAdapter.Fill(dtmonth);
