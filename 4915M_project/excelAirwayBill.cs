@@ -67,7 +67,7 @@ namespace _4915M_project
 
                     if (((Excel.Range)excel_WS_good.Columns[1]).Text.ToString().Length <= 0)
                     {
-                        MessageBox.Show("null asdasd", "Message");
+                        MessageBox.Show("null", "Message");
                     }
                     else
                     {
