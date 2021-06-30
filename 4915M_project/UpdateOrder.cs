@@ -44,18 +44,19 @@ namespace _4915M_project
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            int orderID = Convert.ToInt32(txtOrder.Text);
-            DataTable dt = Program.DataTableVar;
-            dt.Clear();
-            string connStr = "Provider=Microsoft.ACE.OLEDB.12.0;" + "Data Source=des.accdb";
 
-            string sqlStr = "Select orderStatus,paymentStatus,cusID from ShipmentOrder,Payment where ShipmentOrder.orderID = Payment.paymentID and ShipmentOrder.orderID =" + orderID;
-
-            OleDbDataAdapter dataAdapter = new OleDbDataAdapter(sqlStr, connStr);
-            dataAdapter.Fill(dt);
 
             try
             {
+                int orderID = Convert.ToInt32(txtOrder.Text);
+                DataTable dt = Program.DataTableVar;
+                dt.Clear();
+                string connStr = "Provider=Microsoft.ACE.OLEDB.12.0;" + "Data Source=des.accdb";
+
+                string sqlStr = "Select orderStatus,paymentStatus,cusID from ShipmentOrder,Payment where ShipmentOrder.orderID = Payment.paymentID and ShipmentOrder.orderID =" + orderID;
+
+                OleDbDataAdapter dataAdapter = new OleDbDataAdapter(sqlStr, connStr);
+                dataAdapter.Fill(dt);
 
                 if (dt.Rows.Count > 0)
                 {
@@ -64,7 +65,12 @@ namespace _4915M_project
                     int cusID = Convert.ToInt32(dt.Rows[0]["cusID"]);
                     if (vStatus != "Completed")
                     {
-                        if (checkBox1.Checked && vStatus == "Waiting Payment") {
+                        if (comboStatus.Text.ToString() == "Payment" && !checkBox1.Checked && !checkBox2.Checked)
+                        {
+                            MessageBox.Show("Update order status cannot use payment", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        }
+                        else if (checkBox1.Checked && vStatus == "Waiting Payment")
+                        {
                             dt.Clear();
                             string strSqlStr = "Update ShipmentOrder set orderStatus = 'Waiting Booking' where orderID = " + orderID + ";";
                             string strSqlStr2 = "Update Payment set paymentStatus = 'paid' where paymentID = " + orderID + ";";
@@ -76,7 +82,9 @@ namespace _4915M_project
 
                             MessageBox.Show("Cash payment Successful", "Sccessful Update", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                        } else if (checkBox2.Checked && vPayStatus == "extenal") {// has change
+                        }
+                        else if (checkBox2.Checked && vPayStatus == "extenal")
+                        {// has change
                             dt.Clear();
                             string strSqlStr = "Update ShipmentOrder set orderStatus = 'Completed' where orderID = " + orderID + ";";
                             string strSqlStr2 = "Update Payment set paymentStatus = 'paid' where paymentID = " + orderID + ";";
@@ -87,8 +95,9 @@ namespace _4915M_project
                             dataAdapter3.Fill(dt);
 
                             MessageBox.Show("Extenal payment successful", "Sccessful Update", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        } 
-                        else if (checkBox1.Checked && vStatus == "Addition") {
+                        }
+                        else if (checkBox1.Checked && vPayStatus == "addition")
+                        {
                             dt.Clear();
                             string strSqlStr7 = "Update ShipmentOrder set orderStatus = 'Processing' where orderID = " + orderID + ";";
                             string strSqlStr8 = "Update Payment set paymentStatus = 'paid' where paymentID = " + orderID + ";";
@@ -105,7 +114,8 @@ namespace _4915M_project
                             MessageBox.Show("You need to confirm the checkbox", "Sccessful Update", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                         }
-                        else if (comboStatus.Text.ToString() == "Completed" && checkBox3.Checked) {
+                        else if (comboStatus.Text.ToString() == "Completed" && checkBox3.Checked)
+                        {
                             dt.Clear();
                             string strSqlStr7 = "Update ShipmentOrder set orderStatus = '" + comboStatus.Text + "', currentLocation = '" + comboLocation.Text + "' where orderID = " + orderID;
                             OleDbDataAdapter dataAdapter7 = new OleDbDataAdapter(strSqlStr7, connStr);
@@ -117,17 +127,18 @@ namespace _4915M_project
                             /* send email (has been sign) , if that not you , cal tell:xxxxxxxx */
 
                             //get recEmail
-                            string strSqlStr11 = "select cusEmail from Customer where cusID = "+cusID.ToString();
+                            string strSqlStr11 = "select cusEmail from Customer where cusID = " + cusID.ToString();
                             OleDbDataAdapter dataAdapter11 = new OleDbDataAdapter(strSqlStr11, connStr);
                             dataAdapter11.Fill(dt);
 
                             String recEmail = dt.Rows[0]["cusEmail"].ToString();
 
 
-                            sendEmail("ededelivery35@gmail.com", "sdpgroup35", recEmail, "Your package has been receiver", "Your package has been receive, orderID is "+orderID.ToString() +"\n \n If that not you, please contect the customer service tel: 95422996.");
+                            sendEmail("ededelivery35@gmail.com", "sdpgroup35", recEmail, "Your package has been receiver", "Your package has been receive, orderID is " + orderID.ToString() + "\n \n If that not you, please contect the customer service tel: 95422996.");
 
                         }
-                        else {
+                        else if (comboStatus.Text.ToString() == "Processing")
+                        {
                             dt.Clear();
                             string strSqlStr12 = "Update ShipmentOrder set orderStatus = '" + comboStatus.Text + "', currentLocation = '" + comboLocation.Text + "' where orderID = " + orderID;
                             OleDbDataAdapter dataAdapter12 = new OleDbDataAdapter(strSqlStr12, Program.connStr);
@@ -136,6 +147,9 @@ namespace _4915M_project
                             dataAdapter12.Dispose();
                             dataAdapter.Dispose();
                             dt.Clear();
+                        } 
+                        else {
+                            MessageBox.Show("This order cannot pay , please check the payment status and order status", "Fail Action", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         }
 
 
@@ -155,7 +169,7 @@ namespace _4915M_project
             }
             catch (Exception)
             {
-                MessageBox.Show("Something Wrong, may be wrong payment method", "Fail Action", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("You need to input orde ", "Fail Action", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
         }
@@ -185,19 +199,15 @@ namespace _4915M_project
         {
             if (checkBox2.Checked && checkBox1.Checked) {
                 checkBox1.Checked = false;
-                MessageBox.Show("You cannot select more than one check box", "Fail Action", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("You cannot select more than one payment method", "Fail Action", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }if (checkBox2.Checked || checkBox1.Checked) {
                 label5.Visible = false;
                 comboLocation.Visible = false;
-                comboStatus.Visible = false;
-                label4.Visible = false;
             }
             if (!checkBox2.Checked && !checkBox1.Checked)
             {
                 label5.Visible = true;
                 comboLocation.Visible = true;
-                comboStatus.Visible = true;
-                label4.Visible = true;
             }
         }
 
@@ -207,26 +217,35 @@ namespace _4915M_project
             {
                 checkBox2.Checked = false;
 
-                MessageBox.Show("You cannot select more than one check box", "Fail Action", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("You cannot select more than one payment method", "Fail Action", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             if (checkBox2.Checked || checkBox1.Checked)
             {
                 label5.Visible = false;
                 comboLocation.Visible = false;
-                comboStatus.Visible = false;
-                label4.Visible = false;
+
             }
             if (!checkBox2.Checked && !checkBox1.Checked)
             {
                 label5.Visible = true;
                 comboLocation.Visible = true;
-                comboStatus.Visible = true;
-                label4.Visible = true;
+
             }
         }
 
         private void comboStatus_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (comboStatus.Text.ToString() != "Processing")
+            {
+                checkBox2.Visible = false;
+                checkBox1.Visible = false;
+                comboLocation.Visible = true;
+                label5.Visible = true;
+            }
+            if (comboStatus.Text.ToString() != "Payment") {
+                checkBox2.Visible = false;
+                checkBox1.Visible = false;
+            }
             if (comboStatus.Text.ToString() == "Completed")
             {
                 checkBox1.Visible = false;
@@ -237,6 +256,8 @@ namespace _4915M_project
                 checkBox1.Visible = true;
                 checkBox2.Visible = true;
                 checkBox3.Visible = false;
+                label5.Visible = false;
+                comboLocation.Visible = false;
             }
             else {
                 checkBox3.Visible = false;

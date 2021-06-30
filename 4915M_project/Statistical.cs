@@ -85,7 +85,7 @@ namespace _4915M_project
                 dt.Clear();
                 string sqlStr = "Select price,dateOfOrder from ShipmentOrder,Payment where ShipmentOrder.orderID = Payment.paymentID AND paymentStatus = 'paid';";
 
-                DateTime expected = (DateTime)timeDay.Value;
+                DateTime expected = (DateTime)timeMonth.Value;
                 OleDbDataAdapter dataAdapter = new OleDbDataAdapter(sqlStr, Program.connStr);
                 dataAdapter.Fill(dt);
                 int loop = 0, count = 0, price = 0;

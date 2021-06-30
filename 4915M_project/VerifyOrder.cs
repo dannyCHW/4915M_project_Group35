@@ -58,7 +58,7 @@ namespace _4915M_project
                 btnLoad_Click(sender, e);
             }
             catch {
-                MessageBox.Show("Something Wrong", "Verify Fail", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Need select a order.", "Verify Fail", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
 
@@ -87,7 +87,7 @@ namespace _4915M_project
                 dataGridView1.DataSource = dt2;
             }
             catch {
-                MessageBox.Show("Don't press it indiscriminately", "Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Don't press it indiscriminately", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -128,7 +128,7 @@ namespace _4915M_project
             }
             catch
             {
-                MessageBox.Show("Something Wrong", "Verify Fail", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Need select a order", "Verify Fail", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
     }

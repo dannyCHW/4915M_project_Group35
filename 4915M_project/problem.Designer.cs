@@ -134,9 +134,9 @@ namespace _4915M_project
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
             this.label4.Location = new System.Drawing.Point(642, 166);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(198, 38);
+            this.label4.Size = new System.Drawing.Size(201, 38);
             this.label4.TabIndex = 91;
-            this.label4.Text = "Real weight";
+            this.label4.Text = "Real Weight";
             // 
             // label32
             // 

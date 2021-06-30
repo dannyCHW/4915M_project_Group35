@@ -30,6 +30,7 @@ namespace _4915M_project
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.checkBox3 = new System.Windows.Forms.CheckBox();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.label21 = new System.Windows.Forms.Label();
@@ -43,7 +44,6 @@ namespace _4915M_project
             this.comboStatus = new System.Windows.Forms.ComboBox();
             this.comboLocation = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -69,6 +69,18 @@ namespace _4915M_project
             this.panel1.Size = new System.Drawing.Size(1186, 638);
             this.panel1.TabIndex = 0;
             // 
+            // checkBox3
+            // 
+            this.checkBox3.AutoSize = true;
+            this.checkBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
+            this.checkBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.checkBox3.Location = new System.Drawing.Point(211, 364);
+            this.checkBox3.Name = "checkBox3";
+            this.checkBox3.Size = new System.Drawing.Size(848, 30);
+            this.checkBox3.TabIndex = 125;
+            this.checkBox3.Text = "The Goods Have Been Receive And The Signature Has Also Been Handed In";
+            this.checkBox3.UseVisualStyleBackColor = true;
+            // 
             // checkBox2
             // 
             this.checkBox2.AutoSize = true;
@@ -76,10 +88,11 @@ namespace _4915M_project
             this.checkBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
             this.checkBox2.Location = new System.Drawing.Point(670, 364);
             this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(212, 30);
+            this.checkBox2.Size = new System.Drawing.Size(220, 30);
             this.checkBox2.TabIndex = 124;
-            this.checkBox2.Text = "Extenal Payment";
+            this.checkBox2.Text = "External Payment";
             this.checkBox2.UseVisualStyleBackColor = true;
+            this.checkBox2.Visible = false;
             this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
             // 
             // checkBox1
@@ -93,6 +106,7 @@ namespace _4915M_project
             this.checkBox1.TabIndex = 123;
             this.checkBox1.Text = "Cash Payment";
             this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.Visible = false;
             this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // label21
@@ -209,7 +223,6 @@ namespace _4915M_project
             this.comboStatus.Items.AddRange(new object[] {
             "Processing",
             "Completed",
-            "Rejected",
             "Payment"});
             this.comboStatus.Location = new System.Drawing.Point(303, 302);
             this.comboStatus.Name = "comboStatus";
@@ -244,18 +257,6 @@ namespace _4915M_project
             this.label3.Size = new System.Drawing.Size(217, 36);
             this.label3.TabIndex = 84;
             this.label3.Text = "Update Status:";
-            // 
-            // checkBox3
-            // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
-            this.checkBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.checkBox3.Location = new System.Drawing.Point(219, 364);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(848, 30);
-            this.checkBox3.TabIndex = 125;
-            this.checkBox3.Text = "The Goods Have Been Receive And The Signature Has Also Been Handed In";
-            this.checkBox3.UseVisualStyleBackColor = true;
             // 
             // UpdateOrder
             // 
