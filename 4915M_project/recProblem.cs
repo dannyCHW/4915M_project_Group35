@@ -86,20 +86,24 @@ namespace _4915M_project
         {
             try
             {
-                DataTable dt3 = StaffLogin.DataTableVar2;
-                dt3.Clear();
-                string sqqlStr = "Update ShipmentOrder,solveProblemStaffID set orderStatus = 'On Problem', solveProblemStaffID = " + Main.staffID + " where orderID = " + Convert.ToInt32(txtID.Text) + "; ";
-                OleDbDataAdapter dataAdapter3 = new OleDbDataAdapter(sqqlStr, Program.connStr);
-                dataAdapter3.Fill(dt3);
+                if (txtStatus.Text.ToString() != "Completed") {
+                    MessageBox.Show("The order status need to be 'Completed' , please check the order status again", "Action Fail", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else {
+                    DataTable dt3 = StaffLogin.DataTableVar2;
+                    dt3.Clear();
+                    string sqqlStr = "Update ShipmentOrder set  orderStatus = 'On Problem', solveProblemStaffID = " + Main.staffID + " where orderID = " + Convert.ToInt32(txtID.Text) + "; ";
+                    OleDbDataAdapter dataAdapter3 = new OleDbDataAdapter(sqqlStr, Program.connStr);
+                    dataAdapter3.Fill(dt3);
 
-                recProblem_Load(sender, e);
+                    recProblem_Load(sender, e);
 
-                MessageBox.Show("Verify Successful", "Verify Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
+                    MessageBox.Show("Update the order to on problem", "Action Completed", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
             catch
             {
-                MessageBox.Show("Something Wrong", "Verify Fail", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Please check the order status or order number is correct.", "Verify Fail", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -109,16 +113,9 @@ namespace _4915M_project
             try
             {
                 String strOrderID = dataGridView1.Rows[e.RowIndex].Cells["orderID"].Value.ToString();
+                String orderStatus = dataGridView1.Rows[e.RowIndex].Cells["orderStatus"].Value.ToString();
                 txtID.Text = strOrderID;
-                int orderID = Convert.ToInt32(strOrderID);
-
-                DataTable dt4 = new DataTable();
-                string strSqlStr4 = "select orderID,description,totalWeight,length,width,height,type,harmonizedCode,numberOfItem,piece,goodID  from Good where orderID = " + orderID + " ;";
-
-                OleDbDataAdapter dataAdapter4 = new OleDbDataAdapter(strSqlStr4, Program.connStr);
-                dataAdapter4.Fill(dt4);
-
-                dataGridView1.DataSource = dt4;
+                txtStatus.Text = orderStatus;
             }
             catch
             {

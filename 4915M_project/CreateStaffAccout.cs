@@ -74,7 +74,7 @@ namespace _4915M_project
             }
             else if (txtStaffName.Text == "" || txtStaffName.Text.Length < 6)
             {
-                MessageBox.Show("Please Enter A Valid Name", "Invalid Name", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Please enter a valid name", "Invalid Name", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else if (txtPassword.Text.Length < 6)
             {
