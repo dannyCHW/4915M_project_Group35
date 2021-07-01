@@ -74,7 +74,7 @@ namespace _4915M_project
             }
             else if (txtStaffName.Text == "" || txtStaffName.Text.Length < 6)
             {
-                MessageBox.Show("Please Enter A Valid Name", "Invalid Name", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Please enter a valid name", "Invalid Name", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else if (txtPassword.Text.Length < 6)
             {
@@ -88,29 +88,26 @@ namespace _4915M_project
             {
                 DataTable dt = new DataTable();
 
-                String name = txtStaffName.Text;
-                String pwd = txtPassword.Text;
-                String position = comboBox1.Text;
+                String name = txtStaffName.Text.ToString();
+                String pwd = txtPassword.Text.ToString();
+                String position = comboBox1.Text.ToString();
 
                 string sqlString = "Insert into Staff (stfName, stfPosition, stfPassword) values ('" + name + "','" + position + "','" + pwd + "');";
                 OleDbDataAdapter dataAdapter = new OleDbDataAdapter(sqlString, Program.connStr);
                 dataAdapter.Fill(dt);
                 dataAdapter.Dispose();
                 dt.Clear();
-                name = null;
-                pwd = null;
-                position = null;
 
-                DataTable dt2 = new DataTable();
-                string sqlString2 = "Select stfID from Staff where stfName = '"+ txtStaffName.Text +"' AND stfPassword = '" + txtPassword.Text + "' And  stfPosition = '" + comboBox1.Text + "'; ";
+                dt.Clear();
+                string sqlString2 = "Select stfID from Staff where stfName = '" + name + "' AND stfPassword = '" + pwd + "'; ";
                 OleDbDataAdapter dataAdapter2 = new OleDbDataAdapter(sqlString2, Program.connStr);
-                dataAdapter2.Fill(dt2);
-                String id = dt.Rows[0]["stfID"].ToString();
+                dataAdapter2.Fill(dt);
+                int id = Convert.ToInt32(dt.Rows[0]["stfID"]);
                 dataAdapter2.Dispose();
-                dt2.Clear();
+                dt.Clear();
 
 
-                MessageBox.Show("Staff Account has been Successfully Created , the staff ID is " + id, "Registration success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Staff Account has been Successfully Created , the staff ID is " + id.ToString(), "Registration success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 

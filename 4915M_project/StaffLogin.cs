@@ -33,23 +33,24 @@ namespace _4915M_project
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            String staffID = txtStaffID.Text;
-            String pswd = txtPassword.Text;
-            int vID;
-            String vPwd = "";
-            String vPosition;
-            int sstaffID = Convert.ToInt32(txtStaffID.Text);
 
-            DataTable dt = Program.DataTableVar;
-            String connStr = "Provider=Microsoft.ACE.OLEDB.12.0;" + "Data Source=des.accdb";
-
-            dt.Clear();
-
-            string sqlStr = "Select stfID,stfPassword,stfPosition from Staff where stfID = " + sstaffID;
-            OleDbDataAdapter dataAdapter = new OleDbDataAdapter(sqlStr, connStr);
-            dataAdapter.Fill(dt);
             try
             {
+                String staffID = txtStaffID.Text;
+                String pswd = txtPassword.Text;
+                int vID;
+                String vPwd = "";
+                String vPosition;
+                int sstaffID = Convert.ToInt32(txtStaffID.Text);
+
+                DataTable dt = Program.DataTableVar;
+                String connStr = "Provider=Microsoft.ACE.OLEDB.12.0;" + "Data Source=des.accdb";
+
+                dt.Clear();
+
+                string sqlStr = "Select stfID,stfPassword,stfPosition from Staff where stfID = " + sstaffID;
+                OleDbDataAdapter dataAdapter = new OleDbDataAdapter(sqlStr, connStr);
+                dataAdapter.Fill(dt);
 
                 if (dt.Rows.Count > 0)
                 {
@@ -77,7 +78,7 @@ namespace _4915M_project
                     else
                     {
                         //temp message, maybe change to messageBox?
-                        MessageBox.Show("Wrong Id or Password", "Fail Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Wrong id or password", "Fail Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
 
                 }
@@ -88,12 +89,7 @@ namespace _4915M_project
             }
             catch (Exception)
             {
-                MessageBox.Show("Something Wrong", "Fail Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            finally
-            {
-                dt.Clear();
-                dataAdapter.Dispose();
+                MessageBox.Show("The value cannot be empty", "Fail Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
 
         }

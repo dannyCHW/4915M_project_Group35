@@ -30,22 +30,24 @@ namespace _4915M_project
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtID = new System.Windows.Forms.TextBox();
+            this.button3 = new System.Windows.Forms.Button();
+            this.btnProblem = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label21 = new System.Windows.Forms.Label();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnBack = new System.Windows.Forms.Button();
             this.label32 = new System.Windows.Forms.Label();
             this.txtOrder = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btnProblem = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.txtID = new System.Windows.Forms.TextBox();
+            this.txtStatus = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.txtStatus);
             this.panel1.Controls.Add(this.txtID);
             this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.btnProblem);
@@ -61,6 +63,72 @@ namespace _4915M_project
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1186, 638);
             this.panel1.TabIndex = 2;
+            // 
+            // txtID
+            // 
+            this.txtID.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtID.Font = new System.Drawing.Font("PMingLiU", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.txtID.Location = new System.Drawing.Point(1173, 608);
+            this.txtID.Name = "txtID";
+            this.txtID.Size = new System.Drawing.Size(10, 27);
+            this.txtID.TabIndex = 128;
+            this.txtID.Visible = false;
+            // 
+            // button3
+            // 
+            this.button3.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.button3.AutoSize = true;
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.Color.White;
+            this.button3.Location = new System.Drawing.Point(86, 430);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(128, 33);
+            this.button3.TabIndex = 127;
+            this.button3.Text = "Refresh";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // btnProblem
+            // 
+            this.btnProblem.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnProblem.AutoSize = true;
+            this.btnProblem.BackColor = System.Drawing.Color.Red;
+            this.btnProblem.FlatAppearance.BorderSize = 0;
+            this.btnProblem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnProblem.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProblem.ForeColor = System.Drawing.Color.White;
+            this.btnProblem.Location = new System.Drawing.Point(919, 462);
+            this.btnProblem.Name = "btnProblem";
+            this.btnProblem.Size = new System.Drawing.Size(178, 49);
+            this.btnProblem.TabIndex = 125;
+            this.btnProblem.Text = "Problem Order";
+            this.btnProblem.UseVisualStyleBackColor = false;
+            this.btnProblem.Click += new System.EventHandler(this.btnProblem_Click);
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.label1.Location = new System.Drawing.Point(82, 164);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(132, 19);
+            this.label1.TabIndex = 124;
+            this.label1.Text = "Problems Order:";
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(86, 186);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(1011, 238);
+            this.dataGridView1.TabIndex = 123;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // label21
             // 
@@ -128,71 +196,13 @@ namespace _4915M_project
             this.txtOrder.TabIndex = 89;
             this.txtOrder.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtOrder_KeyPress);
             // 
-            // dataGridView1
+            // txtStatus
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(86, 186);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1011, 238);
-            this.dataGridView1.TabIndex = 123;
-            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
-            // 
-            // label1
-            // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.label1.Location = new System.Drawing.Point(82, 164);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(132, 19);
-            this.label1.TabIndex = 124;
-            this.label1.Text = "Problems Order:";
-            // 
-            // btnProblem
-            // 
-            this.btnProblem.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnProblem.AutoSize = true;
-            this.btnProblem.BackColor = System.Drawing.Color.Red;
-            this.btnProblem.FlatAppearance.BorderSize = 0;
-            this.btnProblem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnProblem.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnProblem.ForeColor = System.Drawing.Color.White;
-            this.btnProblem.Location = new System.Drawing.Point(919, 462);
-            this.btnProblem.Name = "btnProblem";
-            this.btnProblem.Size = new System.Drawing.Size(178, 49);
-            this.btnProblem.TabIndex = 125;
-            this.btnProblem.Text = "Problem Order";
-            this.btnProblem.UseVisualStyleBackColor = false;
-            this.btnProblem.Click += new System.EventHandler(this.btnProblem_Click);
-            // 
-            // button3
-            // 
-            this.button3.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.button3.AutoSize = true;
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(86, 430);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(128, 33);
-            this.button3.TabIndex = 127;
-            this.button3.Text = "Refresh";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // txtID
-            // 
-            this.txtID.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtID.Font = new System.Drawing.Font("PMingLiU", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.txtID.Location = new System.Drawing.Point(1173, 608);
-            this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(10, 27);
-            this.txtID.TabIndex = 128;
-            this.txtID.Visible = false;
+            this.txtStatus.Location = new System.Drawing.Point(1164, 608);
+            this.txtStatus.Name = "txtStatus";
+            this.txtStatus.Size = new System.Drawing.Size(10, 22);
+            this.txtStatus.TabIndex = 129;
+            this.txtStatus.Visible = false;
             // 
             // recProblem
             // 
@@ -223,5 +233,6 @@ namespace _4915M_project
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button btnProblem;
         private System.Windows.Forms.TextBox txtID;
+        private System.Windows.Forms.TextBox txtStatus;
     }
 }

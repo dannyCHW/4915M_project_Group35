@@ -85,7 +85,7 @@ namespace _4915M_project
             this.btnStatis.Name = "btnStatis";
             this.btnStatis.Size = new System.Drawing.Size(178, 50);
             this.btnStatis.TabIndex = 106;
-            this.btnStatis.Text = "statistical ->";
+            this.btnStatis.Text = "Statistical ->";
             this.btnStatis.UseVisualStyleBackColor = false;
             this.btnStatis.Click += new System.EventHandler(this.btnStatis_Click);
             // 

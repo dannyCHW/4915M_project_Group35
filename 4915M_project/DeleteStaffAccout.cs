@@ -67,7 +67,7 @@ namespace _4915M_project
                     dt.Clear();
                 }
                 else {
-                    MessageBox.Show("No this accout", "Fail Action", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Cannot found this accout", "Fail Action", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
         }
@@ -75,6 +75,13 @@ namespace _4915M_project
         private void DeleteStaffAccout_Load(object sender, EventArgs e)
         {
             
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ManagerLobby managerlobby = new ManagerLobby();
+            managerlobby.Show();
+            this.Hide();
         }
     }
 }

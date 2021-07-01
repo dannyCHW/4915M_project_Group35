@@ -62,7 +62,7 @@ namespace _4915M_project
                 {
                     dataAdapter.Dispose();
                     dt.Clear();
-                    MessageBox.Show("This Email Already Been used", "Invalid Email", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("This email already been used", "Invalid Email", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                 }
 
@@ -81,7 +81,7 @@ namespace _4915M_project
                     OleDbDataAdapter dataAdapter2 = new OleDbDataAdapter(sqlString, connStr);
                     dataAdapter2.Fill(dt);
                     dataAdapter.Dispose();
-                    MessageBox.Show("Your Account has been Successfully Created", "Registration success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Your account has been successfully created", "Registration success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     Main main = new Main();
                     main.Show();
                     this.Hide();

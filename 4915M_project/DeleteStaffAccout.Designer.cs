@@ -30,13 +30,13 @@ namespace _4915M_project
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnLobby = new System.Windows.Forms.Button();
             this.btnBack = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.checkBox = new System.Windows.Forms.CheckBox();
             this.txtStaffID = new System.Windows.Forms.TextBox();
             this.label30 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -44,7 +44,7 @@ namespace _4915M_project
             // 
             this.panel1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.panel1.BackColor = System.Drawing.SystemColors.Window;
-            this.panel1.Controls.Add(this.btnLobby);
+            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.btnBack);
             this.panel1.Controls.Add(this.btnDelete);
             this.panel1.Controls.Add(this.checkBox);
@@ -55,22 +55,6 @@ namespace _4915M_project
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1186, 638);
             this.panel1.TabIndex = 0;
-            // 
-            // btnLobby
-            // 
-            this.btnLobby.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnLobby.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.btnLobby.FlatAppearance.BorderSize = 0;
-            this.btnLobby.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLobby.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLobby.ForeColor = System.Drawing.Color.White;
-            this.btnLobby.Location = new System.Drawing.Point(943, 556);
-            this.btnLobby.Name = "btnLobby";
-            this.btnLobby.Size = new System.Drawing.Size(178, 50);
-            this.btnLobby.TabIndex = 124;
-            this.btnLobby.Text = "Jump To Lobby ->";
-            this.btnLobby.UseVisualStyleBackColor = false;
-            this.btnLobby.Click += new System.EventHandler(this.btnLobby_Click);
             // 
             // btnBack
             // 
@@ -151,6 +135,22 @@ namespace _4915M_project
             this.label1.TabIndex = 77;
             this.label1.Text = "Delete Staff Account";
             // 
+            // button1
+            // 
+            this.button1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(928, 556);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(178, 50);
+            this.button1.TabIndex = 124;
+            this.button1.Text = "Jump To Lobby";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // DeleteStaffAccout
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -175,7 +175,7 @@ namespace _4915M_project
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.CheckBox checkBox;
         private System.Windows.Forms.Button btnDelete;
-        private System.Windows.Forms.Button btnLobby;
         private System.Windows.Forms.Button btnBack;
+        private System.Windows.Forms.Button button1;
     }
 }

@@ -64,7 +64,7 @@ namespace _4915M_project
             }
             else if (txtGood.Text == "")
             {
-                MessageBox.Show("The order number cannot empty", "Fail Action", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("The good number cannot empty", "Fail Action", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else if (txtWeight.Text == "")
             {
@@ -85,7 +85,13 @@ namespace _4915M_project
                 dataAdapter.Fill(dt);
                 try
                 {
-                    if (dt.Rows.Count > 0)
+                    if (Convert.ToInt32(txtWeight.Text) > 999) {
+                        MessageBox.Show("The order weight cannot over 999kg", "Fail Action", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                    else if (Convert.ToInt32(txtWeight.Text) < 0) {
+                        MessageBox.Show("The weight is invalid , please input a valid weight", "Fail Action", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                    else if (dt.Rows.Count > 0)
                     {
                         int orderID = Convert.ToInt32(dt.Rows[0]["orderID"]);
                         double weight = Convert.ToDouble(dt.Rows[0]["totalWeight"]);
@@ -306,10 +312,10 @@ namespace _4915M_project
 
 
 
-                                sendEmail("ededelivery35@gmail.com", "sdpgroup35", recEmail, "The price has been change", "We find out the weight is no match, we update the weight of the goods in order " + orderID.ToString() +" please check the update price." );
+                                sendEmail("ededelivery35@gmail.com", "sdpgroup35", recEmail, "The price has been change", "We find out the weight is no match, we update the weight of the goods in order " + orderID.ToString() + " please check the update price.");
                                 /* Email send to increate price*/
 
-                                MessageBox.Show("Update successful, Email is send to the customer", "Action Fail", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                MessageBox.Show("Update successful, Email is send to the customer", "Email Send", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             }
                             else if (paymentStatus.Equals("paid") || paymentStatus.Equals("addition"))
                             {
@@ -326,22 +332,19 @@ namespace _4915M_project
                                 OleDbDataAdapter dataAdapter6 = new OleDbDataAdapter(sqlStr6, connStr);
                                 dataAdapter6.Fill(dt);
 
-                                string sqlStr7 = "Update Payment SET paymentStatus='addition' where orderID = " + orderID;
+
+                                string sqlStr7 = "Update Payment SET paymentStatus='addition' where paymentID = " + orderID;
                                 OleDbDataAdapter dataAdapter7 = new OleDbDataAdapter(sqlStr7, connStr);
                                 dataAdapter7.Fill(dt);
-
                                 dt.Clear();
-                                string sqlStr10 = "Select cusEmail fron Customer where cusID = " + cusID;
+                                string sqlStr10 = "Select cusEmail from Customer where cusID = " + cusID;
                                 OleDbDataAdapter dataAdapter10 = new OleDbDataAdapter(sqlStr10, connStr);
                                 dataAdapter10.Fill(dt);
                                 String recEmail = dt.Rows[0]["cusEmail"].ToString();
 
-
-
-
                                 sendEmail("ededelivery35@gmail.com", "sdpgroup35", recEmail, "The price has been change, please pay again for the order", "We find out the weight is no match, we update the weight of the goods in order " + orderID.ToString() + " please check the update price and pay again for the order.");
 
-                                MessageBox.Show("Update successful, Email is send to the customer", "Action Fail", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                MessageBox.Show("Update successful, Email is send to the customer", "Email Send", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             }
 
 
@@ -356,7 +359,7 @@ namespace _4915M_project
                             OleDbDataAdapter dataAdapter11 = new OleDbDataAdapter(sqlStr11, connStr);
                             dataAdapter11.Fill(dt);
 
-                            MessageBox.Show("Update successful, the price no need to change", "Action Fail", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            MessageBox.Show("Update successful, the price no need to change", "Action Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
 
 

@@ -87,7 +87,7 @@ namespace _4915M_project
                     }
                     catch
                     {
-                        MessageBox.Show("Something Wrong , maybe you input a wrong order number , please check that before you chagne", "Fail Update", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        MessageBox.Show("Something Wrong , maybe you input a wrong order number , please check that before you chagne", "Successful Update", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                 }
                 else if (comboColumn.Text == "contactPhone")
