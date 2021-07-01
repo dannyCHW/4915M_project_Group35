@@ -201,7 +201,7 @@ namespace _4915M_project
                 addShipmentOrderUsingConnection();
                 addGoodToShipmentOrder();
                 addPayment();
-                MessageBox.Show("Your shipment order has been submited. Click 'View Airway Bill' to check it. ", "Invalid", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Your shipment order has been submited. Click 'View Airway Bill' to check it. ", "Submited", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Close();
             }
             
@@ -286,7 +286,7 @@ namespace _4915M_project
                 Console.WriteLine(tmp.getLength() + tmp.getWidth());
 
                 sqlStr = "INSERT INTO Good (orderID, description, totalWeight, length, width, height, type, harmonizedCode, numberOfItem, piece)" + 
-                         "VALUES(" + "'" + curOrderID + "'," + "'" + tmp.getDescription() + "'," + "'" + tmp.getHeight() + "'," + "'" + tmp.getLength() + "'," + "'" + tmp.getWidth() + "'," + "'" + tmp.getHeight() + "'," + "'" + tmp.getType() + "'," + "'" + tmp.getHarmonizedCode() + "'," + "'" + tmp.getNumOfItem() + "'," + "'" + tmp.getPiece() + "'" + ");";
+                         "VALUES(" + "'" + curOrderID + "'," + "'" + tmp.getDescription() + "'," + "'" + tmp.getWeight() + "'," + "'" + tmp.getLength() + "'," + "'" + tmp.getWidth() + "'," + "'" + tmp.getHeight() + "'," + "'" + tmp.getType() + "'," + "'" + tmp.getHarmonizedCode() + "'," + "'" + tmp.getNumOfItem() + "'," + "'" + tmp.getPiece() + "'" + ");";
                 dataAdapter = new OleDbDataAdapter(sqlStr, connStr);
                 dataAdapter.Fill(dt);
 
