@@ -236,6 +236,7 @@ namespace _4915M_project
 
         private void excelAirwayBill_Load(object sender, EventArgs e)
         {
+            //set up the dgv
             dgvShipment.ColumnCount = 13;
             dgvShipment.Columns[0].Name = "OrderID(You assign)";
             dgvShipment.Columns[1].Name = "receiverAddress";
@@ -501,8 +502,6 @@ namespace _4915M_project
             dataAdapter.Fill(dt);
             
         }
-
-
 
     }
 }
