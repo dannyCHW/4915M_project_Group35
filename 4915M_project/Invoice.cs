@@ -20,6 +20,8 @@ namespace _4915M_project
 
         String orderNumber = "";
         String sName, sAddress, sCompany, rCountry, areaCode, rAddress, rName, rCompany, cPerson, cPhone, price;
+        String year = "";
+        String month = "";
 
         private void btnGotoInvoice_Click(object sender, EventArgs e)
         {
@@ -37,9 +39,29 @@ namespace _4915M_project
 
         Boolean selected = false;
 
+        private void btnMonthlyBack_Click(object sender, EventArgs e)
+        {
+            
+        }
+
         private void label19_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void cboSelectMonth_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            month = cboSelectMonth.SelectedItem.ToString();
+        }
+
+        private void cboSelectYear_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            year = cboSelectYear.SelectedItem.ToString();
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            getDataToMonthlyDgv();
         }
 
         private void txtPrice_TextChanged(object sender, EventArgs e)
@@ -241,14 +263,15 @@ namespace _4915M_project
 
         private void Invoice_Load(object sender, EventArgs e)
         {
-            InvoicePanel.Visible = false;
             selectPanel.Visible = true;
+            InvoicePanel.Visible = false;
             monthlyInvoicePanel.Visible = false;
 
             orderNumber = null;
             comboInvoice.DropDownStyle = ComboBoxStyle.DropDownList;
             comboInvoice.Items.Clear();
             getRecord();
+            getYearAndMonth();
         }
 
         private void comboInvoice_SelectedIndexChanged(object sender, EventArgs e)
@@ -258,6 +281,41 @@ namespace _4915M_project
             Console.WriteLine(orderNumber);
             displayDetailRecord();
         }
+
+        private void getYearAndMonth()
+        {
+            DataTable dt = new DataTable();
+            string connStr = Program.connStr;
+            String sqlStr = "SELECT dateOfOrder FROM ShipmentOrder WHERE cusID = " + CustomerLogin.currentCustomerID + " AND " + "orderStatus LIKE" + "'Completed'" + ";";
+            OleDbDataAdapter dataAdapter = new OleDbDataAdapter(sqlStr, connStr);
+            dataAdapter.Fill(dt);
+            foreach (DataRow dr in dt.Rows)
+            {
+                String tmp = dr["dateOfOrder"].ToString();
+
+                tmp = tmp.Split('/')[2];
+                tmp = tmp.Split(' ')[0];
+                cboSelectYear.Items.Add(tmp);
+
+                tmp = dr["dateOfOrder"].ToString();
+                tmp = tmp.Split('/')[1];
+                cboSelectMonth.Items.Add(tmp);
+  
+            }
+        }
+
+        private void getDataToMonthlyDgv()
+        {
+            DataTable dt = new DataTable();
+            string connStr = Program.connStr;
+            String sqlStr = "SELECT orderID, receiverName, dateOfOrder, senderName FROM ShipmentOrder WHERE cusID = " + CustomerLogin.currentCustomerID + " AND " + "orderStatus LIKE" + "'Completed'" + "AND dateOfOrder LIKE '" + "%/" + month + "/" + year + "%'" + ";";
+            OleDbDataAdapter dataAdapter = new OleDbDataAdapter(sqlStr, connStr);
+            dataAdapter.Fill(dt);
+
+            dgvMonthlyInvoice.DataSource = dt;
+        }   
+
+        
 
     }
 

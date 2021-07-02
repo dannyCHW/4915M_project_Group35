@@ -53,7 +53,7 @@ namespace _4915M_project
                 dgvGoods.Refresh();
 
                 Excel.Application excel_eAB = new Excel.Application();
-                var workbooks = excel_eAB.Workbooks;
+                Excel.Workbooks workbooks = excel_eAB.Workbooks;
                 var excel_WB = workbooks.Open(openFileDialog1.FileName);
                 Excel.Worksheet excel_WS_shipment;
                 Excel.Worksheet excel_WS_good;
