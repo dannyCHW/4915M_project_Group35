@@ -20,6 +20,21 @@ namespace _4915M_project
 
         String orderNumber = "";
         String sName, sAddress, sCompany, rCountry, areaCode, rAddress, rName, rCompany, cPerson, cPhone, price;
+
+        private void btnGotoInvoice_Click(object sender, EventArgs e)
+        {
+            InvoicePanel.Visible = true;
+            selectPanel.Visible = false;
+            monthlyInvoicePanel.Visible = false;
+        }
+
+        private void btnMonthlyInvoice_Click(object sender, EventArgs e)
+        {
+            InvoicePanel.Visible = false;
+            selectPanel.Visible = false;
+            monthlyInvoicePanel.Visible = true;
+        }
+
         Boolean selected = false;
 
         private void label19_Click(object sender, EventArgs e)
@@ -226,6 +241,10 @@ namespace _4915M_project
 
         private void Invoice_Load(object sender, EventArgs e)
         {
+            InvoicePanel.Visible = false;
+            selectPanel.Visible = true;
+            monthlyInvoicePanel.Visible = false;
+
             orderNumber = null;
             comboInvoice.DropDownStyle = ComboBoxStyle.DropDownList;
             comboInvoice.Items.Clear();

@@ -91,7 +91,11 @@ namespace _4915M_project
 
                     
 
-                    if (shipment_UsedRow <= 1 || shipment_UsedColumn < 12 || good_UsedRow <= 1 || good_UsedColumn < 10)
+                    if (shipment_UsedRow <= 1 || good_UsedRow <= 1)
+                    {
+                        MessageBox.Show("If you are using the format porvided, the file have no data.", "Invalid", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    else if (shipment_UsedColumn < 12 || good_UsedColumn < 10)
                     {
                         MessageBox.Show("You must follow the format provided", "Invalid", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
@@ -503,5 +507,6 @@ namespace _4915M_project
             
         }
 
+        
     }
 }

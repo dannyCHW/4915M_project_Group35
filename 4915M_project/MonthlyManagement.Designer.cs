@@ -55,7 +55,7 @@ namespace _4915M_project
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1186, 638);
+            this.panel1.Size = new System.Drawing.Size(920, 715);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -68,7 +68,7 @@ namespace _4915M_project
             this.btnPay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPay.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPay.ForeColor = System.Drawing.Color.White;
-            this.btnPay.Location = new System.Drawing.Point(485, 495);
+            this.btnPay.Location = new System.Drawing.Point(351, 514);
             this.btnPay.Name = "btnPay";
             this.btnPay.Size = new System.Drawing.Size(203, 49);
             this.btnPay.TabIndex = 143;
@@ -80,7 +80,7 @@ namespace _4915M_project
             // 
             this.txtMoney.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtMoney.Font = new System.Drawing.Font("Century Gothic", 15F);
-            this.txtMoney.Location = new System.Drawing.Point(556, 440);
+            this.txtMoney.Location = new System.Drawing.Point(423, 440);
             this.txtMoney.Name = "txtMoney";
             this.txtMoney.ReadOnly = true;
             this.txtMoney.Size = new System.Drawing.Size(373, 32);
@@ -92,7 +92,7 @@ namespace _4915M_project
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.label2.Location = new System.Drawing.Point(355, 434);
+            this.label2.Location = new System.Drawing.Point(222, 434);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(131, 38);
             this.label2.TabIndex = 141;
@@ -102,7 +102,7 @@ namespace _4915M_project
             // 
             this.txtCount.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtCount.Font = new System.Drawing.Font("Century Gothic", 15F);
-            this.txtCount.Location = new System.Drawing.Point(556, 361);
+            this.txtCount.Location = new System.Drawing.Point(423, 361);
             this.txtCount.Name = "txtCount";
             this.txtCount.ReadOnly = true;
             this.txtCount.Size = new System.Drawing.Size(373, 32);
@@ -114,7 +114,7 @@ namespace _4915M_project
             this.lable2.AutoSize = true;
             this.lable2.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lable2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.lable2.Location = new System.Drawing.Point(237, 354);
+            this.lable2.Location = new System.Drawing.Point(104, 354);
             this.lable2.Name = "lable2";
             this.lable2.Size = new System.Drawing.Size(249, 38);
             this.lable2.TabIndex = 139;
@@ -122,15 +122,16 @@ namespace _4915M_project
             // 
             // btnBack
             // 
-            this.btnBack.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnBack.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.btnBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
             this.btnBack.FlatAppearance.BorderSize = 0;
             this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBack.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBack.ForeColor = System.Drawing.Color.White;
-            this.btnBack.Location = new System.Drawing.Point(32, 563);
+            this.btnBack.Location = new System.Drawing.Point(12, 651);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(178, 50);
+            this.btnBack.Size = new System.Drawing.Size(178, 52);
             this.btnBack.TabIndex = 126;
             this.btnBack.Text = "<-Back";
             this.btnBack.UseVisualStyleBackColor = false;
@@ -140,7 +141,7 @@ namespace _4915M_project
             // 
             this.view.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.view.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.view.Location = new System.Drawing.Point(189, 103);
+            this.view.Location = new System.Drawing.Point(56, 103);
             this.view.Name = "view";
             this.view.RowTemplate.Height = 24;
             this.view.Size = new System.Drawing.Size(792, 229);
@@ -152,7 +153,7 @@ namespace _4915M_project
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(34, 26);
+            this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(629, 38);
             this.label1.TabIndex = 124;
@@ -162,7 +163,7 @@ namespace _4915M_project
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1186, 638);
+            this.ClientSize = new System.Drawing.Size(920, 715);
             this.Controls.Add(this.panel1);
             this.Name = "MonthlyManagement";
             this.Text = "MonthlyManagement";

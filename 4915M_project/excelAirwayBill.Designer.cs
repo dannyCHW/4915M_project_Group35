@@ -41,6 +41,7 @@ namespace _4915M_project
             // 
             // btnGetfile
             // 
+            this.btnGetfile.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnGetfile.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
             this.btnGetfile.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold);
             this.btnGetfile.ForeColor = System.Drawing.Color.White;
@@ -65,6 +66,8 @@ namespace _4915M_project
             // 
             // dgvGoods
             // 
+            this.dgvGoods.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvGoods.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvGoods.Location = new System.Drawing.Point(12, 270);
             this.dgvGoods.Name = "dgvGoods";
@@ -85,11 +88,12 @@ namespace _4915M_project
             // 
             // lblFileName
             // 
+            this.lblFileName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lblFileName.AutoSize = true;
-            this.lblFileName.Font = new System.Drawing.Font("PMingLiU", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.lblFileName.Location = new System.Drawing.Point(207, 551);
+            this.lblFileName.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFileName.Location = new System.Drawing.Point(207, 547);
             this.lblFileName.Name = "lblFileName";
-            this.lblFileName.Size = new System.Drawing.Size(125, 16);
+            this.lblFileName.Size = new System.Drawing.Size(151, 21);
             this.lblFileName.TabIndex = 73;
             this.lblFileName.Text = "Waiting for Import";
             // 
@@ -114,12 +118,12 @@ namespace _4915M_project
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(920, 660);
-            this.Controls.Add(this.btnSubmit);
             this.Controls.Add(this.lblFileName);
+            this.Controls.Add(this.btnGetfile);
+            this.Controls.Add(this.btnSubmit);
             this.Controls.Add(this.label21);
             this.Controls.Add(this.dgvGoods);
             this.Controls.Add(this.dgvShipment);
-            this.Controls.Add(this.btnGetfile);
             this.Name = "excelAirwayBill";
             this.Text = "excelAirwayBill";
             this.Load += new System.EventHandler(this.excelAirwayBill_Load);

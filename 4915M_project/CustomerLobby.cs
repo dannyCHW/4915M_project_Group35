@@ -194,6 +194,9 @@ namespace _4915M_project
             openChildForm(new viewAirwayBill());
         }
 
-        
+        private void btnBulkOrder_Click(object sender, EventArgs e)
+        {
+            openChildForm(new excelAirwayBill());
+        }
     }
 }

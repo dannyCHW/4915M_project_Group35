@@ -53,7 +53,7 @@ namespace _4915M_project
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(918, 622);
+            this.panel1.Size = new System.Drawing.Size(920, 715);
             this.panel1.TabIndex = 0;
             // 
             // btnCheck
@@ -65,7 +65,7 @@ namespace _4915M_project
             this.btnCheck.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCheck.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCheck.ForeColor = System.Drawing.Color.White;
-            this.btnCheck.Location = new System.Drawing.Point(565, 164);
+            this.btnCheck.Location = new System.Drawing.Point(566, 164);
             this.btnCheck.Name = "btnCheck";
             this.btnCheck.Size = new System.Drawing.Size(247, 42);
             this.btnCheck.TabIndex = 123;
@@ -79,7 +79,7 @@ namespace _4915M_project
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.label3.Location = new System.Drawing.Point(80, 305);
+            this.label3.Location = new System.Drawing.Point(81, 305);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(132, 38);
             this.label3.TabIndex = 122;
@@ -91,7 +91,7 @@ namespace _4915M_project
             this.txtExpected.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
             this.txtExpected.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtExpected.ForeColor = System.Drawing.Color.White;
-            this.txtExpected.Location = new System.Drawing.Point(87, 443);
+            this.txtExpected.Location = new System.Drawing.Point(88, 443);
             this.txtExpected.Name = "txtExpected";
             this.txtExpected.Size = new System.Drawing.Size(725, 41);
             this.txtExpected.TabIndex = 115;
@@ -103,7 +103,7 @@ namespace _4915M_project
             this.txtNow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
             this.txtNow.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNow.ForeColor = System.Drawing.Color.White;
-            this.txtNow.Location = new System.Drawing.Point(87, 367);
+            this.txtNow.Location = new System.Drawing.Point(88, 367);
             this.txtNow.Name = "txtNow";
             this.txtNow.Size = new System.Drawing.Size(725, 41);
             this.txtNow.TabIndex = 114;
@@ -115,7 +115,7 @@ namespace _4915M_project
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.label2.Location = new System.Drawing.Point(82, 170);
+            this.label2.Location = new System.Drawing.Point(83, 170);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(187, 28);
             this.label2.TabIndex = 112;
@@ -126,7 +126,7 @@ namespace _4915M_project
             this.txtOrder.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtOrder.BackColor = System.Drawing.SystemColors.Control;
             this.txtOrder.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtOrder.Location = new System.Drawing.Point(275, 174);
+            this.txtOrder.Location = new System.Drawing.Point(276, 174);
             this.txtOrder.Name = "txtOrder";
             this.txtOrder.Size = new System.Drawing.Size(272, 27);
             this.txtOrder.TabIndex = 111;
@@ -138,7 +138,7 @@ namespace _4915M_project
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Location = new System.Drawing.Point(13, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(301, 38);
             this.label1.TabIndex = 110;
@@ -149,7 +149,7 @@ namespace _4915M_project
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(39)))), ((int)(((byte)(40)))));
-            this.ClientSize = new System.Drawing.Size(918, 622);
+            this.ClientSize = new System.Drawing.Size(920, 715);
             this.Controls.Add(this.panel1);
             this.Name = "Tracking";
             this.Text = "Tracking";
